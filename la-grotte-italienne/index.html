@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Grotte Italienne — Pizzeria italienne à Callas | Pizzas, pâtes &amp; terrasse</title>
+<meta name="description" content="La Grotte Italienne, pizzeria et restaurant italien à Callas (Var) : pizzas, lasagnes, raviolis, burgers et salades, terrasse au cœur du vieux village. Réservez votre table rue Saint-Éloi.">
+<meta name="theme-color" content="#FDFBF7">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La Grotte Italienne — Pizzeria italienne à Callas">
+<meta property="og:description" content="Pizzas, pâtes, burgers et salades, en terrasse dans le vieux village de Callas. Réservez votre table.">
+<meta property="og:image" content="assets/pizza-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍕%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/pizza-hero.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Grotte Italienne",
+  "image": "assets/pizza-hero.jpg",
+  "telephone": "+33984188654",
+  "servesCuisine": ["Pizza", "Cuisine italienne"],
+  "priceRange": "€€",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19 rue Saint-Éloi",
+    "postalCode": "83830",
+    "addressLocality": "Callas",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.5925, "longitude": 6.5383 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday","Monday","Tuesday","Wednesday"], "opens": "12:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday","Monday","Tuesday","Wednesday"], "opens": "19:00", "closes": "21:30" }
+  ],
+  "sameAs": ["https://www.facebook.com/eliopatgridou"]
+}
+</script>
+<style>
+/* ============================================================
+   LA GROTTE ITALIENNE — pizzeria, Callas (Var)
+   ============================================================ */
+:root{
+  --cream:#FDFBF7; --ivory:#F4EFE6; --warm:#EDE6D9;
+  --red:#C8102E; --red-deep:#8E0B20;
+  --green:#008C45; --olive:#5A6B4A;
+  --ink:#1C1A17; --gold:#C9A227;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --gutter:clamp(20px,8vw,120px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  font-family:var(--sans);font-weight:400;color:var(--ink);
+  background:var(--cream);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+  font-size:clamp(15px,1.05vw,17px);
+}
+::selection{background:var(--red);color:var(--cream)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* — accessibilité — */
+.skip{position:fixed;top:10px;left:10px;z-index:10001;background:var(--ink);color:var(--cream);
+  padding:.7em 1.2em;border-radius:999px;transform:translateY(-200%);transition:transform .3s var(--ease)}
+.skip:focus{transform:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+
+/* — grain — */
+#grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:9990;pointer-events:none;opacity:.035;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* — curseur custom — */
+#cursor{position:fixed;top:0;left:0;width:14px;height:14px;border:1.5px solid var(--ink);border-radius:50%;
+  z-index:9999;pointer-events:none;transform:translate(-50%,-50%);opacity:0;
+  transition:width .35s var(--ease),height .35s var(--ease),background .35s var(--ease),border-color .35s var(--ease),opacity .3s}
+#cursor.on{opacity:.9}
+#cursor.big{width:44px;height:44px;background:rgba(200,16,46,.9);border-color:transparent}
+@media (pointer:coarse){#cursor{display:none}}
+
+/* — tooltip 3D — */
+#tooltip3d{position:fixed;z-index:9995;pointer-events:none;opacity:0;transform:translate(-50%,-140%);
+  background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  padding:.55em 1em;border-radius:999px;white-space:nowrap;transition:opacity .25s var(--ease)}
+#tooltip3d.on{opacity:1}
+
+/* — canvas 3D — */
+#scene{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+/* — préloader — */
+#preloader{position:fixed;inset:0;z-index:10000;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.pre-inner{text-align:center}
+.pre-count{font-family:var(--serif);font-size:clamp(4rem,12vw,9rem);line-height:1;font-style:italic;display:block}
+.pre-label{display:block;margin-top:1.2em;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive)}
+
+/* — typo utilitaires — */
+.overtitle{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);display:flex;align-items:center;gap:14px}
+.overtitle::before{content:"";width:34px;height:1px;background:var(--gold);flex:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,9vw,9rem)}
+h2{font-size:clamp(2.3rem,4.8vw,4.6rem);margin:.4em 0 .5em}
+h2 em,h1 em{font-style:italic}
+.lead{font-size:clamp(1.02rem,1.25vw,1.2rem);color:#3c3831;max-width:34em}
+
+/* — nav — */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;
+  padding:22px var(--gutter);transition:background .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease)}
+.nav.scrolled{background:rgba(253,251,247,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:14px;padding-bottom:14px;box-shadow:0 1px 0 rgba(28,26,23,.06)}
+.nav-logo{font-family:var(--serif);font-size:1.7rem;font-style:italic}
+.nav-links{display:flex;gap:38px;list-style:none}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-tel{font-size:.92rem;color:#4a463f}
+@media(max-width:899px){.nav-links,.nav-tel{display:none}}
+
+/* — liens soulignés — */
+.lnk{position:relative;padding-bottom:3px;font-size:.95rem}
+.lnk::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--ink);
+  transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+.lnk:hover::after,.lnk:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* — boutons (fill qui monte du bas) — */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7em;overflow:hidden;
+  padding:1.02em 2.1em;border-radius:999px;font-weight:500;font-size:.98rem;letter-spacing:.01em;
+  transition:color .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--red-deep);border-radius:inherit;
+  transform:translateY(101%);transition:transform .55s var(--ease);z-index:0}
+.btn>*{position:relative;z-index:1}
+.btn:hover::before,.btn:focus-visible::before{transform:translateY(0)}
+.btn:active{transform:scale(.97)}
+.btn-solid{background:var(--red);color:#fff}
+.btn-ghost{border:1.5px solid rgba(28,26,23,.4);color:var(--ink)}
+.btn-ghost::before{background:var(--ink)}
+.btn-ghost:hover,.btn-ghost:focus-visible{color:var(--cream);border-color:var(--ink)}
+.btn .arr{transition:transform .45s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+
+/* — sections communes — */
+section{position:relative;z-index:2}
+.wrap{padding:0 var(--gutter);max-width:1560px;margin:0 auto}
+
+/* — HERO — */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:14vh}
+#hero .wrap{width:100%}
+.hero-title{margin:26px 0 30px;max-width:9.5em}
+.hero-title .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero-title .char{display:inline-block;will-change:transform}
+.hero-sub{max-width:30em;color:#45413a;font-size:clamp(1rem,1.2vw,1.15rem)}
+.hero-ctas{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap}
+.hero-foot{position:absolute;left:var(--gutter);bottom:34px;display:flex;align-items:center;gap:16px;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--olive)}
+.scroll-line{width:1px;height:52px;background:rgba(28,26,23,.22);overflow:hidden;position:relative}
+.scroll-line::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;background:var(--red);animation:sline 1.8s var(--ease) infinite}
+@keyframes sline{0%{top:-50%}60%,100%{top:110%}}
+.hero-fallback{display:none;position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%);
+  width:min(42vw,560px);border-radius:50%;box-shadow:0 40px 80px -30px rgba(28,26,23,.35)}
+@media(max-width:899px){
+  #hero{padding-top:19vh;justify-content:flex-start}
+  .hero-foot{bottom:22px}
+  .btn-ghost{background:var(--cream)}
+}
+
+/* — HISTOIRE — */
+#histoire{min-height:110vh;display:flex;align-items:center;padding:16vh 0}
+.hist-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:6vw}
+.hist-stats{display:flex;gap:clamp(20px,3.4vw,58px);margin-top:56px;flex-wrap:wrap}
+.stat{border-top:1px solid var(--gold);padding-top:16px;min-width:110px}
+.stat b{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.6rem);display:block;line-height:1}
+.stat span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive)}
+@media(max-width:899px){.hist-grid{grid-template-columns:1fr}}
+
+/* — INGRÉDIENTS (horizontal épinglé) — */
+#ingredients{overflow:clip}
+.h-track{display:flex;align-items:stretch;will-change:transform}
+.panel{flex:0 0 auto;width:min(86vw,1080px);min-height:100vh;display:flex;align-items:center;padding:0 6vw}
+.panel-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:center;width:100%}
+.panel-num{font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,6vw,5.6rem);color:rgba(28,26,23,.14);line-height:1}
+.panel h3{font-size:clamp(1.9rem,3.4vw,3.2rem);margin:.25em 0 .45em}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:.55em 1.1em;border:1px solid var(--green);
+  color:var(--green);border-radius:999px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.panel-media{border-radius:26px;overflow:hidden;box-shadow:0 34px 70px -34px rgba(28,26,23,.4);aspect-ratio:4/3}
+.panel-media img,.panel-media video{width:100%;height:100%;object-fit:cover}
+@media(max-width:899px){
+  .h-track{display:block}
+  .panel{width:auto;min-height:0;padding:12vh 0}
+  .panel-in{grid-template-columns:1fr;gap:34px}
+}
+
+/* — LA PÂTE — */
+#pate{min-height:100vh}
+.pate-stage{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:center}
+.pate-visual{aspect-ratio:1;position:relative}
+.pate-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;
+  clip-path:circle(16% at 50% 50%)}
+.matu{font-family:var(--serif);font-size:clamp(4.2rem,8.5vw,8rem);line-height:1;display:flex;align-items:baseline;gap:.12em}
+.matu small{font-size:.34em;font-style:italic;color:var(--olive)}
+.pate-detail{margin-top:30px;display:flex;flex-direction:column;gap:12px;font-size:.95rem;color:#45413a}
+.pate-detail span{display:flex;gap:12px;align-items:center}
+.pate-detail span::before{content:"";width:22px;height:1px;background:var(--gold)}
+@media(max-width:899px){.pate-stage{grid-template-columns:1fr;padding:12vh 0}}
+
+/* — LE FOUR — */
+#four{min-height:110vh;display:flex;align-items:center;padding:14vh 0}
+.four-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:6vw;align-items:center}
+.flame-frame{border-radius:30px;overflow:hidden;aspect-ratio:16/10;position:relative;
+  box-shadow:0 40px 90px -34px rgba(120,50,0,.55),0 0 120px -20px rgba(255,122,38,.35)}
+.flame-frame video{width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.four-figures{display:flex;gap:clamp(22px,3vw,52px);margin-top:44px}
+@media(max-width:899px){.four-grid{grid-template-columns:1fr}}
+
+/* — LA CARTE — */
+#carte{padding:18vh 0 14vh}
+.carte-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:64px;flex-wrap:wrap}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:5.5vw;list-style:none}
+.dish{display:flex;align-items:center;gap:26px;padding:26px 4px;border-bottom:1px solid rgba(201,162,39,.34);
+  transition:transform .5s var(--ease)}
+.dish:hover{transform:translateY(-8px)}
+.dish-img{flex:none;width:96px;height:96px;border-radius:50%;object-fit:cover;
+  box-shadow:0 14px 30px -12px rgba(28,26,23,.35);transition:transform .6s var(--ease)}
+.dish:hover .dish-img{transform:rotate(15deg)}
+.dish-ico{display:grid;place-items:center;background:var(--ivory);color:var(--red-deep)}
+.dish-ico svg{width:52%;height:52%}
+.dish-body{flex:1;min-width:0}
+.dish-name{font-family:var(--serif);font-size:1.55rem;line-height:1.1}
+.dish-ing{font-size:.85rem;color:var(--olive);margin-top:5px}
+.dish-price{font-family:var(--serif);font-size:1.35rem;font-style:italic;white-space:nowrap}
+.carte-note{margin-top:54px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.carte-note p{font-size:.92rem;color:var(--olive)}
+@media(max-width:899px){.menu{grid-template-columns:1fr}.dish-img{width:76px;height:76px}.dish-price{white-space:normal;text-align:right;max-width:4.6em;line-height:1.1}}
+
+/* — AMBIANCE — */
+#ambiance{height:96vh;position:relative;overflow:clip;display:flex;align-items:flex-end}
+.amb-img{position:absolute;inset:-12% 0;background:url("assets/terrace.jpg") center/cover no-repeat;will-change:transform}
+.amb-veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,10,.62),rgba(20,16,10,.05) 55%)}
+.amb-in{position:relative;z-index:2;width:100%;padding-bottom:9vh;color:#FDFBF7;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.amb-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,3.4vw,3.1rem);max-width:17em;line-height:1.15}
+.amb-src{margin-top:16px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.72;font-family:var(--sans);font-style:normal}
+.gbadge{background:var(--green);color:#fff;border-radius:999px;padding:.8em 1.5em;display:inline-flex;gap:10px;align-items:center;
+  font-weight:500;font-size:.95rem;box-shadow:0 16px 34px -14px rgba(0,0,0,.5)}
+.gbadge svg{width:15px;height:15px;fill:#fff}
+
+/* — AVIS — */
+#avis{padding:17vh 0 15vh;overflow:clip}
+.avis-head{margin-bottom:60px}
+.avis-track{display:flex;gap:26px;width:max-content;cursor:grab;padding:6px}
+.avis-track.dragging{cursor:grabbing}
+.avis-card{width:min(78vw,430px);background:#fff;border:1px solid rgba(28,26,23,.07);border-radius:24px;
+  padding:38px 36px;box-shadow:0 26px 54px -30px rgba(28,26,23,.18);user-select:none}
+.stars{display:flex;gap:4px;margin-bottom:20px}
+.stars svg{width:15px;height:15px;fill:var(--red)}
+.avis-txt{font-size:1rem;color:#38342e}
+.avis-who{margin-top:26px;font-size:.86rem;color:var(--olive);display:flex;justify-content:space-between;gap:10px}
+
+/* — RÉSERVATION — */
+#reservation{padding:15vh 0 17vh}
+.resa-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:5vw;margin-top:60px}
+.resa-form{background:var(--ivory);border-radius:30px;padding:clamp(28px,3.4vw,52px)}
+.field{position:relative;margin-bottom:26px}
+.field input,.field select,.field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(28,26,23,.25);
+  padding:22px 2px 10px;font:inherit;color:var(--ink);border-radius:0;
+  transition:border-color .4s var(--ease)}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red)}
+.field label{position:absolute;left:2px;top:20px;color:#6d675d;pointer-events:none;
+  transition:all .35s var(--ease);font-size:.98rem}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label,
+.field select:focus+label,.field select.filled+label{
+  top:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.form-done{display:none;text-align:center;padding:40px 10px}
+.form-done .serif{font-size:2rem;margin-bottom:14px}
+.resa-info{display:flex;flex-direction:column;gap:34px}
+.info-block h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);font-weight:500;margin-bottom:12px}
+.info-block p,.info-block a{font-size:1.02rem;color:#33302a}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours td{padding:7px 0;border-bottom:1px dashed rgba(201,162,39,.35)}
+.hours td:last-child{text-align:right;color:#33302a}
+.hours .closed{color:var(--red)}
+.map-frame{border-radius:24px;overflow:hidden;filter:grayscale(1) contrast(1.04);height:250px;border:1px solid rgba(28,26,23,.08)}
+.map-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:899px){.resa-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}}
+
+/* — FOOTER — */
+footer{background:var(--ink);color:var(--cream);position:relative;overflow:clip;z-index:2}
+.foot-mark{position:absolute;left:50%;bottom:-.34em;transform:translateX(-50%);
+  font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,10vw,10.5rem);line-height:1;
+  color:transparent;-webkit-text-stroke:1px rgba(253,251,247,.09);pointer-events:none;white-space:nowrap}
+.foot-in{position:relative;z-index:2;padding:100px var(--gutter) 150px;display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;max-width:1560px;margin:0 auto}
+.foot-in h5{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,251,247,.5);font-weight:500;margin-bottom:18px}
+.foot-in a,.foot-in p{color:rgba(253,251,247,.82);font-size:.95rem}
+.foot-in ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-logo{font-family:var(--serif);font-style:italic;font-size:2.4rem}
+.foot-base{position:relative;z-index:2;border-top:1px solid rgba(253,251,247,.12);padding:26px var(--gutter);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.83rem;color:rgba(253,251,247,.55)}
+.foot-in .lnk::after{background:var(--cream)}
+@media(max-width:899px){.foot-in{grid-template-columns:1fr 1fr;padding-bottom:120px}}
+
+/* — révélations (état initial posé par JS uniquement) — */
+[data-reveal]{will-change:transform,opacity}
+
+/* — reduced motion — */
+@media (prefers-reduced-motion: reduce){
+  #scene,#cursor,.scroll-line::after{display:none!important}
+  .hero-fallback{display:block}
+  *{animation-duration:.001s!important;transition-duration:.15s!important}
+  .pate-visual img{clip-path:circle(75% at 50% 50%)}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<div id="preloader" aria-hidden="true">
+  <div class="pre-inner">
+    <span class="pre-count">0</span>
+    <span class="pre-label">La Grotte Italienne — pizzeria italiana · Callas</span>
+  </div>
+</div>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="tooltip3d" role="status" aria-hidden="true"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#hero" aria-label="La Grotte Italienne — retour en haut">La Grotte Italienne</a>
+  <nav aria-label="Navigation principale">
+    <ul class="nav-links">
+      <li><a class="lnk" href="#histoire">La maison</a></li>
+      <li><a class="lnk" href="#carte">La carte</a></li>
+      <li><a class="lnk" href="#ambiance">L’ambiance</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-tel" href="tel:+33984188654">09 84 18 86 54</a>
+    <a class="btn btn-solid" href="#reservation"><span>Réserver</span></a>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- 1 · HERO -->
+  <section id="hero" aria-label="Introduction">
+    <div class="wrap">
+      <p class="overtitle" data-hero-fade>Pizzeria italiana · Callas, Var</p>
+      <h1 class="hero-title" id="heroTitle" aria-label="La pizza, comme à Napoli.">La pizza, <em>comme à Napoli.</em></h1>
+      <p class="hero-sub" data-hero-fade>Pizzas, pâtes, burgers et salades, servis dans les ruelles du vieux Callas.
+        Une terrasse au calme, une cuisine généreuse. Le reste, c’est du partage.</p>
+      <div class="hero-ctas" data-hero-fade>
+        <a class="btn btn-solid" href="#reservation"><span>Réserver une table</span><span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#carte"><span>Voir la carte</span></a>
+      </div>
+    </div>
+    <img class="hero-fallback" src="assets/pizza-hero.jpg" alt="Pizza margherita vue de dessus, croûte dorée, basilic frais" width="2048" height="2048">
+    <div class="hero-foot" data-hero-fade>
+      <span class="scroll-line" aria-hidden="true"></span>
+      <span>Faites défiler — l’histoire commence</span>
+    </div>
+  </section>
+
+  <!-- 2 · HISTOIRE -->
+  <section id="histoire" aria-label="Notre histoire">
+    <div class="wrap hist-grid">
+      <div>
+        <p class="overtitle" data-reveal>La maison</p>
+        <h2 data-reveal>Un village,<br>une terrasse,<br><em>une bonne table.</em></h2>
+        <p class="lead" data-reveal>La Grotte Italienne vous accueille au cœur du vieux village de Callas,
+          dans le Var. Une conviction simple : une bonne pizza ne s’improvise pas,
+          elle se partage — la pâte, la garniture, l’accueil, et rien d’autre.</p>
+        <p class="lead" data-reveal style="margin-top:1.2em">À midi comme le soir, la carte fait la part
+          belle aux classiques italiens. Pizzas, lasagnes, raviolis, burgers&nbsp;:
+          des assiettes généreuses, à partager en salle ou en terrasse.</p>
+        <div class="hist-stats">
+          <div class="stat" data-reveal><b>9/10</b><span>note Google</span></div>
+          <div class="stat" data-reveal><b>8/10</b><span>TripAdvisor</span></div>
+          <div class="stat" data-reveal><b>7j/7</b><span>en été</span></div>
+        </div>
+      </div>
+      <div aria-hidden="true"><!-- espace scénique : la pizza 3D pivote ici --></div>
+    </div>
+  </section>
+
+  <!-- 3 · INGRÉDIENTS (scroll horizontal épinglé) -->
+  <section id="ingredients" aria-label="Nos ingrédients signature">
+    <div class="h-track" id="hTrack">
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">01</div>
+            <p class="overtitle">L’ingrédient</p>
+            <h3>Sauce<br><em>tomate</em></h3>
+            <p class="lead">La base de toutes les pizzas rouges : une sauce simple et parfumée,
+              étalée généreusement sur la pâte avant d’entrer au four. Une acidité douce,
+              une couleur franche — le goût de l’Italie.</p>
+            <span class="badge">Base des pizzas rouges</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <img src="assets/ingredients.jpg" alt="Tomates, mozzarella, basilic et huile d'olive sur marbre blanc" loading="lazy" width="1536" height="867">
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">02</div>
+            <p class="overtitle">L’ingrédient</p>
+            <h3>Mozzarella<br><em>fondante</em></h3>
+            <p class="lead">Le fromage qui fait la pizza : il fond, il gratine, il file à chaque part.
+              Sur les pizzas comme sur les lasagnes, il est là pour la gourmandise.</p>
+            <span class="badge">Fond · file · gratine</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <video muted playsinline loop preload="none" poster="assets/cheese-pull-poster.jpg" data-autoplay
+              aria-label="Fil de mozzarella fondue étiré depuis une part de pizza chaude">
+              <source src="assets/cheese-pull.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">03</div>
+            <p class="overtitle">L’ingrédient</p>
+            <h3>Basilic frais<br><em>&amp; huile d’olive</em></h3>
+            <p class="lead">Une touche verte et un filet d’huile d’olive pour finir — les gestes
+              simples de la cuisine italienne, ceux qui réveillent une pizza, une salade
+              ou une assiette de pâtes, sans rien masquer du reste.</p>
+            <span class="badge">La touche finale</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <img src="assets/dough.jpg" alt="Mains farinées étirant un disque de pâte à pizza sur un plan de travail en bois clair" loading="lazy" width="1760" height="1326">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · LA PÂTE -->
+  <section id="pate" aria-label="La pâte">
+    <div class="wrap pate-stage">
+      <div class="pate-visual">
+        <img id="pateImg" src="assets/dough.jpg" alt="Pâte à pizza étirée à la main dans un nuage de farine" loading="lazy" width="1760" height="1326">
+      </div>
+      <div>
+        <p class="overtitle" data-reveal>La pâte</p>
+        <h2 data-reveal><em>Le geste</em> fait<br>le travail.</h2>
+        <div class="matu" aria-label="338 avis Google">
+          <span id="matuCount">0</span><small>avis Google</small>
+        </div>
+        <p class="lead" data-reveal style="margin-top:26px">Une pâte étalée à la main, garnie puis cuite à
+          la commande. C’est ce qui rend la croûte dorée, croustillante, généreuse —
+          et ce que saluent, avis après avis, les clients de la maison.</p>
+        <div class="pate-detail">
+          <span data-reveal>Pizzas classiques et recettes maison</span>
+          <span data-reveal>Suggestions du jour en plus de la carte</span>
+          <span data-reveal>Sur place ou à emporter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · LE FOUR -->
+  <section id="four" aria-label="Le service">
+    <div class="wrap four-grid">
+      <div>
+        <p class="overtitle" data-reveal>Le service</p>
+        <h2 data-reveal>Midi.<br>Soir.<br><em>Toute l’année.</em></h2>
+        <p class="lead" data-reveal>Une cuisine qui vit au rythme du service, midi et soir. La pâte
+          se dore, le fromage gratine, l’assiette part chaude vers la salle ou la
+          terrasse. C’est une cuisine simple — et c’est exactement le but.</p>
+        <div class="four-figures">
+          <div class="stat" data-reveal><b>18</b><span>places en salle</span></div>
+          <div class="stat" data-reveal><b>30</b><span>places en terrasse</span></div>
+        </div>
+      </div>
+      <div class="flame-frame" data-reveal>
+        <video muted playsinline loop preload="none" poster="assets/flame-poster.jpg" data-autoplay
+          aria-label="Flammes dans un four à pizza">
+          <source src="assets/flame-loop.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · LA CARTE -->
+  <section id="carte" aria-label="La carte">
+    <div class="wrap">
+      <div class="carte-head">
+        <div>
+          <p class="overtitle" data-reveal>La carte</p>
+          <h2 data-reveal style="margin-bottom:0">Six envies.<br><em>Zéro compromis.</em></h2>
+        </div>
+        <p class="lead" data-reveal style="max-width:22em">Une carte simple, parce que chaque assiette
+          mérite le même soin. Pizzas, pâtes, burgers, salades.</p>
+      </div>
+      <ul class="menu">
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-margherita.jpg" alt="Pizza margherita" loading="lazy" width="800" height="800">
+          <div class="dish-body">
+            <div class="dish-name">Pizzas classiques</div>
+            <div class="dish-ing">Les grandes recettes italiennes, généreusement garnies</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-quattro.jpg" alt="Pizza aux fromages" loading="lazy" width="800" height="800">
+          <div class="dish-body">
+            <div class="dish-name">Pizzas de la maison</div>
+            <div class="dish-ing">Les recettes du chef, à découvrir sur place</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-pates.jpg" alt="Pâte fraîche étalée à la main" loading="lazy" width="800" height="800">
+          <div class="dish-body">
+            <div class="dish-name">Lasagnes</div>
+            <div class="dish-ing">Gratinées, servies en assiette généreuse</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/dough.jpg" alt="Pâte travaillée à la main sur un plan fariné" loading="lazy" width="800" height="800" style="object-position:30% 50%">
+          <div class="dish-body">
+            <div class="dish-name">Raviolis</div>
+            <div class="dish-ing">Pâtes farcies, sauce au choix selon la carte</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <span class="dish-img dish-ico" role="img" aria-label="Pictogramme de burger"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21c0-7 6.5-11 15-11s15 4 15 11z"/><path d="M8 26.5c3 0 3-2 6-2s3 2 6 2 3-2 6-2 3 2 6 2 3-2 6-2"/><path d="M9 31h30v2a5 5 0 0 1-5 5H14a5 5 0 0 1-5-5z"/><path d="M18 16h.01M24 14.5h.01M30 16h.01"/></svg></span>
+          <div class="dish-body">
+            <div class="dish-name">Burger italien</div>
+            <div class="dish-ing">La version italienne du burger, souvent citée par les clients</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-salade.jpg" alt="Tomates, basilic et huile d’olive" loading="lazy" width="800" height="800">
+          <div class="dish-body">
+            <div class="dish-name">Salades</div>
+            <div class="dish-ing">Fraîches et bien garnies, idéales en terrasse</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+      </ul>
+      <div class="carte-note">
+        <p data-reveal>Suggestions du jour en plus de la carte — demandez-les à table.<br>Carte complète et prix communiqués sur place ou par téléphone.</p>
+        <a class="btn btn-ghost" href="#reservation" data-reveal><span>Réserver une table</span><span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · AMBIANCE -->
+  <section id="ambiance" aria-label="L'ambiance de la terrasse">
+    <div class="amb-img" id="ambImg" role="img" aria-label="Terrasse ensoleillée aux murs crème et volets verts, tables en bois sous un olivier"></div>
+    <div class="amb-veil" aria-hidden="true"></div>
+    <div class="wrap amb-in">
+      <blockquote class="amb-quote" data-reveal>
+        « Une terrasse au calme,<br>au cœur du vieux village. »
+        <p class="amb-src">La Grotte Italienne — Callas</p>
+      </blockquote>
+      <a class="gbadge" href="#avis" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        <span>9/10 · 338 avis Google</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 8 · AVIS -->
+  <section id="avis" aria-label="Notes de nos clients">
+    <div class="wrap avis-head">
+      <p class="overtitle" data-reveal>Ils en parlent</p>
+      <h2 data-reveal style="margin-bottom:0">Parole <em>de clients.</em></h2>
+    </div>
+    <div class="avis-track" id="avisTrack" aria-label="Carrousel d'avis — faites glisser">
+      <!-- les cartes sont dupliquées par JS pour la boucle infinie -->
+      <article class="avis-card">
+        <div class="stars" aria-label="Note de 9 sur 10">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" style="opacity:.28"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p class="avis-txt">Une note moyenne de 9/10 sur Google, calculée sur 338 avis laissés par les clients du restaurant. Tous sont à lire sur la fiche Google.</p>
+        <div class="avis-who"><span>Google — 9/10</span><span>338 avis</span></div>
+      </article>
+      <article class="avis-card">
+        <div class="stars" aria-label="Note de 8 sur 10">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" style="opacity:.28"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p class="avis-txt">Une note moyenne de 8/10 sur TripAdvisor, calculée sur 122 avis de voyageurs passés par Callas. Tous sont à lire sur la page TripAdvisor.</p>
+        <div class="avis-who"><span>TripAdvisor — 8/10</span><span>122 avis</span></div>
+      </article>
+      <article class="avis-card">
+        <div class="stars" aria-label="460 avis au total">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" style="opacity:.28"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p class="avis-txt">Au total, 460 avis publiés sur Google et TripAdvisor. Vous êtes passé·e à table ? Votre avis compte aussi : laissez le vôtre après votre visite.</p>
+        <div class="avis-who"><span>Google + TripAdvisor</span><span>460 avis</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 9 · RÉSERVATION / CONTACT -->
+  <section id="reservation" aria-label="Réservation et contact">
+    <div class="wrap">
+      <p class="overtitle" data-reveal>Réservation</p>
+      <h2 data-reveal style="margin-bottom:0">Votre table<br><em>vous attend.</em></h2>
+      <div class="resa-grid">
+        <form class="resa-form" id="resaForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <input id="f-nom" name="nom" type="text" placeholder=" " autocomplete="name" required>
+              <label for="f-nom">Nom</label>
+            </div>
+            <div class="field">
+              <input id="f-tel" name="tel" type="tel" placeholder=" " autocomplete="tel" required>
+              <label for="f-tel">Téléphone</label>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <input id="f-date" name="date" type="date" placeholder=" " required>
+              <label for="f-date">Date</label>
+            </div>
+            <div class="field">
+              <select id="f-couverts" name="couverts" required>
+                <option value="" selected disabled></option>
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7">7 personnes</option>
+                <option value="8">8 personnes et +</option>
+              </select>
+              <label for="f-couverts">Couverts</label>
+            </div>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" placeholder=" " rows="3"></textarea>
+            <label for="f-msg">Message (allergies, occasion, terrasse…)</label>
+          </div>
+          <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center">
+            <span>Demander cette table</span><span class="arr">→</span>
+          </button>
+          <p style="margin-top:18px;font-size:.85rem;color:var(--olive);text-align:center">
+            Confirmation par téléphone aux horaires d’ouverture.</p>
+          <div class="form-done" id="formDone" role="status">
+            <p class="serif"><em>Grazie mille !</em></p>
+            <p>Votre demande est bien partie. Nous vous rappelons très vite pour confirmer.<br>
+            Pressé·e ? <a class="lnk" href="tel:+33984188654" style="color:var(--red)">09 84 18 86 54</a></p>
+          </div>
+        </form>
+        <div class="resa-info">
+          <div class="info-block" data-reveal>
+            <h4>Adresse</h4>
+            <p><a class="lnk" href="https://maps.google.com/?q=19+rue+Saint-%C3%89loi+83830+Callas" target="_blank" rel="noopener">
+              19 rue Saint-Éloi<br>83830 Callas — Vieux village</a></p>
+          </div>
+          <div class="info-block" data-reveal>
+            <h4>Horaires</h4>
+            <table class="hours">
+              <tr><td>Jeudi (hors été)</td><td class="closed">Fermé</td></tr>
+              <tr><td>Vendredi — Mercredi</td><td>12 h – 14 h</td></tr>
+              <tr><td></td><td>19 h – 21 h 30</td></tr>
+            </table>
+          </div>
+          <div class="info-block" data-reveal>
+            <h4>Contact</h4>
+            <p><a class="lnk" href="tel:+33984188654">09 84 18 86 54</a><br>
+            <a class="lnk" href="https://www.facebook.com/eliopatgridou" target="_blank" rel="noopener">Facebook</a></p>
+          </div>
+          <div class="map-frame" data-reveal>
+            <iframe title="Plan d'accès — La Grotte Italienne, 19 rue Saint-Éloi, Callas"
+              src="https://www.google.com/maps?q=19+rue+Saint-%C3%89loi+83830+Callas&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 10 · FOOTER -->
+<footer aria-label="Pied de page">
+  <div class="foot-mark" aria-hidden="true">La Grotte Italienne</div>
+  <div class="foot-in">
+    <div>
+      <p class="foot-logo">La Grotte Italienne</p>
+      <p style="margin-top:14px;max-width:24em;color:rgba(253,251,247,.6)">
+        Pizzeria italienne — pizzas, pâtes, burgers et salades, à Callas.</p>
+    </div>
+    <div>
+      <h5>Trouver</h5>
+      <ul>
+        <li><a class="lnk" href="https://maps.google.com/?q=19+rue+Saint-%C3%89loi+83830+Callas" target="_blank" rel="noopener">19 rue Saint-Éloi, Callas</a></li>
+        <li><a class="lnk" href="tel:+33984188654">09 84 18 86 54</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Suivre</h5>
+      <ul>
+        <li><a class="lnk" href="https://www.facebook.com/eliopatgridou" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="lnk" href="#avis">Avis Google</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Le reste</h5>
+      <ul>
+        <li><a class="lnk" href="#carte">La carte</a></li>
+        <li><a class="lnk" href="#reservation">Réserver</a></li>
+        <li><a class="lnk" href="#" aria-disabled="true">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 La Grotte Italienne — Tous droits réservés</span>
+    <span>Fait avec ❤️ à Callas</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+'use strict';
+
+/* ————— environnement ————— */
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE    = window.matchMedia('(pointer: fine)').matches;
+var hasGSAP = typeof gsap !== 'undefined';
+if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
+
+/* ————— préchargement réel + compteur ————— */
+var PRELOAD = [
+  'assets/pizza-hero.jpg','assets/marble.jpg','assets/dough.jpg',
+  'assets/oven.jpg','assets/ingredients.jpg','assets/terrace.jpg'
+];
+var loadedImgs = {};
+var preCount = document.querySelector('.pre-count');
+var preEl = document.getElementById('preloader');
+var done = 0, total = PRELOAD.length + 1; /* +1 : fontes */
+var shown = 0, target = 0, cntRaf;
+
+function tickCounter(){
+  shown += (target - shown) * 0.14;
+  if (preCount) preCount.textContent = Math.round(shown);
+  if (shown < 99.5) cntRaf = requestAnimationFrame(tickCounter);
+  else { if (preCount) preCount.textContent = 100; }
+}
+function step(){ done++; target = Math.round(done/total*100); }
+
+var loaders = PRELOAD.map(function(src){
+  return new Promise(function(res){
+    var im = new Image();
+    im.onload = function(){ loadedImgs[src] = im; step(); res(); };
+    im.onerror = function(){ step(); res(); };
+    im.src = src;
+  });
+});
+loaders.push((document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(step));
+cntRaf = requestAnimationFrame(tickCounter);
+
+/* ————— split du titre héro ————— */
+function splitTitle(){
+  var h = document.getElementById('heroTitle');
+  if (!h) return [];
+  var chars = [];
+  function wrap(node, italic){
+    var txt = node.textContent;
+    var frag = document.createDocumentFragment();
+    for (var i=0;i<txt.length;i++){
+      var c = txt[i];
+      if (c === ' '){ frag.appendChild(document.createTextNode(' ')); continue; }
+      var s = document.createElement('span');
+      s.className = 'char'; s.textContent = c;
+      if (italic) s.style.fontStyle = 'italic';
+      frag.appendChild(s); chars.push(s);
+    }
+    node.parentNode.replaceChild(frag, node);
+  }
+  /* découpe en gardant l'italique du <em> */
+  var em = h.querySelector('em');
+  var emText = em ? em.textContent : '';
+  var beforeText = h.childNodes[0] && h.childNodes[0].nodeType===3 ? h.childNodes[0].textContent : '';
+  h.textContent = '';
+  var l1 = document.createElement('span'); l1.className='line';
+  var l2 = document.createElement('span'); l2.className='line';
+  l1.appendChild(document.createTextNode(beforeText));
+  l2.appendChild(document.createTextNode(emText));
+  h.appendChild(l1); h.appendChild(l2);
+  wrap(l1.firstChild,false); wrap(l2.firstChild,true);
+  return chars;
+}
+
+/* ============================================================
+   SCÈNE 3D — la pizza qui raconte l'histoire
+   ============================================================ */
+var three = null;
+function initThree(){
+  if (REDUCED || typeof THREE === 'undefined') return null;
+  var canvas = document.getElementById('scene');
+  var renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true, antialias:!isMobile(), powerPreference:'high-performance'});
+  } catch(e){ document.body.classList.add('no3d'); document.querySelector('.hero-fallback').style.display='block'; return null; }
+
+  function isMobile(){ return window.innerWidth < 900; }
+  var DPR = Math.min(window.devicePixelRatio||1, isMobile()?1.5:1.75);
+  renderer.setPixelRatio(DPR);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+
+  var scene = new THREE.Scene();
+  var cam = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, .1, 40);
+  cam.position.set(0,0,5.6);
+
+  scene.add(new THREE.AmbientLight(0xfff2e2, .78));
+  var key = new THREE.DirectionalLight(0xfff8ee, .95); key.position.set(-2.4,1.8,3); scene.add(key);
+  var fill = new THREE.DirectionalLight(0xffe9d0, .28); fill.position.set(2.6,-.6,2); scene.add(fill);
+  var oven = new THREE.PointLight(0xff7a26, 0, 9, 1.8); oven.position.set(1.5,-.3,1.6); scene.add(oven);
+
+  /* — texture pizza : photo masquée en cercle via canvas — */
+  var heroImg = loadedImgs['assets/pizza-hero.jpg'];
+  var texSize = 1024;
+  var pc = document.createElement('canvas'); pc.width = pc.height = texSize;
+  var px = pc.getContext('2d');
+  if (heroImg) px.drawImage(heroImg, 0, 0, texSize, texSize);
+  px.globalCompositeOperation = 'destination-in';
+  var g = px.createRadialGradient(texSize/2,texSize/2, texSize/2*0.80, texSize/2,texSize/2, texSize/2*0.875);
+  g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)');
+  px.fillStyle = g; px.fillRect(0,0,texSize,texSize);
+  var pizzaTex = new THREE.CanvasTexture(pc);
+  pizzaTex.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
+
+  /* — géométrie : disque bombé (croûte gaussienne + dôme) — */
+  var PIZZA_R = 1.55;
+  var PLANE = 2*PIZZA_R/0.84;
+  var SEG = isMobile() ? 72 : 116;
+  var topGeo = new THREE.PlaneGeometry(PLANE, PLANE, SEG, SEG);
+  (function(){
+    var pos = topGeo.attributes.position;
+    for (var i=0;i<pos.count;i++){
+      var x = pos.getX(i), y = pos.getY(i);
+      var rn = Math.hypot(x,y)/PIZZA_R;
+      var z = 0;
+      if (rn <= 1.08){
+        var crust = 0.20*Math.exp(-Math.pow((rn-0.90)/0.105,2));
+        var dome  = 0.055*Math.max(0,1-rn*rn);
+        var n = Math.sin(x*13.7+y*9.3)*Math.cos(x*7.1-y*11.9)*0.011*(rn<1?1:0.3);
+        z = crust + dome + n;
+      }
+      pos.setZ(i,z);
+    }
+    topGeo.computeVertexNormals();
+  })();
+  var topMat = new THREE.MeshStandardMaterial({map:pizzaTex, transparent:true, roughness:.82, metalness:0,
+    emissive:new THREE.Color(0xff5a00), emissiveIntensity:0});
+  var top = new THREE.Mesh(topGeo, topMat);
+
+  var sideGeo = new THREE.CylinderGeometry(PIZZA_R*0.985, PIZZA_R*0.9, .17, 96, 1, true);
+  sideGeo.rotateX(Math.PI/2);
+  var sideMat = new THREE.MeshStandardMaterial({color:0xe0aa6c, roughness:.92, metalness:0});
+  var side = new THREE.Mesh(sideGeo, sideMat); side.position.z = -0.085;
+
+  var botGeo = new THREE.CircleGeometry(PIZZA_R*0.9, 64);
+  var botMat = new THREE.MeshStandardMaterial({color:0xd9a25f, roughness:.95});
+  var bot = new THREE.Mesh(botGeo, botMat); bot.position.z = -0.17; bot.rotation.y = Math.PI;
+
+  var gPizza = new THREE.Group();
+  gPizza.add(top); gPizza.add(side); gPizza.add(bot);
+  scene.add(gPizza);
+
+  /* — ombre de contact — */
+  var sc = document.createElement('canvas'); sc.width = sc.height = 256;
+  var sx = sc.getContext('2d');
+  var sg = sx.createRadialGradient(128,128,20,128,128,120);
+  sg.addColorStop(0,'rgba(28,20,10,.85)'); sg.addColorStop(1,'rgba(28,20,10,0)');
+  sx.fillStyle = sg; sx.fillRect(0,0,256,256);
+  var shadow = new THREE.Mesh(
+    new THREE.PlaneGeometry(4.4,4.4),
+    new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc), transparent:true, opacity:.16, depthWrite:false})
+  );
+  shadow.position.z = -0.8;
+  scene.add(shadow);
+
+  /* — toppings (explosion des ingrédients) — */
+  var toppings = [];
+  function surfZ(rn){ return 0.20*Math.exp(-Math.pow((rn-0.90)/0.105,2)) + 0.055*Math.max(0,1-rn*rn); }
+  function addTopping(mesh, label, r, ang, orbR, orbZ){
+    var homeX = Math.cos(ang)*r, homeY = Math.sin(ang)*r;
+    var home = new THREE.Vector3(homeX, homeY, surfZ(r/PIZZA_R)+0.06);
+    var away = new THREE.Vector3(Math.cos(ang)*orbR, Math.sin(ang)*orbR*0.82, orbZ);
+    mesh.position.copy(home);
+    gPizza.add(mesh);
+    toppings.push({m:mesh, home:home, away:away, label:label, spin:(Math.random()*.7+.3)*(Math.random()<.5?-1:1)});
+  }
+  var tomMatSide = new THREE.MeshStandardMaterial({color:0xb8261f, roughness:.6});
+  var tomMatTop  = new THREE.MeshStandardMaterial({color:0xe0523c, roughness:.55});
+  var mozMat = new THREE.MeshStandardMaterial({color:0xf7f2e6, roughness:.38});
+  var basMat = new THREE.MeshStandardMaterial({color:0x2f7a40, roughness:.7, side:THREE.DoubleSide});
+  var i, ang;
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+.5;
+    var tg = new THREE.CylinderGeometry(.17,.17,.05,24);
+    var tom = new THREE.Mesh(tg,[tomMatSide,tomMatTop,tomMatSide]);
+    tom.rotation.x = Math.PI/2;
+    var wrapT = new THREE.Group(); wrapT.add(tom);
+    addTopping(wrapT,'Tomates', .95, ang, 2.0+.15*i, .45+.18*i);
+  }
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+1.6;
+    var moz = new THREE.Mesh(new THREE.SphereGeometry(.155,20,16), mozMat);
+    moz.scale.set(1,1,.55);
+    var wrapM = new THREE.Group(); wrapM.add(moz);
+    addTopping(wrapM,'Mozzarella', .55, ang, 1.75+.2*i, -.35-.14*i);
+  }
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+2.7;
+    var bg = new THREE.PlaneGeometry(.36,.22,6,3);
+    (function(geo){
+      var p = geo.attributes.position;
+      for (var k=0;k<p.count;k++){
+        var u = (p.getX(k)/.36)+.5;
+        p.setZ(k, Math.sin(u*Math.PI)*.07);
+      }
+      geo.computeVertexNormals();
+    })(bg);
+    var bas = new THREE.Mesh(bg, basMat);
+    bas.rotation.z = Math.random()*Math.PI;
+    var wrapB = new THREE.Group(); wrapB.add(bas);
+    addTopping(wrapB,'Basilic frais', 1.15, ang, 2.25+.12*i, .3-.5*i);
+  }
+
+  /* — état piloté par le scroll — */
+  var S = {x:1.42,y:-.08,scale:.9,rotX:-.38,explode:0,brown:0,fire:0,spin:.09,shadowOp:.16,alpha:1};
+  window.__grotteState = S; /* poignée de debug/support */
+  var lastAlpha = -1;
+  var mouse = {x:0,y:0};
+  if (FINE) window.addEventListener('pointermove', function(e){
+    mouse.x = (e.clientX/window.innerWidth - .5);
+    mouse.y = (e.clientY/window.innerHeight - .5);
+  }, {passive:true});
+
+  var brownFrom = new THREE.Color(0xffffff), brownTo = new THREE.Color(0xc59468);
+  var sideFrom = new THREE.Color(0xe0aa6c), sideTo = new THREE.Color(0x9c6337);
+  var tmpC = new THREE.Color();
+
+  var clock = new THREE.Clock();
+  var running = true;
+  document.addEventListener('visibilitychange', function(){ running = !document.hidden; if(running) loop(); });
+
+  function loop(){
+    if (!running) return;
+    requestAnimationFrame(loop);
+    var dt = Math.min(clock.getDelta(), .05);
+    var t = clock.elapsedTime;
+
+    /* état recalculé chaque frame depuis les sondes de scroll (écrivain unique) */
+    if (window.__grotteCompute) window.__grotteCompute();
+    if (Math.abs(S.alpha - lastAlpha) > .01){ lastAlpha = S.alpha; canvas.style.opacity = S.alpha; }
+
+    gPizza.position.x = S.x + Math.sin(t*.6)*.02;
+    gPizza.position.y = S.y + Math.sin(t*.9)*.035;
+    gPizza.scale.setScalar(S.scale);
+    gPizza.rotation.x = S.rotX + (FINE? -mouse.y*.1 : 0);
+    gPizza.rotation.y = (FINE? mouse.x*.14 : 0);
+    gPizza.rotation.z += S.spin*dt;
+
+    shadow.position.x = gPizza.position.x + .35;
+    shadow.position.y = gPizza.position.y - .55;
+    shadow.scale.setScalar(S.scale);
+    shadow.material.opacity = S.shadowOp * Math.min(1,S.scale);
+
+    /* explosion / re-formation des toppings */
+    for (var j=0;j<toppings.length;j++){
+      var tp = toppings[j];
+      var e = Math.max(0, Math.min(1, S.explode*1.25 - j*0.022));
+      e = e*e*(3-2*e); /* smoothstep */
+      tp.m.position.lerpVectors(tp.home, tp.away, e);
+      /* les ingrédients n'existent que pendant l'explosion (sinon la photo suffit) */
+      tp.m.scale.setScalar(Math.max(.001, e));
+      tp.m.visible = e > .02;
+      tp.m.rotation.z += tp.spin*dt*e;
+      tp.m.rotation.x = e * Math.sin(t*.8+j)*.5;
+    }
+
+    /* brunissage au four */
+    tmpC.copy(brownFrom).lerp(brownTo, S.brown); topMat.color.copy(tmpC);
+    tmpC.copy(sideFrom).lerp(sideTo, S.brown*.9); sideMat.color.copy(tmpC);
+    var pulse = .5+.5*Math.sin(t*6.3)+.22*Math.sin(t*13.1);
+    topMat.emissiveIntensity = S.fire * (0.10 + 0.07*pulse);
+    oven.intensity = S.fire * (1.5 + .8*pulse);
+
+    renderer.render(scene, cam);
+  }
+  loop();
+
+  window.addEventListener('resize', function(){
+    cam.aspect = window.innerWidth/window.innerHeight;
+    cam.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  /* — labels au survol des toppings (desktop) — */
+  var tip = document.getElementById('tooltip3d');
+  if (FINE && tip){
+    var ray = new THREE.Raycaster();
+    var v2 = new THREE.Vector2();
+    window.addEventListener('pointermove', function(e){
+      if (S.explode < .4){ tip.classList.remove('on'); return; }
+      v2.x = (e.clientX/window.innerWidth)*2-1;
+      v2.y = -(e.clientY/window.innerHeight)*2+1;
+      ray.setFromCamera(v2, cam);
+      var meshes = [];
+      toppings.forEach(function(tp){ tp.m.children.forEach(function(c){ c.userData.label = tp.label; meshes.push(c); }); });
+      var hit = ray.intersectObjects(meshes, false)[0];
+      if (hit){
+        tip.textContent = hit.object.userData.label;
+        tip.style.left = e.clientX+'px'; tip.style.top = e.clientY+'px';
+        tip.classList.add('on');
+      } else tip.classList.remove('on');
+    }, {passive:true});
+  }
+
+  return {S:S};
+}
+
+/* ============================================================
+   INIT après préchargement
+   ============================================================ */
+Promise.all(loaders).then(function(){ requestAnimationFrame(start); });
+
+function start(){
+  var chars = splitTitle();
+  three = initThree();
+  var S = three ? three.S : null;
+
+  /* — Lenis + ScrollTrigger — */
+  var lenis = null;
+  if (!REDUCED && typeof Lenis !== 'undefined' && hasGSAP){
+    lenis = new Lenis({duration:1.15, easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(time){ lenis.raf(time*1000); });
+    gsap.ticker.lagSmoothing(0);
+    document.documentElement.classList.add('lenis','lenis-smooth');
+  }
+
+  /* — sortie du préloader + entrée du héro — */
+  cancelAnimationFrame(cntRaf);
+  if (preCount) preCount.textContent = '100';
+  var heroFades = gsap ? gsap.utils.toArray('[data-hero-fade]') : [];
+  if (hasGSAP && !REDUCED){
+    gsap.set(chars, {yPercent:110, rotate:4});
+    gsap.set(heroFades, {autoAlpha:0, y:26});
+    gsap.set('#nav', {autoAlpha:0, y:-16});
+    var tl = gsap.timeline();
+    tl.to('.pre-inner', {autoAlpha:0, y:-30, duration:.5, ease:'power2.in', delay:.25})
+      .to('#preloader', {clipPath:'inset(0 0 100% 0)', duration:1.05, ease:'expo.inOut'})
+      .set('#preloader',{display:'none'})
+      .to(chars, {yPercent:0, rotate:0, duration:1.15, ease:'expo.out', stagger:.03}, '-=.55')
+      .to('#nav', {autoAlpha:1, y:0, duration:.8, ease:'power3.out'}, '-=.8')
+      .to(heroFades, {autoAlpha:1, y:0, duration:.9, ease:'power3.out', stagger:.09}, '-=.75');
+  } else {
+    preEl.style.display = 'none';
+  }
+
+  /* — nav au scroll — */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  /* — lecture des vidéos à l'entrée du viewport — */
+  var vids = [].slice.call(document.querySelectorAll('video[data-autoplay]'));
+  if ('IntersectionObserver' in window){
+    var vio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var v = en.target;
+        if (en.isIntersecting && !REDUCED){ v.play().catch(function(){}); }
+        else v.pause();
+      });
+    }, {threshold:.25});
+    vids.forEach(function(v){ vio.observe(v); });
+  }
+
+  /* — date min du formulaire = aujourd'hui — */
+  var fd = document.getElementById('f-date');
+  if (fd) fd.min = new Date().toISOString().slice(0,10);
+  var sel = document.getElementById('f-couverts');
+  if (sel) sel.addEventListener('change', function(){ sel.classList.toggle('filled', !!sel.value); });
+
+  /* — formulaire (front seul : brancher sur votre système de résa) — */
+  var form = document.getElementById('resaForm');
+  if (form) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+    [].slice.call(form.children).forEach(function(ch){ if (ch.id!=='formDone') ch.style.display='none'; });
+    document.getElementById('formDone').style.display = 'block';
+  });
+
+  /* — curseur custom — */
+  var cursor = document.getElementById('cursor');
+  if (FINE && cursor && !REDUCED){
+    var cx=-100, cy=-100, tx=-100, ty=-100;
+    window.addEventListener('pointermove', function(e){
+      tx=e.clientX; ty=e.clientY; cursor.classList.add('on');
+    }, {passive:true});
+    (function moveCursor(){
+      cx += (tx-cx)*.22; cy += (ty-cy)*.22;
+      cursor.style.transform = 'translate('+(cx-7)+'px,'+(cy-7)+'px)';
+      requestAnimationFrame(moveCursor);
+    })();
+    document.addEventListener('mouseover', function(e){
+      cursor.classList.toggle('big', !!e.target.closest('a,button,.dish,.avis-card,video'));
+    });
+  }
+
+  if (!hasGSAP) return;
+
+  /* — compteur avis — */
+  var matu = {v:0};
+  var matuEl = document.getElementById('matuCount');
+  function renderMatu(){ if (matuEl) matuEl.textContent = Math.round(matu.v); }
+  if (REDUCED){ matu.v = 338; renderMatu(); }
+
+  /* — carrousel d'avis : boucle infinie + drag — */
+  (function(){
+    var track = document.getElementById('avisTrack');
+    if (!track) return;
+    var cards = [].slice.call(track.children);
+    cards.forEach(function(c){ track.appendChild(c.cloneNode(true)); });
+    var half = 0, x = 0, dragX = 0, dragging = false, startX = 0, startOffset = 0, vel = 0;
+    function measure(){ half = track.scrollWidth/2; }
+    measure(); window.addEventListener('resize', measure);
+    track.addEventListener('pointerdown', function(e){
+      dragging = true; startX = e.clientX; startOffset = dragX; vel = 0;
+      track.classList.add('dragging'); track.setPointerCapture(e.pointerId);
+    });
+    track.addEventListener('pointermove', function(e){
+      if (!dragging) return;
+      var nd = startOffset + (e.clientX - startX);
+      vel = nd - dragX; dragX = nd;
+    });
+    ['pointerup','pointercancel'].forEach(function(ev){
+      track.addEventListener(ev, function(){ dragging = false; track.classList.remove('dragging'); });
+    });
+    var hov = false;
+    track.addEventListener('mouseenter', function(){ hov = true; });
+    track.addEventListener('mouseleave', function(){ hov = false; });
+    gsap.ticker.add(function(t2, dtMs){
+      var dt = dtMs/1000;
+      if (!dragging){
+        if (!hov && !REDUCED) x -= 34*dt;   /* autoplay lent */
+        vel *= .94; dragX += vel;
+      }
+      var tot = x + dragX;
+      if (half>0){ tot = ((tot % half) + half) % half; tot -= half; }
+      track.style.transform = 'translate3d('+tot+'px,0,0)';
+    });
+  })();
+
+  /* ————— chorégraphie par breakpoint ————— */
+  var mm = gsap.matchMedia();
+
+  mm.add({
+    desk: '(min-width: 900px) and (prefers-reduced-motion: no-preference)',
+    mob:  '(max-width: 899px) and (prefers-reduced-motion: no-preference)'
+  }, function(ctx){
+    var desk = ctx.conditions.desk;
+
+    /* 3 · ingrédients : rail horizontal épinglé (desktop) */
+    var track = document.getElementById('hTrack');
+    var ingST;
+    if (desk){
+      var hTween = gsap.to(track,{
+        x:function(){ return -(track.scrollWidth - window.innerWidth); }, ease:'none',
+        scrollTrigger:{
+          trigger:'#ingredients', start:'top top',
+          end:function(){ return '+=' + (track.scrollWidth - window.innerWidth); },
+          pin:true, scrub:1, invalidateOnRefresh:true, anticipatePin:1
+        }});
+      ingST = hTween.scrollTrigger;
+    } else {
+      ingST = ScrollTrigger.create({trigger:'#ingredients', start:'top 70%', end:'bottom 60%'});
+    }
+
+    /* 4 · la pâte : masque circulaire + compteur (épinglé sur desktop) */
+    var clipTween = gsap.fromTo('#pateImg',
+      {clipPath:'circle(16% at 50% 50%)'},
+      {clipPath:'circle(70.7% at 50% 50%)', ease:'none', scrollTrigger:{
+        trigger:'#pate', start:desk?'top top':'top 75%', end:desk?'+=160%':'bottom 70%',
+        pin:desk, scrub:1, invalidateOnRefresh:true,
+        onUpdate:function(self){ matu.v = Math.min(1, self.progress*1.25)*338; renderMatu(); }
+      }});
+    var pateSTr = clipTween.scrollTrigger;
+
+    /* sondes passives : la boucle de rendu 3D lit leurs progressions chaque frame */
+    var P = {
+      hist:  ScrollTrigger.create({trigger:'#histoire', start:'top bottom', end:'top top'}),
+      four:  ScrollTrigger.create({trigger:'#four', start:'top bottom', end:'top 15%'}),
+      fire:  ScrollTrigger.create({trigger:'#four', start:'top 70%', end:'top 10%'}),
+      brown: ScrollTrigger.create({trigger:'#four', start:'top 40%', end:'bottom 60%'}),
+      carte: ScrollTrigger.create({trigger:'#carte', start:'top bottom', end:'top 25%'})
+    };
+
+    /* écrivain unique de l'état 3D : composition séquentielle de lerps */
+    function L(a,b,t){ return a+(b-a)*t; }
+    function C(v){ return Math.max(0,Math.min(1,v)); }
+    window.__grotteCompute = function(){
+      if (!S) return;
+      var p1 = P.hist.progress, p2 = ingST.progress, p3 = pateSTr.progress,
+          p4 = P.four.progress, pf = P.fire.progress, pb = P.brown.progress,
+          p5 = P.carte.progress;
+      var x, y, sc, rx;
+      if (desk){
+        /* héro → histoire : pivote à plat, glisse à droite */
+        x = L(1.42, 1.5, p1); y = L(-.08, .05, p1); sc = L(.9, 1.04, p1); rx = L(-.38, 0, p1);
+        /* ingrédients : descend en satellite bas-gauche, explose */
+        x = L(x, -1.9, C(p2*1.15)); y = L(y, -1.2, C(p2*1.4)); sc = L(sc, .62, C(p2*1.6));
+        /* pâte : attend en coin bas-gauche que les ingrédients la rejoignent, puis sort */
+        x = L(x, -2.7, C((p3-.45)*1.9)); y = L(y, -1.95, C((p3-.45)*1.9));
+        /* four : remonte se glisser sous le cadre des flammes (passe sous le pli) */
+        x = L(x, 1.32, p4); y = L(y, -1.32, p4*p4); sc = L(sc, .52, p4); rx = L(rx, -.2, p4);
+      } else {
+        x = 0; y = L(-1.35, -1.5, p1); sc = L(.55, .45, p1); rx = L(-.38, 0, p1);
+        y = L(y, -1.4, p4); sc = L(sc, .5, p4); rx = L(rx, -.2, p4);
+        /* en mobile la pizza devient un fond discret après le héro */
+        S.alpha = L(1, .4, p1);
+      }
+      if (desk) S.alpha = 1;
+      /* carte : la pizza sort de scène par le bas */
+      y = L(y, -3.6, p5); sc = L(sc, .4, p5);
+      S.x = x; S.y = y; S.scale = sc; S.rotX = rx;
+      S.explode = C(p2*2.6) * (1 - C(p3*2.2));
+      S.spin = .09 + p2*.12*(1-p3);
+      S.brown = pb;
+      S.fire = pf * (1-p5);
+      S.shadowOp = .16 * (1-p5);
+    };
+
+    return function(){ window.__grotteCompute = null; };
+  });
+
+  /* — créés APRÈS les pins pour hériter des bons offsets — */
+
+  /* révélations génériques (hors rail horizontal, qui gère sa propre entrée) */
+  if (!REDUCED){
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      if (el.closest('.h-track') && window.innerWidth >= 900) return;
+      gsap.fromTo(el,{autoAlpha:0,y:34},{autoAlpha:1,y:0,duration:1.1,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
+    });
+  }
+
+  /* fond qui évolue (crème → ivoire → chaud → crème) */
+  function bgTo(trigger, from, to){
+    gsap.fromTo(document.body,{backgroundColor:from},{backgroundColor:to,immediateRender:false,ease:'none',
+      scrollTrigger:{trigger:trigger,start:'top 85%',end:'top 15%',scrub:1}});
+  }
+  if (!REDUCED){
+    bgTo('#histoire','#FDFBF7','#F4EFE6');
+    bgTo('#pate','#F4EFE6','#FDFBF7');
+    bgTo('#four','#FDFBF7','#EDE6D9');
+    bgTo('#carte','#EDE6D9','#FDFBF7');
+  }
+
+  /* parallax terrasse */
+  if (!REDUCED){
+    gsap.fromTo('#ambImg',{yPercent:-9},{yPercent:9,ease:'none',
+      scrollTrigger:{trigger:'#ambiance',start:'top bottom',end:'bottom top',scrub:1}});
+  }
+
+  /* reduced-motion : compteur fixe, tout visible (aucun trigger créé) */
+  ScrollTrigger.sort();
+  ScrollTrigger.refresh();
+}
+})();
+</script>
+</body>
+</html>
