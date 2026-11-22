@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Château Maïme — Mariages et vins au cœur des vignes</title>
+<meta name="description" content="Château Maïme, domaine viticole familial AOP Côtes de Provence aux Arcs-sur-Argens (Var) : cérémonie laïque dans le parc, réception au château, piscine, chambres et vins du domaine. Demandez une date.">
+<meta name="theme-color" content="#0E0E0E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Château Maïme — Mariages et vins au cœur des vignes">
+<meta property="og:description" content="Domaine familial des Côtes de Provence aux Arcs-sur-Argens : cérémonie, réception, vins du domaine.">
+<meta property="og:image" content="assets/bastide-vignes.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%230E0E0E%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27serif%27 font-size=%2736%27 text-anchor=%27middle%27 fill=%27%23F5F1EA%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Italiana&family=Michroma&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/soiree-poster.jpg">
+<style>
+:root{--cream:#F5F1EA;--bone:#EAE4D9;--ink:#0E0E0E;--ease:cubic-bezier(.22,1,.36,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+.font-italiana{font-family:Italiana,serif;font-weight:400}
+.font-michroma{font-family:Michroma,sans-serif}
+.font-display{font-family:"Playfair Display",Georgia,serif}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* utilities from the design system */
+.liquid-glass{background:rgba(255,255,255,.18);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid transparent;border-radius:16px;position:relative;overflow:hidden}
+.liquid-glass::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(255,255,255,.4) 0%,rgba(255,255,255,.1) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.liquid-glass-dark{background:rgba(0,0,0,.32);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.brand-wordmark{font-family:Italiana,serif;letter-spacing:-.04em;line-height:.82;text-shadow:0 4px 32px rgba(0,0,0,.15)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-track{animation:marquee 38s linear infinite}
+.grain{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='100' height='100' filter='url(%23n)' opacity='0.5'/></svg>");opacity:.06;mix-blend-mode:overlay}
+
+/* FadeIn + AnimatedHeading (JS sets .shown) */
+.fade{opacity:0;transform:translateY(var(--y,12px));transition:opacity var(--d,900ms) var(--ease),transform var(--d,900ms) var(--ease)}
+.fade.shown{opacity:1;transform:translateY(0)}
+.ah-line{display:inline-block}
+.ah-line.justify{display:flex;justify-content:space-between;width:100%}
+.ah-ch{display:inline-block;opacity:0;transform:translateX(-12px)}
+.shown .ah-ch{opacity:1;transform:translateX(0)}
+
+/* NAVBAR */
+.nav{position:absolute;top:0;left:0;right:0;z-index:50;padding:28px 64px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;position:relative;min-height:48px}
+.nav-links{display:flex;align-items:center;gap:32px;font-size:14px;color:rgba(255,255,255,.9);text-transform:lowercase;letter-spacing:.025em}
+.nav-links a{transition:color .3s;min-height:44px;display:inline-flex;align-items:center}
+.nav-links a:hover{color:#fff}
+.brand{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;color:#fff;min-height:44px;justify-content:center}
+.brand .b1{font-family:Italiana,serif;font-size:24px;letter-spacing:.06em;line-height:1}
+.brand .b2{font-family:Michroma,sans-serif;font-size:10px;color:rgba(255,255,255,.8);letter-spacing:.32em;text-transform:uppercase;margin-top:3px}
+.nav-icons{display:flex;align-items:center;gap:8px;color:#fff}
+.icon-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;transition:background .3s}
+.icon-btn:hover{background:rgba(255,255,255,.12)}
+.icon-btn svg{width:20px;height:20px}
+.call-pill{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.7);color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em;transition:background .3s,color .3s}
+.call-pill:hover{background:#fff;color:var(--ink)}
+.nav-inner .call-pill{margin-left:auto;margin-right:12px}
+.burger{display:none;width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.3);align-items:center;justify-content:center}
+.burger span{display:block;width:16px;height:1px;background:#fff;box-shadow:0 -4px 0 #fff,0 4px 0 #fff}
+.menu{position:fixed;inset:0;z-index:80;background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:32px 24px;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.menu.open{opacity:1;pointer-events:auto}
+.menu a.m{font-family:Italiana,serif;font-size:44px;line-height:1.25;min-height:56px;display:flex;align-items:center}
+.menu .close{position:absolute;top:24px;right:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:22px;line-height:1}
+.menu .meta{margin-top:36px;font-size:13px;color:rgba(255,255,255,.65);line-height:1.8}
+.menu .meta a{text-decoration:underline;text-underline-offset:3px;display:inline-flex;min-height:44px;align-items:center}
+
+/* HERO */
+.hero{position:relative;height:100vh;height:100svh;min-height:680px;background:var(--ink);overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scrim-top{position:absolute;left:0;right:0;top:0;height:28vh;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,transparent 100%)}
+.scrim-bot{position:absolute;left:0;right:0;bottom:0;height:55vh;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 100%)}
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.45) 100%)}
+.hero .grain{position:absolute;inset:0;pointer-events:none}
+.wordmark-wrap{position:absolute;top:128px;left:0;right:0;padding:0 56px;display:flex;justify-content:center;width:100%}
+.wordmark-wrap > div{width:100%}
+.hero h1{margin:0;color:#fff;font-size:clamp(4.5rem,11.6vw,20rem)}
+.hero h1 .l-mobile{display:none}
+.maison{position:absolute;bottom:64px;left:0;right:0;padding:0 64px}
+.maison-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+.eyebrow{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.8);margin:0}
+.maison p.body{margin:20px 0 0;max-width:28rem;font-size:14.5px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7}
+.pill{margin-top:28px;display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(255,255,255,.7);color:#fff;font-size:14px;font-weight:500;padding:0 20px;min-height:44px;transition:background .3s,color .3s}
+.pill:hover{background:#fff;color:var(--ink)}
+.pill svg{width:16px;height:16px}
+
+/* MARQUEE */
+.marquee{background:#fff;color:var(--ink);padding:40px 0;overflow:hidden}
+.marquee-track{display:flex;align-items:center;gap:48px;white-space:nowrap;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:48px}
+.marquee-item b{font-family:Inter,sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;font-size:30px;letter-spacing:.02em}
+.marquee-item svg{width:20px;height:20px;opacity:.7}
+
+/* DROP SHOWCASE (transposé : une section par chapitre) */
+.drop{background-color:var(--cream);padding:128px 56px;position:relative;background-size:cover;background-position:center}
+.drop.plain{background-image:none !important}
+.drop-grid{max-width:80rem;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px}
+.c5{grid-column:span 5}
+.c2{grid-column:span 2}
+.offset{margin-top:-64px}
+.drop .ph{aspect-ratio:4/5;overflow:hidden;background:var(--bone)}
+.drop .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1200ms ease-out}
+.group:hover .ph img{transform:scale(1.04)}
+.drop-text{margin-top:64px}
+.drop-text h2{font-family:Italiana,serif;font-weight:400;font-size:30px;line-height:1.05;margin:0 0 22px;letter-spacing:-.01em}
+.drop-text p{font-size:13.5px;font-weight:300;line-height:1.8;margin:0 0 24px}
+.drop-text p:last-child{margin-bottom:0}
+.drop.rev .tcol{order:-1}
+.drop.rev .tcol + .group{}
+
+/* INFOS / DEVIS (section sombre) */
+.infos{background:var(--ink);color:#fff;padding:128px 56px 56px;position:relative;overflow:hidden}
+.infos .wrap{max-width:80rem;margin:0 auto}
+.infos h2{font-family:Italiana,serif;font-weight:400;font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:-.03em;margin:18px 0 0}
+.infos .eyebrow{color:rgba(255,255,255,.7)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);margin-top:64px;border:1px solid rgba(255,255,255,.14)}
+.fact{background:var(--ink);padding:28px 24px}
+.fact .n{font-family:Italiana,serif;font-size:44px;line-height:1}
+.fact .t{margin-top:12px;font-size:13px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.75)}
+.cols{display:grid;grid-template-columns:5fr 7fr;gap:72px;margin-top:96px}
+.list{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.list li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.85);display:flex;gap:16px;justify-content:space-between}
+.list li span:first-child{color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding-top:3px;flex:0 0 auto}
+.list li span:last-child{text-align:right}
+.reviews{margin-top:28px}
+.score{display:flex;align-items:flex-end;gap:18px}
+.score .big{font-family:Italiana,serif;font-size:96px;line-height:.85}
+.score .s{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;padding-bottom:6px}
+.quotes{display:grid;gap:18px;margin-top:28px}
+.quote{border-left:1px solid rgba(255,255,255,.35);padding:4px 0 4px 18px}
+.quote q{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;quotes:"« " " »"}
+.quote cite{display:block;margin-top:8px;font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.src{font-size:12px;color:rgba(255,255,255,.5);margin-top:18px}
+.src a{text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+form.devis{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.field input,.field textarea,.field select{font:inherit;font-size:16px;color:#fff;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.35);padding:10px 0;min-height:44px;border-radius:0;outline:none;-webkit-appearance:none;appearance:none}
+.field select option{color:var(--ink)}
+.field textarea{resize:vertical;min-height:88px}
+.field input:focus,.field textarea:focus,.field select:focus{border-bottom-color:#fff}
+.submit{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;background:#fff;color:var(--ink);font-size:14px;font-weight:600;transition:opacity .3s}
+.submit:hover{opacity:.85}
+.submit svg{width:16px;height:16px}
+.ok{grid-column:1/-1;font-size:14px;line-height:1.7;color:rgba(255,255,255,.85);display:none}
+.ok.show{display:block}
+.ok a{text-decoration:underline;text-underline-offset:3px}
+.price{margin-top:18px;font-size:13px;color:rgba(255,255,255,.7)}
+.contact-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.contact-row a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:13px;transition:background .3s,color .3s}
+.contact-row a:hover{background:#fff;color:var(--ink)}
+.contact-row svg{width:16px;height:16px}
+.legal{margin-top:96px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.55);line-height:1.7}
+.legal strong{color:rgba(255,255,255,.8);font-weight:500}
+.infos .ghost{position:absolute;right:-2vw;bottom:-3vw;font-family:Italiana,serif;font-size:22vw;line-height:.8;color:rgba(255,255,255,.035);pointer-events:none;white-space:nowrap}
+
+/* RESPONSIVE */
+@media (max-width:1023px){
+  .nav{padding:28px 48px 0}
+  .wordmark-wrap{padding:0 40px}
+  .maison{padding:0 48px;bottom:56px}
+  .maison-grid{grid-template-columns:1fr;gap:32px}
+  .drop{padding:112px 40px}
+  .offset{margin-top:0}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .cols{grid-template-columns:1fr;gap:72px}
+}
+@media (max-width:899px){
+  .drop-grid{gap:24px}
+  .c5,.c2{grid-column:span 12}
+  .drop.rev .tcol{order:0}
+  .drop-text{margin-top:16px}
+  .infos{padding:96px 24px 40px}
+}
+@media (min-width:768px) and (max-width:899px){.c5{grid-column:span 6}}
+@media (max-width:767px){
+  .nav{padding:20px 16px 0}
+  .nav-links,.nav-icons .icon-btn{display:none}
+  .burger{display:inline-flex}
+  .nav-icons{gap:10px}
+  .call-pill{padding:0 16px}
+  .nav-inner .call-pill{margin:0;order:-1}
+  .brand .b1{font-size:22px}
+  .wordmark-wrap{top:104px;padding:0 20px}
+  .hero h1{font-size:clamp(4.5rem,21vw,20rem)}
+  .hero h1 .l-desk{display:none}
+  .hero h1 .l-mobile{display:flex}
+  .hero h1 .l-mobile + .l-mobile{margin-top:.06em}
+  .maison{padding:0 24px;bottom:40px}
+  .maison p.body{font-size:15px}
+  .marquee{padding:32px 0}
+  .marquee-item b{font-size:24px}
+  .drop{padding:88px 24px}
+  .drop-text h2{font-size:34px}
+  .drop-text p{font-size:15px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact{padding:22px 16px}
+  .fact .n{font-size:30px;white-space:nowrap}
+  .list li{flex-direction:column;gap:4px}
+  .list li span:last-child{text-align:left}
+  form.devis{grid-template-columns:1fr}
+  .score .big{font-size:80px}
+  .quote q{font-size:17px}
+  .legal{margin-top:72px}
+}
+@media (max-width:360px){.call-pill{padding:0 12px;font-size:12px}.brand .b1{font-size:20px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+<main id="top" class="bg-cream text-ink">
+  <div style="position:relative">
+    <!-- 7.1 NAVBAR -->
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav-inner fade" data-fade data-delay="120" data-duration="900" data-y="-8">
+        <div class="nav-links">
+          <a href="#domaine">le domaine</a>
+          <a href="#ceremonie">mariages</a>
+          <a href="#contact">contacts</a>
+        </div>
+        <a href="#top" class="brand" aria-label="Château Maïme, retour en haut">
+          <span class="b1">Maïme</span>
+          <span class="b2">Château</span>
+        </a>
+        <a href="tel:+33494474166" class="call-pill" aria-label="Appeler le Château Maïme">Appeler</a>
+        <div class="nav-icons">
+          <a class="icon-btn" href="https://www.instagram.com/chateau.maime.mariages/" target="_blank" rel="noopener" aria-label="Instagram mariages du Château Maïme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a class="icon-btn" href="#contact" aria-label="Demander un devis">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+          <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 7.2 HERO -->
+    <section class="hero" aria-label="Château Maïme">
+      <video id="heroVideo" src="assets/soiree-domaine.mp4" poster="assets/soiree-poster.jpg" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="scrim-top"></div>
+      <div class="scrim-bot"></div>
+      <div class="vignette"></div>
+      <div class="wordmark-wrap">
+        <div>
+          <h1 class="brand-wordmark font-italiana" data-ah data-delay="250" data-char="65" data-dur="900">
+            <span class="sr-only">Château Maïme</span>
+            <span class="ah-line justify l-desk" aria-hidden="true" data-text="CHÂTEAU MAÏME"></span>
+            <span class="ah-line justify l-mobile" aria-hidden="true" data-text="CHÂTEAU"></span>
+            <span class="ah-line justify l-mobile" aria-hidden="true" data-text="MAÏME"></span>
+          </h1>
+        </div>
+      </div>
+      <div class="maison fade" data-fade data-delay="1100" data-duration="1100" data-y="18">
+        <div class="maison-grid">
+          <div>
+            <p class="eyebrow">Le Domaine</p>
+            <p class="body">Vignoble familial des Côtes de Provence depuis 1998, au pied du massif des Maures. Entre vignes, oliviers et chênes-lièges, Château Maïme ouvre ses portes à celles et ceux qui veulent se dire oui en Provence.</p>
+            <a href="#contact" class="pill">Demander une date</a>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 7.3 MARQUEE -->
+  <section class="marquee" aria-label="L'esprit du domaine">
+    <div class="marquee-track" id="marquee"></div>
+  </section>
+
+  <!-- 7.4 DROP SHOWCASE : le domaine -->
+  <section id="domaine" class="drop" style="background-image:url(assets/fond-collection.jpg?v=2)">
+    <div class="drop-grid">
+      <div class="c5 group fade" data-fade data-delay="200" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/bastide-vignes.jpg" alt="La bastide du Château Maïme au milieu des vignes" loading="lazy" style="object-position:40% 50%"></div>
+      </div>
+      <div class="c5 offset group fade" data-fade data-delay="360" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/portail-entree.jpg" alt="Le portail d'entrée du domaine, ouvert sur l'allée et la bastide" loading="lazy" style="object-position:62% 50%"></div>
+      </div>
+      <div class="c2 tcol drop-text fade" data-fade data-delay="520" data-duration="1100" data-y="20">
+        <h2>Un hameau au milieu des vignes</h2>
+        <p>Autrefois, on cultivait ici la vigne, l'olivier et le mûrier. Une chapelle médiévale dédiée à Sainte Maïme a donné son nom au domaine.</p>
+        <p>Aujourd'hui, une trentaine d'hectares en AOP Côtes de Provence, travaillés par la famille et vinifiés au château.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- cérémonie -->
+  <section id="ceremonie" class="drop rev plain">
+    <div class="drop-grid">
+      <div class="c2 tcol drop-text fade" data-fade data-delay="520" data-duration="1100" data-y="20">
+        <h2>La cérémonie</h2>
+        <p>Une cérémonie laïque dans un parc de 6 000 m² planté de chênes-lièges, face aux vignes et au massif des Maures.</p>
+        <p>Puis le cocktail au bord de la piscine, quand la lumière dorée descend sur le domaine.</p>
+      </div>
+      <div class="c5 group fade" data-fade data-delay="200" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/jardin-roses.jpg" alt="Le jardin de roses du domaine et son grand arbre" loading="lazy"></div>
+      </div>
+      <div class="c5 offset group fade" data-fade data-delay="360" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/tables-couchant.jpg" alt="Tables dressées en plein air face aux vignes au coucher du soleil" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- réception -->
+  <section id="reception" class="drop" style="background-image:url(assets/fond-collection.jpg?v=2)">
+    <div class="drop-grid">
+      <div class="c5 group fade" data-fade data-delay="200" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/tables-vue-aerienne.jpg" alt="Vue aérienne des tables rondes dressées dans la cour du château" loading="lazy"></div>
+      </div>
+      <div class="c5 offset group fade" data-fade data-delay="360" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/lustre-salle.jpg" alt="Le lustre en cristal de la salle de réception" loading="lazy"></div>
+      </div>
+      <div class="c2 tcol drop-text fade" data-fade data-delay="520" data-duration="1100" data-y="20">
+        <h2>La réception</h2>
+        <p>Le dîner sous les guirlandes de la cour ou dans la salle du château : hauts plafonds, cinq grandes portes-fenêtres et une piste de danse, de 80 à 200 invités.</p>
+        <p>Une seule réception par jour, sans heure de fin imposée. Le domaine est entièrement à vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- le lendemain -->
+  <section id="lendemain" class="drop rev plain">
+    <div class="drop-grid">
+      <div class="c2 tcol drop-text fade" data-fade data-delay="520" data-duration="1100" data-y="20">
+        <h2>Le lendemain</h2>
+        <p>Un brunch au bord de la piscine pour prolonger la fête avec vos proches.</p>
+        <p>Six chambres au charme provençal sur place, jusqu'à quinze couchages, et une liste d'adresses voisines pour vos invités.</p>
+      </div>
+      <div class="c5 group fade" data-fade data-delay="200" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/piscine.jpg" alt="La piscine et la terrasse de la bastide" loading="lazy"></div>
+      </div>
+      <div class="c5 offset group fade" data-fade data-delay="360" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/chambre.jpg" alt="Une chambre du château, poutres et tomettes" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- les vins -->
+  <section id="vins" class="drop" style="background-image:url(assets/fond-collection.jpg?v=2)">
+    <div class="drop-grid">
+      <div class="c5 group fade" data-fade data-delay="200" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/vins-seau.jpg" alt="Deux bouteilles de Château Maïme au frais dans un seau du domaine" loading="lazy"></div>
+      </div>
+      <div class="c5 offset group fade" data-fade data-delay="360" data-duration="1100" data-y="28">
+        <div class="ph"><img src="assets/bouteille-rocher.jpg" alt="Une bouteille de rosé Château Maïme posée sur la roche" loading="lazy" style="object-position:38% 50%"></div>
+      </div>
+      <div class="c2 tcol drop-text fade" data-fade data-delay="520" data-duration="1100" data-y="20">
+        <h2>Les vins du domaine</h2>
+        <p>Rosés, blancs et rouges des cuvées Héritage, Origine et Promise, nés sur les schistes au pied des Maures.</p>
+        <p>Ce sont eux que l'on sert à votre table. Dégustation au caveau, sur rendez-vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES + DEVIS -->
+  <section id="contact" class="infos">
+    <div class="ghost" aria-hidden="true">Maïme</div>
+    <div class="wrap">
+      <p class="eyebrow">Infos pratiques</p>
+      <h2>Dites oui<br>en Provence</h2>
+
+      <div class="facts">
+        <div class="fact"><div class="n">50&nbsp;–&nbsp;200</div><div class="t">invités pour votre réception</div></div>
+        <div class="fact"><div class="n">6&nbsp;000&nbsp;m²</div><div class="t">de parc pour la cérémonie laïque</div></div>
+        <div class="fact"><div class="n">6</div><div class="t">chambres sur place, jusqu'à 15 couchages</div></div>
+        <div class="fact"><div class="n">1</div><div class="t">seule réception par jour</div></div>
+      </div>
+
+      <div class="cols">
+        <div>
+          <p class="eyebrow">Le jour J</p>
+          <ul class="list">
+            <li><span>Espaces</span><span>Parc, terrasse, piscine, salle de réception, salle de jeux pour les enfants</span></li>
+            <li><span>Traiteur</span><span>Traiteur partenaire du domaine, menus adaptables (végétarien, sans gluten…)</span></li>
+            <li><span>Vins</span><span>Les vins du Château Maïme</span></li>
+            <li><span>Accès</span><span>Parking sur place, accessible aux personnes à mobilité réduite</span></li>
+            <li><span>Tarifs</span><span>Sur devis</span></li>
+          </ul>
+
+          <div class="reviews">
+            <p class="eyebrow" style="margin-top:56px">Ils l'ont vécu</p>
+            <div class="score" style="margin-top:20px">
+              <div class="big">4,9</div>
+              <div class="s">sur 5 · 70 avis<br>98 % des mariés recommandent</div>
+            </div>
+            <div class="quotes">
+              <div class="quote"><q>Tout a été parfait du début de la visite à la fin du mariage.</q><cite>Aurélie · octobre 2026</cite></div>
+              <div class="quote"><q>Il était difficile de rêver mieux.</q><cite>Andrea · juin 2026</cite></div>
+              <div class="quote"><q>Nous ne pouvions pas rêver meilleur endroit.</q><cite>Morgane · juin 2026</cite></div>
+            </div>
+            <p class="src">Avis publiés sur <a href="https://www.mariages.net/chateau-mariage/chateau-maime--e137155" target="_blank" rel="noopener">Mariages.net</a>, consultés le 22/11/2026.</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">Demande de devis</p>
+          <form class="devis" id="devis" novalidate>
+            <div class="field"><label for="f-nom">Vos prénoms</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+            <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
+            <div class="field"><label for="f-date">Date souhaitée</label><input id="f-date" name="date" placeholder="ex. juin 2027"></div>
+            <div class="field"><label for="f-inv">Nombre d'invités</label>
+              <select id="f-inv" name="invites"><option value="">Choisir</option><option>50 à 80</option><option>80 à 120</option><option>120 à 160</option><option>160 à 200</option></select>
+            </div>
+            <div class="field full"><label for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="3" placeholder="Cérémonie laïque, brunch du lendemain, chambres…"></textarea></div>
+            <button type="submit" class="submit">Envoyer ma demande
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </button>
+            <p class="ok" id="ok" role="status">Merci ! Pour fixer une visite du domaine, appelez-nous au <a href="tel:+33494474166">04 94 47 41 66</a> ou écrivez-nous sur <a href="https://www.instagram.com/chateau.maime.mariages/" target="_blank" rel="noopener">Instagram</a>.</p>
+          </form>
+          <p class="price">Location du domaine et menus sur devis, selon la date et le nombre d'invités.</p>
+
+          <div class="contact-row">
+            <a href="tel:+33494474166">04 94 47 41 66</a>
+            <a href="https://www.instagram.com/chateau.maime.mariages/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              Instagram</a>
+            <a href="https://www.facebook.com/chateaumaime83/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ch%C3%A2teau+Ma%C3%AFme+Les+Arcs-sur-Argens" target="_blank" rel="noopener">Itinéraire
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+          <ul class="list" style="margin-top:36px">
+            <li><span>Adresse</span><span>Route Nationale 7, 83460 Les Arcs-sur-Argens</span></li>
+            <li><span>Caveau</span><span>Dégustation et visite sur rendez-vous</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legal">
+        <div><strong>Château Maïme</strong> · Vignoble familial · AOP Côtes de Provence · Les Arcs-sur-Argens, Var</div>
+        <div><strong>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- mobile menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="close" aria-label="Fermer le menu">×</button>
+  <a class="m" href="#domaine">Le domaine</a>
+  <a class="m" href="#ceremonie">La cérémonie</a>
+  <a class="m" href="#reception">La réception</a>
+  <a class="m" href="#vins">Les vins</a>
+  <a class="m" href="#contact">Devis &amp; contact</a>
+  <div class="meta">Route Nationale 7, Les Arcs-sur-Argens<br><a href="tel:+33494474166">04 94 47 41 66</a> · <a href="https://www.instagram.com/chateau.maime.mariages/" target="_blank" rel="noopener">Instagram</a></div>
+</div>
+
+<script>
+(function(){
+  /* FadeIn : setTimeout au montage (pas d'IntersectionObserver) */
+  document.querySelectorAll('[data-fade]').forEach(function(el){
+    el.style.setProperty('--d',(el.dataset.duration||900)+'ms');
+    el.style.setProperty('--y',(el.dataset.y||12)+'px');
+    setTimeout(function(){el.classList.add('shown')}, +(el.dataset.delay||0));
+  });
+  /* AnimatedHeading : lettre par lettre, justify = flex space-between */
+  document.querySelectorAll('[data-ah]').forEach(function(h){
+    var cd=+(h.dataset.char||50), dur=+(h.dataset.dur||800);
+    h.querySelectorAll('.ah-line').forEach(function(line){
+      [].slice.call(line.dataset.text).forEach(function(ch,ci){
+        var s=document.createElement('span'); s.className='ah-ch';
+        s.textContent = ch===' ' ? ' ' : ch;
+        s.style.transition='opacity '+dur+'ms cubic-bezier(.22,1,.36,1) '+(ci*cd)+'ms, transform '+dur+'ms cubic-bezier(.22,1,.36,1) '+(ci*cd)+'ms';
+        line.appendChild(s);
+      });
+    });
+    setTimeout(function(){h.classList.add('shown')}, +(h.dataset.delay||0));
+  });
+  /* Marquee : 10 mots, liste doublée */
+  var words=['vignes','domaine familial','cérémonie','côtes de provence','oliviers','massif des maures','réception','rosé','piscine','dites oui'];
+  var diamond='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z"/></svg>';
+  var m=document.getElementById('marquee'), html='';
+  for(var d=0; d<2; d++) words.forEach(function(w){ html+='<span class="marquee-item"'+(d?' aria-hidden="true"':'')+'><b>'+w+'</b>'+diamond+'</span>'; });
+  m.innerHTML=html;
+  /* menu mobile */
+  var menu=document.getElementById('menu'), burger=document.querySelector('.burger');
+  function setMenu(o){menu.classList.toggle('open',o);menu.setAttribute('aria-hidden',!o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+  burger.addEventListener('click',function(){setMenu(true)});
+  menu.querySelector('.close').addEventListener('click',function(){setMenu(false)});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  /* formulaire de devis (démo : rien n'est envoyé) */
+  document.getElementById('devis').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').classList.add('show');});
+  /* vidéo : relance si l'autoplay est bloqué */
+  var v=document.getElementById('heroVideo'); if(v){ var p=v.play&&v.play(); if(p&&p.catch) p.catch(function(){}); }
+})();
+</script>
+</body>
+</html>
