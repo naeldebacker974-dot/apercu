@@ -1,0 +1,1334 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Payotte by SJ — Plage privée &amp; tapas à La Favière | Bormes-les-Mimosas</title>
+<meta name="description" content="La Payotte by SJ, plage privée et restaurant sur la plage de la Favière à Bormes-les-Mimosas : tapas, planches à partager, cocktails, location de transats et de pédalos, concerts le dimanche.">
+<meta name="theme-color" content="#F7F1E6">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La Payotte by SJ — Plage privée &amp; tapas à La Favière">
+<meta property="og:description" content="Tapas, cocktails, transats et pédalos, les pieds dans le sable de la Favière. Réservez votre transat ou votre table.">
+<meta property="og:image" content="assets/deck.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏖️%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/planche-hero.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Payotte by SJ",
+  "image": "assets/deck.jpg",
+  "telephone": "+33613888227",
+  "servesCuisine": ["Tapas", "Poissons et fruits de mer", "Cocktails"],
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plage de la Favière",
+    "postalCode": "83230",
+    "addressLocality": "Bormes-les-Mimosas",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.119134, "longitude": 6.360247 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "22:00", "validFrom": "2026-06-02", "validThrough": "2026-09-30" }
+  ],
+  "sameAs": ["https://www.instagram.com/lapayottebysj/", "https://www.facebook.com/lapayotteplage/"]
+}
+</script>
+<style>
+/* ============================================================
+   LA PAYOTTE BY SJ — plage privée, La Favière (Bormes-les-Mimosas)
+   Palette mer & sable
+   ============================================================ */
+:root{
+  --sand:#F7F1E6; --shell:#EFE6D6; --dune:#E6D8C0;
+  --sea:#0E6E86;  --sea-deep:#084C5E;
+  --coral:#E0654A; --kelp:#4D6A6E;
+  --ink:#10242C;  --sun:#E2A73A;
+  --foam:#DDEFF0;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --gutter:clamp(20px,8vw,120px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  font-family:var(--sans);font-weight:400;color:var(--ink);
+  background:var(--sand);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+  font-size:clamp(15px,1.05vw,17px);
+}
+::selection{background:var(--sea);color:var(--sand)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* — accessibilité — */
+.skip{position:fixed;top:10px;left:10px;z-index:10001;background:var(--ink);color:var(--sand);
+  padding:.9em 1.3em;border-radius:999px;transform:translateY(-200%);transition:transform .3s var(--ease)}
+.skip:focus{transform:none}
+:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:2px}
+
+/* — grain — */
+#grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:9990;pointer-events:none;opacity:.035;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* — curseur custom — */
+#cursor{position:fixed;top:0;left:0;width:14px;height:14px;border:1.5px solid var(--ink);border-radius:50%;
+  z-index:9999;pointer-events:none;transform:translate(-50%,-50%);opacity:0;
+  transition:width .35s var(--ease),height .35s var(--ease),background .35s var(--ease),border-color .35s var(--ease),opacity .3s}
+#cursor.on{opacity:.9}
+#cursor.big{width:44px;height:44px;background:rgba(14,110,134,.9);border-color:transparent}
+@media (pointer:coarse){#cursor{display:none}}
+
+/* — tooltip 3D — */
+#tooltip3d{position:fixed;z-index:9995;pointer-events:none;opacity:0;transform:translate(-50%,-140%);
+  background:var(--ink);color:var(--sand);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  padding:.55em 1em;border-radius:999px;white-space:nowrap;transition:opacity .25s var(--ease)}
+#tooltip3d.on{opacity:1}
+
+/* — canvas 3D — */
+#scene{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+/* — préloader — */
+#preloader{position:fixed;inset:0;z-index:10000;background:var(--sand);display:flex;align-items:center;justify-content:center}
+.pre-inner{text-align:center}
+.pre-count{font-family:var(--serif);font-size:clamp(4rem,12vw,9rem);line-height:1;font-style:italic;display:block;color:var(--sea-deep)}
+.pre-label{display:block;margin-top:1.2em;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--kelp)}
+
+/* — typo utilitaires — */
+.overtitle{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--kelp);display:flex;align-items:center;gap:14px}
+.overtitle::before{content:"";width:34px;height:1px;background:var(--sun);flex:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,9vw,9rem)}
+h2{font-size:clamp(2.3rem,4.8vw,4.6rem);margin:.4em 0 .5em}
+h2 em,h1 em,h3 em{font-style:italic;color:var(--sea)}
+.lead{font-size:clamp(1.02rem,1.25vw,1.2rem);color:#34474d;max-width:34em}
+
+/* — nav — */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;
+  padding:22px var(--gutter);transition:background .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease)}
+.nav.scrolled{background:rgba(247,241,230,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:14px;padding-bottom:14px;box-shadow:0 1px 0 rgba(16,36,44,.06)}
+.nav-logo{font-family:var(--serif);font-size:1.7rem;font-style:italic;display:inline-flex;align-items:baseline;gap:.35em;white-space:nowrap}
+.nav-logo small{font-family:var(--sans);font-style:normal;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:600}
+.nav-links{display:flex;gap:38px;list-style:none}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-tel{font-size:.92rem;color:#3d5157}
+@media(max-width:899px){.nav-links,.nav-tel{display:none}}
+
+/* — liens soulignés — */
+.lnk{position:relative;padding-bottom:3px;font-size:.95rem}
+.lnk::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--ink);
+  transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+.lnk:hover::after,.lnk:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* — boutons (remplissage qui monte du bas) — */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7em;overflow:hidden;
+  padding:1.02em 2.1em;border-radius:999px;font-weight:500;font-size:.98rem;letter-spacing:.01em;
+  transition:color .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--sea-deep);border-radius:inherit;
+  transform:translateY(101%);transition:transform .55s var(--ease);z-index:0}
+.btn>*{position:relative;z-index:1}
+.btn:hover::before,.btn:focus-visible::before{transform:translateY(0)}
+.btn:active{transform:scale(.97)}
+.btn-solid{background:var(--sea);color:#fff}
+.btn-ghost{border:1.5px solid rgba(16,36,44,.4);color:var(--ink)}
+.btn-ghost::before{background:var(--ink)}
+.btn-ghost:hover,.btn-ghost:focus-visible{color:var(--sand);border-color:var(--ink)}
+.btn .arr{transition:transform .45s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+
+/* — sections communes — */
+section{position:relative;z-index:2}
+.wrap{padding:0 var(--gutter);max-width:1560px;margin:0 auto}
+
+/* — HERO — */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:14vh}
+#hero .wrap{width:100%}
+.hero-title{margin:26px 0 30px;max-width:9.5em}
+.hero-title .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero-title .char{display:inline-block;will-change:transform}
+.hero-title .word{display:inline-block;white-space:nowrap}
+.hero-title .line:last-child .char{color:var(--sea)}
+.hero-sub{max-width:30em;color:#3a4d53;font-size:clamp(1rem,1.2vw,1.15rem)}
+.hero-ctas{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap}
+.hero-foot{position:absolute;left:var(--gutter);bottom:34px;display:flex;align-items:center;gap:16px;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--kelp)}
+.scroll-line{width:1px;height:52px;background:rgba(16,36,44,.22);overflow:hidden;position:relative}
+.scroll-line::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;background:var(--sea);animation:sline 1.8s var(--ease) infinite}
+@keyframes sline{0%{top:-50%}60%,100%{top:110%}}
+.hero-fallback{display:none;position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%);
+  width:min(42vw,560px);border-radius:50%;box-shadow:0 40px 80px -30px rgba(16,36,44,.35)}
+@media(max-width:899px){
+  #hero{padding-top:19vh;justify-content:flex-start}
+  .hero-foot{bottom:22px}
+  .btn-ghost{background:var(--sand)}
+}
+
+/* — HISTOIRE — */
+#histoire{min-height:110vh;display:flex;align-items:center;padding:16vh 0}
+.hist-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:6vw}
+.hist-stats{display:flex;gap:clamp(20px,3.4vw,58px);margin-top:56px;flex-wrap:wrap}
+.stat{border-top:1px solid var(--sun);padding-top:16px;min-width:110px}
+.stat b{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.6rem);display:block;line-height:1}
+.stat span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--kelp)}
+@media(max-width:899px){.hist-grid{grid-template-columns:1fr}}
+
+/* — RAIL (scroll horizontal épinglé) — */
+#ingredients{overflow:clip}
+.h-track{display:flex;align-items:stretch;will-change:transform}
+.panel{flex:0 0 auto;width:min(86vw,1080px);min-height:100vh;display:flex;align-items:center;padding:0 6vw}
+.panel-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:center;width:100%}
+.panel-num{font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,6vw,5.6rem);color:rgba(14,110,134,.16);line-height:1}
+.panel h3{font-size:clamp(1.9rem,3.4vw,3.2rem);margin:.25em 0 .45em}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:.55em 1.1em;border:1px solid var(--coral);
+  color:#b9452c;border-radius:999px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.panel-media{border-radius:26px;overflow:hidden;box-shadow:0 34px 70px -34px rgba(16,36,44,.4);aspect-ratio:4/3}
+.panel-media img,.panel-media video{width:100%;height:100%;object-fit:cover}
+@media(max-width:899px){
+  .h-track{display:block}
+  .panel{width:auto;min-height:0;padding:12vh 0}
+  .panel-in{grid-template-columns:1fr;gap:34px}
+}
+
+/* — LA PLAGE (ex-pâte) — */
+#plage{min-height:100vh}
+.pate-stage{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:center}
+.pate-visual{aspect-ratio:1;position:relative}
+.pate-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;
+  clip-path:circle(16% at 50% 50%)}
+.matu{font-family:var(--serif);font-size:clamp(4.2rem,8.5vw,8rem);line-height:1;display:flex;align-items:baseline;gap:.12em;color:var(--sea-deep)}
+.matu small{font-size:.3em;font-style:italic;color:var(--kelp)}
+.pate-detail{margin-top:30px;display:flex;flex-direction:column;gap:12px;font-size:.95rem;color:#3a4d53}
+.pate-detail span{display:flex;gap:12px;align-items:center}
+.pate-detail span::before{content:"";width:22px;height:1px;background:var(--sun);flex:none}
+@media(max-width:899px){.pate-stage{grid-template-columns:1fr;padding:12vh 0}}
+
+/* — CONCERTS (ex-four) — */
+#concerts{min-height:110vh;display:flex;align-items:center;padding:14vh 0}
+.four-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:6vw;align-items:center}
+.flame-frame{border-radius:30px;overflow:hidden;aspect-ratio:16/10;position:relative;
+  box-shadow:0 40px 90px -34px rgba(120,60,10,.5),0 0 120px -20px rgba(226,167,58,.4)}
+.flame-frame video{width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.flame-frame::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(160deg,rgba(226,167,58,.28),rgba(224,101,74,.14) 45%,rgba(8,76,94,.18));mix-blend-mode:soft-light}
+.four-figures{display:flex;gap:clamp(22px,3vw,52px);margin-top:44px}
+@media(max-width:899px){.four-grid{grid-template-columns:1fr}}
+
+/* — LA CARTE — */
+#carte{padding:18vh 0 14vh}
+.carte-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:64px;flex-wrap:wrap}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:5.5vw;list-style:none}
+.dish{display:flex;align-items:center;gap:26px;padding:26px 4px;border-bottom:1px solid rgba(226,167,58,.38);
+  transition:transform .5s var(--ease)}
+.dish:hover{transform:translateY(-8px)}
+.dish-img{flex:none;width:96px;height:96px;border-radius:50%;object-fit:cover;
+  box-shadow:0 14px 30px -12px rgba(16,36,44,.35);transition:transform .6s var(--ease)}
+.dish:hover .dish-img{transform:rotate(15deg)}
+.dish-ico{display:grid;place-items:center;background:var(--foam);color:var(--sea-deep)}
+.dish-ico svg{width:50%;height:50%}
+.dish-body{flex:1;min-width:0}
+.dish-name{font-family:var(--serif);font-size:1.55rem;line-height:1.1}
+.dish-ing{font-size:.85rem;color:var(--kelp);margin-top:5px}
+.dish-price{font-family:var(--serif);font-size:1.35rem;font-style:italic;white-space:nowrap;color:var(--sea-deep)}
+.carte-note{margin-top:54px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.carte-note p{font-size:.92rem;color:var(--kelp)}
+@media(max-width:899px){.menu{grid-template-columns:1fr}}
+
+/* — AMBIANCE — */
+#ambiance{height:96vh;position:relative;overflow:clip;display:flex;align-items:flex-end}
+.amb-img{position:absolute;inset:-12% 0;background:url("assets/parillada.jpg") center 60%/cover no-repeat;will-change:transform}
+.amb-veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,30,38,.66),rgba(6,30,38,.05) 55%)}
+.amb-in{position:relative;z-index:2;width:100%;padding-bottom:9vh;color:#F7F1E6;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.amb-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,3.4vw,3.1rem);max-width:17em;line-height:1.15}
+.amb-src{margin-top:16px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.78;font-family:var(--sans);font-style:normal}
+.gbadge{background:var(--sea);color:#fff;border-radius:999px;padding:.8em 1.5em;display:inline-flex;gap:10px;align-items:center;
+  font-weight:500;font-size:.95rem;box-shadow:0 16px 34px -14px rgba(0,0,0,.5);min-height:44px}
+.gbadge svg{width:15px;height:15px;fill:#fff}
+
+/* — AVIS — */
+#avis{padding:17vh 0 15vh;overflow:clip}
+.avis-head{margin-bottom:60px}
+.avis-track{display:flex;gap:26px;width:max-content;cursor:grab;padding:6px}
+.avis-track.dragging{cursor:grabbing}
+.avis-card{width:min(78vw,430px);background:#fff;border:1px solid rgba(16,36,44,.07);border-radius:24px;
+  padding:38px 36px;box-shadow:0 26px 54px -30px rgba(16,36,44,.18);user-select:none}
+.stars{display:flex;gap:4px;margin-bottom:20px;align-items:center;min-height:15px}
+.stars svg{width:15px;height:15px;fill:var(--coral)}
+.stars .tag{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-weight:600}
+.avis-big{font-family:var(--serif);font-size:2.6rem;line-height:1;margin-bottom:14px;color:var(--sea-deep)}
+.avis-big small{font-size:.45em;color:var(--kelp);font-style:italic}
+.avis-txt{font-size:1rem;color:#33464c}
+.avis-who{margin-top:26px;font-size:.86rem;color:var(--kelp);display:flex;justify-content:space-between;gap:10px}
+
+/* — RÉSERVATION — */
+#reservation{padding:15vh 0 17vh}
+.resa-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:5vw;margin-top:60px}
+.resa-form{background:var(--shell);border-radius:30px;padding:clamp(28px,3.4vw,52px)}
+.field{position:relative;margin-bottom:26px}
+.field input,.field select,.field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(16,36,44,.25);
+  padding:22px 2px 10px;font:inherit;color:var(--ink);border-radius:0;min-height:52px;
+  transition:border-color .4s var(--ease)}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sea)}
+.field label{position:absolute;left:2px;top:20px;color:#5f7176;pointer-events:none;
+  transition:all .35s var(--ease);font-size:.98rem}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label,
+.field select:focus+label,.field select.filled+label,
+.field input[type=date]+label{
+  top:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--kelp)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.form-done{display:none;text-align:center;padding:40px 10px}
+.form-done .serif{font-size:2rem;margin-bottom:14px}
+.resa-info{display:flex;flex-direction:column;gap:34px}
+.info-block h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--kelp);font-weight:500;margin-bottom:12px}
+.info-block p,.info-block a{font-size:1.02rem;color:#2c3e44}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours td{padding:7px 0;border-bottom:1px dashed rgba(226,167,58,.45)}
+.hours td:last-child{text-align:right;color:#2c3e44}
+.hours .closed{color:var(--coral)}
+.map-frame{border-radius:24px;overflow:hidden;filter:grayscale(1) contrast(1.04);height:250px;border:1px solid rgba(16,36,44,.08)}
+.map-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:899px){.resa-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}}
+
+/* — FOOTER — */
+footer{background:var(--ink);color:var(--sand);position:relative;overflow:clip;z-index:2}
+.foot-mark{position:absolute;left:50%;bottom:-.34em;transform:translateX(-50%);
+  font-family:var(--serif);font-style:italic;font-size:clamp(5rem,20vw,22rem);line-height:1;
+  color:transparent;-webkit-text-stroke:1px rgba(247,241,230,.09);pointer-events:none;white-space:nowrap}
+.foot-in{position:relative;z-index:2;padding:100px var(--gutter) 150px;display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;max-width:1560px;margin:0 auto}
+.foot-in h5{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,241,230,.5);font-weight:500;margin-bottom:18px}
+.foot-in a,.foot-in p{color:rgba(247,241,230,.82);font-size:.95rem}
+.foot-in ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-in .foot-logo{font-family:var(--serif);font-style:italic;font-size:2.4rem;color:var(--sand);line-height:1.1;white-space:nowrap}
+.foot-logo small{font-family:var(--sans);font-style:normal;font-size:.32em;letter-spacing:.2em;text-transform:uppercase;color:#7fc3cf;font-weight:600;margin-left:.4em}
+.foot-base{position:relative;z-index:2;border-top:1px solid rgba(247,241,230,.12);padding:26px var(--gutter);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.83rem;color:rgba(247,241,230,.55)}
+.foot-in .lnk::after{background:var(--sand)}
+@media(max-width:899px){.foot-in{grid-template-columns:1fr 1fr;padding-bottom:120px}}
+
+/* — passe mobile (≤ 899 px uniquement ; ordinateur inchangé) — */
+.nav-call{display:none}
+@media(max-width:899px){
+  .nav-logo{font-size:1.38rem;min-height:44px;align-items:center}
+  .nav-logo small{display:none}
+  .nav-right{gap:10px}
+  .nav .btn{padding:.85em 1.35em;min-height:44px}
+  .nav-call{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;
+    border:1.5px solid rgba(16,36,44,.3);color:var(--ink);background:rgba(247,241,230,.7)}
+  .nav-call svg{width:18px;height:18px}
+  .pre-label{padding:0 24px;line-height:1.6}
+  .panel{padding:12vh var(--gutter)}
+  .panel h3{font-size:2.3rem}
+  .pate-stage{padding:12vh var(--gutter)}
+  .overtitle,.stat span,.badge,.pre-label,.hero-foot,.amb-src,.info-block h4,.foot-in h5{font-size:12px}
+  .dish{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:16px;row-gap:4px;align-items:start;padding:22px 0}
+  .dish-img{width:64px;height:64px;grid-row:span 2}
+  .dish-name{font-size:1.4rem}
+  .dish-ing{font-size:.92rem}
+  .dish-price{grid-column:2;text-align:left;white-space:nowrap;font-size:1.05rem}
+  .amb-img{background-image:url("assets/deck.jpg");background-position:center 55%}
+  .avis-track{touch-action:pan-y}
+  .avis-card{padding:30px 26px}
+  .resa-info a.lnk,.foot-in a{display:inline-flex;align-items:center;min-height:44px}
+  .foot-in ul{gap:0}
+  .foot-in .foot-logo{font-size:2rem}
+  .hero-foot{display:none}
+}
+
+/* — révélations (état initial posé par JS uniquement) — */
+[data-reveal]{will-change:transform,opacity}
+
+/* — reduced motion — */
+@media (prefers-reduced-motion: reduce){
+  #scene,#cursor,.scroll-line::after{display:none!important}
+  .hero-fallback{display:block}
+  *{animation-duration:.001s!important;transition-duration:.15s!important}
+  .pate-visual img{clip-path:circle(75% at 50% 50%)}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<div id="preloader" aria-hidden="true">
+  <div class="pre-inner">
+    <span class="pre-count">0</span>
+    <span class="pre-label">La Payotte by SJ — plage de la Favière · Bormes-les-Mimosas</span>
+  </div>
+</div>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="tooltip3d" role="status" aria-hidden="true"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#hero" aria-label="La Payotte by SJ — retour en haut">La Payotte<small>by SJ</small></a>
+  <nav aria-label="Navigation principale">
+    <ul class="nav-links">
+      <li><a class="lnk" href="#histoire">La plage</a></li>
+      <li><a class="lnk" href="#carte">La carte</a></li>
+      <li><a class="lnk" href="#concerts">Le dimanche</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-tel" href="tel:+33613888227">06 13 88 82 27</a>
+    <a class="nav-call" href="tel:+33613888227" aria-label="Appeler le 06 13 88 82 27"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+    <a class="btn btn-solid" href="#reservation"><span>Réserver</span></a>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- 1 · HERO -->
+  <section id="hero" aria-label="Introduction">
+    <div class="wrap">
+      <p class="overtitle" data-hero-fade>Plage privée · La Favière</p>
+      <h1 class="hero-title" id="heroTitle" aria-label="Tapas, cocktails, sable chaud.">Tapas, cocktails, <em>sable chaud.</em></h1>
+      <p class="hero-sub" data-hero-fade>Restaurant de plage, tapas à partager, cocktails, transats et pédalos
+        sur la plage de la Favière. Et le dimanche, l’apéro se fait en musique.</p>
+      <div class="hero-ctas" data-hero-fade>
+        <a class="btn btn-solid" href="#reservation"><span>Réserver un transat</span><span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#carte"><span>Voir la carte</span></a>
+      </div>
+    </div>
+    <img class="hero-fallback" src="assets/planche-hero.jpg" alt="Grand plat de fruits de mer à partager, gambas et moules, vu de dessus" width="1400" height="1400">
+    <div class="hero-foot" data-hero-fade>
+      <span class="scroll-line" aria-hidden="true"></span>
+      <span>Faites défiler — la plage vous attend</span>
+    </div>
+  </section>
+
+  <!-- 2 · LA MAISON -->
+  <section id="histoire" aria-label="La maison">
+    <div class="wrap hist-grid">
+      <div>
+        <p class="overtitle" data-reveal>La maison</p>
+        <h2 data-reveal>Une plage,<br>une équipe,<br><em>un art de vivre.</em></h2>
+        <p class="lead" data-reveal>La Payotte by SJ, c’est la plage privée de la Favière, à Bormes-les-Mimosas.
+          Un deck en bois posé sur le sable, des parasols blancs face à la baie, et une cuisine
+          qui se partage — midi et soir, en saison.</p>
+        <p class="lead" data-reveal style="margin-top:1.2em">On y vient pour une journée de transat,
+          un déjeuner après la baignade, un apéro au coucher du soleil. Et pour les grands jours :
+          anniversaires, brunchs, mariages et cérémonies laïques les pieds dans le sable.</p>
+        <div class="hist-stats">
+          <div class="stat" data-reveal><b>4,3/5</b><span>note Google</span></div>
+          <div class="stat" data-reveal><b>29 k</b><span>abonnés Instagram</span></div>
+          <div class="stat" data-reveal><b>8 h – 22 h</b><span>7j/7 en saison</span></div>
+        </div>
+      </div>
+      <div aria-hidden="true"><!-- espace scénique : le plat 3D pivote ici --></div>
+    </div>
+  </section>
+
+  <!-- 3 · RAIL (scroll horizontal épinglé) -->
+  <section id="ingredients" aria-label="Ce qui fait La Payotte">
+    <div class="h-track" id="hTrack">
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">01</div>
+            <p class="overtitle">À table</p>
+            <h3>Tapas<br><em>à partager</em></h3>
+            <p class="lead">Des tartines garnies, des assiettes qui arrivent au milieu de la table,
+              des fourchettes qui se croisent. À l’apéro comme au déjeuner, ici, on picore
+              et on partage, avec la mer en toile de fond.</p>
+            <span class="badge">Restaurant · Tapas · Snack</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <img src="assets/tapas.jpg" alt="Tartines garnies de jambon cru, mozzarella et tomates sur planches en bois, terrasse en arrière-plan" loading="lazy" width="720" height="540">
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">02</div>
+            <p class="overtitle">La plage</p>
+            <h3>Les pieds<br><em>dans le sable</em></h3>
+            <p class="lead">Un ponton de bois entre les palmiers, le sable chaud sous les pieds,
+              et au bout, le deck ouvert sur la baie. On entre à La Payotte comme on
+              part en vacances.</p>
+            <span class="badge">Plage de la Favière</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <video muted playsinline loop preload="none" poster="assets/sable-poster.jpg" data-autoplay
+              aria-label="Ponton en bois sur le sable entre les palmiers, à l'entrée de La Payotte">
+              <source src="assets/sable-loop.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-in">
+          <div>
+            <div class="panel-num" aria-hidden="true">03</div>
+            <p class="overtitle">À l’apéro</p>
+            <h3>Planches<br><em>mixtes</em></h3>
+            <p class="lead">Un cocktail bien frais, le bruit des vagues, et une longue planche
+              en bois qui passe de main en main. L’apéro, version Favière.</p>
+            <span class="badge">Cocktails &amp; planches</span>
+          </div>
+          <div class="panel-media" data-reveal>
+            <img src="assets/planche.jpg" alt="Longue planche en bois garnie de beignets, croquettes, ailes grillées et sauces" loading="lazy" width="720" height="960" style="object-position:50% 40%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · LA PLAGE (transats & pédalos) -->
+  <section id="plage" aria-label="Transats et pédalos">
+    <div class="wrap pate-stage">
+      <div class="pate-visual">
+        <img id="pateImg" src="assets/plage.jpg" alt="Parasols blancs et transats sur la plage de la Favière, port et mer en arrière-plan" loading="lazy" width="720" height="450">
+      </div>
+      <div>
+        <p class="overtitle" data-reveal>Transats &amp; pédalos</p>
+        <h2 data-reveal><em>Le sable</em> fait<br>le reste.</h2>
+        <div class="matu" aria-label="29 000 abonnés sur Instagram">
+          <span id="matuCount">0</span><small>k abonnés suivent la plage</small>
+        </div>
+        <p class="lead" data-reveal style="margin-top:26px">Un transat au premier rang, un parasol,
+          la mer à quelques pas. Quand l’envie vous prend, un pédalo pour partir au large,
+          puis retour à l’ombre pour un cocktail. Pensez à réserver, l’été passe vite.</p>
+        <div class="pate-detail">
+          <span data-reveal>Location de transats et de matelas</span>
+          <span data-reveal>Pédalos pour partir au large</span>
+          <span data-reveal>Balançoires sur le sable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · LES CONCERTS DU DIMANCHE -->
+  <section id="concerts" aria-label="Les concerts du dimanche">
+    <div class="wrap four-grid">
+      <div>
+        <p class="overtitle" data-reveal>Le dimanche</p>
+        <h2 data-reveal>Tapas.<br>Musique live.<br><em>Soleil couchant.</em></h2>
+        <p class="lead" data-reveal>Le dimanche en fin d’après-midi, le deck devient scène :
+          concert live, apéro tapas, cocktails à la main face à la baie. Les soirées spéciales
+          — DJ sets, showcases, Fête de la musique — s’annoncent sur Instagram.</p>
+        <div class="four-figures">
+          <div class="stat" data-reveal><b>Live</b><span>le dimanche</span></div>
+          <div class="stat" data-reveal><b>DJ set</b><span>soirées spéciales</span></div>
+        </div>
+      </div>
+      <div class="flame-frame" data-reveal>
+        <video muted playsinline loop preload="none" poster="assets/deck-poster.jpg" data-autoplay
+          aria-label="Le deck en bois de La Payotte, tables et chaises face à la mer">
+          <source src="assets/deck-loop.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · LA CARTE -->
+  <section id="carte" aria-label="La carte">
+    <div class="wrap">
+      <div class="carte-head">
+        <div>
+          <p class="overtitle" data-reveal>La carte</p>
+          <h2 data-reveal style="margin-bottom:0">Six envies.<br><em>À partager.</em></h2>
+        </div>
+        <p class="lead" data-reveal style="max-width:22em">Une cuisine de plage généreuse, inspirée par la mer :
+          on picore, on partage, on trinque.</p>
+      </div>
+      <ul class="menu">
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-tapas.jpg" alt="Tartine garnie de jambon cru et mozzarella" loading="lazy" width="600" height="600">
+          <div class="dish-body">
+            <div class="dish-name">Tapas</div>
+            <div class="dish-ing">À partager, à l’apéro comme au déjeuner</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-planche.jpg" alt="Planche de beignets et croquettes" loading="lazy" width="600" height="600">
+          <div class="dish-body">
+            <div class="dish-name">Planches mixtes</div>
+            <div class="dish-ing">Bouchées, grillades et sauces, sur planche en bois</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <img class="dish-img" src="assets/menu-parillada.jpg" alt="Bol de gambas, moules, thon snacké et riz" loading="lazy" width="600" height="600">
+          <div class="dish-body">
+            <div class="dish-name">Parillada de la mer</div>
+            <div class="dish-ing">Gambas, moules, poisson et riz</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <span class="dish-img dish-ico" role="img" aria-label="Pictogramme de poulpe"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 22c0-7 4.5-12 10-12s10 5 10 12c0 3-1 5-2.5 6.5"/><path d="M15.5 28.5C14 27 14 25 14 22"/><path d="M16 28c-2 4-6 5-8 4"/><path d="M20 30c-1 5-3 8-6 9"/><path d="M24 30.5V40"/><path d="M28 30c1 5 3 8 6 9"/><path d="M32 28c2 4 6 5 8 4"/><circle cx="20.5" cy="20" r="1.2" fill="currentColor"/><circle cx="27.5" cy="20" r="1.2" fill="currentColor"/></svg></span>
+          <div class="dish-body">
+            <div class="dish-name">Poulpe grillé au chorizo</div>
+            <div class="dish-ing">Un classique de la carte, inspiré de la mer</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <span class="dish-img dish-ico" role="img" aria-label="Pictogramme de poisson"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24c6-8 14-11 22-9 5 1 9 5 11 9-2 4-6 8-11 9-8 2-16-1-22-9z"/><path d="M39 24l5-6v12z"/><circle cx="14" cy="22.5" r="1.3" fill="currentColor"/><path d="M22 18c2 4 2 8 0 12"/></svg></span>
+          <div class="dish-body">
+            <div class="dish-name">Filet de loup à la plancha</div>
+            <div class="dish-ing">Ou les nouilles sautées aux gambas façon yakisoba</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+        <li class="dish" data-reveal>
+          <span class="dish-img dish-ico" role="img" aria-label="Pictogramme de cocktail"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12h24l-10 14v10"/><path d="M26 26 12 12"/><path d="M19 40h14"/><path d="M26 36v4"/><circle cx="34" cy="10" r="4"/><path d="M15 16h18"/></svg></span>
+          <div class="dish-body">
+            <div class="dish-name">Cocktails maison</div>
+            <div class="dish-ing">Mojitos fraise ou passion, et les classiques de l’été</div>
+          </div>
+          <div class="dish-price">Prix sur place</div>
+        </li>
+      </ul>
+      <div class="carte-note">
+        <p data-reveal>Brunch, anniversaires, mariages et événements privés : parlons-en.<br>Carte complète et prix communiqués sur place ou par téléphone.</p>
+        <a class="btn btn-ghost" href="#reservation" data-reveal><span>Réserver une table</span><span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · AMBIANCE -->
+  <section id="ambiance" aria-label="L'ambiance">
+    <div class="amb-img" id="ambImg" role="img" aria-label="Plats de la mer servis sur une table en bois, sous la paillote face à la plage"></div>
+    <div class="amb-veil" aria-hidden="true"></div>
+    <div class="wrap amb-in">
+      <blockquote class="amb-quote" data-reveal>
+        « Un apéro les pieds dans le sable,<br>face à la mer. »
+        <p class="amb-src">D’après l’office de tourisme de Bormes</p>
+      </blockquote>
+      <a class="gbadge" href="#avis" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        <span>4,3 · 561 avis Google</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 8 · AVIS -->
+  <section id="avis" aria-label="Ce qu'on dit de La Payotte">
+    <div class="wrap avis-head">
+      <p class="overtitle" data-reveal>Ils en parlent</p>
+      <h2 data-reveal style="margin-bottom:0">La Favière <em>en parle.</em></h2>
+    </div>
+    <div class="avis-track" id="avisTrack" aria-label="Carrousel — faites glisser">
+      <!-- les cartes sont dupliquées par JS pour la boucle infinie -->
+      <article class="avis-card">
+        <div class="stars" aria-label="Note de 4,3 sur 5">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" style="opacity:.28"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p class="avis-big">4,3 <small>sur 5</small></p>
+        <p class="avis-txt">La note moyenne laissée sur Google par les clients de la plage. Tous les avis sont à lire sur la fiche Google de La Payotte.</p>
+        <div class="avis-who"><span>Google</span><span>561 avis</span></div>
+      </article>
+      <article class="avis-card">
+        <div class="stars"><span class="tag">Instagram</span></div>
+        <p class="avis-big">29 k <small>abonnés</small></p>
+        <p class="avis-txt">Couchers de soleil, soirées, mariages et nouveautés : toute la vie de la plage se suit sur le compte @lapayottebysj.</p>
+        <div class="avis-who"><span>@lapayottebysj</span><span>29 244 abonnés</span></div>
+      </article>
+      <article class="avis-card">
+        <div class="stars"><span class="tag">Office de tourisme</span></div>
+        <p class="avis-big">Plage <small>de la Favière</small></p>
+        <p class="avis-txt">Référencée par l’office de tourisme de Bormes-les-Mimosas : restaurant de plage, tapas, snack, cocktails, location de transats et de pédalos.</p>
+        <div class="avis-who"><span>Bormes-les-Mimosas</span><span>Côte d’Azur France</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 9 · RÉSERVATION / CONTACT -->
+  <section id="reservation" aria-label="Réservation et contact">
+    <div class="wrap">
+      <p class="overtitle" data-reveal>Réservation</p>
+      <h2 data-reveal style="margin-bottom:0">Votre transat<br><em>vous attend.</em></h2>
+      <div class="resa-grid">
+        <form class="resa-form" id="resaForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <input id="f-nom" name="nom" type="text" placeholder=" " autocomplete="name" required>
+              <label for="f-nom">Nom</label>
+            </div>
+            <div class="field">
+              <input id="f-tel" name="tel" type="tel" placeholder=" " autocomplete="tel" required>
+              <label for="f-tel">Téléphone</label>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <input id="f-date" name="date" type="date" placeholder=" " required>
+              <label for="f-date">Date</label>
+            </div>
+            <div class="field">
+              <select id="f-couverts" name="couverts" required>
+                <option value="" selected disabled></option>
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7">7 personnes</option>
+                <option value="8">8 personnes et +</option>
+              </select>
+              <label for="f-couverts">Personnes</label>
+            </div>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" placeholder=" " rows="3"></textarea>
+            <label for="f-msg">Message (transats, table, anniversaire…)</label>
+          </div>
+          <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center">
+            <span>Demander une réservation</span><span class="arr">→</span>
+          </button>
+          <p style="margin-top:18px;font-size:.85rem;color:var(--kelp);text-align:center">
+            Confirmation par téléphone aux horaires d’ouverture.</p>
+          <div class="form-done" id="formDone" role="status">
+            <p class="serif"><em>Merci !</em></p>
+            <p>Votre demande est bien partie. Nous vous rappelons très vite pour confirmer.<br>
+            Pressé·e ? <a class="lnk" href="tel:+33613888227" style="color:var(--sea)">06 13 88 82 27</a></p>
+          </div>
+        </form>
+        <div class="resa-info">
+          <div class="info-block" data-reveal>
+            <h4>Adresse</h4>
+            <p><a class="lnk" href="https://maps.google.com/?q=43.119134,6.360247" target="_blank" rel="noopener">
+              Plage de la Favière<br>83230 Bormes-les-Mimosas</a></p>
+          </div>
+          <div class="info-block" data-reveal>
+            <h4>Horaires</h4>
+            <table class="hours">
+              <tr><td>Tous les jours, en saison</td><td>8 h – 22 h</td></tr>
+              <tr><td>Saison 2026</td><td>2 juin – 30 sept.</td></tr>
+              <tr><td>Hors saison</td><td class="closed">Fermé</td></tr>
+            </table>
+          </div>
+          <div class="info-block" data-reveal>
+            <h4>Contact</h4>
+            <p><a class="lnk" href="tel:+33613888227">06 13 88 82 27</a><br>
+            <a class="lnk" href="https://www.instagram.com/lapayottebysj/" target="_blank" rel="noopener">@lapayottebysj</a><br>
+            <a class="lnk" href="https://www.facebook.com/lapayotteplage/" target="_blank" rel="noopener">Facebook</a></p>
+          </div>
+          <div class="map-frame" data-reveal>
+            <iframe title="Plan d'accès — La Payotte by SJ, plage de la Favière, Bormes-les-Mimosas"
+              src="https://www.google.com/maps?q=43.119134,6.360247&z=16&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 10 · FOOTER -->
+<footer aria-label="Pied de page">
+  <div class="foot-mark" aria-hidden="true">La Payotte</div>
+  <div class="foot-in">
+    <div>
+      <p class="foot-logo">La Payotte<small>by SJ</small></p>
+      <p style="margin-top:14px;max-width:24em;color:rgba(247,241,230,.6)">
+        Plage privée, restaurant et bar à tapas — plage de la Favière, Bormes-les-Mimosas.</p>
+    </div>
+    <div>
+      <h5>Trouver</h5>
+      <ul>
+        <li><a class="lnk" href="https://maps.google.com/?q=43.119134,6.360247" target="_blank" rel="noopener">Plage de la Favière, Bormes</a></li>
+        <li><a class="lnk" href="tel:+33613888227">06 13 88 82 27</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Suivre</h5>
+      <ul>
+        <li><a class="lnk" href="https://www.instagram.com/lapayottebysj/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a class="lnk" href="https://www.facebook.com/lapayotteplage/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="lnk" href="#avis">Avis Google</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Le reste</h5>
+      <ul>
+        <li><a class="lnk" href="#carte">La carte</a></li>
+        <li><a class="lnk" href="#reservation">Réserver</a></li>
+        <li><a class="lnk" href="#" aria-disabled="true">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 La Payotte by SJ — Tous droits réservés</span>
+    <span>Fait avec ☀️ à La Favière</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+'use strict';
+
+/* ————— environnement ————— */
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE    = window.matchMedia('(pointer: fine)').matches;
+var hasGSAP = typeof gsap !== 'undefined';
+if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
+
+/* ————— préchargement réel + compteur ————— */
+var PRELOAD = [
+  'assets/planche-hero.jpg','assets/deck.jpg','assets/plage.jpg',
+  'assets/bar.jpg','assets/tapas.jpg','assets/parillada.jpg'
+];
+var loadedImgs = {};
+var preCount = document.querySelector('.pre-count');
+var preEl = document.getElementById('preloader');
+var done = 0, total = PRELOAD.length + 1; /* +1 : fontes */
+var shown = 0, target = 0, cntRaf;
+
+function tickCounter(){
+  shown += (target - shown) * 0.14;
+  if (preCount) preCount.textContent = Math.round(shown);
+  if (shown < 99.5) cntRaf = requestAnimationFrame(tickCounter);
+  else { if (preCount) preCount.textContent = 100; }
+}
+function step(){ done++; target = Math.round(done/total*100); }
+
+var loaders = PRELOAD.map(function(src){
+  return new Promise(function(res){
+    var im = new Image();
+    im.crossOrigin = 'anonymous';
+    im.onload = function(){ loadedImgs[src] = im; step(); res(); };
+    im.onerror = function(){ step(); res(); };
+    im.src = src;
+  });
+});
+loaders.push((document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(step));
+cntRaf = requestAnimationFrame(tickCounter);
+
+/* ————— split du titre héro ————— */
+function splitTitle(){
+  var h = document.getElementById('heroTitle');
+  if (!h) return [];
+  var chars = [];
+  function wrap(node, italic){
+    var txt = node.textContent;
+    var frag = document.createDocumentFragment();
+    var words = txt.split(' ');
+    words.forEach(function(w, wi){
+      if (wi > 0) frag.appendChild(document.createTextNode(' '));
+      if (!w) return;
+      var ws = document.createElement('span'); ws.className = 'word';
+      for (var i=0;i<w.length;i++){
+        var s = document.createElement('span');
+        s.className = 'char'; s.textContent = w[i];
+        if (italic) s.style.fontStyle = 'italic';
+        ws.appendChild(s); chars.push(s);
+      }
+      frag.appendChild(ws);
+    });
+    node.parentNode.replaceChild(frag, node);
+  }
+  var em = h.querySelector('em');
+  var emText = em ? em.textContent : '';
+  var beforeText = h.childNodes[0] && h.childNodes[0].nodeType===3 ? h.childNodes[0].textContent : '';
+  h.textContent = '';
+  var l1 = document.createElement('span'); l1.className='line';
+  var l2 = document.createElement('span'); l2.className='line';
+  l1.appendChild(document.createTextNode(beforeText));
+  l2.appendChild(document.createTextNode(emText));
+  h.appendChild(l1); h.appendChild(l2);
+  wrap(l1.firstChild,false); wrap(l2.firstChild,true);
+  return chars;
+}
+
+/* ============================================================
+   SCÈNE 3D — le grand plat de la mer qui raconte la plage
+   ============================================================ */
+var three = null;
+function initThree(){
+  if (REDUCED || typeof THREE === 'undefined') return null;
+  var canvas = document.getElementById('scene');
+  function isMobile(){ return window.innerWidth < 900; }
+  var renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true, antialias:!isMobile(), powerPreference:'high-performance'});
+  } catch(e){ document.body.classList.add('no3d'); document.querySelector('.hero-fallback').style.display='block'; return null; }
+
+  var DPR = Math.min(window.devicePixelRatio||1, isMobile()?1.25:1.75);
+  renderer.setPixelRatio(DPR);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+
+  var scene = new THREE.Scene();
+  var cam = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, .1, 40);
+  cam.position.set(0,0,5.6);
+
+  scene.add(new THREE.AmbientLight(0xfff2e2, .78));
+  var key = new THREE.DirectionalLight(0xfff8ee, .95); key.position.set(-2.4,1.8,3); scene.add(key);
+  var fill = new THREE.DirectionalLight(0xdff2f5, .28); fill.position.set(2.6,-.6,2); scene.add(fill);
+  var sunset = new THREE.PointLight(0xff8a3a, 0, 9, 1.8); sunset.position.set(1.5,-.3,1.6); scene.add(sunset);
+
+  /* — texture : photo masquée en cercle via canvas — */
+  var heroImg = loadedImgs['assets/planche-hero.jpg'];
+  var texSize = 1024;
+  var pc = document.createElement('canvas'); pc.width = pc.height = texSize;
+  var px = pc.getContext('2d');
+  if (heroImg) px.drawImage(heroImg, 0, 0, texSize, texSize);
+  px.globalCompositeOperation = 'destination-in';
+  var g = px.createRadialGradient(texSize/2,texSize/2, texSize/2*0.80, texSize/2,texSize/2, texSize/2*0.875);
+  g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)');
+  px.fillStyle = g; px.fillRect(0,0,texSize,texSize);
+  var dishTex = new THREE.CanvasTexture(pc);
+  dishTex.encoding = THREE.sRGBEncoding;
+  dishTex.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
+
+  /* — géométrie : disque bombé (rebord gaussien + dôme) — */
+  var DISH_R = 1.55;
+  var PLANE = 2*DISH_R/0.84;
+  var SEG = isMobile() ? 72 : 116;
+  var topGeo = new THREE.PlaneGeometry(PLANE, PLANE, SEG, SEG);
+  (function(){
+    var pos = topGeo.attributes.position;
+    for (var i=0;i<pos.count;i++){
+      var x = pos.getX(i), y = pos.getY(i);
+      var rn = Math.hypot(x,y)/DISH_R;
+      var z = 0;
+      if (rn <= 1.08){
+        var rim  = 0.20*Math.exp(-Math.pow((rn-0.90)/0.105,2));
+        var dome = 0.055*Math.max(0,1-rn*rn);
+        var n = Math.sin(x*13.7+y*9.3)*Math.cos(x*7.1-y*11.9)*0.011*(rn<1?1:0.3);
+        z = rim + dome + n;
+      }
+      pos.setZ(i,z);
+    }
+    topGeo.computeVertexNormals();
+  })();
+  var topMat = new THREE.MeshStandardMaterial({map:dishTex, transparent:true, roughness:.7, metalness:0,
+    emissive:new THREE.Color(0xff6a20), emissiveIntensity:0});
+  var top = new THREE.Mesh(topGeo, topMat);
+
+  /* tranche : le bord du plat (acier sombre) */
+  var sideGeo = new THREE.CylinderGeometry(DISH_R*0.985, DISH_R*0.9, .17, 96, 1, true);
+  sideGeo.rotateX(Math.PI/2);
+  var sideMat = new THREE.MeshStandardMaterial({color:0x34393d, roughness:.55, metalness:.35});
+  var side = new THREE.Mesh(sideGeo, sideMat); side.position.z = -0.085;
+
+  var botGeo = new THREE.CircleGeometry(DISH_R*0.9, 64);
+  var botMat = new THREE.MeshStandardMaterial({color:0x2a2e31, roughness:.6, metalness:.3});
+  var bot = new THREE.Mesh(botGeo, botMat); bot.position.z = -0.17; bot.rotation.y = Math.PI;
+
+  /* poignées du plat */
+  var handleMat = new THREE.MeshStandardMaterial({color:0x3b4145, roughness:.45, metalness:.5});
+  var hGeo = new THREE.TorusGeometry(.2, .028, 10, 32, Math.PI);
+  var h1 = new THREE.Mesh(hGeo, handleMat); h1.rotation.z = -Math.PI/2; h1.position.set(DISH_R*0.99, 0, 0.06);
+  var h2 = new THREE.Mesh(hGeo, handleMat); h2.rotation.z =  Math.PI/2; h2.position.set(-DISH_R*0.99, 0, 0.06);
+
+  var gDish = new THREE.Group();
+  gDish.add(top); gDish.add(side); gDish.add(bot); gDish.add(h1); gDish.add(h2);
+  scene.add(gDish);
+
+  /* — ombre de contact — */
+  var sc = document.createElement('canvas'); sc.width = sc.height = 256;
+  var sx = sc.getContext('2d');
+  var sg = sx.createRadialGradient(128,128,20,128,128,120);
+  sg.addColorStop(0,'rgba(10,30,38,.85)'); sg.addColorStop(1,'rgba(10,30,38,0)');
+  sx.fillStyle = sg; sx.fillRect(0,0,256,256);
+  var shadow = new THREE.Mesh(
+    new THREE.PlaneGeometry(4.4,4.4),
+    new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc), transparent:true, opacity:.16, depthWrite:false})
+  );
+  shadow.position.z = -0.8;
+  scene.add(shadow);
+
+  /* — garnitures qui s'envolent (gambas, moules, citron) — */
+  var toppings = [];
+  function surfZ(rn){ return 0.20*Math.exp(-Math.pow((rn-0.90)/0.105,2)) + 0.055*Math.max(0,1-rn*rn); }
+  function addTopping(mesh, label, r, ang, orbR, orbZ){
+    var home = new THREE.Vector3(Math.cos(ang)*r, Math.sin(ang)*r, surfZ(r/DISH_R)+0.06);
+    var away = new THREE.Vector3(Math.cos(ang)*orbR, Math.sin(ang)*orbR*0.82, orbZ);
+    mesh.position.copy(home);
+    gDish.add(mesh);
+    toppings.push({m:mesh, home:home, away:away, label:label, spin:(Math.random()*.7+.3)*(Math.random()<.5?-1:1)});
+  }
+  var shrimpMat = new THREE.MeshStandardMaterial({color:0xf0794e, roughness:.5});
+  var musselMat = new THREE.MeshStandardMaterial({color:0x1d2433, roughness:.3, metalness:.2});
+  var lemonSide = new THREE.MeshStandardMaterial({color:0xf2c230, roughness:.5});
+  var lemonTop  = new THREE.MeshStandardMaterial({color:0xfbe58a, roughness:.45});
+  var i, ang;
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+.5;
+    var shrimp = new THREE.Mesh(new THREE.TorusGeometry(.13,.055,10,20,Math.PI*1.35), shrimpMat);
+    var wrapS = new THREE.Group(); wrapS.add(shrimp);
+    addTopping(wrapS,'Gambas', .95, ang, 2.0+.15*i, .45+.18*i);
+  }
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+1.6;
+    var mus = new THREE.Mesh(new THREE.SphereGeometry(.15,20,16), musselMat);
+    mus.scale.set(1,.55,.4);
+    var wrapM = new THREE.Group(); wrapM.add(mus);
+    addTopping(wrapM,'Moules', .55, ang, 1.75+.2*i, -.35-.14*i);
+  }
+  for (i=0;i<3;i++){
+    ang = i*(Math.PI*2/3)+2.7;
+    var lg = new THREE.CylinderGeometry(.14,.14,.04,24);
+    var lem = new THREE.Mesh(lg,[lemonSide,lemonTop,lemonSide]);
+    lem.rotation.x = Math.PI/2;
+    var wrapL = new THREE.Group(); wrapL.add(lem);
+    addTopping(wrapL,'Citron', 1.15, ang, 2.25+.12*i, .3-.5*i);
+  }
+
+  /* — état piloté par le scroll — */
+  var S = {x:1.42,y:-.08,scale:.9,rotX:-.38,explode:0,brown:0,fire:0,spin:.09,shadowOp:.16,alpha:1};
+  var lastAlpha = -1;
+  var mouse = {x:0,y:0};
+  if (FINE) window.addEventListener('pointermove', function(e){
+    mouse.x = (e.clientX/window.innerWidth - .5);
+    mouse.y = (e.clientY/window.innerHeight - .5);
+  }, {passive:true});
+
+  /* « coucher de soleil » : le plat se dore quand on arrive au dimanche */
+  var warmFrom = new THREE.Color(0xffffff), warmTo = new THREE.Color(0xffc48e);
+  var sideFrom = new THREE.Color(0x34393d), sideTo = new THREE.Color(0x6b4a2e);
+  var tmpC = new THREE.Color();
+
+  var clock = new THREE.Clock();
+  var running = true;
+  document.addEventListener('visibilitychange', function(){ running = !document.hidden; if(running) loop(); });
+
+  function loop(){
+    if (!running) return;
+    requestAnimationFrame(loop);
+    var dt = Math.min(clock.getDelta(), .05);
+    var t = clock.elapsedTime;
+
+    /* état recalculé chaque frame depuis les sondes de scroll (écrivain unique) */
+    if (window.__payotteCompute) window.__payotteCompute();
+    if (Math.abs(S.alpha - lastAlpha) > .01){ lastAlpha = S.alpha; canvas.style.opacity = S.alpha; }
+
+    gDish.position.x = S.x + Math.sin(t*.6)*.02;
+    gDish.position.y = S.y + Math.sin(t*.9)*.035;
+    gDish.scale.setScalar(S.scale);
+    gDish.rotation.x = S.rotX + (FINE? -mouse.y*.1 : 0);
+    gDish.rotation.y = (FINE? mouse.x*.14 : 0);
+    gDish.rotation.z += S.spin*dt;
+
+    shadow.position.x = gDish.position.x + .35;
+    shadow.position.y = gDish.position.y - .55;
+    shadow.scale.setScalar(S.scale);
+    shadow.material.opacity = S.shadowOp * Math.min(1,S.scale);
+
+    for (var j=0;j<toppings.length;j++){
+      var tp = toppings[j];
+      var e = Math.max(0, Math.min(1, S.explode*1.25 - j*0.022));
+      e = e*e*(3-2*e);
+      tp.m.position.lerpVectors(tp.home, tp.away, e);
+      tp.m.scale.setScalar(Math.max(.001, e));
+      tp.m.visible = e > .02;
+      tp.m.rotation.z += tp.spin*dt*e;
+      tp.m.rotation.x = e * Math.sin(t*.8+j)*.5;
+    }
+
+    tmpC.copy(warmFrom).lerp(warmTo, S.brown); topMat.color.copy(tmpC);
+    tmpC.copy(sideFrom).lerp(sideTo, S.brown*.9); sideMat.color.copy(tmpC);
+    var pulse = .5+.5*Math.sin(t*6.3)+.22*Math.sin(t*13.1);
+    topMat.emissiveIntensity = S.fire * (0.10 + 0.07*pulse);
+    sunset.intensity = S.fire * (1.5 + .8*pulse);
+
+    renderer.render(scene, cam);
+  }
+  loop();
+
+  window.addEventListener('resize', function(){
+    cam.aspect = window.innerWidth/window.innerHeight;
+    cam.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  /* — étiquettes au survol des garnitures (desktop) — */
+  var tip = document.getElementById('tooltip3d');
+  if (FINE && tip){
+    var ray = new THREE.Raycaster();
+    var v2 = new THREE.Vector2();
+    var meshes = [];
+    toppings.forEach(function(tp){ tp.m.children.forEach(function(c){ c.userData.label = tp.label; meshes.push(c); }); });
+    window.addEventListener('pointermove', function(e){
+      if (S.explode < .4){ tip.classList.remove('on'); return; }
+      v2.x = (e.clientX/window.innerWidth)*2-1;
+      v2.y = -(e.clientY/window.innerHeight)*2+1;
+      ray.setFromCamera(v2, cam);
+      var hit = ray.intersectObjects(meshes, false)[0];
+      if (hit){
+        tip.textContent = hit.object.userData.label;
+        tip.style.left = e.clientX+'px'; tip.style.top = e.clientY+'px';
+        tip.classList.add('on');
+      } else tip.classList.remove('on');
+    }, {passive:true});
+  }
+
+  return {S:S};
+}
+
+/* ============================================================
+   INIT après préchargement
+   ============================================================ */
+Promise.all(loaders).then(function(){ requestAnimationFrame(start); });
+
+function start(){
+  var chars = splitTitle();
+  three = initThree();
+  var S = three ? three.S : null;
+
+  /* — Lenis + ScrollTrigger — */
+  if (!REDUCED && typeof Lenis !== 'undefined' && hasGSAP){
+    var lenis = new Lenis({duration:1.15, easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(time){ lenis.raf(time*1000); });
+    gsap.ticker.lagSmoothing(0);
+    document.documentElement.classList.add('lenis','lenis-smooth');
+  }
+
+  /* — sortie du préloader + entrée du héro — */
+  cancelAnimationFrame(cntRaf);
+  if (preCount) preCount.textContent = '100';
+  if (hasGSAP && !REDUCED){
+    var heroFades = gsap.utils.toArray('[data-hero-fade]');
+    gsap.set(chars, {yPercent:110, rotate:4});
+    gsap.set(heroFades, {autoAlpha:0, y:26});
+    gsap.set('#nav', {autoAlpha:0, y:-16});
+    var tl = gsap.timeline();
+    tl.to('.pre-inner', {autoAlpha:0, y:-30, duration:.5, ease:'power2.in', delay:.25})
+      .to('#preloader', {clipPath:'inset(0 0 100% 0)', duration:1.05, ease:'expo.inOut'})
+      .set('#preloader',{display:'none'})
+      .to(chars, {yPercent:0, rotate:0, duration:1.15, ease:'expo.out', stagger:.03}, '-=.55')
+      .to('#nav', {autoAlpha:1, y:0, duration:.8, ease:'power3.out'}, '-=.8')
+      .to(heroFades, {autoAlpha:1, y:0, duration:.9, ease:'power3.out', stagger:.09}, '-=.75');
+  } else {
+    preEl.style.display = 'none';
+  }
+
+  /* — nav au scroll — */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  /* — lecture des vidéos à l'entrée du viewport — */
+  var vids = [].slice.call(document.querySelectorAll('video[data-autoplay]'));
+  if ('IntersectionObserver' in window){
+    var vio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var v = en.target;
+        if (en.isIntersecting && !REDUCED){ v.play().catch(function(){}); }
+        else v.pause();
+      });
+    }, {threshold:.25});
+    vids.forEach(function(v){ vio.observe(v); });
+  }
+
+  /* — date min du formulaire = aujourd'hui — */
+  var fd = document.getElementById('f-date');
+  if (fd) fd.min = new Date().toISOString().slice(0,10);
+  var sel = document.getElementById('f-couverts');
+  if (sel) sel.addEventListener('change', function(){ sel.classList.toggle('filled', !!sel.value); });
+
+  /* — formulaire (front seul : à brancher sur l'outil de réservation) — */
+  var form = document.getElementById('resaForm');
+  if (form) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+    [].slice.call(form.children).forEach(function(ch){ if (ch.id!=='formDone') ch.style.display='none'; });
+    document.getElementById('formDone').style.display = 'block';
+  });
+
+  /* — curseur custom — */
+  var cursor = document.getElementById('cursor');
+  if (FINE && cursor && !REDUCED){
+    var cx=-100, cy=-100, tx=-100, ty=-100;
+    window.addEventListener('pointermove', function(e){
+      tx=e.clientX; ty=e.clientY; cursor.classList.add('on');
+    }, {passive:true});
+    (function moveCursor(){
+      cx += (tx-cx)*.22; cy += (ty-cy)*.22;
+      cursor.style.transform = 'translate('+(cx-7)+'px,'+(cy-7)+'px)';
+      requestAnimationFrame(moveCursor);
+    })();
+    document.addEventListener('mouseover', function(e){
+      cursor.classList.toggle('big', !!e.target.closest('a,button,.dish,.avis-card,video'));
+    });
+  }
+
+  if (!hasGSAP) return;
+
+  /* — compteur abonnés — */
+  var matu = {v:0};
+  var matuEl = document.getElementById('matuCount');
+  function renderMatu(){ if (matuEl) matuEl.textContent = Math.round(matu.v); }
+  if (REDUCED){ matu.v = 29; renderMatu(); }
+
+  /* — carrousel : boucle infinie + drag — */
+  (function(){
+    var track = document.getElementById('avisTrack');
+    if (!track) return;
+    var cards = [].slice.call(track.children);
+    cards.forEach(function(c){ var cl = c.cloneNode(true); cl.setAttribute('aria-hidden','true'); track.appendChild(cl); });
+    var half = 0, x = 0, dragX = 0, dragging = false, startX = 0, startOffset = 0, vel = 0;
+    function measure(){ half = track.scrollWidth/2; }
+    measure(); window.addEventListener('resize', measure);
+    track.addEventListener('pointerdown', function(e){
+      dragging = true; startX = e.clientX; startOffset = dragX; vel = 0;
+      track.classList.add('dragging'); track.setPointerCapture(e.pointerId);
+    });
+    track.addEventListener('pointermove', function(e){
+      if (!dragging) return;
+      var nd = startOffset + (e.clientX - startX);
+      vel = nd - dragX; dragX = nd;
+    });
+    ['pointerup','pointercancel'].forEach(function(ev){
+      track.addEventListener(ev, function(){ dragging = false; track.classList.remove('dragging'); });
+    });
+    var hov = false;
+    track.addEventListener('mouseenter', function(){ hov = true; });
+    track.addEventListener('mouseleave', function(){ hov = false; });
+    gsap.ticker.add(function(t2, dtMs){
+      var dt = dtMs/1000;
+      if (!dragging){
+        if (!hov && !REDUCED) x -= 34*dt;
+        vel *= .94; dragX += vel;
+      }
+      var tot = x + dragX;
+      if (half>0){ tot = ((tot % half) + half) % half; tot -= half; }
+      track.style.transform = 'translate3d('+tot+'px,0,0)';
+    });
+  })();
+
+  /* ————— chorégraphie par breakpoint ————— */
+  var mm = gsap.matchMedia();
+
+  mm.add({
+    desk: '(min-width: 900px) and (prefers-reduced-motion: no-preference)',
+    mob:  '(max-width: 899px) and (prefers-reduced-motion: no-preference)'
+  }, function(ctx){
+    var desk = ctx.conditions.desk;
+
+    /* 3 · rail horizontal épinglé (desktop) */
+    var track = document.getElementById('hTrack');
+    var ingST;
+    if (desk){
+      var hTween = gsap.to(track,{
+        x:function(){ return -(track.scrollWidth - window.innerWidth); }, ease:'none',
+        scrollTrigger:{
+          trigger:'#ingredients', start:'top top',
+          end:function(){ return '+=' + (track.scrollWidth - window.innerWidth); },
+          pin:true, scrub:1, invalidateOnRefresh:true, anticipatePin:1
+        }});
+      ingST = hTween.scrollTrigger;
+    } else {
+      ingST = ScrollTrigger.create({trigger:'#ingredients', start:'top 70%', end:'bottom 60%'});
+    }
+
+    /* 4 · la plage : masque circulaire + compteur (épinglé sur desktop) */
+    var clipTween = gsap.fromTo('#pateImg',
+      {clipPath:'circle(16% at 50% 50%)'},
+      {clipPath:'circle(70.7% at 50% 50%)', ease:'none', scrollTrigger:{
+        trigger:'#plage', start:desk?'top top':'top 75%', end:desk?'+=160%':'bottom 70%',
+        pin:desk, scrub:1, invalidateOnRefresh:true,
+        onUpdate:function(self){ matu.v = Math.min(1, self.progress*1.25)*29; renderMatu(); }
+      }});
+    var pateSTr = clipTween.scrollTrigger;
+
+    /* sondes passives : la boucle 3D lit leurs progressions chaque frame */
+    var P = {
+      hist:  ScrollTrigger.create({trigger:'#histoire', start:'top bottom', end:'top top'}),
+      four:  ScrollTrigger.create({trigger:'#concerts', start:'top bottom', end:'top 15%'}),
+      fire:  ScrollTrigger.create({trigger:'#concerts', start:'top 70%', end:'top 10%'}),
+      brown: ScrollTrigger.create({trigger:'#concerts', start:'top 40%', end:'bottom 60%'}),
+      carte: ScrollTrigger.create({trigger:'#carte', start:'top bottom', end:'top 25%'})
+    };
+
+    function L(a,b,t){ return a+(b-a)*t; }
+    function C(v){ return Math.max(0,Math.min(1,v)); }
+    window.__payotteCompute = function(){
+      if (!S) return;
+      var p1 = P.hist.progress, p2 = ingST.progress, p3 = pateSTr.progress,
+          p4 = P.four.progress, pf = P.fire.progress, pb = P.brown.progress,
+          p5 = P.carte.progress;
+      var x, y, sc, rx;
+      if (desk){
+        x = L(1.42, 1.5, p1); y = L(-.08, .05, p1); sc = L(.9, 1.04, p1); rx = L(-.38, 0, p1);
+        x = L(x, -1.9, C(p2*1.15)); y = L(y, -1.2, C(p2*1.4)); sc = L(sc, .62, C(p2*1.6));
+        x = L(x, -2.7, C((p3-.45)*1.9)); y = L(y, -1.95, C((p3-.45)*1.9));
+        x = L(x, 1.32, p4); y = L(y, -1.32, p4*p4); sc = L(sc, .52, p4); rx = L(rx, -.2, p4);
+        S.alpha = 1;
+      } else {
+        x = 0; y = L(-1.35, -1.5, p1); sc = L(.55, .45, p1); rx = L(-.38, 0, p1);
+        y = L(y, -1.4, p4); sc = L(sc, .5, p4); rx = L(rx, -.2, p4);
+        /* sur mobile, le plat devient un fond discret après le héro */
+        S.alpha = L(1, .16, p1) * (1 - C(p5*1.6));
+      }
+      y = L(y, -3.6, p5); sc = L(sc, .4, p5);
+      S.x = x; S.y = y; S.scale = sc; S.rotX = rx;
+      S.explode = C(p2*2.6) * (1 - C(p3*2.2));
+      S.spin = .09 + p2*.12*(1-p3);
+      S.brown = pb;
+      S.fire = pf * (1-p5);
+      S.shadowOp = .16 * (1-p5);
+    };
+
+    return function(){ window.__payotteCompute = null; };
+  });
+
+  /* — créés APRÈS les pins pour hériter des bons offsets — */
+  if (!REDUCED){
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      if (el.closest('.h-track') && window.innerWidth >= 900) return;
+      gsap.fromTo(el,{autoAlpha:0,y:34},{autoAlpha:1,y:0,duration:1.1,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
+    });
+  }
+
+  /* fond qui évolue (sable → coquillage → sable → dune → sable) */
+  function bgTo(trigger, from, to){
+    gsap.fromTo(document.body,{backgroundColor:from},{backgroundColor:to,immediateRender:false,ease:'none',
+      scrollTrigger:{trigger:trigger,start:'top 85%',end:'top 15%',scrub:1}});
+  }
+  if (!REDUCED){
+    bgTo('#histoire','#F7F1E6','#EFE6D6');
+    bgTo('#plage','#EFE6D6','#F7F1E6');
+    bgTo('#concerts','#F7F1E6','#E6D8C0');
+    bgTo('#carte','#E6D8C0','#F7F1E6');
+  }
+
+  /* parallax ambiance */
+  if (!REDUCED){
+    gsap.fromTo('#ambImg',{yPercent:-9},{yPercent:9,ease:'none',
+      scrollTrigger:{trigger:'#ambiance',start:'top bottom',end:'bottom top',scrub:1}});
+  }
+
+  ScrollTrigger.sort();
+  ScrollTrigger.refresh();
+}
+})();
+</script>
+</body>
+</html>
