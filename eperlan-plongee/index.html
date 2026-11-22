@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#04182B">
+<title>Éperlan Plongée · Cavalaire-sur-Mer · Les grandes épaves du Var</title>
+<meta name="description" content="Club de plongée au port de Cavalaire-sur-Mer : épaves du Rubis, de l'Espingole et du Prophète, bateau Eperlan II, formations FFESSM / CMAS, Nitrox.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/surface.jpg">
+<link rel="icon" href="data:,">
+<style>
+:root{
+  --night:#04182B;
+  --deep:#021120;
+  --ink:#EFF8FF;
+  --soft:rgba(214,236,255,.8);
+  --accent:#46E3D3;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --artH:calc(100vw * 1520 / 2688);
+  --bandH:clamp(120px, 14vw, 220px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--night);-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--ink);font-family:Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;height:64px;padding:0 2.2vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;z-index:50;
+  background:linear-gradient(rgba(4,24,43,.6),rgba(4,24,43,0));font:500 12px/1 Inter,sans-serif;transform:translateY(-100%)}
+.nav{transition:background .4s}
+.nav.scrolled{background:linear-gradient(rgba(4,24,43,.85),rgba(4,24,43,.55) 70%,rgba(4,24,43,0))}
+.nav .l,.nav .r{display:flex;align-items:center}
+.nav .l{gap:5.6vw}
+.nav .r{justify-content:flex-end;gap:2.6vw}
+.nav a.lk{color:rgba(239,248,255,.82);height:44px;display:inline-flex;align-items:center;transition:color .3s;letter-spacing:.02em}
+.nav a.lk:hover{color:#fff}
+.nav .logo{width:44px;height:44px;display:grid;place-items:center}
+.nav .box{height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border:1px solid rgba(239,248,255,.6);border-radius:2px;transition:background .3s,color .3s;white-space:nowrap}
+.nav .box:hover{background:#fff;color:var(--night)}
+.nav .box svg{width:14px;height:14px}
+
+/* ---------- scroller ---------- */
+#scroller{position:fixed;top:0;left:0;width:100%;will-change:transform}
+.scene{position:relative;height:var(--sh,var(--artH));overflow-x:clip;background:var(--deep)}
+#top{overflow:clip}
+.art{position:absolute;top:0;left:0;width:100vw;height:var(--sh,var(--artH))}
+.bg{position:absolute;inset:0;background:var(--img) var(--pos,center) / cover no-repeat}
+.shade{position:absolute;inset:0;pointer-events:none}
+.art > *{position:absolute}
+.art > .bg,.art > .shade{position:absolute}
+
+/* glows */
+.glow,.mist,.sunglow{transform:translate(-50%,-50%);aspect-ratio:1;border-radius:50%;pointer-events:none;mix-blend-mode:screen}
+.glow{background:radial-gradient(closest-side,rgba(160,235,255,.55),rgba(90,180,255,.18) 50%,transparent);animation:breathe 3.8s ease-in-out infinite}
+.mist{aspect-ratio:auto;background:radial-gradient(closest-side,rgba(170,235,255,.45),rgba(120,200,255,.14) 55%,transparent);animation:breathe 4.6s ease-in-out infinite}
+.sunglow{background:radial-gradient(closest-side,rgba(235,252,255,.34),rgba(150,220,255,.14) 50%,transparent);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);filter:brightness(1)}50%{transform:translate(-50%,-50%) scale(1.08);filter:brightness(1.25)}}
+@keyframes flicker{0%{opacity:1}12%{opacity:.78}24%{opacity:1}38%{opacity:.86}52%{opacity:1}66%{opacity:.7}80%{opacity:.95}90%{opacity:.82}}
+
+/* canvases */
+canvas{display:block;pointer-events:none}
+canvas.fall{mix-blend-mode:screen;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(transparent,#000 12%,#000 82%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(transparent,#000 12%,#000 82%,transparent);
+  mask-composite:intersect}
+canvas.dust{inset:0;width:100%;height:100%;mix-blend-mode:screen}
+
+/* sprites (fish) */
+.fish{left:0;top:0;pointer-events:none;will-change:transform;color:var(--fc,#cfefff)}
+.fish svg{width:100%;height:100%;display:block;overflow:visible}
+.fish .b{display:none}
+.fish.down .a{display:none}
+.fish.down .b{display:block}
+.fish.pale{filter:drop-shadow(0 0 8px rgba(170,235,255,.45))}
+
+/* seams */
+.seam{position:relative;height:0;z-index:10;pointer-events:none}
+.band{position:absolute;top:0;left:0;width:100vw;height:var(--bandH);transform:translateY(-50%)}
+.band svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.band canvas{position:absolute;top:0;height:100%;z-index:0}
+
+/* hero copy */
+.hero-copy{position:absolute;left:0;right:0;top:calc(var(--artH) * .085);text-align:center;z-index:6;pointer-events:none}
+.hero-copy h1{font:500 clamp(46px,6.4vw,124px)/1 Oswald,sans-serif;--ls:.42em;letter-spacing:calc(var(--ls) + var(--lsx,0em));padding-left:calc(var(--ls) + var(--lsx,0em));overflow:hidden;padding-top:.14em;text-shadow:0 0 40px rgba(60,160,255,.5);white-space:nowrap}
+.hero-copy h1 span{display:inline-block}
+.hero-copy .sub{position:absolute;left:0;right:0;top:calc(var(--artH) * .145);font:500 clamp(12px,1.18vw,22px)/1.3 Oswald,sans-serif;letter-spacing:.62em;padding-left:.62em;color:#fff;white-space:nowrap}
+
+/* section copy */
+.copy{position:absolute;z-index:6;max-width:520px;padding:26px 28px;border-radius:3px;
+  background:linear-gradient(rgba(3,20,38,.62),rgba(3,20,38,.42));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.copy h2{font:600 clamp(30px,3.4vw,60px)/1.04 Inter,sans-serif;letter-spacing:-.025em}
+.copy .rule{width:150px;height:1px;background:rgba(239,248,255,.45);margin:20px 0 22px;transform-origin:left}
+.copy h3{font:600 15px/1.35 Inter,sans-serif;margin:22px 0 8px}
+.copy .rule + h3,.copy .rule + .ln + h3{margin-top:0}
+.copy p{font:400 14px/1.55 Inter,sans-serif;color:var(--soft);max-width:52ch}
+.copy p + p{margin-top:10px}
+.copy .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 18px;background:#fff;color:var(--night);font:600 12.5px/1 Inter,sans-serif;border-radius:2px;
+  transition:background .3s,color .3s,transform .5s var(--ease)}
+.btn:hover{background:var(--accent);color:#03202a;transform:translateY(-2px)}
+.btn.line{background:transparent;color:var(--ink);border:1px solid rgba(239,248,255,.6)}
+.btn.line:hover{background:var(--accent);color:#03202a;border-color:var(--accent)}
+.depth{display:inline-block;font:500 12px/1 Oswald,sans-serif;letter-spacing:.18em;color:var(--accent);margin-left:8px;vertical-align:1px}
+.boat{margin-top:18px;display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:center}
+.boat img{width:132px;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:2px}
+.boat p{font-size:13px}
+.quote{margin-top:18px;padding-left:14px;border-left:1px solid rgba(70,227,211,.6)}
+.quote p{font-style:italic;color:var(--ink)}
+.quote small{display:block;margin-top:6px;font:400 12px/1.4 Inter,sans-serif;color:var(--soft)}
+.prices{margin-top:4px;display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:5px;font:400 13.5px/1.45 Inter,sans-serif;color:var(--soft)}
+.prices b{font-weight:600;color:var(--ink);text-align:right;white-space:nowrap}
+.note{font:400 12px/1.45 Inter,sans-serif!important;color:rgba(214,236,255,.62)!important;margin-top:10px}
+.copy.center{text-align:center;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.copy.center .rule{margin-left:auto;margin-right:auto;transform-origin:center}
+.copy.center p{margin-left:auto;margin-right:auto}
+.copy.center .btns{justify-content:center}
+.copy.center h2,.copy.center p{text-shadow:0 2px 18px rgba(2,17,32,.85)}
+.info{margin-top:22px;font:400 13px/1.6 Inter,sans-serif;color:var(--soft)}
+.info .soc{display:flex;justify-content:center;gap:6px;margin-top:6px}
+.info .soc a{height:44px;display:inline-flex;align-items:center;padding:0 12px;color:var(--ink);border-bottom:1px solid transparent}
+.info .soc a:hover{color:var(--accent)}
+
+/* reveal lines */
+.js .ln{display:block;overflow:hidden}
+.js .ln > span{display:block}
+.js .copy:not(.shown) .ln > *{transform:translateY(105%)}
+.js .copy:not(.shown) .rule{transform:scaleX(0)}
+
+/* cursor lamp */
+.lamp{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:40;mix-blend-mode:screen;
+  background:radial-gradient(closest-side,rgba(190,235,255,.15),rgba(120,200,255,.055) 55%,transparent);display:none}
+@media (pointer:fine){.lamp{display:block}}
+
+/* depth gauge (desktop) */
+.gauge{position:fixed;right:2.2vw;top:50%;transform:translateY(-50%);z-index:45;display:flex;align-items:center;gap:10px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;color:rgba(239,248,255,.85);pointer-events:none}
+.gauge .track{width:1px;height:160px;background:rgba(239,248,255,.25);position:relative}
+.gauge .dot{position:absolute;left:-3px;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+
+/* ---------- responsive ---------- */
+@media (max-width:899px){
+  :root{--artH:max(calc(100vw * 1520 / 2688), 92svh);--bandH:130px}
+  .art{width:calc(var(--sh,var(--artH)) * 2688 / 1520);left:calc(50vw - var(--focus) * var(--sh,var(--artH)) * 2688 / 1520 / 100)}
+  .band{width:calc(var(--lowH) * 2688 / 1520);left:calc(50vw - var(--focus) * var(--lowH) * 2688 / 1520 / 100)}
+  .nav{height:56px;grid-template-columns:auto 1fr;padding:0 16px}
+  .nav .l,.nav .r a.lk{display:none}
+  .nav .c{order:-1}
+  .nav .box{font-size:13px}
+  .hero-copy{top:calc(var(--artH) * .11)}
+  .hero-copy h1{font-size:9.6vw;--ls:.14em}
+  .hero-copy .sub{font-size:12px;letter-spacing:.32em;padding-left:.32em;top:calc(9.6vw * 1.14 + 30px)}
+  .copy{left:16px!important;right:16px!important;width:auto!important;max-width:none;top:calc(var(--artH) * .24)!important;padding:18px;transform:none!important;
+    background:linear-gradient(rgba(4,24,43,.8),rgba(4,24,43,.55));-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+  .copy h2{font-size:30px}
+  .copy p{font-size:13.5px}
+  .copy.center{top:calc(var(--artH) * .22)!important;background:linear-gradient(rgba(4,24,43,.55),rgba(4,24,43,.25))}
+  .gauge{display:none}
+  .nav.scrolled .box{background:rgba(4,24,43,.7)}
+  .boat{grid-template-columns:110px 1fr}
+  .boat img{width:110px}
+  .btn{font-size:13px}
+}
+@media (min-width:600px) and (max-width:899px){
+  .copy:not(.center){right:auto!important;width:min(560px, calc(100vw - 32px))!important}
+}
+@media (prefers-reduced-motion:reduce){
+  .glow,.mist,.sunglow{animation:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fa" viewBox="0 0 100 50"><path d="M15 25C26 8 58 5 80 21c5 3 5 5 0 8C58 45 26 42 15 25Z" fill="currentColor"/><path d="M19 25 2 12l5 13-5 13Z" fill="currentColor"/><circle cx="72" cy="22" r="2.4" fill="#021120" opacity=".7"/></symbol>
+    <symbol id="fb" viewBox="0 0 100 50"><path d="M15 25C26 8 58 5 80 21c5 3 5 5 0 8C58 45 26 42 15 25Z" fill="currentColor"/><path d="M19 25 5 8l1 17-3 15Z" fill="currentColor"/><circle cx="72" cy="22" r="2.4" fill="#021120" opacity=".7"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <nav class="l">
+    <a class="lk" href="#club">Le club</a>
+    <a class="lk" href="#epaves">Les épaves</a>
+    <a class="lk" href="#plongees">Formations</a>
+  </nav>
+  <div class="c">
+    <a class="logo" href="#top" aria-label="Éperlan Plongée, retour en haut">
+      <svg width="26" height="24" viewBox="0 0 26 24" aria-hidden="true"><path d="M1 2h11v20H1z" fill="#fff"/><path d="M12 2h13l-6 10 6 10H12z" fill="#2F8FE0"/><path d="M12 2h13l-6 10 6 10H12z" fill="none" stroke="#fff" stroke-width="1.2"/></svg>
+    </a>
+  </div>
+  <div class="r">
+    <a class="lk" href="#plongees">Tarifs</a>
+    <a class="lk" href="#contact">Contact</a>
+    <a class="box" href="tel:+33609756217"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+  </div>
+</header>
+
+<div class="gauge" aria-hidden="true"><span id="gaugeTxt">0 M</span><div class="track"><div class="dot" id="gaugeDot"></div></div></div>
+
+<main id="scroller">
+
+  <!-- 1. HERO : la surface -->
+  <section class="scene" id="top" style="--focus:42">
+    <div class="art" id="heroArt">
+      <div class="bg" style="--img:url('assets/surface.jpg');--pos:50% 45%"></div>
+      <div class="shade" style="background:radial-gradient(120% 70% at 50% 0%,rgba(2,17,32,.35),transparent 60%)"></div>
+      <div class="sunglow" style="left:41%;top:61%;width:21%"></div>
+      <canvas class="fall" data-kind="column" data-speed="1" style="left:38.6%;top:58%;width:6.8%;height:24%"></canvas>
+      <div class="mist" style="left:42%;top:72%;width:22%;height:9%"></div>
+      <canvas class="fall" data-kind="column" data-speed="1.15" style="left:36%;top:74%;width:12%;height:34%"></canvas>
+      <div class="glow" style="left:24%;top:30%;width:3%"></div>
+      <div class="glow" style="left:31%;top:46%;width:2.4%"></div>
+      <div class="glow" style="left:58%;top:36%;width:2.6%"></div>
+      <div class="glow" style="left:66%;top:52%;width:3.4%"></div>
+      <div class="glow" style="left:79%;top:40%;width:2.4%"></div>
+      <div class="glow" style="left:13%;top:62%;width:3.6%"></div>
+      <div class="glow" style="left:88%;top:66%;width:3.8%"></div>
+      <canvas class="dust" data-kind="wisp" data-n="70"></canvas>
+      <div class="fish pale" data-mode="wander" data-x="21" data-y="34" data-w="3.2" style="--fc:#d8f3ff"></div>
+      <div class="fish pale" data-mode="wander" data-x="78" data-y="26" data-w="2.6" style="--fc:#d8f3ff"></div>
+      <div class="fish pale" data-mode="wander" data-x="64" data-y="48" data-w="2.2" style="--fc:#d8f3ff"></div>
+      <div class="fish" data-mode="cross" data-y="12" data-w="2.4" style="--fc:#0b2a44"></div>
+      <div class="fish" data-mode="cross" data-y="20" data-w="1.8" style="--fc:#0b2a44"></div>
+      <div class="fish" data-mode="cross" data-y="28" data-w="2.2" style="--fc:#0b2a44"></div>
+      <div class="fish" data-mode="cross" data-y="16" data-w="1.6" style="--fc:#0b2a44"></div>
+    </div>
+    <div class="hero-copy" id="heroCopy">
+      <h1 id="title" aria-label="Éperlan">ÉPERLAN</h1>
+      <div class="sub" id="sub">PLONGÉE · CAVALAIRE-SUR-MER</div>
+    </div>
+  </section>
+
+  <div class="seam" data-seed="11" data-open="42" style="--focus:42"><div class="band"></div></div>
+
+  <!-- 2. LE CLUB -->
+  <section class="scene" id="club" style="--focus:42">
+    <div class="art">
+      <div class="bg" style="--img:url('assets/merou.jpg');--pos:50% 40%"></div>
+      <canvas class="fall" data-kind="column" data-speed=".9" style="left:38.6%;top:0;width:6.8%;height:100%"></canvas>
+      <div class="glow" style="left:46%;top:14%;width:9%"></div>
+      <div class="glow" style="left:30%;top:22%;width:5%"></div>
+      <div class="glow" style="left:62%;top:20%;width:5.6%"></div>
+      <canvas class="dust" data-kind="mote" data-n="50"></canvas>
+      <div class="fish pale" data-mode="wander" data-x="14" data-y="22" data-w="2.2"></div>
+    </div>
+    <div class="copy" style="left:55%;top:24%;width:36%">
+      <h2 data-split>Le club</h2>
+      <div class="rule"></div>
+      <p data-split>Au port de Cavalaire, l'Éperlan accueille les plongeurs de tous niveaux d'avril à novembre : baptêmes, enfants, formations, plongée encadrée, autonome ou technique.</p>
+      <p data-split>Momo, le gérant, et son équipe tiennent à trois mots : détente, sécurité, convivialité. Des îles d'Hyères jusqu'au large du cap Camarat, le bateau rejoint roches, tombants et grandes épaves.</p>
+      <div class="boat" data-block>
+        <img src="assets/eperlan-ii.jpg" alt="Le bateau Eperlan II en navigation au large de Cavalaire" loading="lazy" width="900" height="506">
+        <p><b style="color:var(--ink);font-weight:600">L'Eperlan II</b> : vedette en aluminium de 15 m, jusqu'à 35 plongeurs, deux échelles sur mesure et douchette à eau chaude.</p>
+      </div>
+      <div class="quote" data-block>
+        <p>« Le meilleur club de plongée du secteur. Momo, le patron est un vrai pro. »</p>
+        <small>Olivier H., témoignage publié par le club · 4,7/5 sur cursosdebuceo (62 avis)</small>
+      </div>
+      <div class="btns" data-block><a class="btn" href="#epaves">Voir les épaves</a></div>
+    </div>
+  </section>
+
+  <div class="seam" data-seed="23" data-open="42" style="--focus:42"><div class="band"></div></div>
+
+  <!-- 3. LES ÉPAVES -->
+  <section class="scene" id="epaves" style="--focus:42">
+    <div class="art">
+      <div class="bg" style="--img:url('assets/prophete.jpg');--pos:50% 60%"></div>
+      <canvas class="fall" data-kind="column" data-speed="1.05" style="left:38.6%;top:0;width:6.8%;height:62%"></canvas>
+      <div class="mist" style="left:42%;top:60%;width:22%;height:10%"></div>
+      <canvas class="dust" data-kind="spray" data-n="60" data-x="34" data-w="16" data-y="48" data-h="18"></canvas>
+      <div class="fish pale" data-mode="wander" data-x="74" data-y="56" data-w="2.4"></div>
+    </div>
+    <div class="copy" style="left:6.5%;top:24%;width:31%">
+      <h2 data-split>Les grandes épaves</h2>
+      <div class="rule"></div>
+      <h3 data-split>Le Prophète. <span class="depth">−34 M</span></h3>
+      <p data-split>Construit à Sète en 1853, coulé en mars 1860 avec une cargaison de blé, au sud-est du cap Lardier. Sur le sable, ses chaudières et un grand volant. À partir du niveau 2.</p>
+      <h3 data-split>L'Espingole. <span class="depth">−34 à −39 M</span></h3>
+      <p data-split>Contre-torpilleur de 1900, échoué sur la basse du Taillat le 4 février 1903, puis coulé en baie de Cavalaire pendant son remorquage. Éponges violettes, mérous, dentis et congres. À partir du niveau 3.</p>
+      <div class="btns" data-block><a class="btn" href="#plongees">Le programme</a></div>
+    </div>
+  </section>
+
+  <div class="seam" data-seed="37" data-open="42" style="--focus:42"><div class="band"></div></div>
+
+  <!-- 4. PLONGÉES & FORMATIONS -->
+  <section class="scene" id="plongees" style="--focus:42">
+    <div class="art">
+      <div class="bg" style="--img:url('assets/espingole.jpg');--pos:50% 55%"></div>
+      <canvas class="fall" data-kind="column" data-speed="1" style="left:38.6%;top:0;width:6.8%;height:40%"></canvas>
+      <canvas class="fall" data-kind="stream" data-speed=".55" style="left:61.2%;top:52%;width:1.8%;height:28%"></canvas>
+      <canvas class="fall" data-kind="stream" data-speed=".6" style="left:68.4%;top:58%;width:1.8%;height:25%"></canvas>
+      <canvas class="fall" data-kind="stream" data-speed=".5" style="left:75.5%;top:55%;width:1.8%;height:25%"></canvas>
+      <div class="glow" style="left:70%;top:22%;width:14%"></div>
+      <canvas class="dust" data-kind="bubble" data-n="22" data-x="58" data-w="26" data-y="40" data-h="40"></canvas>
+    </div>
+    <div class="copy" style="left:6.5%;top:25%;width:31%">
+      <h2 data-split>Plongées &amp; formations</h2>
+      <div class="rule"></div>
+      <h3 data-split>L'été, départ à 8 h 30.</h3>
+      <p data-split>En juillet et août, une grande sortie chaque matin : le Prophète le lundi, les îles d'Hyères le mardi, le Rubis le jeudi, l'Espingole le samedi. L'après-midi, départ à 14 h 30 pour explorations, baptêmes et formations.</p>
+      <h3 data-split>Formations FFESSM / CMAS.</h3>
+      <p data-split>Enfants de 8 à 12 ans, niveaux 1, 2 et 3, Nitrox simple et confirmé. Station de gonflage avec Nitrox, ouverte toute l'année.</p>
+      <h3 data-split>Tarifs.</h3>
+      <div class="prices" data-block>
+        <span>Plongée encadrée</span><b>70 €</b>
+        <span>Plongée autonome (niveau 3)</span><b>50 €</b>
+        <span>Plongée technique</span><b>95 €</b>
+        <span>Baptême, tout compris</span><b>100 €</b>
+        <span>Formation niveau 1</span><b>500 €</b>
+        <span>Supplément Rubis</span><b>5 €</b>
+      </div>
+      <p class="note" data-split>Gonflage compris. Tarifs publiés par le club, à confirmer à la réservation.</p>
+    </div>
+  </section>
+
+  <div class="seam" data-seed="53" data-open="-1" style="--focus:42"><div class="band"></div></div>
+
+  <!-- 5. FINALE : le Rubis -->
+  <section class="scene" id="contact" style="--focus:42">
+    <div class="art">
+      <div class="bg" style="--img:url('assets/rubis.jpg');--pos:50% 60%"></div>
+      <div class="shade" style="background:linear-gradient(rgba(2,17,32,.35),transparent 55%)"></div>
+      <div class="sunglow" style="left:44%;top:6%;width:19%"></div>
+      <canvas class="fall" data-kind="column" data-speed=".8" style="left:38.6%;top:58%;width:6.8%;height:30%"></canvas>
+      <canvas class="dust" data-kind="shimmer" data-n="90" data-x="30" data-w="30" data-y="2" data-h="22"></canvas>
+      <div class="glow" style="left:44%;top:46%;width:5%"></div>
+      <div class="fish pale" data-mode="wander" data-x="66" data-y="44" data-w="2.6"></div>
+      <div class="fish pale" data-mode="wander" data-x="24" data-y="54" data-w="2.2"></div>
+      <div class="fish pale" data-mode="cross" data-y="30" data-w="1.8"></div>
+      <div class="fish pale" data-mode="cross" data-y="38" data-w="1.6"></div>
+      <div class="fish pale" data-mode="cross" data-y="24" data-w="2"></div>
+    </div>
+    <div class="copy center" style="left:50%;transform:translateX(-50%);top:16%;width:60%">
+      <h2 data-split style="font-size:clamp(34px,4.4vw,78px)">Rendez-vous sur le Rubis.</h2>
+      <div class="rule"></div>
+      <p data-split>Sous-marin mouilleur de mines lancé à Toulon en 1931, sabordé au large du cap Camarat en 1958. Il repose droit sur le sable, par 41 m de fond.</p>
+      <div class="btns" data-block>
+        <a class="btn" href="tel:+33609756217">Appeler le 06 09 75 62 17</a>
+        <a class="btn line" href="mailto:eperlan83@orange.fr">Écrire un e-mail</a>
+      </div>
+      <div class="info" data-block>
+        <p>Port de Cavalaire, place Sainte-Estelle, face à la Maison de la Mer · 83240 Cavalaire-sur-Mer<br>Ouvert d'avril à novembre</p>
+        <div class="soc"><a href="https://www.instagram.com/eperlan_plongee/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/eperlancavalaire/" target="_blank" rel="noopener">Facebook</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div class="lamp" id="lamp"></div>
+
+<script>
+(() => {
+  const doc = document.documentElement;
+  doc.classList.add('js');
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const scroller = document.getElementById('scroller');
+  const scenes = [...document.querySelectorAll('.scene')];
+  const seams = [...document.querySelectorAll('.seam')];
+  const heroArt = document.getElementById('heroArt');
+  const heroCopy = document.getElementById('heroCopy');
+  const title = document.getElementById('title');
+  const sub = document.getElementById('sub');
+  const isMobile = () => innerWidth < 900;
+  const DPR = () => Math.min(devicePixelRatio || 1, isMobile() ? 1.25 : 1.5);
+  const ease = 'cubic-bezier(.2,.8,.2,1)';
+
+  /* ---------- seeded random ---------- */
+  const rng = s => () => (s = (s * 16807) % 2147483647) / 2147483647;
+
+  /* ---------- seam bands (drawn reef strata) ---------- */
+  function seamSVG(seed, open) {
+    const R = rng(seed * 997 + 13), W = 1000, H = 200, id = 's' + seed;
+    const hasOpen = open >= 0, ox = open * 10, ow = 70;
+    const gl = ox - ow / 2, gr = ox + ow / 2;
+    // reef floor: rounded boulders of varying size
+    const top = [];
+    for (let x = -20; x <= W + 40;) { const w = 18 + R() * 70, h = 6 + R() * 26 * (R() < .25 ? 1.5 : 1); top.push([x, 58 + (R() - .5) * 10]); top.push([x + w * .5, 58 - h]); x += w; }
+    // cave ceiling: lumps and narrow drips
+    const bot = [];
+    for (let x = -20; x <= W + 40;) {
+      const w = 22 + R() * 60; bot.push([x, 140 + (R() - .5) * 10]); bot.push([x + w * .5, 140 + 6 + R() * 16]);
+      if (R() < .3) { const dx = x + w * .8; bot.push([dx, 146]); bot.push([dx + 3, 168 + R() * 22]); bot.push([dx + 6, 146]); }
+      x += w;
+    }
+    const yAt = (arr, x) => { for (let i = 1; i < arr.length; i++) if (arr[i][0] >= x) { const a = arr[i - 1], b = arr[i], t = (x - a[0]) / ((b[0] - a[0]) || 1); return a[1] + (b[1] - a[1]) * t; } return arr[arr.length - 1][1]; };
+    const seg = (arr, x0, x1) => [[x0, yAt(arr, x0)], ...arr.filter(p => p[0] > x0 && p[0] < x1), [x1, yAt(arr, x1)]];
+    const smooth = (pts, closed) => { // quadratic through midpoints
+      const m = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2], f = p => p[0].toFixed(1) + ' ' + p[1].toFixed(1);
+      let d = closed ? 'M' + f(m(pts[pts.length - 1], pts[0])) : 'M' + f(pts[0]);
+      const n = pts.length;
+      for (let i = closed ? 0 : 1; i < (closed ? n : n - 1); i++) d += 'Q' + f(pts[i]) + ' ' + f(m(pts[i], pts[(i + 1) % n]));
+      if (!closed) d += 'L' + f(pts[n - 1]);
+      return d + (closed ? 'Z' : '');
+    };
+    const gapEdge = (x, dir) => { const pts = []; const y0 = yAt(top, x), y1 = yAt(bot, x); for (let i = 1; i < 5; i++) pts.push([x + dir * (2 + R() * 10), y0 + (y1 - y0) * i / 5]); return pts; };
+    const block = (x0, x1, dy1, dy2, le, re) => {
+      let pts = seg(top, x0, x1).map(p => [p[0], p[1] + dy1]);
+      if (re) pts = pts.concat(re);
+      pts = pts.concat(seg(bot, x0, x1).reverse().map(p => [p[0], p[1] + dy2]));
+      if (le) pts = pts.concat([...le].reverse());
+      return pts;
+    };
+    const parts = hasOpen ? [[-30, gl, null, gapEdge(gl, -1)], [gr, W + 30, gapEdge(gr, 1), null]] : [[-30, W + 30, null, null]];
+    let out = `<defs>
+      <linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16507A"/><stop offset=".22" stop-color="#062440"/><stop offset=".6" stop-color="#021120"/><stop offset="1" stop-color="#0A2E4C"/></linearGradient>
+      <linearGradient id="${id}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D6494"/><stop offset=".4" stop-color="#0A3556"/><stop offset="1" stop-color="#0D3A5E"/></linearGradient>
+      <filter id="${id}n" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .35" numOctaves="2" seed="${seed}"/><feColorMatrix values="0 0 0 0 .6  0 0 0 0 .85  0 0 0 0 1  0 0 0 1.4 -.72"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    </defs>`;
+    parts.forEach(([a, b, le, re]) => out += `<path d="${smooth(block(a, b, -14, 12, le, re), true)}" fill="url(#${id}b)"/>`);
+    const front = parts.map(([a, b, le, re]) => smooth(block(a, b, 0, 0, le, re), true)).join('');
+    out += `<path d="${front}" fill="url(#${id}g)"/>`;
+    out += `<path d="${front}" fill="#fff" filter="url(#${id}n)" opacity=".28"/>`;
+    parts.forEach(([a, b]) => {
+      out += `<path d="${smooth(seg(top, a, b), false)}" fill="none" stroke="rgba(150,230,255,.7)" stroke-width="1.4" vector-effect="non-scaling-stroke"/>`;
+      out += `<path d="${smooth(seg(bot, a, b), false)}" fill="none" stroke="rgba(90,185,240,.35)" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
+    });
+    // posidonia tufts on the reef floor
+    for (let i = 0; i < 22; i++) {
+      const x = R() * W; if (hasOpen && x > gl - 16 && x < gr + 16) continue;
+      const y = yAt(top, x) + 3, n = 4 + (R() * 5 | 0);
+      for (let k = 0; k < n; k++) { const bx = x + (k - n / 2) * 2, h = 10 + R() * 22, c = (R() - .5) * 16; out += `<path d="M${bx.toFixed(1)} ${y.toFixed(1)}q${(c * .3).toFixed(1)} ${(-h * .6).toFixed(1)} ${c.toFixed(1)} ${(-h).toFixed(1)}" stroke="${k % 2 ? '#0B3B5E' : '#145A86'}" stroke-width="1.6" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`; }
+    }
+    // gorgonian fans under the ceiling
+    const fan = (x, y, len, ang, d) => { if (!d) return ''; const x2 = x + Math.cos(ang) * len, y2 = y + Math.sin(ang) * len; return `<path d="M${x.toFixed(1)} ${y.toFixed(1)}L${x2.toFixed(1)} ${y2.toFixed(1)}" stroke="#0E3F63" stroke-width="${(d * .45 + .4).toFixed(2)}" stroke-linecap="round" vector-effect="non-scaling-stroke"/>` + fan(x2, y2, len * .74, ang - .45 + (R() - .5) * .3, d - 1) + fan(x2, y2, len * .74, ang + .45 + (R() - .5) * .3, d - 1); };
+    for (let i = 0; i < 8; i++) { const x = 20 + R() * 960; if (hasOpen && x > gl - 30 && x < gr + 30) continue; out += fan(x, yAt(bot, x) - 3, 8 + R() * 6, Math.PI / 2 + (R() - .5) * .6, 4); }
+    return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${out}</svg>`;
+  }
+  seams.forEach(s => {
+    const band = s.querySelector('.band');
+    const open = +s.dataset.open;
+    band.innerHTML = seamSVG(+s.dataset.seed, open);
+    if (open >= 0) {
+      const c = document.createElement('canvas');
+      c.className = 'fall seamfall';
+      c.dataset.kind = 'column'; c.dataset.speed = '1'; c.dataset.body = '1';
+      const w = 12.6; c.style.left = (open - w / 2) + '%'; c.style.width = w + '%';
+      band.prepend(c);
+    }
+  });
+
+  /* ---------- bubble sprites ---------- */
+  function mkSprite(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); return c; }
+  const bubbleSpr = mkSprite(32, 32, (g) => {
+    const gr = g.createRadialGradient(16, 16, 9, 16, 16, 15);
+    gr.addColorStop(0, 'rgba(160,225,255,0.05)'); gr.addColorStop(.82, 'rgba(200,244,255,.55)'); gr.addColorStop(1, 'rgba(200,244,255,0)');
+    g.fillStyle = gr; g.beginPath(); g.arc(16, 16, 15, 0, 7); g.fill();
+    g.fillStyle = 'rgba(255,255,255,.9)'; g.beginPath(); g.arc(11.5, 11, 3, 0, 7); g.fill();
+  });
+  const streakSpr = [
+    mkSprite(8, 160, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, 'rgba(190,240,255,0)'); gr.addColorStop(.35, 'rgba(210,248,255,.9)'); gr.addColorStop(1, 'rgba(120,200,255,0)'); g.fillStyle = gr; g.fillRect(2, 0, 4, h); }),
+    mkSprite(8, 160, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, 'rgba(120,190,255,0)'); gr.addColorStop(.5, 'rgba(140,215,255,.75)'); gr.addColorStop(1, 'rgba(90,150,255,0)'); g.fillStyle = gr; g.fillRect(2, 0, 4, h); })
+  ];
+
+  /* ---------- rising bubble columns (canvas.fall) ---------- */
+  const falls = [...document.querySelectorAll('canvas.fall')].map(c => ({ c, g: c.getContext('2d'), kind: c.dataset.kind, sp: +c.dataset.speed || 1, body: !!c.dataset.body, parts: [], w: 0, h: 0 }));
+  function sizeFall(f) {
+    const w = f.c.offsetWidth, h = f.c.offsetHeight, d = DPR();
+    f.w = w; f.h = h; f.c.width = Math.max(1, w * d | 0); f.c.height = Math.max(1, h * d | 0); f.g.setTransform(d, 0, 0, d, 0, 0);
+    const mob = isMobile() ? .55 : 1;
+    const n = Math.round((f.kind === 'column' ? Math.round(w / 2.2) * 2 : Math.round(w / 3) * 3) * mob);
+    f.parts = [];
+    for (let i = 0; i < n; i++) {
+      const streak = f.kind === 'column' && Math.random() < .28;
+      const x = f.kind === 'column' ? Math.random() * w : w * .25 + Math.random() * w * .5;
+      f.parts.push({ x, streak, spr: Math.random() < .45 ? 0 : 1,
+        r: f.kind === 'column' ? .8 + Math.random() * 3.2 : 1 + Math.random() * 2.2,
+        len: streak ? 60 + Math.random() * 220 : 8,
+        v: streak ? 260 + Math.random() * 240 : (f.kind === 'column' ? 70 + Math.random() * 150 : 60 + Math.random() * 90),
+        ph: Math.random() * 5000, a: .18 + Math.random() * .55, wob: Math.random() * 6 });
+    }
+  }
+  function drawFall(f, t) {
+    const g = f.g, w = f.w, h = f.h; g.globalCompositeOperation = 'source-over'; g.clearRect(0, 0, w, h);
+    if (f.body) {
+      const vg = g.createLinearGradient(0, 0, 0, h);
+      vg.addColorStop(0, 'rgba(6,40,70,0)'); vg.addColorStop(.2, 'rgba(6,40,70,1)'); vg.addColorStop(.8, 'rgba(6,40,70,1)'); vg.addColorStop(1, 'rgba(6,40,70,0)');
+      g.fillStyle = vg; g.fillRect(0, 0, w, h);
+      const gr = g.createLinearGradient(0, 0, w, 0);
+      gr.addColorStop(0, 'rgba(60,140,230,0)'); gr.addColorStop(.18, 'rgba(70,160,235,.55)'); gr.addColorStop(.5, 'rgba(150,225,255,.85)'); gr.addColorStop(.82, 'rgba(70,160,235,.55)'); gr.addColorStop(1, 'rgba(60,140,230,0)');
+      g.fillStyle = gr; g.fillRect(0, 0, w, h);
+    }
+    g.globalCompositeOperation = 'lighter';
+    for (const p of f.parts) {
+      const span = h + p.len, y = h - ((t * p.v * f.sp + p.ph) % span);
+      const dim = f.kind === 'column' ? 1 - Math.pow(Math.abs(p.x / w - .5) * 2, 2) * .6 : 1;
+      g.globalAlpha = p.a * dim;
+      if (p.streak) {
+        g.drawImage(streakSpr[p.spr], p.x, y, Math.max(.8, p.r * .9), p.len);
+        g.drawImage(streakSpr[p.spr], p.x, y + span, Math.max(.8, p.r * .9), p.len);
+      } else {
+        const x = p.x + Math.sin(t * 2.2 + p.ph) * p.wob * .5, s = p.r * 2.4;
+        g.drawImage(bubbleSpr, x - s / 2, y - s / 2, s, s);
+        g.drawImage(bubbleSpr, x - s / 2, y + span - s / 2, s, s);
+      }
+    }
+    g.globalAlpha = 1;
+  }
+
+  /* ---------- particle canvases (canvas.dust) ---------- */
+  const dusts = [...document.querySelectorAll('canvas.dust')].map(c => ({ c, g: c.getContext('2d'), kind: c.dataset.kind, n: +c.dataset.n || 40,
+    box: { x: (+c.dataset.x || 0) / 100, w: (c.dataset.w ? +c.dataset.w : 100) / 100, y: (+c.dataset.y || 0) / 100, h: (c.dataset.h ? +c.dataset.h : 100) / 100 }, parts: [], w: 0, h: 0 }));
+  function sizeDust(d) {
+    const w = d.c.offsetWidth, h = d.c.offsetHeight, r = DPR();
+    d.w = w; d.h = h; d.c.width = Math.max(1, w * r | 0); d.c.height = Math.max(1, h * r | 0); d.g.setTransform(r, 0, 0, r, 0, 0);
+    const n = Math.round(d.n * (isMobile() ? .5 : 1));
+    d.parts = Array.from({ length: n }, () => ({ u: Math.random(), v: Math.random(), r: Math.random(), ph: Math.random() * 6.28, sp: .4 + Math.random() * .8 }));
+  }
+  function drawDust(d, t) {
+    const g = d.g, W = d.w, H = d.h, B = d.box; g.clearRect(0, 0, W, H);
+    const bx = B.x * W, by = B.y * H, bw = B.w * W, bh = B.h * H;
+    for (const p of d.parts) {
+      if (d.kind === 'wisp') {
+        let v = (p.v - t * .02 * p.sp) % 1; if (v < 0) v += 1; const rise = 1 - v;
+        const x = (.15 + p.u * .7 + Math.sin(t + p.ph) * .012) * W, y = v * H, a = Math.min(1, rise / .25) * Math.abs(Math.sin(2 * t + p.ph)) * .9;
+        g.fillStyle = `rgba(190,240,255,${a})`; g.beginPath(); g.arc(x, y, .8 + p.r * 1.8, 0, 7); g.fill();
+      } else if (d.kind === 'mote') {
+        let v = (p.v - t * .008 * p.sp) % 1; if (v < 0) v += 1;
+        const x = (p.u + Math.sin(t * .5 + p.ph) * .02) * W, a = .25 + p.r * .5;
+        g.fillStyle = `rgba(170,225,255,${a})`; g.beginPath(); g.arc(x, v * H, .6 + p.r * 1.4, 0, 7); g.fill();
+      } else if (d.kind === 'spray') {
+        const life = (t * p.sp * .5 + p.ph) % 1;
+        const x = bx + bw * .5 + (p.r - .5) * .6 * bw * life * 1.6, y = by + bh - life * life * .9 * bh;
+        g.fillStyle = `rgba(200,245,255,${(1 - life) * .8})`; g.beginPath(); g.arc(x, y, .7 + p.u * 1.6, 0, 7); g.fill();
+      } else if (d.kind === 'bubble') {
+        const life = (t * p.sp * .16 + p.ph) % 1, a = Math.sin(life * Math.PI) * .9;
+        const x = bx + p.u * bw + Math.sin(1.4 * t + p.ph) * .03 * bw, y = by + bh - life * bh, r = (2 + p.r * 7) * W / 1440;
+        const gr = g.createRadialGradient(x - r * .3, y - r * .3, 0, x, y, r);
+        gr.addColorStop(0, `rgba(235,250,255,${a})`); gr.addColorStop(.6, `rgba(140,210,255,${.35 * a})`); gr.addColorStop(1, 'rgba(120,200,255,0)');
+        g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+      } else if (d.kind === 'shimmer') {
+        const a = Math.max(0, Math.sin(t * (1.2 + 2 * p.r) + p.ph)) * .7, spread = .3 + p.v * .7;
+        const x = bx + bw * (.5 + (p.u - .5) * spread), y = by + p.v * bh, len = 6 + p.r * 12;
+        const lg = g.createLinearGradient(x - len / 2, 0, x + len / 2, 0); lg.addColorStop(0, 'rgba(215,245,255,0)'); lg.addColorStop(.5, `rgba(215,245,255,${a * .55})`); lg.addColorStop(1, 'rgba(215,245,255,0)');
+        g.fillStyle = lg; g.fillRect(x - len / 2, y, len, 1);
+      }
+    }
+  }
+
+  /* ---------- fish sprites ---------- */
+  const fishes = [...document.querySelectorAll('.fish')].map((el, i) => {
+    el.innerHTML = '<svg class="a"><use href="#fa"/></svg><svg class="b"><use href="#fb"/></svg>';
+    const cross = el.dataset.mode === 'cross';
+    return { el, art: el.closest('.art'), cross, x: +el.dataset.x || 0, y: +el.dataset.y || 0, wp: +el.dataset.w || 2,
+      ph: Math.random() * 6.28, ox: 0, oy: 0, dur: 9 + Math.random() * 7, off: Math.random(), amp: 1 + Math.random() * 3,
+      flap: 1 / (6 + Math.random() * 4), last: 0, down: false, size: cross ? (1.6 + Math.random() * 1.6) : 0 };
+  });
+  let mx = -9999, my = -9999;
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+
+  /* ---------- reveal (line splitting) ---------- */
+  const copies = [...document.querySelectorAll('.copy')];
+  copies.forEach(cp => {
+    cp.querySelectorAll('[data-block]').forEach(el => { const w = document.createElement('div'); w.className = 'ln'; el.replaceWith(w); w.appendChild(el); });
+    cp._els = [...cp.querySelectorAll('[data-split]')]; cp._els.forEach(el => el._orig = el.innerHTML);
+  });
+  function splitCopy(cp) {
+    cp._els.forEach(el => {
+      el.innerHTML = el._orig;
+      // wrap words (keep inline tags intact by working on child nodes)
+      const words = [];
+      const walk = (node, wrap) => {
+        [...node.childNodes].forEach(n => {
+          if (n.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            n.textContent.split(/(\s+)/).forEach(tk => { if (!tk) return; if (/^\s+$/.test(tk)) frag.appendChild(document.createTextNode(tk)); else { const s = document.createElement('span'); s.textContent = tk; s.style.display = 'inline-block'; frag.appendChild(s); words.push(s); } });
+            n.replaceWith(frag);
+          } else if (n.nodeType === 1) { n.style.display = 'inline-block'; words.push(n); }
+        });
+      };
+      walk(el);
+      const lines = []; let top = null;
+      words.forEach(w => { const t = w.offsetTop; if (top === null || Math.abs(t - top) > 4) { lines.push([]); top = t; } lines[lines.length - 1].push(w.outerHTML); });
+      el.innerHTML = lines.map(l => `<span class="ln"><span>${l.join(' ')}</span></span>`).join('');
+    });
+  }
+  function revealCopy(cp) {
+    if (cp._done) return; cp._done = true;
+    const spans = [...cp.querySelectorAll('.ln > *')], rule = cp.querySelector('.rule');
+    cp.classList.add('shown');
+    if (RM) return;
+    spans.forEach((s, i) => s.animate([{ transform: 'translateY(105%)' }, { transform: 'translateY(0)' }], { duration: 1000, delay: i * 80, easing: ease, fill: 'backwards' }));
+    if (rule) rule.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 1100, delay: 160, easing: ease, fill: 'backwards' });
+    const total = 1000 + spans.length * 80 + 50;
+    setTimeout(() => cp._els.forEach(el => el.innerHTML = el._orig), total);
+  }
+
+  /* ---------- layout ---------- */
+  let artH = 0, heroH = 0, total = 0;
+  function layout() {
+    const probe = scenes[0];
+    probe.style.removeProperty('--sh');
+    artH = probe.offsetHeight;
+    scenes.forEach((s, i) => {
+      s.style.removeProperty('--sh');
+      const cp = s.querySelector('.copy');
+      let h = artH;
+      if (cp) { const need = cp.offsetTop + cp.offsetHeight + (isMobile() ? 86 : 120); h = Math.max(artH, need); }
+      s.style.setProperty('--sh', h + 'px');
+    });
+    seams.forEach(sm => { const low = sm.nextElementSibling; sm.style.setProperty('--lowH', low.offsetHeight + 'px'); });
+    heroH = scenes[0].offsetHeight;
+    total = scroller.offsetHeight;
+    document.body.style.height = total + 'px';
+    falls.forEach(sizeFall); dusts.forEach(sizeDust);
+    copies.forEach(cp => { if (!cp._done) splitCopy(cp); });
+    // depth anchors
+    anchors = scenes.map((s, i) => ({ y: s.offsetTop, d: [0, 18, 34, 39, 41][i] }));
+  }
+  let anchors = [];
+
+  /* ---------- anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1), el = document.getElementById(id); if (!el) return;
+    e.preventDefault();
+    const sec = el.closest('.scene') || el;
+    let y = sec.offsetTop; if (sec.id !== 'top') y += isMobile() ? 0 : 0;
+    scrollTo(0, Math.min(y, total - innerHeight));
+  }));
+
+  /* ---------- intro ---------- */
+  const letters = [...title.textContent].map(ch => `<span>${ch}</span>`).join('');
+  title.innerHTML = letters;
+  function intro() {
+    const nav = document.getElementById('nav');
+    if (RM) { nav.style.transform = 'none'; return; }
+    [...title.children].forEach((s, i) => s.animate([{ transform: 'translateY(110%)' }, { transform: 'translateY(0)' }], { duration: 1200, delay: 250 + i * 70, easing: ease, fill: 'backwards' }));
+    const mob = isMobile();
+    sub.animate([{ letterSpacing: '1.4em', transform: 'translateY(14px)', clipPath: 'inset(0 50% 0 50%)' }, { letterSpacing: mob ? '.32em' : '.62em', transform: 'translateY(0)', clipPath: 'inset(0 0% 0 0%)' }], { duration: 1600, delay: 900, easing: ease, fill: 'backwards' });
+    heroArt.animate([{ transform: 'scale(1.09)' }, { transform: 'scale(1)' }], { duration: 2600, easing: ease, composite: 'add' });
+    nav.animate([{ transform: 'translateY(-100%)' }, { transform: 'translateY(0)' }], { duration: 900, delay: 500, easing: ease, fill: 'both' });
+  }
+
+  /* ---------- main loop ---------- */
+  let cur = scrollY, lastT = performance.now(), lx = innerWidth / 2, ly = innerHeight / 2;
+  const navEl = document.getElementById('nav');
+  const lamp = document.getElementById('lamp'), gTxt = document.getElementById('gaugeTxt'), gDot = document.getElementById('gaugeDot');
+  const t0 = performance.now();
+  function frame(now) {
+    const dt = Math.min(.05, (now - lastT) / 1000); lastT = now;
+    const t = RM ? 0 : (now - t0) / 1000;
+    const target = scrollY;
+    if (RM) cur = target; else { cur += (target - cur) * (1 - Math.exp(-7.5 * dt)); if (Math.abs(target - cur) < .05) cur = target; }
+    scroller.style.transform = `translate3d(0,${-cur}px,0)`;
+    navEl.classList.toggle('scrolled', cur > 40);
+
+    // hero parallax
+    const hp = Math.min(1, Math.max(0, cur / heroH));
+    heroArt.style.transform = `translate3d(0,${cur * .32}px,0)`;
+    heroCopy.style.transform = `translate3d(0,${cur * .55}px,0)`;
+    title.style.setProperty('--lsx', (hp * .18).toFixed(3) + 'em');
+
+    // reveals
+    const vh = innerHeight;
+    copies.forEach(cp => { if (!cp._done) { const r = cp.getBoundingClientRect(); if (r.top < vh * .8) revealCopy(cp); } });
+
+    // canvases
+    falls.forEach(f => { const r = f.c.getBoundingClientRect(); if (r.bottom > -50 && r.top < vh + 50) drawFall(f, t); });
+    dusts.forEach(d => { const r = d.c.getBoundingClientRect(); if (r.bottom > 0 && r.top < vh) drawDust(d, t); });
+
+    // fish
+    const rects = new Map();
+    fishes.forEach(F => {
+      let ar = rects.get(F.art); if (!ar) { ar = F.art.getBoundingClientRect(); rects.set(F.art, ar); }
+      if (ar.bottom < -100 || ar.top > vh + 100) return;
+      const W = F.art.offsetWidth, H = F.art.offsetHeight;
+      if (F.cross) {
+        const w = F.size / 100 * W, p = ((t / F.dur + F.off) % 1);
+        const x = (-0.08 + p * 1.16) * W, y = (F.y / 100 + Math.sin(p * 9 + F.off * 6) * F.amp / 100) * H;
+        F.el.style.width = w + 'px'; F.el.style.height = w * .5 + 'px';
+        F.el.style.transform = `translate3d(${x - w / 2}px,${y - w / 4}px,0)`;
+        if (!RM && now - F.last > F.flap * 1000) { F.last = now; F.down = !F.down; F.el.classList.toggle('down', F.down); }
+      } else {
+        const w = F.wp / 100 * W;
+        let bx = (F.x / 100 + Math.sin(.35 * t + F.ph) * .012) * W, by = (F.y / 100 + Math.sin(.9 * t + F.ph) * .014) * H;
+        const sx = ar.left + bx, sy = ar.top + by, dx = sx - mx, dy = sy - my, dd = Math.hypot(dx, dy);
+        let tx = 0, ty = 0;
+        if (dd < 260 && dd > .1) { const f = Math.pow(1 - dd / 260, 1.5) * 90; tx = dx / dd * f; ty = dy / dd * f; }
+        const k = 1 - Math.exp(-3 * dt); F.ox += (tx - F.ox) * k; F.oy += (ty - F.oy) * k;
+        const vx = Math.cos(.35 * t + F.ph) + F.ox * .02, face = vx < 0 ? -1 : 1;
+        const rot = Math.sin(.7 * t + F.ph) * 6 + F.ox * .05;
+        F.el.style.width = w + 'px'; F.el.style.height = w * .5 + 'px';
+        F.el.style.transform = `translate3d(${bx + F.ox - w / 2}px,${by + F.oy - w / 4}px,0) rotate(${rot}deg) scaleX(${face})`;
+        if (!RM && now - F.last > 220) { F.last = now; F.down = !F.down; F.el.classList.toggle('down', F.down); }
+      }
+    });
+
+    // lamp
+    if (mx > -9000) { const k = 1 - Math.exp(-10 * dt); lx += (mx - lx) * k; ly += (my - ly) * k; lamp.style.transform = `translate3d(${lx}px,${ly}px,0)`; }
+
+    // depth gauge
+    if (anchors.length) {
+      const mid = cur + vh * .5; let d = 0;
+      for (let i = 0; i < anchors.length; i++) { const a = anchors[i], b = anchors[i + 1]; if (!b) { d = a.d; break; } if (mid < b.y) { d = a.d + (b.d - a.d) * Math.max(0, (mid - a.y) / (b.y - a.y)); break; } }
+      const max = Math.max(1, total - vh);
+      gTxt.textContent = (d < .5 ? '0' : '−' + Math.round(d)) + ' M';
+      gDot.style.top = (Math.min(1, cur / max) * 153) + 'px';
+    }
+    requestAnimationFrame(frame);
+  }
+
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 120); });
+  const start = () => { layout(); intro(); requestAnimationFrame(frame); };
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(start);
+})();
+</script>
+</body>
+</html>
