@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Mas du Lingousto · Hôtel ★★★★ & restaurant gastronomique à Cuers (Var)</title>
+<meta name="description" content="Le Mas du Lingousto, hôtel 4 étoiles et table gastronomique (1 toque Gault&Millau) au milieu des vignes à Cuers, dans le Var : 22 chambres, piscine, mariages et séminaires.">
+<meta property="og:title" content="Le Mas du Lingousto · Cuers">
+<meta property="og:description" content="Table gastronomique, 22 chambres, piscine et réceptions dans un mas provençal au cœur des vignes.">
+<meta property="og:image" content="assets/mas-vignes-aerien.jpg">
+<meta name="theme-color" content="#F5EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%23231910%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-family=%22Georgia%22 font-size=%2232%22 text-anchor=%22middle%22 fill=%22%23D9A35F%22%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/mas-vignes-aerien.jpg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":["Hotel","Restaurant"],
+  "name":"Le Mas du Lingousto",
+  "starRating":{"@type":"Rating","ratingValue":"4"},
+  "servesCuisine":["Gastronomique","Provençale"],
+  "telephone":"+33494286910",
+  "email":"contact@lingousto.fr",
+  "numberOfRooms":22,
+  "address":{"@type":"PostalAddress","streetAddress":"934 avenue Henri et Eugénie Majastre","postalCode":"83390","addressLocality":"Cuers","addressRegion":"Var","addressCountry":"FR"},
+  "amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Piscine extérieure","value":true},{"@type":"LocationFeatureSpecification","name":"Salle de fitness","value":true}],
+  "image":"assets/mas-vignes-aerien.jpg"
+}
+</script>
+<style>
+:root{
+  --bg:#F5EEE2;          /* crème pierre de mas */
+  --bg2:#EEE3D0;
+  --ink:#2A1F16;         /* brun terre */
+  --muted:#6B5B4B;       /* gris chaud */
+  --gold:#B07F3D;        /* or (lisible sur crème) */
+  --gold-l:#D9A35F;      /* or du modèle */
+  --terra:#C0643A;       /* terre cuite (orange brûlé réchauffé) */
+  --olive:#5E6A3A;
+  --night:#231910;
+  --line:rgba(42,31,22,.12);
+  --glass:rgba(255,251,244,.55);
+  --glow:0 0 30px rgba(217,163,95,.18);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gutter:clamp(20px,4vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--bg);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;font-size:clamp(15px,1.05vw,17px)}
+::selection{background:var(--gold-l);color:var(--night)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+
+main{max-width:1280px;margin:0 auto;position:relative}
+section{position:relative;padding:clamp(80px,12vw,150px) var(--gutter)}
+
+/* grain doux */
+#grain{position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* curseur point */
+#cursor{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--gold);z-index:9999;
+  pointer-events:none;transform:translate3d(-50%,-50%,0);opacity:0;transition:width .4s var(--ease),height .4s var(--ease),background .4s,opacity .3s;mix-blend-mode:multiply}
+#cursor.on{opacity:1}
+#cursor.big{width:42px;height:42px;background:rgba(217,163,95,.35)}
+@media (pointer:coarse){#cursor{display:none}}
+
+/* typo */
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;flex:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:clamp(2.1rem,4.4vw,3.6rem);margin:.45em 0 .5em}
+h2 em,h1 em{font-style:italic}
+.gold-text{background:linear-gradient(100deg,#9C6A2C 0%,#D9A35F 45%,#C97A2B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1.02rem,1.2vw,1.15rem);color:var(--muted);max-width:36em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,70px)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:.9em 1.8em;border-radius:999px;
+  font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;transition:all .6s var(--ease);white-space:nowrap}
+.btn-gold{border:1px solid var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold);color:#fff;box-shadow:var(--glow)}
+.btn-fill{background:var(--ink);color:var(--bg);border:1px solid var(--ink)}
+.btn-fill:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn-light{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-light:hover{background:#fff;color:var(--ink)}
+
+/* glass */
+.glass{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6);box-shadow:var(--glow),0 20px 50px -30px rgba(42,31,22,.35)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .6s var(--ease),box-shadow .6s var(--ease)}
+.nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px var(--gutter)}
+.nav.scrolled{background:rgba(245,238,226,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.logo{font-family:var(--serif);font-size:1.45rem;line-height:1.05;display:inline-flex;flex-direction:column;min-height:44px;justify-content:center}
+.logo small{font-family:var(--sans);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-top:3px}
+.nav-links{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:400}
+.nav-links a{position:relative;display:inline-flex;align-items:center;min-height:44px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:8px;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav .nav-call,.nav .burger{display:none}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;border:1px solid rgba(42,31,22,.25);background:rgba(255,251,244,.6)}
+.icon-btn svg{width:18px;height:18px}
+
+/* menu mobile */
+#mnav{position:fixed;inset:0;z-index:950;background:rgba(245,238,226,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  display:flex;flex-direction:column;justify-content:center;padding:90px var(--gutter) 40px;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+#mnav.open{opacity:1;visibility:visible}
+#mnav a{font-family:var(--serif);font-size:2rem;min-height:56px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+#mnav .mnav-foot{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+#mnav .mnav-foot a{font-family:var(--sans);font-size:13px;border:0}
+#mnav .mnav-foot a.btn-gold{border:1px solid var(--gold)}
+#mnav-close{position:absolute;top:16px;right:var(--gutter)}
+
+/* HERO */
+.hero{min-height:100svh;padding:120px var(--gutter) 70px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:var(--bg)}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.hero-bg::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,transparent 55%,rgba(42,31,22,.38) 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(245,238,226,.93) 0%,rgba(245,238,226,.78) 34%,rgba(245,238,226,.15) 62%,transparent 80%)}
+.hero-txt,.hero-card-wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(40px,5.2vw,66px);margin:22px 0 26px;line-height:1.04}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:inline-block}
+.hero-sub{max-width:30em;color:#4A3B2D;font-size:clamp(1rem,1.15vw,1.1rem)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-badges{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap}
+.hero-badges div{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#4A3B2D;line-height:1.5}
+.hero-badges b{display:block;font-family:var(--serif);font-size:1.7rem;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:400}
+.hero-card-wrap{justify-self:end;width:100%;max-width:420px}
+.hero-card{position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(42,31,22,.55),var(--glow);border:1px solid rgba(255,255,255,.6)}
+.hero-card .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s var(--ease)}
+.hero-card .slide.on{opacity:1}
+.hero-card .slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 7s linear}
+.hero-card .slide.on img{transform:scale(1)}
+.hero-tag{position:absolute;left:16px;right:16px;bottom:16px;border-radius:16px;padding:14px 18px;z-index:2;
+  background:rgba(35,25,16,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);color:#fff}
+.hero-tag small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-l);font-weight:500}
+.hero-tag span{font-family:var(--serif);font-size:1.15rem}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#4A3B2D;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-cue i{width:1px;height:44px;background:linear-gradient(var(--gold),transparent);display:block;animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* PLATS */
+.dishes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.dish{border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.dish-img{aspect-ratio:3/4;overflow:hidden}
+.dish-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.dish:hover .dish-img img{transform:scale(1.07)}
+.dish-body{padding:20px 20px 24px}
+.dish-top{display:flex;flex-direction:column;gap:6px}
+.dish h3{font-size:1.3rem}
+.dish-price{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap;font-weight:500}
+.dish p{font-size:.92rem;color:var(--muted);margin-top:8px}
+.note-src{font-size:12px;color:var(--muted);margin-top:26px}
+
+/* MODAL CARTE */
+#menuModal{position:fixed;inset:0;z-index:1000;background:rgba(245,238,226,.86);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  opacity:0;visibility:hidden;transition:opacity .7s var(--ease),visibility .7s;overflow-y:auto;overscroll-behavior:contain}
+#menuModal.open{opacity:1;visibility:visible}
+.modal-in{max-width:980px;margin:0 auto;padding:110px var(--gutter) 80px}
+.modal-close{position:fixed;top:18px;right:var(--gutter);z-index:2}
+.modal-in h2{text-align:center}
+.modal-in .eyebrow{justify-content:center}
+.menu-cat{margin-top:56px}
+.menu-cat h3{font-size:1.6rem;margin-bottom:20px;color:var(--gold);font-style:italic}
+.mi{display:flex;align-items:baseline;gap:14px;padding:12px 0}
+.mi-name{font-family:var(--serif);font-size:1.18rem}
+.mi-name small{display:block;font-family:var(--sans);font-size:.88rem;color:var(--muted);margin-top:3px;font-weight:300}
+.mi-dots{flex:1;border-bottom:1px dashed rgba(42,31,22,.3);transform:translateY(-6px);min-width:20px}
+.mi-price{font-family:var(--serif);font-size:1.15rem;white-space:nowrap}
+.mi-price.soft{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* CHEF */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:center}
+.about-img{position:relative}
+.about-img .round{aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--glow),0 40px 80px -40px rgba(42,31,22,.6)}
+.about-img .round img{width:100%;height:118%;object-fit:cover}
+.about-img .mini{position:absolute;width:38%;aspect-ratio:1;border-radius:50%;overflow:hidden;left:-6%;bottom:-4%;border:6px solid var(--bg);box-shadow:0 20px 40px -20px rgba(42,31,22,.5)}
+.about-img .mini img{width:100%;height:100%;object-fit:cover}
+.about p+p{margin-top:1.1em}
+.signature{font-family:var(--serif);font-style:italic;font-size:2.6rem;color:var(--muted);opacity:.85;margin-top:30px;line-height:1}
+.sig-role{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:10px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;border-top:1px solid var(--line);padding-top:28px}
+.stats b{display:block;font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1.1}
+.stats span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* MENUS */
+.tasting{background:radial-gradient(ellipse at 50% 0%,rgba(217,163,95,.16),transparent 65%)}
+.t-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.t-col{border-radius:24px;padding:40px 32px;display:flex;flex-direction:column}
+.t-col .num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem}
+.t-col h3{font-size:1.9rem;margin:12px 0 6px}
+.t-price{font-family:var(--serif);font-size:2.6rem;line-height:1.1;margin:10px 0 18px}
+.t-price small{display:block;margin-top:6px;font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.t-col ul{list-style:none;border-top:1px solid var(--line);margin-top:auto}
+.t-col li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.t-col.feat{background:linear-gradient(160deg,#2E2217,#1E150D);color:#F5EEE2;border-color:rgba(217,163,95,.35)}
+.t-col.feat .t-price small,.t-col.feat p{color:#CDBFAE}
+.t-col.feat li{border-color:rgba(245,238,226,.14)}
+.t-col.feat ul{border-color:rgba(245,238,226,.14)}
+.t-col p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+
+/* IMMERSIF */
+.immersive{padding-left:var(--gutter);padding-right:var(--gutter)}
+.imm-card{position:relative;border-radius:30px;overflow:hidden;min-height:min(86vh,760px);display:flex;align-items:flex-end}
+.imm-card .imm-bg{position:absolute;inset:-12% 0;z-index:0}
+.imm-card .imm-bg img{width:100%;height:100%;object-fit:cover}
+.imm-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(28,20,12,.88) 0%,rgba(28,20,12,.45) 45%,rgba(28,20,12,.05) 75%)}
+.imm-txt{position:relative;z-index:2;color:#F5EEE2;padding:clamp(28px,5vw,70px);width:100%}
+.imm-txt .eyebrow{color:var(--gold-l)}
+.imm-txt h2{max-width:14em}
+.imm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;border-top:1px solid rgba(245,238,226,.22);padding-top:26px}
+.imm-grid h3{font-size:1.35rem;margin-bottom:6px}
+.imm-grid p{font-size:.95rem;color:#DCCFBF}
+
+/* CHAMBRES */
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.room{border-radius:22px;overflow:hidden}
+.room-img{aspect-ratio:4/3;overflow:hidden}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.room:hover .room-img img{transform:scale(1.06)}
+.room-body{padding:22px 24px 26px}
+.room h3{font-size:1.45rem}
+.room p{font-size:.93rem;color:var(--muted);margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.chip{font-size:12px;letter-spacing:.08em;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,251,244,.5)}
+.offer{margin-top:40px;border-radius:24px;display:grid;grid-template-columns:1fr 1.3fr;overflow:hidden}
+.offer-img{min-height:280px;position:relative}
+.offer-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.offer-txt{padding:clamp(28px,4vw,50px)}
+.offer-txt h3{font-size:clamp(1.7rem,2.6vw,2.3rem);margin:12px 0 14px}
+.offer-txt ul{list-style:none;margin:16px 0 26px}
+.offer-txt li{padding:8px 0 8px 26px;position:relative;font-size:.95rem}
+.offer-txt li::before{content:"";position:absolute;left:0;top:1.05em;width:12px;height:1px;background:var(--gold)}
+
+/* PISCINE */
+.well{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,90px);align-items:center}
+.well-imgs{position:relative;padding-bottom:16%}
+.well-imgs .big{border-radius:26px;overflow:hidden;aspect-ratio:4/3}
+.well-imgs .big img,.well-imgs .small img{width:100%;height:100%;object-fit:cover}
+.well-imgs .small{position:absolute;width:52%;aspect-ratio:4/3;right:-4%;bottom:0;border-radius:20px;overflow:hidden;border:6px solid var(--bg);box-shadow:0 30px 60px -30px rgba(42,31,22,.6)}
+.feat-list{list-style:none;margin-top:26px}
+.feat-list li{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.feat-list li b{font-family:var(--serif);font-weight:400;font-size:1.2rem;display:block}
+.feat-list li span{font-size:.92rem;color:var(--muted)}
+.feat-list .ic{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(176,127,61,.45);display:grid;place-items:center;color:var(--gold)}
+.feat-list .ic svg{width:18px;height:18px}
+
+/* MARIAGES */
+.wed-hero{position:relative;border-radius:30px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end}
+.wed-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wed-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,20,12,.82) 0%,rgba(28,20,12,.45) 50%,rgba(28,20,12,.1) 100%)}
+.wed-txt{position:relative;z-index:2;color:#F5EEE2;padding:clamp(28px,5vw,64px);max-width:640px}
+.wed-txt .eyebrow{color:var(--gold-l)}
+.wed-txt p{color:#E3D7C7}
+.wed-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.wed-stat{border-radius:20px;padding:26px 22px}
+.wed-stat b{display:block;font-family:var(--serif);font-weight:400;font-size:2.1rem;line-height:1.1}
+.wed-stat span{font-size:.9rem;color:var(--muted)}
+.wed-split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.wed-box{border-radius:24px;padding:clamp(28px,4vw,46px)}
+.wed-box h3{font-size:1.8rem;margin:10px 0 12px}
+.wed-box ul{list-style:none;margin:14px 0 26px}
+.wed-box li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+
+/* CRITIQUES */
+.crit{text-align:center}
+.crit .eyebrow{justify-content:center}
+.car{position:relative;max-width:900px;margin:40px auto 0;overflow:hidden;touch-action:pan-y}
+.car-track{display:flex;transition:transform 1.1s var(--ease)}
+.car-slide{flex:0 0 100%;padding:10px 4px}
+.car-slide blockquote{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.7rem);line-height:1.25;font-style:italic}
+.car-slide .who{margin-top:24px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.car-slide .src{margin-top:8px;font-size:13px;color:var(--muted)}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:30px}
+.car-dot{width:44px;height:44px;display:grid;place-items:center}
+.car-dot i{width:8px;height:8px;border-radius:50%;background:rgba(42,31,22,.22);transition:all .5s var(--ease)}
+.car-dot.on i{background:var(--gold);width:26px;border-radius:6px}
+.car-arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(42,31,22,.25);display:grid;place-items:center}
+.car-arrow svg{width:18px;height:18px}
+
+/* RESERVATION */
+.resa{background:radial-gradient(ellipse at 50% 40%,rgba(217,163,95,.28),transparent 62%)}
+.resa-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,5vw,80px);align-items:start}
+.resa-info p{color:var(--muted)}
+.resa-info .info{margin-top:28px;border-top:1px solid var(--line)}
+.resa-info .info div{padding:16px 0;border-bottom:1px solid var(--line)}
+.resa-info h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:4px}
+.resa-info a{display:inline-flex;align-items:center;min-height:44px}
+form.glass{border-radius:26px;padding:clamp(24px,4vw,44px)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:5px;border-radius:999px;background:rgba(42,31,22,.06);margin-bottom:24px}
+.tabs button{min-height:44px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.04em;transition:all .5s var(--ease)}
+.tabs button.on{background:var(--ink);color:var(--bg)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.field input,.field select,.field textarea{min-height:50px;border-radius:14px;border:1px solid rgba(42,31,22,.18);background:#FFFBF4;padding:12px 16px;font-size:16px;font-weight:300;width:100%;appearance:none;-webkit-appearance:none}
+.field select{background:#FFFBF4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B07F3D' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 16px center}
+.field option{background:#FFFBF4;color:var(--ink)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,163,95,.25)}
+.form-note{font-size:12.5px;color:var(--muted);margin-top:14px}
+.form-ok{display:none;margin-top:14px;font-size:.95rem;color:var(--olive)}
+
+/* GALERIE */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+.gal figure{border-radius:18px;overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:12px;bottom:12px;font-size:12px;letter-spacing:.08em;color:#fff;background:rgba(35,25,16,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px}
+.g-a{grid-column:span 2;grid-row:span 2}.g-b{grid-row:span 2}.g-c{grid-column:span 2}
+
+/* ACCES */
+.acces{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.map{border-radius:24px;overflow:hidden;min-height:380px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:sepia(.25) saturate(.9)}
+.acces-card{border-radius:24px;padding:clamp(26px,4vw,44px)}
+.acces-card h3{font-size:1.8rem;margin:8px 0 16px}
+.acces-card dl{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;font-size:.95rem}
+.acces-card dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500;padding-top:3px}
+.acces-card dd a{display:inline-flex;align-items:center;min-height:44px}
+
+/* FOOTER */
+footer{background:var(--night);color:#E8DCCB;margin-top:40px}
+.foot-in{max-width:1280px;margin:0 auto;padding:80px var(--gutter) 40px;display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:50px}
+.foot-logo{font-family:var(--serif);font-size:2.2rem;color:#fff}
+.foot-in p{color:#BCAE9C;font-size:.95rem;margin-top:12px;max-width:26em}
+.foot-in h5{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);font-weight:500;margin-bottom:12px}
+.foot-in ul{list-style:none}
+.foot-in li a{display:inline-flex;align-items:center;min-height:44px}
+.news{display:flex;gap:8px;margin-top:14px}
+.news input{flex:1;min-width:0;min-height:48px;border-radius:999px;border:1px solid rgba(232,220,203,.25);background:rgba(255,255,255,.05);padding:0 18px;color:#fff;font-size:16px}
+.news button{min-height:48px;padding:0 20px;border-radius:999px;border:1px solid var(--gold-l);color:var(--gold-l);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.foot-bot{max-width:1280px;margin:0 auto;padding:22px var(--gutter) 30px;border-top:1px solid rgba(232,220,203,.12);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:#9C8E7C}
+
+.swipe-hint{display:none;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:-6px}
+.swipe-hint i{width:40px;height:1px;background:var(--gold)}
+/* barre mobile bas */
+.mbar{display:none}
+
+/* ——— Mobile & tablette ——— */
+@media(max-width:1100px){
+  .nav-links{gap:20px;font-size:13px}
+  .dishes{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:899px){
+  .nav-links,.nav .btn-gold{display:none}
+  .nav .nav-call,.nav .burger{display:inline-grid}
+  .nav-in{padding:12px var(--gutter)}
+  .logo{font-size:1.2rem}
+  .logo small{font-size:10px;letter-spacing:.24em}
+  .hero{grid-template-columns:1fr;padding-top:calc(min(56svh,470px) - 70px);padding-bottom:60px;min-height:auto;gap:36px}
+  .hero-bg{bottom:auto;height:min(56svh,470px)}
+  .hero-bg img{opacity:1;height:100%}
+  .hero-bg::before{background:linear-gradient(180deg,rgba(245,238,226,.7) 0%,rgba(245,238,226,0) 22%)}
+  .hero-bg::after{background:linear-gradient(180deg,transparent 45%,rgba(245,238,226,.75) 78%,var(--bg) 100%)}
+  .hero-txt .eyebrow{display:inline-flex;background:rgba(245,238,226,.88);padding:8px 14px;border-radius:999px;color:var(--ink);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .hero-txt .eyebrow::before{display:none}
+  .hero-txt .eyebrow{letter-spacing:.1em;font-size:12px}
+  .hero h1{margin-top:18px}
+  .hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+  .hero-badges div{font-size:11.5px;letter-spacing:.08em}
+  .dishes,.rooms{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(var(--gutter) * -1);padding:6px var(--gutter) 26px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .dishes::-webkit-scrollbar,.rooms::-webkit-scrollbar{display:none}
+  .dish,.room{flex:0 0 80%;scroll-snap-align:center}
+  .dish-img{aspect-ratio:4/5}
+  .swipe-hint{display:flex}
+  .imm-card::after{background:linear-gradient(0deg,rgba(28,20,12,.94) 0%,rgba(28,20,12,.78) 60%,rgba(28,20,12,.1) 100%)}
+  .hero h1{font-size:clamp(38px,10.4vw,56px)}
+  .hero-card-wrap{justify-self:center;max-width:340px}
+  .hero-badges{gap:20px}
+  .hero-badges b{font-size:1.45rem}
+  .scroll-cue{display:none}
+  .about,.well,.resa-grid,.acces,.wed-split,.offer{grid-template-columns:1fr}
+  .about-img{max-width:420px;margin:0 auto;width:86%}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .t-cols{grid-template-columns:1fr}
+  .imm-grid{grid-template-columns:1fr;gap:16px}
+  .imm-card{min-height:auto}
+  .imm-txt{padding-top:220px}
+  .wed-stats{grid-template-columns:repeat(2,1fr);gap:12px}
+  .wed-stat{padding:20px 18px}
+  .wed-stat b{font-size:1.7rem}
+  .wed-hero{min-height:auto}
+  .wed-txt{padding-top:200px}
+  .wed-hero::after{background:linear-gradient(0deg,rgba(28,20,12,.9) 0%,rgba(28,20,12,.55) 55%,rgba(28,20,12,.1) 100%)}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;gap:10px}
+  .g-a{grid-column:span 2;grid-row:span 2}.g-b{grid-row:span 2}.g-c{grid-column:span 2}
+  .foot-in{grid-template-columns:1fr;gap:36px;padding-bottom:30px}
+  .foot-bot{padding-bottom:100px}
+  .well-imgs .small{right:0}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:800;gap:8px;padding:6px;border-radius:999px;
+    background:rgba(35,25,16,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 40px -16px rgba(0,0,0,.5);
+    transform:translateY(140%);transition:transform .7s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar a{flex:1;min-height:48px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#F5EEE2}
+  .mbar a.pri{background:var(--gold-l);color:var(--night)}
+  .mbar svg{width:16px;height:16px}
+  .car-slide blockquote{font-size:1.55rem}
+}
+@media(max-width:520px){
+  .row{grid-template-columns:1fr}
+  .hero-ctas .btn{flex:1 1 auto}
+  .tabs button{font-size:12px;letter-spacing:0}
+  .mi{flex-wrap:wrap;gap:4px 10px}
+  .mi-name{flex:1 1 100%}
+  .mi-dots{display:none}
+  .acces-card dl{grid-template-columns:1fr;gap:2px}
+  .acces-card dd{margin-bottom:10px}
+  .signature{font-size:2.2rem}
+  .well-imgs .small{width:56%}
+}
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+  #cursor{display:none}
+}
+</style>
+</head>
+<body>
+<div id="grain" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo" aria-label="Le Mas du Lingousto, accueil">Le Mas du Lingousto<small>Cuers · Var</small></a>
+    <ul class="nav-links">
+      <li><a href="#table">La table</a></li>
+      <li><a href="#chef">Le chef</a></li>
+      <li><a href="#chambres">Chambres</a></li>
+      <li><a href="#piscine">Piscine</a></li>
+      <li><a href="#mariages">Mariages</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-gold" href="#reserver">Réserver une table</a>
+      <a class="icon-btn nav-call" href="tel:+33494286910" aria-label="Appeler le 04 94 28 69 10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      <button class="icon-btn burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<nav id="mnav" aria-label="Menu principal">
+  <button class="icon-btn" id="mnav-close" aria-label="Fermer le menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#table">La table</a>
+  <a href="#chef">Le chef</a>
+  <a href="#menus">Les menus</a>
+  <a href="#chambres">Chambres</a>
+  <a href="#piscine">Piscine & bien-être</a>
+  <a href="#mariages">Mariages & séminaires</a>
+  <a href="#reserver">Réserver</a>
+  <div class="mnav-foot">
+    <a class="btn btn-fill" href="tel:+33494286910">Appeler</a>
+    <a class="btn btn-gold" href="mailto:contact@lingousto.fr">Écrire</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"><img src="assets/mas-vignes-aerien.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero-txt">
+    <p class="eyebrow" data-hero-fade>Hôtel ★★★★ & table gastronomique</p>
+    <h1>
+      <span class="ln"><span>Une cuisine</span></span>
+      <span class="ln"><span><em class="gold-text">d’exception</em></span></span>
+      <span class="ln"><span>au cœur des vignes</span></span>
+    </h1>
+    <p class="hero-sub" data-hero-fade>Au Mas du Lingousto, à Cuers, la table du chef Thomas Richieri se partage sur des terrasses ombragées qui donnent sur les vignes du Var. Et l’on peut rester dormir.</p>
+    <div class="hero-ctas" data-hero-fade>
+      <a class="btn btn-fill" href="#reserver">Réserver une table</a>
+      <a class="btn btn-gold" href="#chambres">Les chambres</a>
+    </div>
+    <div class="hero-badges" data-hero-fade>
+      <div><b>1 toque</b>Gault&amp;Millau</div>
+      <div><b>22</b>chambres & suites</div>
+      <div><b>7 j/7</b>toute l’année</div>
+    </div>
+  </div>
+  <div class="hero-card-wrap">
+    <div class="hero-card" id="heroCard">
+      <div class="slide on" data-tag="Langoustine et kumquat"><img src="assets/langoustine-kumquat.jpg" alt="Assiette de langoustine et kumquat"></div>
+      <div class="slide" data-tag="Veau gourmand printanier"><img src="assets/veau-printanier.jpg" alt="Assiette de veau et légumes de printemps" loading="lazy"></div>
+      <div class="slide" data-tag="Sphère de ricotta et framboise"><img src="assets/ricotta-framboise.jpg" alt="Dessert ricotta et framboise sur la terrasse" loading="lazy"></div>
+      <div class="hero-tag"><small>Dans l’assiette</small><span id="heroTag">Langoustine et kumquat</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Défiler<i></i></div>
+</section>
+
+<!-- PLATS -->
+<section id="table">
+  <div class="sec-head" data-reveal>
+    <div>
+      <p class="eyebrow">La table</p>
+      <h2>La cuisine du <em>Mas</em></h2>
+      <p class="lead">Une table gourmande, classique et généreuse, d’inspiration provençale, servie midi et soir en terrasse face aux vignes ou dans la véranda.</p>
+    </div>
+    <button class="btn btn-gold" id="openMenu">Voir les menus</button>
+  </div>
+  <div class="dishes">
+    <article class="dish glass" data-reveal>
+      <div class="dish-img"><img src="assets/langoustine-kumquat.jpg" alt="Langoustine et kumquat" loading="lazy"></div>
+      <div class="dish-body"><div class="dish-top"><h3>Langoustine & kumquat</h3><span class="dish-price">Selon saison</span></div><p>La langoustine et la note acidulée du kumquat.</p></div>
+    </article>
+    <article class="dish glass" data-reveal>
+      <div class="dish-img"><img src="assets/veau-printanier.jpg" alt="Veau gourmand printanier" loading="lazy"></div>
+      <div class="dish-body"><div class="dish-top"><h3>Veau printanier</h3><span class="dish-price">Selon saison</span></div><p>Le veau, accompagné des légumes de printemps.</p></div>
+    </article>
+    <article class="dish glass" data-reveal>
+      <div class="dish-img"><img src="assets/poireau-vinaigrette.jpg" alt="Comme un poireau vinaigrette" loading="lazy"></div>
+      <div class="dish-body"><div class="dish-top"><h3>Comme un poireau vinaigrette</h3><span class="dish-price">Selon saison</span></div><p>Un classique de bistrot, revisité.</p></div>
+    </article>
+    <article class="dish glass" data-reveal>
+      <div class="dish-img"><img src="assets/baba-rhum.jpg" alt="Baba au rhum revisité" loading="lazy"></div>
+      <div class="dish-body"><div class="dish-top"><h3>Baba au rhum revisité</h3><span class="dish-price">Selon saison</span></div><p>Le dessert de tradition, à la façon de la maison.</p></div>
+    </article>
+  </div>
+  <p class="swipe-hint" aria-hidden="true"><i></i>Glisser pour voir les plats</p>
+  <p class="note-src" data-reveal>La carte suit les saisons : les plats présentés ici sont des créations de la maison, la carte du jour est donnée à table.</p>
+</section>
+
+<!-- CHEF -->
+<section id="chef">
+  <div class="about">
+    <div data-reveal>
+      <p class="eyebrow">Le chef</p>
+      <h2>La vision de <em>Thomas Richieri</em></h2>
+      <p class="lead">Une cuisine de tradition qui rassure, travaillée avec des produits choisis : poulpe sauvage de Palamós, maigre de Corse Label Rouge, herbes du jardin aromatique du Mas.</p>
+      <p>Thomas Richieri a pris la suite en cuisine et la maison garde sa toque au guide Gault&amp;Millau. À ses côtés, Marie Pilotto signe les desserts, du chariot de douceurs aux créations à l’assiette. La carte des vins fait la part belle à la région.</p>
+      <p class="signature">Thomas Richieri</p>
+      <p class="sig-role">Chef de cuisine</p>
+      <div class="stats">
+        <div><b>11/20</b><span>Gault&amp;Millau</span></div>
+        <div><b>1 toque</b><span>Table gourmande</span></div>
+        <div><b>54 €</b><span>Menu des chefs</span></div>
+        <div><b>89 €</b><span>Menu Signature</span></div>
+      </div>
+    </div>
+    <div class="about-img" data-reveal>
+      <div class="round"><img src="assets/cuisine.jpg" alt="La cuisine du Mas et son passe aux lampes dorées" loading="lazy" data-parallax></div>
+      <div class="mini"><img src="assets/jardin-aromatiques.jpg" alt="Le jardin d’herbes aromatiques" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENUS DEGUSTATION -->
+<section class="tasting" id="menus">
+  <div class="sec-head" data-reveal>
+    <div>
+      <p class="eyebrow">Les menus</p>
+      <h2>Trois façons de <em>passer à table</em></h2>
+    </div>
+    <p class="lead">Des menus qui changent avec le marché et les saisons, à composer selon l’envie, le temps et l’occasion.</p>
+  </div>
+  <div class="t-cols">
+    <div class="t-col glass" data-stagger>
+      <span class="num">I.</span>
+      <h3>Menu des chefs</h3>
+      <div class="t-price">54 € <small>par personne, hors boissons</small></div>
+      <p>Le menu du moment, imaginé par la brigade au fil du marché.</p>
+      <ul><li>Le menu complet du moment</li><li>Renouvelé au fil des saisons</li><li>Desserts de Marie Pilotto</li></ul>
+    </div>
+    <div class="t-col glass feat" data-stagger>
+      <span class="num">II.</span>
+      <h3>Menu Signature</h3>
+      <div class="t-price">89 € <small>par personne, hors boissons</small></div>
+      <p>Le grand menu du chef pour découvrir la maison en plusieurs temps.</p>
+      <ul><li>Les créations du chef</li><li>Accords mets et vins sur demande</li><li>Pour les grandes occasions</li></ul>
+    </div>
+    <div class="t-col glass" data-stagger>
+      <span class="num">III.</span>
+      <h3>À la carte</h3>
+      <div class="t-price">Au choix <small>prix sur place</small></div>
+      <p>Pour composer librement, midi et soir, en terrasse ou dans la véranda.</p>
+      <ul><li>Entrées, plats & fromages affinés</li><li>Options sans gluten et sans lactose</li><li>Menu enfant</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMMERSIF -->
+<section class="immersive" id="ambiance">
+  <div class="imm-card" data-reveal>
+    <div class="imm-bg" data-imm><img src="assets/terrasse.jpg" alt="La terrasse du Mas du Lingousto et la façade ocre" loading="lazy"></div>
+    <div class="imm-txt">
+      <p class="eyebrow">L’art de recevoir</p>
+      <h2>Un mas provençal où le temps <em>ralentit</em></h2>
+      <div class="imm-grid">
+        <div><h3>Les terrasses</h3><p>Déjeuners à l’ombre des arbres, dîners face aux vignes, sur la terrasse couverte ou ombragée.</p></div>
+        <div><h3>La véranda & le bar</h3><p>Une salle lumineuse ouverte sur le jardin, et un lounge bar pour l’apéritif ou le dernier verre.</p></div>
+        <div><h3>La cave</h3><p>Une carte des vins tournée vers la région, au cœur d’un territoire labellisé Vignobles &amp; Découvertes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAMBRES -->
+<section id="chambres">
+  <div class="sec-head" data-reveal>
+    <div>
+      <p class="eyebrow">L’hôtel ★★★★</p>
+      <h2>22 chambres <em>au milieu des vignes</em></h2>
+    </div>
+    <p class="lead">De 25 à 60 m², chaque chambre a son style, contemporain ou revisité. Ouvert toute l’année, à 20 km de l’aéroport Toulon-Hyères.</p>
+  </div>
+  <div class="rooms">
+    <article class="room glass" data-reveal>
+      <div class="room-img"><img src="assets/chambre-classique.jpg" alt="Chambre classique" loading="lazy"></div>
+      <div class="room-body"><h3>Chambres classiques</h3><p>Le confort d’un 4 étoiles au calme : climatisation, Wi-Fi, télévision.</p></div>
+    </article>
+    <article class="room glass" data-reveal>
+      <div class="room-img"><img src="assets/chambre-superieure.jpg" alt="Chambre supérieure" loading="lazy"></div>
+      <div class="room-body"><h3>Chambres supérieures</h3><p>Plus d’espace, et pour certaines une terrasse privée.</p></div>
+    </article>
+    <article class="room glass" data-reveal>
+      <div class="room-img"><img src="assets/suite.jpg" alt="Suite familiale avec coin salon" loading="lazy"></div>
+      <div class="room-body"><h3>Suites familiales</h3><p>Entièrement équipées, pour voyager en famille sans rien sacrifier.</p></div>
+    </article>
+  </div>
+  <p class="swipe-hint" aria-hidden="true"><i></i>Glisser pour voir les chambres</p>
+  <div class="chips" data-reveal>
+    <span class="chip">Petit-déjeuner, aussi en chambre</span><span class="chip">Room service</span><span class="chip">Demi-pension</span><span class="chip">Chambre accessible PMR</span><span class="chip">Parking privé & borne de recharge</span><span class="chip">Animaux de moins de 5 kg acceptés</span>
+  </div>
+  <div class="offer glass" data-reveal>
+    <div class="offer-img"><img src="assets/table-terrasse.jpg" alt="Table dressée sur la terrasse ombragée" loading="lazy"></div>
+    <div class="offer-txt">
+      <p class="eyebrow">Séjour à deux</p>
+      <h3>L’Escapade romantique</h3>
+      <ul>
+        <li>Une nuit en chambre supérieure avec terrasse</li>
+        <li>Accueil au champagne</li>
+        <li>Deux menus du chef et accords mets et vins</li>
+        <li>Deux petits-déjeuners</li>
+      </ul>
+      <a class="btn btn-fill" href="#reserver" data-objet="chambre">Demander cette escapade</a>
+    </div>
+  </div>
+</section>
+
+<!-- PISCINE -->
+<section id="piscine">
+  <div class="well">
+    <div class="well-imgs" data-reveal>
+      <div class="big"><img src="assets/piscine-vue.jpg" alt="La piscine vue depuis les chambres" loading="lazy"></div>
+      <div class="small"><img src="assets/piscine.jpg" alt="La piscine au soleil" loading="lazy"></div>
+    </div>
+    <div data-reveal>
+      <p class="eyebrow">Piscine & bien-être</p>
+      <h2>Le soleil du Var, <em>côté jardin</em></h2>
+      <p class="lead">Entre deux repas, la piscine extérieure, le parc et la petite rivière invitent à ne rien faire du tout.</p>
+      <ul class="feat-list">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 18c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 15V5a2 2 0 0 1 4 0M16 15V5a2 2 0 0 0-4 0M8 9h8"/></svg></span><div><b>Piscine extérieure</b><span>En plein soleil, au calme du domaine.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span><div><b>Salle de fitness</b><span>Pour garder le rythme pendant le séjour.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-10a7 7 0 0 1 14 0c0 4-3 7-7 10zM12 7v6"/></svg></span><div><b>Massages</b><span>Sur demande, pour prolonger la détente.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22V12M12 12C12 7 8 4 3 4c0 5 4 8 9 8zM12 12c0-5 4-8 9-8 0 5-4 8-9 8z"/></svg></span><div><b>Parc, rivière & pétanque</b><span>Jardin fleuri, petit pont sur la rivière, terrain de boules.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARIAGES -->
+<section id="mariages">
+  <div class="wed-hero" data-reveal>
+    <img src="assets/veranda.jpg" alt="La véranda dressée pour une réception" loading="lazy">
+    <div class="wed-txt">
+      <p class="eyebrow">Mariages & réceptions</p>
+      <h2>Dire oui <em>sous les platanes</em></h2>
+      <p>Cocktail sous les platanes de la terrasse ombragée, photos sur le pont des amoureux, dîner dans la salle ouverte sur les vignes, puis la piste de danse. Vos invités peuvent dormir sur place.</p>
+      <div class="hero-ctas"><a class="btn btn-light" href="#reserver" data-objet="mariage">Demander un devis</a></div>
+    </div>
+  </div>
+  <div class="wed-stats">
+    <div class="wed-stat glass" data-stagger><b>30 – 120</b><span>invités</span></div>
+    <div class="wed-stat glass" data-stagger><b>80</b><span>convives assis face aux vignes</span></div>
+    <div class="wed-stat glass" data-stagger><b>100</b><span>personnes en cocktail sur la terrasse</span></div>
+    <div class="wed-stat glass" data-stagger><b>60+</b><span>invités : le Mas privatisé</span></div>
+  </div>
+  <div class="wed-split">
+    <div class="wed-box glass" data-reveal>
+      <p class="eyebrow">Mariages & fêtes de famille</p>
+      <h3>Un seul lieu, tout sur place</h3>
+      <ul>
+        <li>Cuisine du chef, du cocktail au dessert</li>
+        <li>Coordination du jour J par l’équipe du Mas</li>
+        <li>Salle de bal, piste de danse et sonorisation</li>
+        <li>22 chambres pour les mariés et leurs proches</li>
+      </ul>
+      <a class="btn btn-fill" href="#reserver" data-objet="mariage">Parler de votre mariage</a>
+    </div>
+    <div class="wed-box glass" data-reveal>
+      <p class="eyebrow">Séminaires</p>
+      <h3>Travailler au vert</h3>
+      <ul>
+        <li>Deux salles de réunion jusqu’à 35 personnes</li>
+        <li>Vidéoprojecteur, écran, micro, paperboard, Wi-Fi</li>
+        <li>Journées d’étude et séminaires résidentiels</li>
+        <li>Parking privé et parking autocars</li>
+      </ul>
+      <a class="btn btn-gold" href="#reserver" data-objet="mariage">Demander un devis séminaire</a>
+    </div>
+  </div>
+</section>
+
+<!-- CRITIQUES -->
+<section class="crit" id="avis">
+  <p class="eyebrow" data-reveal>Ce qu’on en dit</p>
+  <div class="car" id="car" data-reveal>
+    <div class="car-track" id="carTrack">
+      <div class="car-slide"><blockquote>« Une maison presque indispensable. »</blockquote><p class="who">Gault&amp;Millau</p><p class="src">Table gourmande · 1 toque · 11/20</p></div>
+      <div class="car-slide"><blockquote>Note de 9 sur 10, « Excellent ».</blockquote><p class="who">Fiche officielle Provence-Alpes-Côte d’Azur Tourisme</p><p class="src">Hôtel-restaurant Le Mas du Lingousto, fiche mise à jour en janvier 2026</p></div>
+      <div class="car-slide"><blockquote>Qualité Tourisme™, Vignobles &amp; Découvertes, Tourisme &amp; Handicap.</blockquote><p class="who">Labels de la maison</p><p class="src">Relevés par l’office de tourisme</p></div>
+      <div class="car-slide"><blockquote>Recommandé par le Bottin Gourmand et le Petit Futé.</blockquote><p class="who">Guides</p><p class="src">Références citées sur la fiche officielle</p></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-arrow" id="carPrev" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div id="carDots" style="display:flex"></div>
+      <button class="car-arrow" id="carNext" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="resa" id="reserver">
+  <div class="resa-grid">
+    <div class="resa-info" data-reveal>
+      <p class="eyebrow">Réserver</p>
+      <h2>Une table, une nuit, <em>un grand jour</em></h2>
+      <p>Indiquez-nous votre demande : elle part directement dans la boîte mail du Mas. Pour un service le jour même, appelez plutôt.</p>
+      <div class="info">
+        <div><h4>Téléphone</h4><a href="tel:+33494286910">04 94 28 69 10</a></div>
+        <div><h4>E-mail</h4><a href="mailto:contact@lingousto.fr">contact@lingousto.fr</a></div>
+        <div><h4>Restaurant</h4>Tous les jours, midi (12 h – 14 h) et soir (à partir de 19 h)</div>
+      </div>
+    </div>
+    <form class="glass" id="resaForm" data-reveal novalidate>
+      <div class="tabs" role="tablist" aria-label="Objet de la demande">
+        <button type="button" class="on" data-t="table" role="tab" aria-selected="true">Table</button>
+        <button type="button" data-t="chambre" role="tab" aria-selected="false">Chambre</button>
+        <button type="button" data-t="mariage" role="tab" aria-selected="false">Événement</button>
+      </div>
+      <div class="row">
+        <div class="field"><label for="fDate" id="lDate">Date</label><input type="date" id="fDate" required></div>
+        <div class="field" id="wrapTime"><label for="fTime">Heure</label>
+          <select id="fTime"><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>19:00</option><option selected>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option></select></div>
+        <div class="field" id="wrapNights" hidden><label for="fNights">Nuits</label>
+          <select id="fNights"><option>1 nuit</option><option>2 nuits</option><option>3 nuits</option><option>4 nuits</option><option>5 nuits ou plus</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="fGuests" id="lGuests">Convives</label>
+          <select id="fGuests"><option>1 personne</option><option selected>2 personnes</option><option>3 personnes</option><option>4 personnes</option><option>5 personnes</option><option>6 personnes</option><option>7 à 10 personnes</option><option>Plus de 10 personnes</option></select></div>
+        <div class="field"><label for="fName">Nom</label><input type="text" id="fName" autocomplete="name" required></div>
+      </div>
+      <div class="field"><label for="fContact">Téléphone ou e-mail</label><input type="text" id="fContact" autocomplete="email" required></div>
+      <div class="field"><label for="fMsg">Demandes particulières</label><textarea id="fMsg" placeholder="Allergies, occasion spéciale, table en terrasse…"></textarea></div>
+      <button class="btn btn-fill" type="submit" style="width:100%">Envoyer la demande</button>
+      <p class="form-note">Votre messagerie s’ouvre avec la demande prête à envoyer au Mas.</p>
+      <p class="form-ok" id="formOk">Merci ! Il ne reste qu’à envoyer le message préparé.</p>
+    </form>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie">
+  <div class="sec-head" data-reveal>
+    <div><p class="eyebrow">Galerie</p><h2>Le Mas <em>en images</em></h2></div>
+  </div>
+  <div class="gal">
+    <figure class="g-a" data-stagger><img src="assets/facade-mas.jpg" alt="La façade du mas sous le soleil" loading="lazy" style="object-position:50% 80%"><figcaption>Le mas</figcaption></figure>
+    <figure class="g-b" data-stagger><img src="assets/fleurs.jpg" alt="Orchidées et fleurs devant les baies vitrées" loading="lazy"></figure>
+    <figure data-stagger><img src="assets/chariot-douceurs.jpg" alt="Le chariot de douceurs" loading="lazy"><figcaption>Chariot de douceurs</figcaption></figure>
+    <figure data-stagger><img src="assets/fromages.jpg" alt="Plateau de fromages affinés" loading="lazy"></figure>
+    <figure class="g-c" data-stagger><img src="assets/vue-aerienne-mas.jpg" alt="Le mas vu du ciel au milieu des vignes" loading="lazy"><figcaption>Au milieu des vignes</figcaption></figure>
+    <figure data-stagger><img src="assets/patio.jpg" alt="Le patio fleuri" loading="lazy"></figure>
+    <figure data-stagger><img src="assets/lounge-bar.jpg" alt="Le lounge bar et son piano" loading="lazy"><figcaption>Lounge bar</figcaption></figure>
+    <figure class="g-c" data-stagger><img src="assets/riviere-pont.jpg" alt="Le parc et la rivière" loading="lazy"><figcaption>Côté rivière</figcaption></figure>
+    <figure data-stagger><img src="assets/table-mariage.jpg" alt="Table dressée pour une réception" loading="lazy"></figure>
+    <figure data-stagger><img src="assets/ricotta-framboise.jpg" alt="Dessert ricotta et framboise" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ACCES -->
+<section id="acces" style="padding-top:0">
+  <div class="acces">
+    <div class="acces-card glass" data-reveal>
+      <p class="eyebrow">Nous trouver</p>
+      <h3>Le Mas du Lingousto</h3>
+      <dl>
+        <dt>Adresse</dt><dd>934 avenue Henri et Eugénie Majastre<br>83390 Cuers, Var</dd>
+        <dt>Téléphone</dt><dd><a href="tel:+33494286910">04 94 28 69 10</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:contact@lingousto.fr">contact@lingousto.fr</a></dd>
+        <dt>Accès</dt><dd>À 20 km de l’aéroport Toulon-Hyères. Parking privé gardé, héliport.</dd>
+        <dt>Langues</dt><dd>Français, English, Español, Italiano</dd>
+      </dl>
+      <div class="hero-ctas"><a class="btn btn-fill" href="https://www.google.com/maps/dir/?api=1&destination=Le+Mas+du+Lingousto+Cuers" target="_blank" rel="noopener">Itinéraire</a></div>
+    </div>
+    <div class="map" data-reveal>
+      <iframe title="Carte : Le Mas du Lingousto à Cuers" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Le%20Mas%20du%20Lingousto%2C%20Cuers&z=13&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div>
+      <div class="foot-logo">Le Mas du Lingousto</div>
+      <p>Hôtel 4 étoiles et restaurant gastronomique dans un mas provençal, au milieu des vignes de Cuers. Ouvert toute l’année.</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+33494286910">04 94 28 69 10</a></li>
+        <li><a href="mailto:contact@lingousto.fr">contact@lingousto.fr</a></li>
+        <li><a href="https://www.facebook.com/maslingousto/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Les nouvelles du Mas</h5>
+      <p style="margin-top:0">Menus de saison, soirées et offres de séjour.</p>
+      <form class="news" id="newsForm"><label for="nMail" class="sr" style="position:absolute;left:-9999px">E-mail</label><input id="nMail" type="email" placeholder="Votre e-mail" autocomplete="email"><button type="submit">S’inscrire</button></form>
+    </div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Le Mas du Lingousto · Cuers, Var</span><span>Hôtel ★★★★ · Gault&amp;Millau 1 toque</span></div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+33494286910"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+  <a class="pri" href="#reserver">Réserver</a>
+</div>
+
+<!-- MODAL MENUS -->
+<div id="menuModal" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+  <button class="icon-btn modal-close" id="closeMenu" aria-label="Fermer les menus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="modal-in">
+    <p class="eyebrow">Le Mas du Lingousto</p>
+    <h2 id="menuTitle">Menus & <em>carte</em></h2>
+    <div class="menu-cat">
+      <h3>Les menus</h3>
+      <div class="mi"><span class="mi-name">Menu des chefs<small>Le menu du moment, au fil du marché</small></span><span class="mi-dots"></span><span class="mi-price">54 €</span></div>
+      <div class="mi"><span class="mi-name">Menu Signature<small>Le grand menu du chef</small></span><span class="mi-dots"></span><span class="mi-price">89 €</span></div>
+      <div class="mi"><span class="mi-name">À la carte<small>Entrées, plats, fromages et desserts</small></span><span class="mi-dots"></span><span class="mi-price soft">Prix sur place</span></div>
+    </div>
+    <div class="menu-cat">
+      <h3>Entrées</h3>
+      <div class="mi"><span class="mi-name">Carpaccio de poulpe sauvage de Palamós<small>Aïoli au wasabi, tobiko au yuzu</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+      <div class="mi"><span class="mi-name">Comme un poireau vinaigrette<small>Le classique, revisité</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+    </div>
+    <div class="menu-cat">
+      <h3>Plats</h3>
+      <div class="mi"><span class="mi-name">Dos de maigre de Corse Label Rouge rôti<small>Pulpe de patate douce, sauce vierge à l’huile d’olive</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+      <div class="mi"><span class="mi-name">Veau gourmand printanier<small>Légumes de saison</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+    </div>
+    <div class="menu-cat">
+      <h3>Desserts</h3>
+      <div class="mi"><span class="mi-name">Dans l’esprit d’une piña colada<small>Chocolat et noix de coco</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+      <div class="mi"><span class="mi-name">Baba au rhum revisité<small>Crème et fruits rouges</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+      <div class="mi"><span class="mi-name">Plateau de fromages affinés<small>Avant le dessert</small></span><span class="mi-dots"></span><span class="mi-price soft">Selon la carte</span></div>
+    </div>
+    <p class="note-src" style="text-align:center">La carte change avec les saisons. Prix des menus par personne, hors boissons.</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  const mobile = matchMedia('(max-width: 899px)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasG = typeof gsap !== 'undefined';
+  if (hasG && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+  /* Lenis */
+  let lenis = null;
+  if (typeof Lenis !== 'undefined' && !reduce) {
+    lenis = new Lenis({ duration: 1.3, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    if (hasG) { lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0); }
+    else { const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+  }
+  const goTo = (sel) => { const el = document.querySelector(sel); if (!el) return; if (lenis) lenis.scrollTo(el, { offset: -70 }); else el.scrollIntoView({ behavior: 'smooth' }); };
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const h = a.getAttribute('href'); if (h.length < 2) return;
+    e.preventDefault(); closeMnav();
+    if (a.dataset.objet) setTab(a.dataset.objet);
+    goTo(h === '#top' ? '#hero' : h);
+  }));
+
+  /* Nav */
+  const nav = document.getElementById('nav'), mbar = document.getElementById('mbar');
+  const onScroll = () => { const y = window.scrollY; nav.classList.toggle('scrolled', y > 30); mbar.classList.toggle('show', y > window.innerHeight * .7); };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* Menu mobile */
+  const mnav = document.getElementById('mnav'), burger = document.getElementById('burger');
+  function closeMnav(){ mnav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); if (lenis) lenis.start(); }
+  burger.addEventListener('click', () => { mnav.classList.add('open'); burger.setAttribute('aria-expanded','true'); if (lenis) lenis.stop(); });
+  document.getElementById('mnav-close').addEventListener('click', closeMnav);
+
+  /* Curseur */
+  const cur = document.getElementById('cursor');
+  if (matchMedia('(pointer:fine)').matches && !reduce) {
+    let x = 0, y = 0, cx = 0, cy = 0;
+    addEventListener('mousemove', e => { x = e.clientX; y = e.clientY; cur.classList.add('on'); });
+    document.addEventListener('mouseleave', () => cur.classList.remove('on'));
+    (function loop(){ cx += (x - cx) * .18; cy += (y - cy) * .18; cur.style.transform = `translate3d(${cx}px,${cy}px,0) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button,select,input,textarea,.dish,.room,.gal figure').forEach(el => {
+      el.addEventListener('mouseenter', () => cur.classList.add('big'));
+      el.addEventListener('mouseleave', () => cur.classList.remove('big'));
+    });
+  }
+
+  /* Carte héro : diaporama */
+  const slides = [...document.querySelectorAll('#heroCard .slide')], tag = document.getElementById('heroTag');
+  let si = 0;
+  setInterval(() => { slides[si].classList.remove('on'); si = (si + 1) % slides.length; slides[si].classList.add('on'); tag.textContent = slides[si].dataset.tag; }, 5200);
+
+  /* Animations */
+  if (hasG && !reduce) {
+    gsap.from('.hero h1 .ln>span', { y: 100, opacity: 0, duration: 1.6, ease: 'power4.out', stagger: .14, delay: .15 });
+    gsap.from('[data-hero-fade]', { y: 30, opacity: 0, duration: 1.4, ease: 'power3.out', stagger: .12, delay: .5 });
+    gsap.from('.hero-card-wrap', { y: 80, opacity: 0, scale: .96, duration: 1.8, ease: 'power3.out', delay: .4 });
+    gsap.to('.hero-card', { y: -16, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+    gsap.to('.hero-bg img', { yPercent: 12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+    gsap.utils.toArray('[data-reveal]').forEach(el => {
+      gsap.from(el, { y: 60, opacity: 0, duration: 1.5, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+    });
+    const groups = new Map();
+    document.querySelectorAll('[data-stagger]').forEach(el => { const p = el.parentElement; if (!groups.has(p)) groups.set(p, []); groups.get(p).push(el); });
+    groups.forEach((els, p) => gsap.from(els, { y: 70, opacity: 0, duration: 1.4, ease: 'power3.out', stagger: .18, scrollTrigger: { trigger: p, start: 'top 85%' } }));
+
+    gsap.fromTo('[data-imm] img', { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.imm-card', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo('[data-parallax]', { yPercent: -8 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '.about-img', start: 'top bottom', end: 'bottom top', scrub: true } });
+    if (!mobile) gsap.fromTo('.well-imgs .small', { y: 60 }, { y: -30, ease: 'none', scrollTrigger: { trigger: '.well-imgs', start: 'top bottom', end: 'bottom top', scrub: true } });
+    addEventListener('load', () => ScrollTrigger.refresh());
+  }
+
+  /* Modal menus */
+  const modal = document.getElementById('menuModal');
+  const openM = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; if (lenis) lenis.stop();
+    if (hasG && !reduce) gsap.fromTo('#menuModal .menu-cat, #menuModal h2', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: 'power3.out', stagger: .08 }); };
+  const closeM = () => { modal.classList.remove('open'); document.body.style.overflow = ''; if (lenis) lenis.start(); };
+  document.getElementById('openMenu').addEventListener('click', openM);
+  document.getElementById('closeMenu').addEventListener('click', closeM);
+  addEventListener('keydown', e => { if (e.key === 'Escape') { closeM(); closeMnav(); } });
+
+  /* Carrousel critiques */
+  const track = document.getElementById('carTrack'), n = track.children.length, dots = document.getElementById('carDots');
+  let ci = 0, timer;
+  for (let i = 0; i < n; i++) { const b = document.createElement('button'); b.className = 'car-dot'; b.setAttribute('aria-label', 'Avis ' + (i + 1)); b.innerHTML = '<i></i>'; b.onclick = () => go(i); dots.appendChild(b); }
+  function go(i){ ci = (i + n) % n; track.style.transform = `translateX(-${ci * 100}%)`; [...dots.children].forEach((d, k) => d.classList.toggle('on', k === ci)); clearInterval(timer); timer = setInterval(() => go(ci + 1), 6500); }
+  document.getElementById('carPrev').onclick = () => go(ci - 1);
+  document.getElementById('carNext').onclick = () => go(ci + 1);
+  let sx = null;
+  const car = document.getElementById('car');
+  car.addEventListener('pointerdown', e => { sx = e.clientX; });
+  car.addEventListener('pointerup', e => { if (sx === null) return; const dx = e.clientX - sx; if (Math.abs(dx) > 40) go(ci + (dx < 0 ? 1 : -1)); sx = null; });
+  car.addEventListener('pointercancel', () => sx = null);
+  go(0);
+
+  /* Formulaire */
+  let objet = 'table';
+  const tabs = document.querySelectorAll('.tabs button');
+  function setTab(t){
+    objet = t;
+    tabs.forEach(b => { const on = b.dataset.t === t; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    document.getElementById('wrapTime').hidden = t !== 'table';
+    document.getElementById('wrapNights').hidden = t !== 'chambre';
+    document.getElementById('lDate').textContent = t === 'chambre' ? 'Arrivée' : 'Date';
+    document.getElementById('lGuests').textContent = t === 'table' ? 'Convives' : (t === 'chambre' ? 'Voyageurs' : 'Invités');
+  }
+  tabs.forEach(b => b.addEventListener('click', () => setTab(b.dataset.t)));
+  const d = document.getElementById('fDate'); const today = new Date(); d.min = today.toISOString().slice(0, 10);
+  document.getElementById('resaForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const labels = { table: 'Réservation de table', chambre: 'Demande de chambre', mariage: 'Demande de devis événement' };
+    let body = `${labels[objet]}\nDate : ${v('fDate') || 'à préciser'}\n`;
+    if (objet === 'table') body += `Heure : ${v('fTime')}\n`;
+    if (objet === 'chambre') body += `Durée : ${v('fNights')}\n`;
+    body += `Nombre : ${v('fGuests')}\nNom : ${v('fName')}\nContact : ${v('fContact')}\n\n${v('fMsg')}`;
+    location.href = 'mailto:contact@lingousto.fr?subject=' + encodeURIComponent(labels[objet] + ' · ' + (v('fName') || 'site')) + '&body=' + encodeURIComponent(body);
+    document.getElementById('formOk').style.display = 'block';
+  });
+  document.getElementById('newsForm').addEventListener('submit', e => {
+    e.preventDefault();
+    location.href = 'mailto:contact@lingousto.fr?subject=' + encodeURIComponent('Inscription aux nouvelles du Mas') + '&body=' + encodeURIComponent('Merci de m’inscrire : ' + document.getElementById('nMail').value);
+  });
+})();
+</script>
+</body>
+</html>
