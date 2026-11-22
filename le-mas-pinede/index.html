@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Mas Pinède — Chambres d'hôtes &amp; bien-être à Lorgues (Var)</title>
+<meta name="description" content="Le Mas Pinède, chambres et table d'hôtes à Lorgues : 5 chambres, une roulotte, piscine chauffée, jacuzzi, sauna et massages sur demande. Maria &amp; Pascal vous accueillent toute l'année.">
+<meta name="theme-color" content="#0a0608">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Le Mas Pinède — Chambres d'hôtes &amp; bien-être à Lorgues">
+<meta property="og:description" content="5 chambres d'hôtes, une roulotte, piscine chauffée, jacuzzi et sauna, en bordure du village de Lorgues.">
+<meta property="og:image" content="assets/nuit-piscine.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌲%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/nuit-piscine.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Le Mas Pinède",
+  "image": "assets/nuit-piscine.jpg",
+  "telephone": "+33494738340",
+  "email": "contact@lemaspinede.fr",
+  "address": {"@type": "PostalAddress", "streetAddress": "2629 route de Saint-Antonin", "postalCode": "83510", "addressLocality": "Lorgues", "addressCountry": "FR"},
+  "geo": {"@type": "GeoCoordinates", "latitude": 43.502157, "longitude": 6.324098},
+  "numberOfRooms": 5,
+  "petsAllowed": false,
+  "checkinTime": "17:00",
+  "checkoutTime": "10:00",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Piscine chauffée (mai à septembre)", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Sauna", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Wifi gratuit", "value": true}
+  ],
+  "sameAs": ["https://www.facebook.com/LeMasPinede/"]
+}
+</script>
+<style>
+:root{
+  --bg:#0a0608; --bg2:#0a0a0c; --ink:#fff;
+  --muted:rgba(255,255,255,.7); --soft:rgba(255,255,255,.55);
+  --pool:#6BADC4; --deep:#0A4267;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --script:'Dancing Script',cursive;
+  --gx:clamp(20px,6vw,96px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg2);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.app{background:var(--bg);overflow-x:clip}
+.font-instrument{font-family:var(--serif)}
+.scrollbar-hide::-webkit-scrollbar{display:none}
+.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
+
+/* ---------- liquid glass (from the template) ---------- */
+.liquid-glass{
+  background:rgba(255,255,255,.01);background-blend-mode:luminosity;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  border:none;box-shadow:inset 0 1px 1px rgba(255,255,255,.1);
+  position:relative;overflow:hidden;
+}
+.liquid-glass::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+  background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.text-glow{text-shadow:0 0 40px rgba(255,255,255,.4),0 0 80px rgba(255,255,255,.2),0 0 120px rgba(255,255,255,.1)}
+.button-glow{box-shadow:0 0 20px rgba(255,255,255,.3),0 0 40px rgba(255,255,255,.1)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;
+  background:#fff;color:#000;padding:14px 32px;border-radius:999px;font-weight:500;font-size:14px;letter-spacing:.025em;
+  transition:all .3s;white-space:nowrap}
+.btn:hover{background:rgba(255,255,255,.9)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:14px 28px;border-radius:999px;
+  color:#fff;font-size:14px;letter-spacing:.025em;font-weight:500;transition:background .3s}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* ---------- navbar ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;transition:background .5s var(--ease),padding .5s var(--ease)}
+.nav.scrolled{background:rgba(10,6,8,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:12px;padding-bottom:12px;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.logo{font-family:var(--script);font-size:26px;line-height:1;color:#fff;font-weight:600;white-space:nowrap;min-height:44px;display:flex;align-items:center}
+.nav-links{display:none;gap:48px}
+.nav-links a{color:rgba(255,255,255,.8);font-size:14px;letter-spacing:.025em;transition:color .3s;padding:12px 0}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cta{display:none}
+.call{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 16px;border-radius:999px;background:#fff;color:#000;font-size:13px;font-weight:600}
+.call svg{width:15px;height:15px}
+.burger{width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:0;cursor:pointer;position:relative;z-index:70}
+.burger span{display:block;width:24px;height:1.5px;background:#fff;border-radius:2px;transition:transform .5s var(--ease),opacity .4s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);z-index:44}
+.scrim.open{opacity:1;pointer-events:auto}
+.menu{position:fixed;top:0;right:0;bottom:0;width:85%;max-width:340px;z-index:45;background:rgba(10,6,8,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-left:1px solid rgba(255,255,255,.1);transform:translateX(100%);transition:transform .6s var(--ease);display:flex;flex-direction:column;padding:104px 32px 36px}
+.menu.open{transform:none}
+.menu a.m{font-family:var(--serif);font-size:34px;line-height:1;color:#fff;padding:12px 0;opacity:0;transform:translateX(24px);transition:opacity .5s var(--ease),transform .5s var(--ease);min-height:44px}
+.menu.open a.m{opacity:1;transform:none}
+.menu .menu-foot{margin-top:auto;opacity:0;transform:translateX(24px);transition:opacity .5s var(--ease) .45s,transform .5s var(--ease) .45s;display:flex;flex-direction:column;gap:12px}
+.menu.open .menu-foot{opacity:1;transform:none}
+.menu .menu-foot p{font-size:13px;color:var(--soft);line-height:1.6}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .ov{position:absolute;inset:0;background:rgba(0,0,0,.2)}
+.hero .ov2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 60%,rgba(10,6,8,.9) 100%)}
+.hero-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 var(--gx);margin-top:-120px;text-align:center}
+.hero-k{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-weight:400;color:#fff;font-size:44px;line-height:.9;letter-spacing:-.02em}
+.hero h1 em{font-style:italic}
+.hero p.sub{color:var(--muted);font-size:15px;line-height:1.6;margin-top:20px;max-width:36rem}
+.hero .ctas{margin-top:24px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.hero .reveal-h{opacity:0;transform:translateY(24px);filter:blur(8px);animation:rise 1.4s var(--ease) forwards}
+.hero .d1{animation-delay:.25s}.hero .d2{animation-delay:.5s}.hero .d3{animation-delay:.7s}
+@keyframes rise{to{opacity:1;transform:none;filter:none}}
+.sound{display:none;position:absolute;bottom:32px;left:32px;align-items:center;gap:12px}
+.sound .c{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.sound .c i{display:block;width:12px;height:1.5px;background:rgba(255,255,255,.8);animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{width:4px;opacity:.5}}
+.sound span{color:rgba(255,255,255,.6);font-size:12px;line-height:1.35}
+.hero-facts{position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 16px}
+.chip{font-size:12px;color:rgba(255,255,255,.85);padding:8px 14px;border-radius:999px}
+
+/* ---------- quote section (parallax) ---------- */
+.quote{position:relative;height:100vh;height:100svh;min-height:640px;overflow:hidden;
+  background:linear-gradient(180deg,#010A17 0%,#0A4267 30%,#20658E 60%,#6BADC4 100%);
+  display:flex;align-items:center;justify-content:center}
+.rainbow{position:absolute;left:0;right:0;top:0;z-index:30;width:100%;will-change:transform;pointer-events:none;opacity:.9}
+.cloud{position:absolute;z-index:10;width:500px;will-change:transform;opacity:0;pointer-events:none;display:none}
+.cloud.l{left:0;bottom:10%}
+.cloud.r{right:0;bottom:15%}
+.cloud img{width:100%}
+.cloud.l img{margin-left:-50%}
+.cloud.r img{margin-left:45%;transform:scaleX(-1)}
+.pines{position:absolute;left:0;right:0;bottom:-90px;z-index:25;will-change:transform;pointer-events:none}
+.pines svg{display:block;width:100%;height:250px}
+.pines-floor{height:90px;background:#0a0608;margin-top:-1px}
+@media (min-width:768px){.pines svg{height:340px}}
+.q-in{position:relative;z-index:20;max-width:56rem;padding:0 var(--gx);text-align:center;margin-top:-14vh}
+.q-in blockquote{font-family:var(--serif);color:#fff;font-size:22px;line-height:1.45}
+.q-in cite{display:block;margin-top:24px;color:rgba(255,255,255,.8);font-size:14px;letter-spacing:.025em;font-style:normal}
+
+/* ---------- shared section styles ---------- */
+section.s{position:relative;padding:76px var(--gx)}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--pool);margin-bottom:16px;display:block}
+h2.t{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;letter-spacing:-.015em}
+h2.t em{font-style:italic;color:rgba(255,255,255,.75)}
+p.lead{color:var(--muted);font-size:16px;line-height:1.7;max-width:40rem;margin-top:20px}
+.rv{opacity:0;transform:translateY(32px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* Le Mas */
+.mas{background:var(--bg)}
+.mas-grid{display:grid;gap:40px;margin-top:8px}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mosaic figure{border-radius:20px;overflow:hidden;position:relative}
+.mosaic figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.mosaic figure:hover img{transform:scale(1.05)}
+.mosaic .big{grid-column:1/-1;aspect-ratio:16/10}
+.mosaic .sm{aspect-ratio:1/1}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.fact{border-radius:20px;padding:18px 16px}
+.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;line-height:1}
+.fact span{display:block;margin-top:8px;font-size:13px;color:var(--soft);line-height:1.45}
+.dist{margin-top:28px;border-radius:24px;padding:22px 20px}
+.dist h3{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);font-weight:500;margin-bottom:12px}
+.dist ul{list-style:none;display:grid;grid-template-columns:1fr;gap:10px 16px}
+.dist li{font-size:14px;color:#fff;display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px}
+.dist li i{font-style:normal;color:var(--soft)}
+
+/* Chambres */
+.rooms{background:linear-gradient(180deg,var(--bg) 0%,#0b1420 100%)}
+.rooms-head{display:flex;flex-direction:column;gap:12px}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px calc(var(--gx) * -1) 0;padding:0 var(--gx) 8px;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.room{flex:0 0 80%;max-width:380px;scroll-snap-align:start;border-radius:28px;padding:10px;scroll-margin-left:var(--gx)}
+.room .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/3.4}
+.room .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.room:hover .ph img{transform:scale(1.05)}
+.room .tx{padding:18px 10px 12px}
+.room h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1}
+.room p{font-size:13px;color:var(--soft);margin-top:8px;line-height:1.5}
+.track-ctl{display:flex;align-items:center;gap:10px;margin-top:18px}
+.track-ctl button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s}
+.track-ctl button:hover{background:rgba(255,255,255,.1)}
+.track-ctl small{font-size:12px;color:var(--soft);margin-left:6px}
+.equip{margin-top:40px;border-radius:24px;padding:24px 20px;display:grid;gap:20px}
+.equip ul{list-style:none;display:grid;grid-template-columns:1fr;gap:10px}
+.equip li{font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.equip li::before{content:'';flex:0 0 6px;height:6px;border-radius:50%;background:var(--pool);margin-top:8px;box-shadow:0 0 10px var(--pool)}
+.equip h3{font-family:var(--serif);font-weight:400;font-size:26px}
+
+/* Roulotte */
+.rou{background:#0b1420;overflow:hidden}
+.rou-grid{display:grid;gap:36px;align-items:center}
+.rou-ph{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden}
+.rou-ph img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.rou-ph .inset{position:absolute;right:12px;bottom:12px;width:44%;aspect-ratio:1;border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.45)}
+.rou-ph .inset img{position:static;width:100%;height:100%;inset:auto}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.tag{font-size:13px;padding:9px 14px;border-radius:999px;color:rgba(255,255,255,.88)}
+
+/* Bien-être */
+.spa{position:relative;padding:0;overflow:hidden;background:#06040a}
+.spa-bg{position:absolute;inset:-20% 0;background:url(assets/spa-jacuzzi-nuit.jpg) center/cover no-repeat;will-change:transform}
+.spa-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,4,10,.92) 0%,rgba(6,4,10,.55) 35%,rgba(6,4,10,.7) 70%,#0a0608 100%)}
+.spa::before,.spa::after{content:'';position:absolute;left:0;right:0;height:180px;z-index:1;pointer-events:none}
+.spa::before{top:0;background:linear-gradient(#0b1420,rgba(11,20,32,0))}
+.spa::after{bottom:0;background:linear-gradient(rgba(10,6,8,0),#0a0608)}
+.spa-in{position:relative;z-index:2;padding:88px var(--gx)}
+.spa-cards{display:grid;gap:14px;margin-top:40px}
+.scard{border-radius:28px;padding:10px;background:rgba(255,255,255,.03)}
+.scard .ph{aspect-ratio:16/10;border-radius:20px;overflow:hidden}
+.scard .ph img{width:100%;height:100%;object-fit:cover}
+.scard .tx{padding:18px 12px 12px}
+.scard h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.scard h3 small{font-family:var(--sans);font-size:13px;color:var(--pool);letter-spacing:.02em;white-space:nowrap}
+.scard p{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.6}
+.spa-note{margin-top:24px;font-size:13px;color:var(--soft);line-height:1.6;max-width:40rem}
+
+/* Table */
+.table{background:var(--bg)}
+.table-grid{display:grid;gap:36px;align-items:center}
+.table-ph{border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+.table-ph img{width:100%;height:100%;object-fit:cover}
+.menu-card{margin-top:28px;border-radius:24px;padding:22px 20px;display:grid;gap:14px}
+.menu-card .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:12px}
+.menu-card .row:last-child{border:0;padding:0}
+.menu-card .row span{font-size:15px;color:#fff;line-height:1.4}
+.menu-card .row span small{display:block;font-size:12px;color:var(--soft);margin-top:3px}
+.menu-card .row b{font-family:var(--serif);font-weight:400;font-size:26px;white-space:nowrap}
+
+/* Infos & avis */
+.infos{background:linear-gradient(180deg,var(--bg) 0%,#0A2238 100%)}
+.info-grid{display:grid;gap:14px;margin-top:40px}
+.icard{border-radius:24px;padding:24px 20px}
+.icard h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.05}
+.icard ul{list-style:none;margin-top:14px;display:grid;gap:10px}
+.icard li{font-size:14px;color:rgba(255,255,255,.85);line-height:1.5;display:flex;justify-content:space-between;gap:12px}
+.icard li i{font-style:normal;color:var(--soft);text-align:right}
+.icard .price{font-family:var(--serif);font-size:44px;line-height:1;margin-top:14px}
+.icard .price small{font-family:var(--sans);font-size:13px;color:var(--soft);margin-left:6px}
+.icard p{font-size:14px;color:var(--muted);line-height:1.6;margin-top:10px}
+.reviews{display:grid;gap:14px;margin-top:56px}
+.rcard{border-radius:24px;padding:26px 22px}
+.rcard .score{font-family:var(--serif);font-size:64px;line-height:.9}
+.rcard .score small{font-size:24px;color:var(--soft)}
+.rcard .stars{color:#F7D58B;letter-spacing:3px;font-size:14px;margin-top:10px}
+.rcard blockquote{font-family:var(--serif);font-size:24px;line-height:1.35}
+.rcard .src{font-size:12px;color:var(--soft);margin-top:14px;line-height:1.5}
+
+/* Contact */
+.contact{background:#0A2238;padding-bottom:40px}
+.contact-grid{display:grid;gap:14px;margin-top:40px}
+.ccard{border-radius:28px;padding:26px 22px}
+.ccard .big{font-family:var(--serif);font-size:30px;line-height:1.15}
+.ccard .lines{margin-top:18px;display:grid;gap:4px}
+.ccard .lines a,.ccard .lines span{display:flex;align-items:center;gap:12px;min-height:48px;font-size:15px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.ccard .lines a svg,.ccard .lines span svg{width:18px;height:18px;flex:0 0 18px;opacity:.75}
+.ccard .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.map{border-radius:28px;overflow:hidden;min-height:320px;position:relative;background:#0b1420}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.4) invert(.9) hue-rotate(180deg) contrast(.9)}
+footer{background:#0A2238;padding:40px var(--gx) 48px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:18px}
+footer .logo{font-size:30px}
+footer p{font-size:13px;color:var(--soft);line-height:1.6}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+footer nav a{font-size:13px;color:rgba(255,255,255,.75);min-height:44px;display:inline-flex;align-items:center}
+
+/* ---------- breakpoints ---------- */
+@media (max-width:899px){
+  .liquid-glass{backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+}
+@media (max-width:380px){
+  .logo{font-size:23px}
+  .call{padding:0 13px}
+}
+@media (min-width:640px){
+  .cloud{display:block}
+  .hero h1{font-size:60px}
+  .q-in blockquote{font-size:26px}
+  .room{flex-basis:46%}
+  .info-grid{grid-template-columns:1fr 1fr}
+  .reviews{grid-template-columns:1fr 1.6fr}
+  .equip ul{grid-template-columns:1fr 1fr}
+  .dist ul{grid-template-columns:1fr 1fr}
+}
+@media (min-width:768px){
+  .nav{padding:20px 48px}
+  .nav.scrolled{padding-top:14px;padding-bottom:14px}
+  .logo{font-size:30px}
+  .hero h1{font-size:72px}
+  .hero p.sub{font-size:16px;margin-top:28px}
+  .hero .ctas{margin-top:36px}
+  .cloud{width:650px}
+  .q-in blockquote{font-size:36px;line-height:1.5}
+  .q-in cite{margin-top:32px;font-size:16px}
+  h2.t{font-size:60px}
+  section.s{padding:140px var(--gx)}
+  .spa-in{padding:150px var(--gx)}
+  .spa-cards{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .hero-facts{bottom:36px}
+}
+@media (min-width:900px){
+  .nav-links{display:flex}
+  .sound{display:flex}
+  .nav-cta{display:inline-flex;min-height:44px;padding:12px 28px}
+  .burger,.nav .call{display:none}
+  .mas-grid{grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+  .mas-grid .sticky{position:sticky;top:120px}
+  .rou-grid,.table-grid{grid-template-columns:1fr 1fr;gap:80px}
+  .rou-grid .rou-ph{order:2}
+  .room{flex-basis:31%}
+  .equip{grid-template-columns:1fr 2fr;align-items:start;padding:32px}
+  .info-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-facts{left:auto;right:32px;justify-content:flex-end;max-width:60%}
+}
+@media (min-width:1024px){
+  .hero h1{font-size:110px}
+  .q-in blockquote{font-size:42px}
+  .track{margin-right:0;padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none}
+  .hero .reveal-h{animation:none;opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="logo" aria-label="Le Mas Pinède, accueil">Le Mas Pinède</a>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#mas">Le Mas</a>
+    <a href="#chambres">Chambres</a>
+    <a href="#bien-etre">Bien-être</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a class="call" href="tel:+33494738340" aria-label="Appeler le Mas Pinède"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Appeler</a>
+    <a class="btn button-glow nav-cta" href="#contact">Réserver un séjour</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="menu" id="menu" aria-label="Menu">
+  <a class="m" href="#mas">Le Mas</a>
+  <a class="m" href="#chambres">Chambres</a>
+  <a class="m" href="#roulotte">La roulotte</a>
+  <a class="m" href="#bien-etre">Bien-être</a>
+  <a class="m" href="#table">Table d'hôtes</a>
+  <a class="m" href="#contact">Contact</a>
+  <div class="menu-foot">
+    <p>2629 route de Saint-Antonin<br>83510 Lorgues</p>
+    <a class="btn button-glow" href="tel:+33494738340">04 94 73 83 40</a>
+  </div>
+</aside>
+
+<!-- ================= SECTION 1 : HERO ================= -->
+<section class="hero" id="top">
+  <video autoplay muted loop playsinline preload="auto" poster="assets/nuit-piscine.jpg" aria-hidden="true">
+    <source src="assets/hero-mas.mp4" type="video/mp4">
+  </video>
+  <div class="ov"></div><div class="ov2"></div>
+  <div class="hero-c">
+    <p class="hero-k reveal-h">Chambres &amp; table d'hôtes · Lorgues, Var</p>
+    <h1 class="text-glow reveal-h d1">Douceur des pins.<br><em>Calme profond.</em></h1>
+    <p class="sub reveal-h d2">Maria &amp; Pascal vous accueillent dans leurs 5 chambres d'hôtes et leur roulotte, entre piscine chauffée, jacuzzi et sauna.</p>
+    <div class="ctas reveal-h d3">
+      <a class="btn button-glow" href="#contact">Réserver votre séjour</a>
+      <a class="btn-ghost" href="#mas">Découvrir le Mas</a>
+    </div>
+  </div>
+  <div class="sound" aria-hidden="true">
+    <div class="c"><i></i></div>
+    <span>Respirez,<br>vous êtes arrivés</span>
+  </div>
+  <div class="hero-facts">
+    <span class="chip liquid-glass">Piscine chauffée</span>
+    <span class="chip liquid-glass">Jacuzzi &amp; sauna</span>
+    <span class="chip liquid-glass">Ouvert toute l'année</span>
+  </div>
+</section>
+
+<!-- ================= SECTION 2 : QUOTE (parallax) ================= -->
+<section class="quote" id="quote">
+  <img class="rainbow" id="rainbow" src="assets/arc-lumiere.png" alt="" aria-hidden="true">
+  <div class="cloud l" id="cloudL"><img src="assets/nuage.png" alt="" aria-hidden="true"></div>
+  <div class="cloud r" id="cloudR"><img src="assets/nuage.png" alt="" aria-hidden="true"></div>
+  <div class="q-in rv">
+    <blockquote>« En bordure du village de Lorgues, sur la route de Saint-Antonin, nos chambres d'hôtes allient design et bien-être. Ici, vous serez assurés d'une grande tranquillité, au calme et à l'abri des regards. »</blockquote>
+    <cite>Maria &amp; Pascal — vos hôtes</cite>
+  </div>
+  <div class="pines" id="pines" aria-hidden="true">
+    <svg viewBox="0 -20 1440 360" preserveAspectRatio="xMidYMax slice">
+<g fill="#08263a" opacity=".85"><path d="M15.0,272.04179042075833 C18.0,220.3 20.2,175.0 22.7,158.1 L25.7,158.1 C28.2,181.4 23.0,220.3 26.0,272.04179042075833 Z M24.2,181.4 L-12.5,155.6 L-10.0,159.4 Z M24.2,178.9 L63.4,153.0 L60.9,156.8 Z"/><ellipse cx="57.2" cy="136.8" rx="29.6" ry="18.7"/><ellipse cx="-5.1" cy="136.6" rx="26.7" ry="13.5"/><ellipse cx="29.5" cy="136.1" rx="29.3" ry="19.0"/><ellipse cx="37.7" cy="146.9" rx="20.6" ry="16.2"/><ellipse cx="-22.1" cy="139.4" rx="29.1" ry="12.7"/><ellipse cx="15.9" cy="146.0" rx="29.4" ry="16.0"/><ellipse cx="42.9" cy="137.0" rx="29.4" ry="13.1"/><ellipse cx="24.2" cy="146.5" rx="55.1" ry="12.9"/><path d="M132.8,264.1418287482812 C135.8,203.1 137.1,149.6 139.6,129.7 L142.6,129.7 C145.1,157.2 140.8,203.1 143.8,264.1418287482812 Z M141.1,157.2 L92.1,126.7 L95.4,131.3 Z M141.1,154.2 L193.4,123.6 L190.1,128.2 Z"/><ellipse cx="165.9" cy="112.7" rx="33.3" ry="19.1"/><ellipse cx="134.7" cy="109.6" rx="44.3" ry="20.2"/><ellipse cx="106.0" cy="116.3" rx="38.1" ry="21.8"/><ellipse cx="172.6" cy="109.3" rx="48.5" ry="14.8"/><ellipse cx="129.9" cy="120.8" rx="29.6" ry="18.2"/><ellipse cx="77.9" cy="118.6" rx="43.6" ry="19.0"/><ellipse cx="192.6" cy="109.9" rx="42.0" ry="19.2"/><ellipse cx="152.1" cy="113.4" rx="45.3" ry="22.4"/><ellipse cx="137.6" cy="118.5" rx="27.5" ry="20.2"/><ellipse cx="161.3" cy="126.5" rx="44.9" ry="16.4"/><ellipse cx="141.1" cy="116.0" rx="73.5" ry="15.3"/><path d="M273.7,260.67214456474767 C276.7,200.6 273.6,148.1 276.1,128.6 L279.1,128.6 C281.6,155.6 281.7,200.6 284.7,260.67214456474767 Z M277.6,155.6 L236.7,125.6 L239.5,130.1 Z M277.6,152.6 L321.1,122.6 L318.4,127.1 Z"/><ellipse cx="290.3" cy="113.4" rx="25.9" ry="16.1"/><ellipse cx="304.8" cy="111.1" rx="39.3" ry="18.0"/><ellipse cx="239.4" cy="111.2" rx="27.1" ry="14.7"/><ellipse cx="269.6" cy="114.8" rx="35.2" ry="22.4"/><ellipse cx="298.5" cy="110.7" rx="26.2" ry="14.3"/><ellipse cx="237.7" cy="117.4" rx="22.0" ry="21.0"/><ellipse cx="241.3" cy="108.3" rx="24.6" ry="18.3"/><ellipse cx="290.1" cy="109.2" rx="24.2" ry="21.2"/><ellipse cx="277.6" cy="115.1" rx="61.3" ry="15.0"/><path d="M459.7,263.02234276256735 C462.7,203.3 459.5,151.0 462.0,131.6 L465.0,131.6 C467.5,158.5 467.7,203.3 470.7,263.02234276256735 Z M463.5,158.5 L413.2,128.7 L416.6,133.1 Z M463.5,155.5 L517.1,125.7 L513.7,130.1 Z"/><ellipse cx="448.3" cy="114.3" rx="29.2" ry="19.1"/><ellipse cx="401.9" cy="106.4" rx="31.7" ry="14.9"/><ellipse cx="441.0" cy="106.0" rx="26.8" ry="14.8"/><ellipse cx="407.4" cy="113.5" rx="27.4" ry="21.3"/><ellipse cx="479.5" cy="108.3" rx="32.7" ry="16.5"/><ellipse cx="444.3" cy="107.7" rx="46.7" ry="22.3"/><ellipse cx="458.7" cy="116.3" rx="28.8" ry="14.4"/><ellipse cx="441.3" cy="111.1" rx="46.2" ry="14.9"/><ellipse cx="396.4" cy="127.5" rx="39.2" ry="14.8"/><ellipse cx="469.5" cy="105.4" rx="39.2" ry="22.2"/><ellipse cx="514.6" cy="121.4" rx="32.9" ry="16.7"/><ellipse cx="463.5" cy="118.2" rx="75.4" ry="14.9"/><path d="M583.0,255.12534692685858 C586.0,192.6 591.9,137.9 594.4,117.6 L597.4,117.6 C599.9,145.7 591.0,192.6 594.0,255.12534692685858 Z M595.9,145.7 L546.2,114.4 L549.5,119.1 Z M595.9,142.6 L648.9,111.3 L645.6,116.0 Z"/><ellipse cx="614.8" cy="104.8" rx="44.8" ry="21.2"/><ellipse cx="553.4" cy="95.4" rx="35.8" ry="21.6"/><ellipse cx="554.1" cy="101.8" rx="43.5" ry="23.3"/><ellipse cx="636.2" cy="101.2" rx="31.0" ry="19.7"/><ellipse cx="574.2" cy="109.7" rx="43.3" ry="17.3"/><ellipse cx="661.9" cy="91.4" rx="28.9" ry="18.5"/><ellipse cx="573.3" cy="101.5" rx="49.4" ry="19.8"/><ellipse cx="526.5" cy="112.2" rx="34.5" ry="20.1"/><ellipse cx="642.4" cy="92.4" rx="35.5" ry="20.7"/><ellipse cx="595.9" cy="103.5" rx="74.5" ry="15.6"/><path d="M709.0,241.42012333620474 C712.0,176.1 713.8,118.9 716.3,97.7 L719.3,97.7 C721.8,127.1 717.0,176.1 720.0,241.42012333620474 Z M717.8,127.1 L667.3,94.4 L670.7,99.3 Z M717.8,123.8 L771.6,91.1 L768.3,96.0 Z"/><ellipse cx="760.3" cy="93.7" rx="36.2" ry="18.6"/><ellipse cx="780.9" cy="87.2" rx="30.9" ry="15.9"/><ellipse cx="668.5" cy="91.9" rx="45.9" ry="16.1"/><ellipse cx="763.9" cy="93.9" rx="42.4" ry="18.1"/><ellipse cx="724.7" cy="71.7" rx="27.3" ry="24.2"/><ellipse cx="738.9" cy="82.0" rx="48.9" ry="19.0"/><ellipse cx="770.3" cy="89.9" rx="31.9" ry="17.2"/><ellipse cx="717.8" cy="83.0" rx="75.7" ry="16.3"/><path d="M842.4,235.56613435443347 C845.4,185.8 836.7,142.2 839.2,126.1 L842.2,126.1 C844.7,148.5 850.4,185.8 853.4,235.56613435443347 Z M840.7,148.5 L800.5,123.6 L803.2,127.3 Z M840.7,146.0 L883.5,121.1 L880.8,124.8 Z"/><ellipse cx="878.3" cy="104.9" rx="35.3" ry="17.9"/><ellipse cx="859.0" cy="119.9" rx="31.1" ry="17.4"/><ellipse cx="883.2" cy="106.3" rx="24.3" ry="15.0"/><ellipse cx="882.6" cy="119.1" rx="32.8" ry="17.0"/><ellipse cx="801.3" cy="106.5" rx="33.0" ry="12.1"/><ellipse cx="791.4" cy="117.3" rx="31.4" ry="14.8"/><ellipse cx="871.8" cy="121.3" rx="22.5" ry="12.6"/><ellipse cx="789.2" cy="105.6" rx="29.9" ry="11.4"/><ellipse cx="885.0" cy="104.9" rx="27.5" ry="18.5"/><ellipse cx="852.6" cy="107.6" rx="26.6" ry="15.0"/><ellipse cx="840.7" cy="114.9" rx="60.2" ry="12.4"/><path d="M1017.0,247.61595882634853 C1020.0,191.4 1018.7,142.3 1021.2,124.0 L1024.2,124.0 C1026.7,149.3 1025.0,191.4 1028.0,247.61595882634853 Z M1022.7,149.3 L981.6,121.2 L984.3,125.4 Z M1022.7,146.5 L1066.5,118.4 L1063.7,122.6 Z"/><ellipse cx="1071.3" cy="118.8" rx="25.8" ry="16.4"/><ellipse cx="1013.1" cy="107.5" rx="28.0" ry="18.3"/><ellipse cx="1014.4" cy="103.5" rx="27.7" ry="13.7"/><ellipse cx="1054.5" cy="119.8" rx="34.2" ry="15.7"/><ellipse cx="994.3" cy="101.8" rx="30.9" ry="18.9"/><ellipse cx="976.0" cy="118.6" rx="25.0" ry="18.3"/><ellipse cx="990.9" cy="114.6" rx="40.9" ry="16.0"/><ellipse cx="1013.6" cy="106.7" rx="23.7" ry="15.7"/><ellipse cx="1004.0" cy="109.0" rx="35.4" ry="15.9"/><ellipse cx="1022.7" cy="111.4" rx="61.6" ry="14.0"/><path d="M1168.4,255.59004479644352 C1171.4,204.5 1158.6,159.8 1161.1,143.2 L1164.1,143.2 C1166.6,166.2 1176.4,204.5 1179.4,255.59004479644352 Z M1162.6,166.2 L1117.0,140.6 L1120.1,144.5 Z M1162.6,163.6 L1211.1,138.1 L1208.1,141.9 Z"/><ellipse cx="1222.7" cy="122.3" rx="29.9" ry="11.8"/><ellipse cx="1198.1" cy="125.7" rx="27.0" ry="14.7"/><ellipse cx="1215.0" cy="136.9" rx="29.8" ry="12.6"/><ellipse cx="1216.0" cy="131.9" rx="39.2" ry="12.2"/><ellipse cx="1106.2" cy="134.3" rx="33.3" ry="12.1"/><ellipse cx="1218.4" cy="133.2" rx="41.3" ry="12.1"/><ellipse cx="1208.0" cy="121.6" rx="42.6" ry="15.0"/><ellipse cx="1142.1" cy="131.5" rx="44.0" ry="13.5"/><ellipse cx="1162.6" cy="131.7" rx="68.3" ry="12.8"/><path d="M1288.7,254.30541002581705 C1291.7,197.7 1278.8,148.1 1281.3,129.7 L1284.3,129.7 C1286.8,155.2 1296.7,197.7 1299.7,254.30541002581705 Z M1282.8,155.2 L1241.5,126.9 L1244.3,131.1 Z M1282.8,152.3 L1326.8,124.0 L1324.1,128.3 Z"/><ellipse cx="1255.3" cy="108.3" rx="40.0" ry="18.1"/><ellipse cx="1286.4" cy="108.9" rx="30.6" ry="18.5"/><ellipse cx="1256.3" cy="122.4" rx="41.2" ry="13.1"/><ellipse cx="1227.2" cy="115.7" rx="40.9" ry="17.1"/><ellipse cx="1253.4" cy="114.3" rx="34.7" ry="18.3"/><ellipse cx="1300.9" cy="116.6" rx="39.1" ry="21.0"/><ellipse cx="1260.6" cy="109.1" rx="26.4" ry="14.4"/><ellipse cx="1326.9" cy="120.7" rx="24.7" ry="21.2"/><ellipse cx="1282.8" cy="116.9" rx="61.9" ry="14.2"/><path d="M0,520 L0,267.1 L40,264.8 L80,262.0 L120,259.3 L160,256.9 L200,255.3 L240,254.6 L280,254.7 L320,255.4 L360,256.4 L400,257.2 L440,257.4 L480,256.6 L520,254.8 L560,251.8 L600,247.9 L640,243.4 L680,238.9 L720,234.9 L760,231.7 L800,229.9 L840,229.5 L880,230.5 L920,232.9 L960,236.1 L1000,239.7 L1040,243.1 L1080,246.1 L1120,248.2 L1160,249.4 L1200,249.7 L1240,249.3 L1280,248.5 L1320,248.0 L1360,247.9 L1400,248.7 L1440,250.5 L1480,253.3 L1440,520 Z"/></g>
+<g fill="#0a0608"><path d="M-15.0,299.0711890321119 C-12.0,212.3 -9.5,136.4 -7.0,108.1 L-4.0,108.1 C-1.5,147.2 -7.0,212.3 -4.0,299.0711890321119 Z M-5.5,147.2 L-67.6,103.8 L-63.5,110.3 Z M-5.5,142.9 L60.8,99.5 L56.6,106.0 Z"/><ellipse cx="-17.5" cy="71.0" rx="52.4" ry="24.5"/><ellipse cx="-4.5" cy="102.8" rx="50.5" ry="28.5"/><ellipse cx="-84.6" cy="75.5" rx="40.9" ry="19.6"/><ellipse cx="-29.1" cy="80.5" rx="61.7" ry="23.7"/><ellipse cx="-86.4" cy="99.7" rx="39.4" ry="21.9"/><ellipse cx="-34.1" cy="72.0" rx="41.2" ry="28.1"/><ellipse cx="-49.3" cy="96.0" rx="35.8" ry="30.2"/><ellipse cx="-67.4" cy="89.5" rx="44.5" ry="23.4"/><ellipse cx="17.1" cy="72.0" rx="60.9" ry="30.6"/><ellipse cx="-5.5" cy="88.6" rx="93.2" ry="21.7"/><path d="M172.1,307.6801995948314 C175.1,219.1 176.6,141.6 179.1,112.8 L182.1,112.8 C184.6,152.7 180.1,219.1 183.1,307.6801995948314 Z M180.6,152.7 L101.8,108.4 L107.1,115.0 Z M180.6,148.3 L264.5,104.0 L259.3,110.6 Z"/><ellipse cx="229.2" cy="90.5" rx="52.4" ry="28.1"/><ellipse cx="102.2" cy="102.2" rx="68.3" ry="26.7"/><ellipse cx="165.0" cy="97.8" rx="60.6" ry="32.0"/><ellipse cx="236.3" cy="93.1" rx="71.9" ry="20.1"/><ellipse cx="221.7" cy="101.2" rx="68.1" ry="32.6"/><ellipse cx="212.1" cy="76.0" rx="43.5" ry="28.4"/><ellipse cx="281.9" cy="86.3" rx="58.6" ry="20.6"/><ellipse cx="74.5" cy="91.8" rx="51.0" ry="23.4"/><ellipse cx="171.1" cy="75.5" rx="76.3" ry="31.9"/><ellipse cx="180.6" cy="92.9" rx="118.1" ry="22.1"/><path d="M352.2,301.95982860712485 C355.2,225.1 352.3,157.9 354.8,132.9 L357.8,132.9 C360.3,167.5 360.2,225.1 363.2,301.95982860712485 Z M356.3,167.5 L288.6,129.1 L293.1,134.9 Z M356.3,163.7 L428.4,125.2 L423.9,131.0 Z"/><ellipse cx="421.8" cy="105.6" rx="59.9" ry="19.9"/><ellipse cx="384.6" cy="112.5" rx="62.8" ry="18.2"/><ellipse cx="434.0" cy="107.2" rx="37.5" ry="24.6"/><ellipse cx="299.1" cy="116.8" rx="46.5" ry="24.8"/><ellipse cx="392.8" cy="117.4" rx="40.3" ry="22.8"/><ellipse cx="353.6" cy="128.2" rx="39.2" ry="19.8"/><ellipse cx="354.3" cy="120.1" rx="45.1" ry="22.7"/><ellipse cx="356.3" cy="115.6" rx="101.5" ry="19.2"/><path d="M606.6,303.60515569229545 C609.6,211.8 600.8,131.5 603.3,101.7 L606.3,101.7 C608.8,143.0 614.6,211.8 617.6,303.60515569229545 Z M604.8,143.0 L528.1,97.1 L533.2,104.0 Z M604.8,138.4 L686.7,92.5 L681.5,99.4 Z"/><ellipse cx="698.5" cy="61.0" rx="57.4" ry="31.9"/><ellipse cx="705.4" cy="76.9" rx="50.5" ry="23.5"/><ellipse cx="700.5" cy="68.1" rx="61.7" ry="22.6"/><ellipse cx="610.0" cy="95.4" rx="45.7" ry="31.9"/><ellipse cx="606.7" cy="92.9" rx="66.1" ry="23.8"/><ellipse cx="690.3" cy="78.2" rx="41.8" ry="20.7"/><ellipse cx="603.0" cy="76.9" rx="51.7" ry="22.6"/><ellipse cx="604.8" cy="81.0" rx="115.1" ry="22.9"/><path d="M814.4,296.64371643790395 C817.4,226.5 797.5,165.2 800.0,142.4 L803.0,142.4 C805.5,173.9 822.4,226.5 825.4,296.64371643790395 Z M801.5,173.9 L738.3,138.9 L742.5,144.1 Z M801.5,170.4 L868.9,135.4 L864.7,140.6 Z"/><ellipse cx="861.5" cy="114.2" rx="61.0" ry="23.3"/><ellipse cx="872.6" cy="119.0" rx="44.7" ry="19.9"/><ellipse cx="889.8" cy="127.4" rx="44.4" ry="20.3"/><ellipse cx="761.7" cy="112.2" rx="36.7" ry="24.6"/><ellipse cx="763.5" cy="137.1" rx="41.1" ry="18.6"/><ellipse cx="803.4" cy="116.2" rx="44.7" ry="25.8"/><ellipse cx="869.5" cy="133.6" rx="52.3" ry="25.4"/><ellipse cx="879.5" cy="126.2" rx="54.9" ry="16.3"/><ellipse cx="842.6" cy="123.5" rx="55.9" ry="22.6"/><ellipse cx="801.5" cy="126.6" rx="94.8" ry="17.5"/><path d="M1015.9,282.68015247384477 C1018.9,221.1 1003.5,167.2 1006.0,147.2 L1009.0,147.2 C1011.5,174.9 1023.9,221.1 1026.9,282.68015247384477 Z M1007.5,174.9 L950.8,144.2 L954.6,148.8 Z M1007.5,171.9 L1068.0,141.1 L1064.2,145.7 Z"/><ellipse cx="994.0" cy="126.5" rx="37.0" ry="20.7"/><ellipse cx="1031.7" cy="129.5" rx="36.6" ry="18.3"/><ellipse cx="1034.3" cy="122.5" rx="47.3" ry="14.5"/><ellipse cx="1007.6" cy="139.5" rx="44.8" ry="18.0"/><ellipse cx="980.9" cy="138.2" rx="41.6" ry="18.9"/><ellipse cx="966.8" cy="123.8" rx="45.0" ry="16.8"/><ellipse cx="986.6" cy="139.5" rx="35.6" ry="14.0"/><ellipse cx="1066.3" cy="129.0" rx="50.0" ry="15.8"/><ellipse cx="971.0" cy="138.0" rx="43.4" ry="19.2"/><ellipse cx="985.3" cy="136.4" rx="44.2" ry="21.2"/><ellipse cx="1007.5" cy="133.4" rx="85.1" ry="15.4"/><path d="M1279.2,291.2918902861274 C1282.2,228.3 1276.1,173.2 1278.6,152.8 L1281.6,152.8 C1284.1,181.1 1287.2,228.3 1290.2,291.2918902861274 Z M1280.1,181.1 L1222.5,149.6 L1226.4,154.3 Z M1280.1,178.0 L1341.5,146.5 L1337.7,151.2 Z"/><ellipse cx="1269.1" cy="132.3" rx="52.6" ry="23.3"/><ellipse cx="1220.0" cy="135.1" rx="51.2" ry="21.8"/><ellipse cx="1355.6" cy="136.8" rx="32.7" ry="23.0"/><ellipse cx="1349.1" cy="137.7" rx="43.3" ry="18.4"/><ellipse cx="1325.7" cy="130.1" rx="34.8" ry="23.3"/><ellipse cx="1217.1" cy="145.2" rx="49.5" ry="22.2"/><ellipse cx="1343.7" cy="126.6" rx="51.6" ry="14.2"/><ellipse cx="1219.8" cy="138.8" rx="31.7" ry="20.9"/><ellipse cx="1354.6" cy="140.2" rx="44.9" ry="18.3"/><ellipse cx="1322.6" cy="126.9" rx="38.8" ry="23.1"/><ellipse cx="1280.1" cy="138.6" rx="86.3" ry="15.7"/><path d="M1470.3,292.5155561844756 C1473.3,224.2 1453.4,164.4 1455.9,142.1 L1458.9,142.1 C1461.4,172.9 1478.3,224.2 1481.3,292.5155561844756 Z M1457.4,172.9 L1396.5,138.7 L1400.6,143.9 Z M1457.4,169.5 L1522.3,135.3 L1518.2,140.4 Z"/><ellipse cx="1423.6" cy="124.0" rx="59.7" ry="22.0"/><ellipse cx="1522.8" cy="124.4" rx="39.1" ry="17.9"/><ellipse cx="1535.9" cy="130.7" rx="41.2" ry="15.6"/><ellipse cx="1457.1" cy="129.8" rx="44.4" ry="18.0"/><ellipse cx="1485.9" cy="136.7" rx="38.9" ry="15.7"/><ellipse cx="1429.8" cy="122.9" rx="51.8" ry="17.4"/><ellipse cx="1508.0" cy="131.6" rx="46.8" ry="17.5"/><ellipse cx="1537.4" cy="119.9" rx="55.7" ry="17.7"/><ellipse cx="1409.9" cy="132.2" rx="40.8" ry="25.1"/><ellipse cx="1456.7" cy="116.5" rx="38.8" ry="19.7"/><ellipse cx="1485.5" cy="137.3" rx="36.6" ry="19.4"/><ellipse cx="1457.4" cy="126.8" rx="91.3" ry="17.1"/><path d="M0,520 L0,293.9 L40,297.1 L80,299.6 L120,301.1 L160,301.7 L200,301.4 L240,300.3 L280,298.8 L320,297.3 L360,295.9 L400,294.9 L440,294.6 L480,294.9 L520,295.6 L560,296.5 L600,297.4 L640,297.9 L680,297.7 L720,296.7 L760,294.8 L800,292.2 L840,288.9 L880,285.5 L920,282.2 L960,279.3 L1000,277.3 L1040,276.3 L1080,276.3 L1120,277.3 L1160,279.0 L1200,281.1 L1240,283.2 L1280,285.1 L1320,286.5 L1360,287.3 L1400,287.4 L1440,287.0 L1480,286.4 L1440,520 Z"/></g>
+</svg>
+    <div class="pines-floor"></div>
+  </div>
+</section>
+
+<!-- ================= LE MAS ================= -->
+<section class="s mas" id="mas">
+  <div class="mas-grid">
+    <div class="sticky rv">
+      <span class="eyebrow">Le Mas</span>
+      <h2 class="t">Un mas provençal<br><em>à l'abri des regards</em></h2>
+      <p class="lead">Cinq chambres d'hôtes pour 2 ou 3 personnes, une roulotte pour des vacances insolites, une piscine chauffée de mai à septembre et un grand jardin arboré, clos et sécurisé. Le pool-house équipé permet de préparer de petits repas à déguster sous les mûriers-platanes.</p>
+      <div class="facts">
+        <div class="fact liquid-glass"><b>5</b><span>chambres d'hôtes indépendantes, salle de bains et WC privés</span></div>
+        <div class="fact liquid-glass"><b>1</b><span>roulotte tout équipée pour 3 personnes</span></div>
+        <div class="fact liquid-glass"><b>Mai → sept.</b><span>piscine extérieure chauffée</span></div>
+        <div class="fact liquid-glass"><b>365 j</b><span>ouvert toute l'année, tous les jours</span></div>
+      </div>
+      <div class="dist liquid-glass">
+        <h3>Depuis Lorgues</h3>
+        <ul>
+          <li>Gare TGV des Arcs <i>15 min</i></li>
+          <li>Autoroute A8 <i>15 min</i></li>
+          <li>Gorges du Verdon <i>30 min</i></li>
+          <li>Fréjus, Ste-Maxime <i>30 min</i></li>
+          <li>Saint-Tropez <i>40 min</i></li>
+          <li>Aéroport d'Hyères <i>50 min</i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="big rv"><img src="assets/mas-vue-aerienne.jpg" alt="Vue aérienne du Mas Pinède, de sa piscine et du jardin" loading="lazy"></figure>
+      <figure class="sm rv"><img src="assets/piscine-parasols.jpg" alt="La piscine chauffée et ses parasols" loading="lazy"></figure>
+      <figure class="sm rv"><img src="assets/jardin-nuit.jpg" alt="Le jardin éclairé le soir" loading="lazy"></figure>
+      <figure class="big rv"><img src="assets/piscine-jardin.jpg" alt="Bains de soleil autour de la piscine, dans la pinède" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAMBRES ================= -->
+<section class="s rooms" id="chambres">
+  <div class="rooms-head rv">
+    <span class="eyebrow">Les chambres</span>
+    <h2 class="t">Cinq chambres,<br><em>cinq cépages de Provence</em></h2>
+    <p class="lead">Chaque chambre est personnalisée et porte le nom d'un cépage. Le petit-déjeuner, varié et équilibré (boissons chaudes, pains frais, viennoiseries, jus de fruits et confitures maison), est servi autour de la piscine ou dans le pool-house.</p>
+  </div>
+  <div class="track scrollbar-hide" id="track">
+    <article class="room liquid-glass"><div class="ph"><img src="assets/ch-grenache.jpg" alt="Chambre Grenache" loading="lazy"></div><div class="tx"><h3>Grenache</h3><p>Chambre d'hôtes · petit-déjeuner inclus</p></div></article>
+    <article class="room liquid-glass"><div class="ph"><img src="assets/ch-cinsault.jpg" alt="Chambre Cinsault" loading="lazy"></div><div class="tx"><h3>Cinsault</h3><p>Chambre d'hôtes · petit-déjeuner inclus</p></div></article>
+    <article class="room liquid-glass"><div class="ph"><img src="assets/ch-mourvedre.jpg" alt="Chambre Mourvèdre" loading="lazy"></div><div class="tx"><h3>Mourvèdre</h3><p>Chambre d'hôtes · petit-déjeuner inclus</p></div></article>
+    <article class="room liquid-glass"><div class="ph"><img src="assets/ch-rolle.jpg" alt="Chambre Rolle" loading="lazy"></div><div class="tx"><h3>Rolle</h3><p>Chambre d'hôtes · petit-déjeuner inclus</p></div></article>
+    <article class="room liquid-glass"><div class="ph"><img src="assets/ch-syrah.jpg" alt="Chambre Syrah" loading="lazy"></div><div class="tx"><h3>Syrah</h3><p>Chambre d'hôtes · petit-déjeuner inclus</p></div></article>
+  </div>
+  <div class="track-ctl">
+    <button type="button" id="prev" aria-label="Chambre précédente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button type="button" id="next" aria-label="Chambre suivante"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18l6-6-6-6"/></svg></button>
+    <small>Glissez pour voir les cinq chambres</small>
+  </div>
+  <div class="equip liquid-glass rv">
+    <h3>Dans chaque chambre</h3>
+    <ul>
+      <li>Climatisation réglable individuellement</li>
+      <li>Salle de bains et WC privés</li>
+      <li>Wifi haut débit gratuit</li>
+      <li>Grand placard double avec penderie</li>
+      <li>Coffre-fort, bouilloire, sèche-cheveux</li>
+      <li>Lit bébé prêté sur demande</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= ROULOTTE ================= -->
+<section class="s rou" id="roulotte">
+  <div class="rou-grid">
+    <div class="rou-ph rv">
+      <img id="rouImg" src="assets/roulotte.jpg" alt="La roulotte du Mas Pinède dans le jardin" loading="lazy">
+      <div class="inset"><img src="assets/roulotte-interieur.jpg" alt="Intérieur coloré de la roulotte" loading="lazy"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Hébergement insolite</span>
+      <h2 class="t">La roulotte,<br><em>un retour à la nature</em></h2>
+      <p class="lead">Pour un jour, un week-end ou une semaine : une roulotte tout équipée pour 3 personnes, avec un coin chambre et son grand lit, une zone de vie avec un lit 1 place, une salle d'eau avec douche et WC, et sa terrasse avec salon de jardin et hamac.</p>
+      <div class="tags">
+        <span class="tag liquid-glass">Kitchenette équipée</span>
+        <span class="tag liquid-glass">Réfrigérateur &amp; micro-ondes</span>
+        <span class="tag liquid-glass">Cafetière</span>
+        <span class="tag liquid-glass">Hamac</span>
+        <span class="tag liquid-glass">Barbecue électrique en location</span>
+        <span class="tag liquid-glass">Petit-déjeuner sur demande</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BIEN-ÊTRE ================= -->
+<section class="spa" id="bien-etre">
+  <div class="spa-bg" id="spaBg" aria-hidden="true"></div>
+  <div class="spa-in">
+    <div class="rv">
+      <span class="eyebrow">L'espace bien-être</span>
+      <h2 class="t">Jacuzzi, sauna<br><em>et massages</em></h2>
+      <p class="lead">Un espace bien-être extérieur et couvert, avec spa (jacuzzi) et sauna, à votre disposition en option toute l'année. Les massages sont réalisés par une masseuse professionnelle, sur réservation.</p>
+    </div>
+    <div class="spa-cards">
+      <article class="scard liquid-glass rv"><div class="ph"><img src="assets/spa-jacuzzi-bleu.jpg" alt="Le jacuzzi de l'espace bien-être" loading="lazy"></div><div class="tx"><h3>Jacuzzi <small>25 € · 30 min</small></h3><p>Privatisé pour vous. Circulation, détente des muscles, meilleur sommeil… même en hiver.</p></div></article>
+      <article class="scard liquid-glass rv"><div class="ph"><img src="assets/spa-sauna.jpg" alt="Le sauna du Mas Pinède" loading="lazy"></div><div class="tx"><h3>Sauna <small>25 € · 30 min</small></h3><p>Privatisé pour vous. Une chaleur relaxante et purifiante, bonne pour la peau et les défenses naturelles.</p></div></article>
+      <article class="scard liquid-glass rv"><div class="ph"><img src="assets/spa-espace.jpg" alt="L'espace bien-être éclairé le soir" loading="lazy"></div><div class="tx"><h3>Massage <small>70 € · 1 h</small></h3><p>Massage californien par une masseuse professionnelle, sur réservation, pour relâcher les tensions et retrouver le sommeil.</p></div></article>
+    </div>
+    <p class="spa-note rv">Tarifs indicatifs publiés par le Mas, à confirmer lors de la réservation.</p>
+  </div>
+</section>
+
+<!-- ================= TABLE D'HÔTES ================= -->
+<section class="s table" id="table">
+  <div class="table-grid">
+    <div class="table-ph rv"><img src="assets/petit-dejeuner.jpg" alt="Petit-déjeuner servi au bord de la piscine" loading="lazy"></div>
+    <div class="rv">
+      <span class="eyebrow">Table d'hôtes</span>
+      <h2 class="t">Une cuisine<br><em>100 % maison</em></h2>
+      <p class="lead">Le soir, la table d'hôtes sert une cuisine méditerranéenne faite maison, sur réservation 48 h à l'avance. Le matin, le petit-déjeuner vous attend au bord de la piscine.</p>
+      <div class="menu-card liquid-glass">
+        <div class="row"><span>Table d'hôtes<small>Entrée, plat, dessert (hors boissons) · réserver 48 h avant</small></span><b>30 €</b></div>
+        <div class="row"><span>Petit-déjeuner<small>Inclus avec les chambres d'hôtes</small></span><b>Inclus</b></div>
+        <div class="row"><span>Petit-déjeuner roulotte<small>En option, par personne</small></span><b>10 €</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFOS & AVIS ================= -->
+<section class="s infos" id="infos">
+  <div class="rv">
+    <span class="eyebrow">Bon à savoir</span>
+    <h2 class="t">Votre séjour,<br><em>en toute simplicité</em></h2>
+    <p class="lead">En réservant en direct auprès de Maria &amp; Pascal, vous profitez des meilleurs tarifs.</p>
+  </div>
+  <div class="info-grid">
+    <div class="icard liquid-glass rv">
+      <h3>Chambre pour deux</h3>
+      <div class="price">100–130 €<small>/ nuit</small></div>
+      <p>Petit-déjeuner inclus. Personne en plus&nbsp;: 30&nbsp;€. Tarifs 2026 selon la saison, à confirmer à la réservation.</p>
+    </div>
+    <div class="icard liquid-glass rv">
+      <h3>Longs séjours</h3>
+      <ul>
+        <li>À partir d'une semaine <i>−10 %</i></li>
+        <li>À partir de 15 jours <i>−20 %</i></li>
+        <li>Acompte à la réservation <i>30 %</i></li>
+      </ul>
+    </div>
+    <div class="icard liquid-glass rv">
+      <h3>Arrivée &amp; départ</h3>
+      <ul>
+        <li>Arrivée <i>17 h – 20 h</i></li>
+        <li>Départ <i>8 h – 10 h</i></li>
+        <li>Animaux <i>non admis</i></li>
+      </ul>
+      <p>Carte bancaire, espèces, chèques-vacances, virement.</p>
+    </div>
+  </div>
+  <div class="reviews">
+    <div class="rcard liquid-glass rv">
+      <div class="score">9,0<small>/10</small></div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p class="src">Note des voyageurs sur Expedia</p>
+    </div>
+    <div class="rcard liquid-glass rv">
+      <blockquote>« Cadre agréable, belle chambre. Séance jacuzzi relaxante, n'hésitez pas même en hiver, c'est top. Merci à Maria et Pascal pour leur accueil. »</blockquote>
+      <p class="src">Maryse et René · témoignage publié sur le site du Mas Pinède</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="s contact" id="contact">
+  <div class="rv">
+    <span class="eyebrow">Réserver</span>
+    <h2 class="t">Venez vous<br><em>ressourcer</em></h2>
+    <p class="lead">Appelez Maria &amp; Pascal ou écrivez-leur : ils vous répondent sur les disponibilités, la table d'hôtes et les soins.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="ccard liquid-glass rv">
+      <p class="big">Le Mas Pinède</p>
+      <div class="lines">
+        <a href="tel:+33494738340"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>04 94 73 83 40</a>
+        <a href="mailto:contact@lemaspinede.fr?subject=Demande%20de%20s%C3%A9jour%20au%20Mas%20Pin%C3%A8de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contact@lemaspinede.fr</a>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>2629 route de Saint-Antonin, 83510 Lorgues</span>
+        <a href="https://www.facebook.com/LeMasPinede/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+      </div>
+      <div class="ctas">
+        <a class="btn button-glow" href="tel:+33494738340">Appeler</a>
+        <a class="btn-ghost liquid-glass" href="mailto:contact@lemaspinede.fr?subject=Demande%20de%20s%C3%A9jour%20au%20Mas%20Pin%C3%A8de">Écrire un e-mail</a>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe title="Le Mas Pinède sur la carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=43.502157,6.324098&amp;z=13&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Le Mas Pinède</span>
+  <p>Chambres et table d'hôtes, hébergement insolite · 2629 route de Saint-Antonin, 83510 Lorgues · Ouvert toute l'année</p>
+  <nav aria-label="Liens du pied de page">
+    <a href="#chambres">Chambres</a><a href="#roulotte">Roulotte</a><a href="#bien-etre">Bien-être</a><a href="#table">Table d'hôtes</a><a href="#contact">Contact</a><a href="#top">Mentions légales</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- navbar ---------- */
+  var nav=document.getElementById('nav');
+  function onScrollNav(){nav.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScrollNav,{passive:true});onScrollNav();
+
+  /* ---------- mobile menu (stagger 150ms + 75ms, button 450ms) ---------- */
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu'),scrim=document.getElementById('scrim');
+  var links=[].slice.call(menu.querySelectorAll('a.m'));
+  links.forEach(function(a,i){a.style.transitionDelay=(150+i*75)+'ms'});
+  function setMenu(open){
+    burger.classList.toggle('open',open);menu.classList.toggle('open',open);scrim.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+    document.body.style.overflow=open?'hidden':'';
+  }
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  scrim.addEventListener('click',function(){setMenu(false)});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  /* ---------- reveal ---------- */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  /* ---------- rooms carousel ---------- */
+  var track=document.getElementById('track');
+  function step(){var r=track.querySelector('.room');return r?r.getBoundingClientRect().width+14:300}
+  document.getElementById('prev').addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
+  document.getElementById('next').addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'})});
+
+  /* ---------- quote parallax (rAF + lerp, per template) ---------- */
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var quote=document.getElementById('quote'),rainbow=document.getElementById('rainbow'),
+      cL=document.getElementById('cloudL'),cR=document.getElementById('cloudR'),pines=document.getElementById('pines'),
+      spaBg=document.getElementById('spaBg'),spa=document.getElementById('bien-etre'),
+      rouImg=document.getElementById('rouImg'),rou=document.getElementById('roulotte');
+  function clamp(a,b,v){return Math.max(a,Math.min(b,v))}
+  function lerp(c,t,f){return c+(t-c)*f}
+  function prog(el){var r=el.getBoundingClientRect(),h=window.innerHeight;return clamp(0,1,(h-r.top)/(h+r.height))}
+  var s={rY:120,lX:-200,rX:200,cY:0,pY:40,spa:0,rou:0};
+  function frame(){
+    var p=prog(quote);
+    var tRY=120+(-160-120)*p;
+    var inView=p>0.12&&p<0.92;
+    var tLX=inView?0:-200,tRX=inView?0:200,tCY=p*-50,tPY=40-p*80;
+    s.rY=lerp(s.rY,tRY,0.06);
+    s.lX=lerp(s.lX,tLX,0.04);s.rX=lerp(s.rX,tRX,0.04);s.cY=lerp(s.cY,tCY,0.04);
+    s.pY=lerp(s.pY,tPY,0.06);
+    rainbow.style.transform='translate3d(0,'+s.rY.toFixed(2)+'px,0)';
+    cL.style.transform='translate3d('+s.lX.toFixed(2)+'px,'+s.cY.toFixed(2)+'px,0)';
+    cR.style.transform='translate3d('+s.rX.toFixed(2)+'px,'+s.cY.toFixed(2)+'px,0)';
+    cL.style.opacity=(1-Math.abs(s.lX)/200).toFixed(3);
+    cR.style.opacity=(1-Math.abs(s.rX)/200).toFixed(3);
+    pines.style.transform='translate3d(0,'+s.pY.toFixed(2)+'px,0)';
+    s.spa=lerp(s.spa,(prog(spa)-.5)*-120,0.08);
+    spaBg.style.transform='translate3d(0,'+s.spa.toFixed(2)+'px,0)';
+    s.rou=lerp(s.rou,(prog(rou)-.5)*-60,0.08);
+    rouImg.style.transform='translate3d(0,'+s.rou.toFixed(2)+'px,0)';
+    requestAnimationFrame(frame);
+  }
+  if(!reduce){requestAnimationFrame(frame)}else{cL.style.opacity=1;cR.style.opacity=1;cL.style.transform=cR.style.transform='none'}
+})();
+</script>
+</body>
+</html>
