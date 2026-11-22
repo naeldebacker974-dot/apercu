@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Barco Beach — Restaurant, plage privée &amp; rooftop · La Nartelle, Sainte-Maxime</title>
+<meta name="description" content="Barco Beach, restaurant de plage, plage privée et rooftop Sunbar sur la plage de la Nartelle à Sainte-Maxime. Une histoire de famille depuis 2001. Réservation par téléphone.">
+<meta name="theme-color" content="#0a0608">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Barco Beach — La Nartelle, Sainte-Maxime">
+<meta property="og:description" content="Restaurant, plage privée et rooftop Sunbar face au golfe de Saint-Tropez. Depuis 2001.">
+<meta property="og:image" content="assets/plage-parasols.jpg">
+<link rel="icon" href="assets/logo-cabane.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Nunito:wght@300..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/plage-parasols.jpg">
+<link rel="preload" as="image" href="assets/sunbar-coucher.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Barco Beach",
+  "description": "Restaurant de plage, plage privée et rooftop (Sunbar) sur la plage de la Nartelle à Sainte-Maxime.",
+  "image": "assets/plage-parasols.jpg",
+  "telephone": "+33677588673",
+  "servesCuisine": ["Cuisine de la mer", "Cuisine sud-américaine", "Cuisine asiatique", "Méditerranéenne"],
+  "acceptsReservations": "True",
+  "foundingDate": "2001",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "57 avenue du Général Touzet du Vigier, plage de la Nartelle",
+    "postalCode": "83120",
+    "addressLocality": "Sainte-Maxime",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.322151, "longitude": 6.664579 },
+  "sameAs": ["https://www.instagram.com/barcobeach/", "https://www.facebook.com/barcobeachh"]
+}
+</script>
+<style>
+/* ===== Reset / base (Layer 4) ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#0a0608;font-family:'Nunito',sans-serif;scrollbar-gutter:stable}
+body{color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block}
+a{color:inherit}
+#root{background:#0a0608}
+@keyframes bobUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* Visibility helpers (Tailwind screens: md 768, xl 1024) */
+.flex{display:flex}.hidden{display:none}
+@media (min-width:768px){.md\:hidden{display:none!important}.md\:flex{display:flex}}
+@media (min-width:1024px){.xl\:hidden{display:none!important}.xl\:flex{display:flex}.xl\:block{display:block}}
+.tracking-widest{letter-spacing:.1em}.tracking-tight{letter-spacing:-.025em}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}
+.gap-3\.5{gap:14px}
+
+/* Scene 1 responsive switch */
+@media (max-width:1023.98px){
+  .hero-s1-desktop-heading,.hero-s1-desktop-cards,.hero-s1-desktop-dots,.hero-s1-desktop-cue{display:none!important}
+  .hero-s1-mobile{display:flex!important}
+}
+.s1-three{display:none}
+@media (min-width:768px){.s1-one{display:none}.s1-three{display:flex}}
+
+h1,h2{font-variation-settings:'opsz' 30}
+/* ===== Nav ===== */
+.navlink{font-family:'Nunito',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;opacity:.9;text-decoration:none;cursor:pointer;
+  display:inline-flex;align-items:center;min-height:44px;transition:opacity .3s}
+.navlink:hover{opacity:1}
+.navcall{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 15px;border-radius:99px;border:1px solid rgba(255,255,255,.55);
+  background:rgba(10,6,8,.18);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;text-decoration:none;
+  font:600 12px/1 'Nunito',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.navcall svg{width:14px;height:14px}
+.starlogo{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.starlogo span{font:500 12px/1 'Nunito',sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#fff;white-space:nowrap}
+@media (max-width:1179.98px){nav .starlogo span{display:none}}
+@media (max-width:767.98px){.starlogo span{display:none}}
+@media (max-width:1023.98px){.navgrp{gap:22px!important}}
+
+/* ===== Porthole (portal) ===== */
+.portal-img{width:100%;height:100%;object-fit:cover;display:block;
+  -webkit-mask-image:radial-gradient(circle var(--r) at 52% 38%,transparent 98.5%,#000 100%);
+  mask-image:radial-gradient(circle var(--r) at 52% 38%,transparent 98.5%,#000 100%)}
+.portal-wrap{--r:min(15vw,24vh)}
+@media (max-width:1023.98px){.portal-wrap{--r:min(19vw,15vh)}}
+@media (max-width:767.98px){.portal-wrap{--r:max(76px,min(20vw,10vh))}}
+.s1veil{position:absolute;left:0;right:0;bottom:0;height:64%;pointer-events:none;
+  background:linear-gradient(to top,rgba(10,6,8,.78) 0%,rgba(10,6,8,.55) 45%,rgba(10,6,8,.2) 75%,rgba(10,6,8,0) 100%)}
+.hero-s1-mobile .hd{color:#fff!important;text-shadow:0 2px 24px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.6)}
+.hero-s1-mobile .s1p{color:rgba(255,245,235,.92)!important;text-shadow:0 1px 12px rgba(0,0,0,.8)}
+@media (max-width:767.98px) and (max-height:740px){.s1-one{display:none}}
+.hublot{position:absolute;left:52%;top:38%;width:calc(var(--r)*2 + 26px);height:calc(var(--r)*2 + 26px);transform:translate(-50%,-50%);border-radius:50%;
+  background:conic-gradient(from 210deg,#7a5524,#e8c88c,#a77a3c,#f6dfae,#80592a,#d9b06c,#7a5524);
+  -webkit-mask:radial-gradient(circle,transparent calc(var(--r) - 1px),#000 var(--r));mask:radial-gradient(circle,transparent calc(var(--r) - 1px),#000 var(--r));
+  box-shadow:0 18px 50px rgba(0,0,0,.35);pointer-events:none}
+.hublot i{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3d6,#8a6430 70%)}
+.hublot-glass{position:absolute;left:52%;top:38%;width:calc(var(--r)*2);height:calc(var(--r)*2);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+  background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,.12) 100%);
+  box-shadow:inset 0 0 30px rgba(0,0,0,.35)}
+
+/* ===== Arc slider ===== */
+.arc-card{position:absolute}
+.arc-inner{position:relative;width:100%;height:100%;background-size:cover;background-position:center;box-shadow:0 8px 40px rgba(40,30,40,.28);
+  display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.arc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.3) 55%,rgba(0,0,0,.22) 100%);pointer-events:none}
+.arc-num{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-family:'Nunito',sans-serif;color:rgba(255,255,255,.85)}
+.arc-title{position:relative;font-family:'Bodoni Moda',serif;font-weight:400;color:#fff;line-height:1.05;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.arc-desc{position:relative;font-family:'Nunito',sans-serif;color:rgba(255,255,255,.85);margin-top:6px;line-height:1.4;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+@media (max-width:767.98px){.arc-num{width:28px;height:28px;font-size:12px}}
+
+/* ===== Scene1 cards ===== */
+.s1card{position:relative;overflow:hidden;background-size:cover;background-position:center;flex-shrink:0;text-decoration:none;display:block;pointer-events:auto;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.s1card:hover{transform:translateY(-4px)}
+
+/* ===== Fixed bar after hero ===== */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:8px 20px;
+  background:rgba(10,6,8,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,245,235,.08);
+  transform:translateY(-110%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.topbar.on{transform:none}
+.topbar .links{display:none;gap:30px}
+@media (min-width:1024px){.topbar{padding:8px 48px}.topbar .links{display:flex}}
+
+/* ===== Content sections (same warm dark cinematic system) ===== */
+.sec{position:relative;padding:120px 60px;max-width:1360px;margin:0 auto}
+@media (max-width:1023.98px){.sec{padding:96px 32px}}
+@media (max-width:767.98px){.sec{padding:80px 20px}}
+.eyebrow{font:600 12px/1 'Nunito',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,245,235,.6);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:rgba(255,245,235,.45)}
+.h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(36px,5.4vw,72px);line-height:1.04;letter-spacing:-.01em;margin-top:22px;color:#fff}
+.h2 em{font-style:italic}
+.lead{font-size:clamp(16px,1.35vw,19px);line-height:1.75;color:rgba(255,245,235,.82);max-width:560px}
+.muted{color:rgba(255,245,235,.6)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Histoire */
+.story{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.story-photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.story-photo img{width:100%;height:100%;object-fit:cover}
+.story-photo .tag{position:absolute;left:22px;bottom:22px;right:22px;font-family:'Bodoni Moda',serif;font-size:22px;font-style:italic;line-height:1.3;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.story-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);pointer-events:none}
+.story-photo .tag{z-index:2}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px;border-top:1px solid rgba(255,245,235,.14);padding-top:30px}
+.stat b{display:block;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(34px,3.4vw,46px);line-height:1}
+.stat span{display:block;margin-top:8px;font-size:13px;line-height:1.4;color:rgba(255,245,235,.65)}
+.quote{margin-top:34px;font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(20px,1.8vw,26px);line-height:1.4;color:#fff}
+.quote small{display:block;margin-top:10px;font:500 12px/1.4 'Nunito',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,245,235,.55);font-style:normal}
+@media (max-width:900px){.story{grid-template-columns:1fr;gap:44px}.story-photo{aspect-ratio:4/4.4}}
+
+/* Univers */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.uni{position:relative;border-radius:28px;overflow:hidden;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;
+  background-size:cover;background-position:center;box-shadow:0 20px 60px rgba(0,0,0,.45);isolation:isolate}
+.uni::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.08) 80%)}
+.uni .num{position:absolute;top:22px;right:22px;width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(255,255,255,.85)}
+.uni h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(30px,2.6vw,40px);line-height:1.05}
+.uni p{margin-top:12px;font-size:15px;line-height:1.65;color:rgba(255,255,255,.86)}
+.uni .chip{display:inline-flex;align-self:flex-start;margin-bottom:16px;padding:7px 12px;border-radius:99px;font:600 12px/1 'Nunito',sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25)}
+@media (max-width:1023.98px){.trio{grid-template-columns:1fr;gap:18px}.uni{min-height:440px}}
+@media (max-width:767.98px){.uni{min-height:400px;padding:24px;border-radius:22px}}
+
+/* Carte */
+.carte-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:60px;margin:48px -60px 0;padding:0 60px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 auto;width:250px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 8px 32px rgba(0,0,0,.45)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 16px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);font-family:'Bodoni Moda',serif;font-size:19px;line-height:1.15}
+@media (max-width:1023.98px){.strip{margin:40px -32px 0;padding:0 32px 8px;scroll-padding-left:32px}}
+@media (max-width:767.98px){.strip{margin:36px -20px 0;padding:0 20px 8px;scroll-padding-left:20px}.strip figure{width:72vw;max-width:280px}}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.mcol{border:1px solid rgba(255,245,235,.12);border-radius:26px;padding:30px;background:linear-gradient(180deg,rgba(255,245,235,.045),rgba(255,245,235,.015))}
+.mcol h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:28px;line-height:1.1}
+.mcol h3 small{display:block;margin-top:6px;font:600 12px/1.3 'Nunito',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,245,235,.55)}
+.mi{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:16px 0;border-bottom:1px dashed rgba(255,245,235,.14)}
+.mi:last-child{border-bottom:0;padding-bottom:0}
+.mi b{font-weight:700;font-size:15px;letter-spacing:.02em}
+.mi .p{font-family:'Bodoni Moda',serif;font-size:19px;white-space:nowrap}
+.mi span{grid-column:1/-1;font-size:13.5px;line-height:1.5;color:rgba(255,245,235,.62)}
+.menu-note{margin-top:26px;font-size:13px;line-height:1.6;color:rgba(255,245,235,.55)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 22px;border-radius:99px;text-decoration:none;
+  font:700 13px/1 'Nunito',sans-serif;letter-spacing:.12em;text-transform:uppercase;transition:transform .3s,background .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:#fff;color:#3b1a0a}
+.btn.ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn svg{width:16px;height:16px}
+@media (max-width:1023.98px){.menu{grid-template-columns:1fr 1fr}}
+@media (max-width:767.98px){.menu{grid-template-columns:1fr}.mcol{padding:24px 20px;border-radius:22px}}
+
+/* Sunbar */
+.sunbar{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.sunbar>img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;will-change:transform}
+.sunbar::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,6,8,.92) 0%,rgba(10,6,8,.45) 45%,rgba(10,6,8,.1) 100%)}
+.sunbar::after{content:"";position:absolute;top:0;left:0;right:0;height:30%;z-index:1;background:linear-gradient(to bottom,#0a0608,transparent)}
+.sunbar .in{position:relative;z-index:2;padding:0 60px 110px;max-width:1360px;margin:0 auto;width:100%}
+.sunbar .h2{font-size:clamp(44px,8vw,112px);text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.sunbar .lead{text-shadow:0 1px 12px rgba(0,0,0,.8)}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.pill{padding:10px 16px;border-radius:99px;border:1px solid rgba(255,255,255,.3);font-size:13px;letter-spacing:.06em;background:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+@media (max-width:1023.98px){.sunbar .in{padding:0 32px 90px}}
+@media (max-width:767.98px){.sunbar{min-height:88vh}.sunbar .in{padding:0 20px 72px}}
+
+/* Infos */
+.infos{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.ic{border:1px solid rgba(255,245,235,.12);border-radius:22px;padding:24px;background:rgba(255,245,235,.03)}
+.ic h4{font:700 12px/1 'Nunito',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,245,235,.55)}
+.ic p{margin-top:12px;font-size:15px;line-height:1.6}
+.ic .big{font-family:'Bodoni Moda',serif;font-size:26px;line-height:1.15}
+.svc{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.svc span{font-size:13px;padding:8px 12px;border-radius:99px;background:rgba(255,245,235,.07);border:1px solid rgba(255,245,235,.1)}
+.resa{position:relative;border-radius:28px;overflow:hidden;padding:44px 36px;background:linear-gradient(160deg,#f3e6d3 0%,#e7d3b8 100%);color:#3b1a0a}
+.resa h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(32px,3.2vw,46px);line-height:1.05}
+.resa h3 em{font-style:italic}
+.resa p{margin-top:14px;color:#5c2d0e;line-height:1.65;font-size:16px}
+.resa .tel{display:block;margin-top:26px;font-family:'Bodoni Moda',serif;font-size:clamp(30px,3vw,40px);color:#3b1a0a;text-decoration:none;min-height:44px}
+.resa .btn.dark{background:#3b1a0a;color:#fff;margin-top:22px}
+.resa .btn.out{border:1px solid rgba(59,26,10,.35);color:#3b1a0a;margin-top:22px}
+.resa .logo-bg{position:absolute;right:-30px;bottom:-40px;width:200px;opacity:.12;filter:invert(1) sepia(1) saturate(3) hue-rotate(-20deg)}
+@media (max-width:900px){.infos{grid-template-columns:1fr;gap:40px}}
+@media (max-width:767.98px){.cards2{grid-template-columns:1fr}.resa{padding:34px 22px;border-radius:22px}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.25fr;gap:50px;align-items:stretch}
+.map{border-radius:28px;overflow:hidden;min-height:420px;border:1px solid rgba(255,245,235,.12);filter:grayscale(.35) contrast(1.05)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+.clist{list-style:none;margin-top:34px;display:grid;gap:4px}
+.clist li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,245,235,.1);font-size:16px;line-height:1.5}
+.clist svg{flex:0 0 20px;width:20px;height:20px;margin-top:2px;opacity:.75}
+.clist a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;margin:-12px 0}
+@media (max-width:900px){.contact{grid-template-columns:1fr;gap:36px}.map,.map iframe{min-height:320px}}
+
+footer{border-top:1px solid rgba(255,245,235,.1);padding:40px 60px 110px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(255,245,235,.55);max-width:1360px;margin:0 auto}
+footer a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:767.98px){footer{padding:32px 20px 100px;flex-direction:column}}
+
+/* mobile sticky call */
+.callfab{position:fixed;left:16px;right:16px;bottom:14px;z-index:85;display:none;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:99px;
+  background:#f3e6d3;color:#3b1a0a;text-decoration:none;font:800 14px/1 'Nunito',sans-serif;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 30px rgba(0,0,0,.45);
+  transform:translateY(140%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.callfab.on{transform:none}
+.callfab svg{width:18px;height:18px}
+@media (max-width:767.98px){.callfab{display:flex}}
+
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div id="root">
+
+<!-- ================= HERO : sticky viewport ================= -->
+<div id="container" style="height:480vh;position:relative">
+  <div style="position:sticky;top:0;height:100vh;overflow:hidden;background:#0a0608">
+
+    <!-- z 0 · WORLD BG : le Sunbar au crépuscule -->
+    <div id="world" style="position:absolute;inset:0;transform-origin:50% 50%;will-change:transform">
+      <img src="assets/sunbar-coucher.jpg" alt="Le Sunbar, rooftop du Barco Beach, au coucher du soleil sur le golfe" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block">
+    </div>
+
+    <!-- z 9 · ARC CARD SLIDER (Scene 2) -->
+    <div id="arcWrap" style="position:absolute;left:0;right:0;bottom:80px;z-index:9;opacity:0;pointer-events:none">
+      <div id="arc" style="position:relative;width:100%"></div>
+    </div>
+
+    <!-- z 10 · BOTTOM CLOUDS : brume marine -->
+    <div id="clouds" style="position:absolute;bottom:-240px;left:0;right:0;z-index:10;transform-origin:50% 100%;opacity:.7;will-change:transform,opacity">
+      <img src="assets/brume.png" alt="" style="width:100%;height:auto;display:block">
+    </div>
+
+    <!-- z 15 · PORTAL BG : la plage de jour, un hublot ouvert sur le soir -->
+    <div id="portal" class="portal-wrap" style="position:absolute;inset:0;z-index:15;transform-origin:52% 38%;will-change:transform,opacity">
+      <picture><source media="(max-width: 767px)" srcset="assets/plage-voilier.jpg"><img class="portal-img" src="assets/plage-parasols.jpg" alt="Parasols et transats du Barco Beach sur la plage de la Nartelle"></picture>
+      <div class="hublot-glass"></div>
+      <div class="hublot" id="hublot"></div>
+    </div>
+
+    <!-- z 16 · BOTTOM FADE -->
+    <div style="position:absolute;bottom:0;left:0;right:0;height:40%;z-index:16;background:linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);pointer-events:none"></div>
+
+    <!-- z 16 · FOLIAGE LEFT + RIGHT : palmiers du Sunbar -->
+    <div id="curtainL" style="position:absolute;inset:0;z-index:16;transform-origin:0% 100%;will-change:transform,opacity;pointer-events:none">
+      <img src="assets/palmes-gauche.png" alt="" style="position:absolute;bottom:0;left:0;width:clamp(220px, 42vw, 560px);height:auto;display:block">
+    </div>
+    <div id="curtainR" style="position:absolute;inset:0;z-index:16;transform-origin:100% 100%;will-change:transform,opacity;pointer-events:none">
+      <img src="assets/palmes-droite.png" alt="" style="position:absolute;bottom:0;right:0;width:clamp(220px, 42vw, 560px);height:auto;display:block">
+    </div>
+
+    <!-- z 20 · SCENE 1 UI -->
+    <div id="scene1" style="position:absolute;inset:0;z-index:20;opacity:1;pointer-events:none">
+
+      <div class="hero-s1-desktop-heading" aria-hidden="true" style="position:absolute;left:0;bottom:0;width:62vw;height:75vh;background:radial-gradient(ellipse at 0% 100%, rgba(10,6,8,0.62) 0%, rgba(10,6,8,0.34) 42%, rgba(10,6,8,0) 72%)"></div>
+      <!-- DESKTOP — heading bottom-left -->
+      <div class="hero-s1-desktop-heading fade" data-d="0.3s" style="position:absolute;bottom:120px;left:60px;max-width:440px">
+        <h1 style="font-family:'Bodoni Moda', serif;font-weight:400;color:#fff;margin:0;text-shadow:0 2px 24px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)">
+          <span style="display:block;font-size:clamp(32px, 4.5vw, 54px);line-height:1.1;letter-spacing:0.04em">BIENVENUE <span style="font-style:italic">AU</span></span>
+          <span style="display:block;font-size:clamp(50px, 7.5vw, 88px);line-height:0.9;letter-spacing:-0.02em">BARCO</span>
+        </h1>
+        <p style="font-family:'Nunito', sans-serif;margin-top:24px;font-size:18px;line-height:1.7;color:rgba(255,245,235,0.88);max-width:300px;text-shadow:0 1px 12px rgba(0,0,0,0.8)">
+          Restaurant, plage privée et rooftop sur le sable de la Nartelle, à Sainte-Maxime. Une histoire de famille depuis 2001.
+        </p>
+      </div>
+
+      <!-- DESKTOP — 3 cards bottom-right -->
+      <div class="hero-s1-desktop-cards fade" data-d="0.55s" style="position:absolute;right:40px;bottom:120px;display:flex;gap:12px">
+        <a class="s1card" href="#univers" data-card="reel" data-img="assets/plage-voilier.jpg" data-label="La plage" data-size="158" data-radius="28" data-label-size="18" data-circle="30" data-blur="1" data-shadow="0 8px 32px rgba(0,0,0,0.45)" aria-label="Découvrir la plage"></a>
+        <a class="s1card" href="#histoire" data-card="number" data-num="25" data-img="assets/ig-sunbar_palmiers.jpg" data-label="ans en 2026" data-size="158" data-radius="28" data-label-size="18" data-circle="30" data-num-size="36" data-blur="1" data-shadow="0 8px 32px rgba(0,0,0,0.45)" aria-label="Notre histoire"></a>
+        <a class="s1card" href="#carte" data-card="reel" data-img="assets/restaurant.jpg" data-label="La carte" data-size="158" data-radius="28" data-label-size="18" data-circle="30" data-blur="1" data-shadow="0 8px 32px rgba(0,0,0,0.45)" aria-label="Voir la carte"></a>
+      </div>
+
+      <!-- DESKTOP — slider dots -->
+      <div class="hero-s1-desktop-dots fade dots" data-d="0.8s" style="position:absolute;bottom:40px;left:60px;display:flex;gap:8px"></div>
+
+      <!-- DESKTOP — scroll cue -->
+      <div class="hero-s1-desktop-cue fade" data-d="0.9s" style="position:absolute;bottom:36px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font-family:'Nunito', sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Défiler</span>
+        <div style="width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;animation:bobUp 1.8s ease-in-out infinite">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+
+      <!-- ≤1023px — centered fallback (mobile + tablet) -->
+      <div class="hero-s1-mobile" id="s1mobile" style="display:none;flex-direction:column;align-items:center;text-align:center;height:100%;justify-content:flex-end;gap:22px;padding:80px 24px 92px;position:relative">
+        <div class="s1veil" aria-hidden="true"></div>
+        <div class="fade" data-d="0.3s" style="position:relative">
+          <h1 class="hd" style="font-family:'Bodoni Moda', serif;font-weight:400;color:#3b1a0a;margin:0">
+            <span class="tracking-widest hd-a" style="display:block;line-height:1.1">BIENVENUE <span style="font-style:italic">AU</span></span>
+            <span class="tracking-tight leading-none hd-b" style="display:block">BARCO</span>
+          </h1>
+        </div>
+        <p class="fade s1p" data-d="0.3s" style="font-family:'Nunito', sans-serif;color:#5c2d0e;line-height:1.6;position:relative">
+          Restaurant, plage privée et rooftop sur le sable de la Nartelle, à Sainte-Maxime. Depuis 2001.
+        </p>
+        <div class="fade s1-one" data-d="0.55s" style="gap:14px;position:relative">
+          <a class="s1card" href="#univers" data-card="reel" data-img="assets/plage-voilier.jpg" data-label="La plage" data-size="140" data-radius="22" data-label-size="13" data-circle="26" aria-label="Découvrir la plage"></a>
+        </div>
+        <div class="fade s1-three gap-3.5" data-d="0.55s" style="position:relative">
+          <a class="s1card" href="#univers" data-card="reel" data-img="assets/plage-voilier.jpg" data-label="La plage" data-size="140" data-radius="22" data-label-size="13" data-circle="26" data-blur="1" aria-label="Découvrir la plage"></a>
+          <a class="s1card" href="#histoire" data-card="number" data-num="25" data-img="assets/ig-sunbar_palmiers.jpg" data-label="ans en 2026" data-size="140" data-radius="22" data-label-size="13" data-circle="26" data-num-size="28" data-blur="1" aria-label="Notre histoire"></a>
+          <a class="s1card" href="#carte" data-card="reel" data-img="assets/restaurant.jpg" data-label="La carte" data-size="140" data-radius="22" data-label-size="13" data-circle="26" data-blur="1" aria-label="Voir la carte"></a>
+        </div>
+        <div class="fade dots" data-d="0.8s" style="position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:center;gap:8px"></div>
+      </div>
+    </div>
+
+    <!-- z 45 · TOP FADE -->
+    <div style="position:absolute;top:0;left:0;right:0;height:42vh;z-index:45;background:linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 100%);pointer-events:none"></div>
+
+    <!-- z 46 · SCENE 2 UI -->
+    <div id="scene2" style="position:absolute;inset:0;z-index:46;opacity:0;pointer-events:none;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:12vh">
+      <h2 id="s2h" style="font-family:'Bodoni Moda', serif;font-weight:400;color:#fff;letter-spacing:0.03em;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,0.4);margin:0;padding:0 20px">DU SABLE AU <span style="font-style:italic">SUNBAR</span></h2>
+      <p id="s2p" style="font-family:'Nunito', sans-serif;line-height:1.6;letter-spacing:-0.01em;color:rgba(255,255,255,0.82);margin-top:18px;padding:0 20px;text-shadow:0 1px 12px rgba(0,0,0,.5)">
+        Le midi les pieds dans le sable, le soir sur le rooftop&nbsp;: une cuisine de voyage, entre Amérique du Sud, Asie et Méditerranée.
+      </p>
+    </div>
+
+    <!-- z 50 · NAV -->
+    <nav style="position:absolute;top:0;left:0;right:0;z-index:50" aria-label="Navigation principale">
+      <div class="flex md:hidden" style="width:100%;justify-content:space-between;align-items:center;padding:12px 20px">
+        <a class="navlink" href="#carte" style="font-size:12px">La carte</a>
+        <a class="starlogo" href="#" aria-label="Barco Beach, accueil"><img src="assets/logo-cabane.png" alt="Barco Beach" style="height:34px;width:auto;display:block"></a>
+        <a class="navcall" href="tel:+33677588673" aria-label="Appeler le Barco Beach au 06 77 58 86 73"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+      </div>
+      <div class="hidden md:flex" style="width:100%;justify-content:space-between;align-items:center;padding:16px 48px">
+        <div class="navgrp" style="display:flex;gap:36px;flex:1 1 0">
+          <a class="navlink" href="#univers" style="font-size:12px">Restaurant</a>
+          <a class="navlink" href="#univers" style="font-size:12px">Plage</a>
+          <a class="navlink" href="#sunbar" style="font-size:12px">Sunbar</a>
+        </div>
+        <a class="starlogo" href="#" aria-label="Barco Beach, accueil"><img src="assets/logo-cabane.png" alt="" style="height:32px;width:auto;display:block"><span>Barco Beach</span></a>
+        <div class="navgrp" style="display:flex;gap:36px;flex:1 1 0;justify-content:flex-end;align-items:center">
+          <a class="navlink" href="#carte" style="font-size:12px">La carte</a>
+          <a class="navlink" href="#histoire" style="font-size:12px">Histoire</a>
+          <a class="navcall" href="tel:+33677588673" aria-label="Réserver par téléphone au 06 77 58 86 73">Réserver</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+<!-- fixed bar after hero -->
+<header class="topbar" id="topbar" aria-hidden="true">
+  <a class="starlogo" href="#" tabindex="-1"><img src="assets/logo-cabane.png" alt="" style="height:28px;width:auto"><span>Barco Beach</span></a>
+  <div class="links">
+    <a class="navlink" href="#histoire" style="font-size:12px" tabindex="-1">Histoire</a>
+    <a class="navlink" href="#univers" style="font-size:12px" tabindex="-1">Plage &amp; Sunbar</a>
+    <a class="navlink" href="#carte" style="font-size:12px" tabindex="-1">La carte</a>
+    <a class="navlink" href="#infos" style="font-size:12px" tabindex="-1">Infos</a>
+  </div>
+  <a class="navcall" href="tel:+33677588673" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+</header>
+
+<main>
+<!-- ================= HISTOIRE ================= -->
+<section class="sec" id="histoire">
+  <div class="story">
+    <div class="story-photo reveal">
+      <img src="assets/restaurant.jpg" alt="La salle du restaurant Barco Beach ouverte sur la baie de Sainte-Maxime" loading="lazy">
+      <p class="tag">« Un chez-nous imaginé pour devenir un chez-vous. »</p>
+    </div>
+    <div>
+      <p class="eyebrow reveal">Notre histoire</p>
+      <h2 class="h2 reveal">Une paillote, <em>une famille,</em> vingt-cinq étés.</h2>
+      <p class="lead reveal" style="margin-top:26px">En 2001, Ricardo et Mandy, jeunes parents de quatre enfants, ouvrent sur la plage de la Nartelle une paillote conviviale, pensée pour accueillir les familles simplement et généreusement. Elle ne devait durer qu’un été.</p>
+      <p class="lead reveal" style="margin-top:18px">Vingt-cinq ans plus tard, le Barco est devenu un vrai lieu de vie, où plusieurs générations se retrouvent presque toute l’année. La cuisine, elle, raconte la famille&nbsp;: des racines et des voyages, des accents sud-américains et asiatiques, les bons produits et le bord de mer.</p>
+      <div class="stats reveal">
+        <div class="stat"><b>2001</b><span>première saison sur la plage</span></div>
+        <div class="stat"><b>25</b><span>ans célébrés en 2026</span></div>
+        <div class="stat"><b>3</b><span>univers&nbsp;: table, plage, rooftop</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UNIVERS ================= -->
+<section class="sec" id="univers" style="padding-top:40px">
+  <p class="eyebrow reveal">Restaurant · Plage privée · Rooftop</p>
+  <h2 class="h2 reveal">Trois façons de vivre <em>la Nartelle.</em></h2>
+  <div class="trio">
+    <article class="uni reveal" style="background-image:url(assets/restaurant.jpg)">
+      <span class="num">01</span>
+      <span class="chip">Le restaurant</span>
+      <h3>À table, face à la baie</h3>
+      <p>Une cuisine voyageuse et familiale&nbsp;: suggestions du jour, pêche locale, huîtres Gillardeau, belles viandes, classiques revisités (curry, tataki, ceviche) et grandes salades colorées.</p>
+    </article>
+    <article class="uni reveal" style="background-image:url(assets/ig-morning_parasols.jpg)">
+      <span class="num">02</span>
+      <span class="chip">La plage</span>
+      <h3>Transats et parasols bleus</h3>
+      <p>Des transats au bord de l’eau, bercés par le bruit des vagues, et une équipe de plage aux petits soins pour une détente complète, du café du matin au dernier rayon.</p>
+    </article>
+    <article class="uni reveal" style="background-image:url(assets/ig-sunbar_sunset.jpg)">
+      <span class="num">03</span>
+      <span class="chip">Le Sunbar</span>
+      <h3>Le rooftop du golfe</h3>
+      <p>Une vue panoramique unique sur la Nartelle, pour un repas ou simplement un verre au coucher du soleil. Les places sont limitées&nbsp;: pensez à réserver.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ================= CARTE ================= -->
+<section class="sec" id="carte" style="padding-top:60px">
+  <div class="carte-head">
+    <div>
+      <p class="eyebrow reveal">La carte 2026</p>
+      <h2 class="h2 reveal">Une cuisine <em>qui voyage.</em></h2>
+    </div>
+    <div class="btns reveal">
+      <a class="btn ghost" href="https://www.barcobeach.fr/_files/ugd/ae98d3_89f49c6efbc14cd2afbbd2d7f099196f.pdf" target="_blank" rel="noopener">Carte complète (PDF)</a>
+      <a class="btn ghost" href="https://www.barcobeach.fr/_files/ugd/ae98d3_d3fff882e3fd4201866c6c65a889209e.pdf" target="_blank" rel="noopener" lang="en">English menu</a>
+    </div>
+  </div>
+
+  <div class="strip" id="strip">
+    <figure><img src="assets/ig-crudo.jpg" alt="Crudo de sériole" loading="lazy"><figcaption>Crudo de sériole</figcaption></figure>
+    <figure><img src="assets/ig-tartare.jpg" alt="Tartare de gambas" loading="lazy"><figcaption>Tartare de gambas</figcaption></figure>
+    <figure><img src="assets/ig-tataki.jpg" alt="Tataki de bœuf en croûte de sésame" loading="lazy"><figcaption>Tataki de bœuf</figcaption></figure>
+    <figure><img src="assets/ig-primavera.jpg" alt="Salade Primavera" loading="lazy"><figcaption>Salade Primavera</figcaption></figure>
+    <figure><img src="assets/ig-mezcaloma.jpg" alt="Cocktail Mezcaloma" loading="lazy"><figcaption>Mezcaloma</figcaption></figure>
+    <figure><img src="assets/ig-figue.jpg" alt="Cocktail Don’t Give a Figue" loading="lazy"><figcaption>Don’t Give a Figue</figcaption></figure>
+  </div>
+
+  <div class="menu">
+    <div class="mcol reveal">
+      <h3>Crudo &amp; entrées<small>Pour commencer</small></h3>
+      <div class="mi"><b>Tiradito de thon</b><em class="p">26</em><span>Cœur de thon façon sashimi, huile de sésame, sauce soja au yuzu et gingembre maison</span></div>
+      <div class="mi"><b>Tataki de bœuf</b><em class="p">29</em><span>Cœur de rumsteak en croûte de sésame, sauce umami coriandre, soja, yuzu, miso</span></div>
+      <div class="mi"><b>Tartare de gambas</b><em class="p">29</em><span>Ciboulette, zeste de citron, huile d’olive de Kalamata, réduction d’agrumes</span></div>
+      <div class="mi"><b>Pulpo gallego</b><em class="p">29</em><span>Poulpe, pommes de terre, pimentón fumé, fleur de sel fumée</span></div>
+      <div class="mi"><b>Empanadas chilenas</b><em class="p">24</em><span>Chaussons au filet de bœuf, oignons, olives et épices sud-américaines</span></div>
+    </div>
+    <div class="mcol reveal">
+      <h3>Fideuà, plancha &amp; curry<small>La spécialité du chef Ricardo</small></h3>
+      <div class="mi"><b>Fideuà classique</b><em class="p">42</em><span>Vermicelles, cabillaud, gambas, saint-jacques, calamars, moules, palourdes</span></div>
+      <div class="mi"><b>Fideuà royale</b><em class="p">70</em><span>La classique, avec une demi-queue de langouste. Option à l’encre de seiche</span></div>
+      <div class="mi"><b>Plancha mer</b><em class="p">40</em><span>Saumon, thon, saint-jacques, crevettes, calamars, salade composée</span></div>
+      <div class="mi"><b>Black cod</b><em class="p">44</em><span>Dos de cabillaud mariné au miso et saké, nid de légumes au wok</span></div>
+      <div class="mi"><b>Curry corner</b><em class="p">dès 36</em><span>Curry des îles, curry gambas Ceylon, curry de poisson, curry végétarien</span></div>
+    </div>
+    <div class="mcol reveal">
+      <h3>Au bar<small>Cocktails &amp; spritz maison</small></h3>
+      <div class="mi"><b>Cocktails signatures</b><em class="p">20</em><span>Mezcaloma, Basil Yuzu Smash, Agua del Diablo, Pisco Loco, Spice Up Your Relationship</span></div>
+      <div class="mi"><b>Spritz</b><em class="p">18</em><span>Rosato, Tokyo, Bergamore, Naranja, Bellini</span></div>
+      <div class="mi"><b>Mocktails signatures</b><em class="p">14</em><span>Yubaté, Feeling Peachy, Mango Encanto, Paloma Salvia</span></div>
+      <div class="mi"><b>Gin &amp; tonic</b><em class="p">dès 17</em><span>Une sélection de gins (Bulldog, Roku, Hendrick’s, Monkey 47…) et tonics Fever-Tree</span></div>
+      <div class="mi"><b>Limonades maison</b><em class="p">&nbsp;</em><span>Classique, menthe, basilic ou gingembre</span></div>
+    </div>
+  </div>
+  <p class="menu-note reveal">Extrait de la carte publiée par le Barco Beach (saison 2026), prix en euros. Menu enfant (moins de 12 ans)&nbsp;: 18&nbsp;€. Suggestions du jour et pêche locale selon l’arrivage. Merci de signaler toute allergie ou intolérance à l’équipe.</p>
+</section>
+
+<!-- ================= SUNBAR ================= -->
+<section class="sunbar" id="sunbar">
+  <img id="sunbarImg" src="assets/sunbar-crepuscule.jpg" alt="Le Sunbar au crépuscule, face au golfe de Saint-Tropez" loading="lazy">
+  <div class="in">
+    <p class="eyebrow reveal">Le rooftop · Sunbar</p>
+    <h2 class="h2 reveal">Quand le soleil <em>se couche.</em></h2>
+    <p class="lead reveal" style="margin-top:22px">Au-dessus de la plage, le Sunbar regarde le golfe de Saint-Tropez. Cocktails signatures, spritz maison et, en saison, des soirées DJ avec l’horizon en toile de fond.</p>
+    <div class="pills reveal">
+      <span class="pill">Vue panoramique sur la Nartelle</span>
+      <span class="pill">Cocktails signatures</span>
+      <span class="pill">Soirées DJ en saison</span>
+      <span class="pill">Places limitées</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFOS & RÉSERVATION ================= -->
+<section class="sec" id="infos">
+  <div class="infos">
+    <div>
+      <p class="eyebrow reveal">Infos pratiques</p>
+      <h2 class="h2 reveal">De février <em>à mi-novembre.</em></h2>
+      <div class="cards2">
+        <div class="ic reveal"><h4>Saison</h4><p class="big">Tous les jours, de février à mi-novembre</p><p class="muted">Fermé l’hiver. Réouverture en février.</p></div>
+        <div class="ic reveal"><h4>Réservation</h4><p class="big">Par téléphone</p><p class="muted">Restaurant, transats et Sunbar&nbsp;: un appel suffit.</p></div>
+        <div class="ic reveal" style="grid-column:1/-1"><h4>Sur place</h4>
+          <div class="svc"><span>Pieds dans l’eau</span><span>Terrasse couverte</span><span>Rooftop</span><span>Menu enfant</span><span>Parking privé</span><span>Animaux acceptés</span><span>Wi-Fi</span><span>CB, American Express, espèces</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="resa reveal">
+      <h3>Réservez votre <em>table</em> ou votre transat</h3>
+      <p>Pour le déjeuner, la plage ou un verre au Sunbar, l’équipe vous répond directement.</p>
+      <a class="tel" href="tel:+33677588673">06 77 58 86 73</a>
+      <div class="btns">
+        <a class="btn dark" href="tel:+33677588673"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a class="btn out" href="https://www.instagram.com/barcobeach/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact" style="padding-top:40px">
+  <div class="contact">
+    <div>
+      <p class="eyebrow reveal">Contact &amp; accès</p>
+      <h2 class="h2 reveal">Sur le sable <em>de la Nartelle.</em></h2>
+      <ul class="clist reveal">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>57 avenue du Général Touzet du Vigier (D559)<br>Plage de la Nartelle, 83120 Sainte-Maxime</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33677588673">06 77 58 86 73</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><a href="https://www.instagram.com/barcobeach/" target="_blank" rel="noopener">@barcobeach</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v3.5H8V21h3.5v-7.5H14l.5-3.5h-3V7.5c0-.6.4-1 1-1H15z"/></svg><a href="https://www.facebook.com/barcobeachh" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+      <div class="btns reveal" style="margin-top:30px">
+        <a class="btn light" href="https://www.google.com/maps/dir/?api=1&amp;destination=43.322151,6.664579" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Plan d’accès au Barco Beach, plage de la Nartelle" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=43.322151,6.664579&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© Barco Beach · Restaurant, plage privée &amp; rooftop · Sainte-Maxime</span>
+  <span><a href="tel:+33677588673">06 77 58 86 73</a> · <a href="https://www.instagram.com/barcobeach/" target="_blank" rel="noopener">Instagram</a> · <a href="#">Mentions légales</a></span>
+</footer>
+
+<a class="callfab" id="callfab" href="tel:+33677588673" aria-label="Appeler le Barco Beach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Réserver · 06 77 58 86 73</a>
+</div>
+
+<script>
+(function(){
+  // ---- math helpers (Layer 8)
+  var easeInOut=function(t){return t<0.5?2*t*t:-1+(4-2*t)*t};
+  var lerp=function(a,b,t){return a+(b-a)*t};
+  var clamp=function(v,lo,hi){return Math.min(hi,Math.max(lo,v))};
+  var $=function(id){return document.getElementById(id)};
+
+  var mq=window.matchMedia('(max-width: 767px)');
+  var isMobile=mq.matches;
+
+  // ---- hublot rivets
+  var h=$('hublot');for(var i=0;i<12;i++){var r=document.createElement('i');r.style.transform='rotate('+(i*30)+'deg) translateY(calc(-1 * (var(--r) + 6.5px)))';h.appendChild(r)}
+
+  // ---- SliderDots
+  document.querySelectorAll('.dots').forEach(function(d){
+    for(var i=0;i<4;i++){var b=document.createElement('div');b.style.cssText=i===0?'width:28px;height:4px;border-radius:2px;background:rgba(255,255,255,0.9)':'width:14px;height:4px;border-radius:2px;background:rgba(255,255,255,0.35)';d.appendChild(b)}
+  });
+
+  // ---- Scene1Card (Layer 6)
+  function play(size){return '<div style="width:'+size+'px;height:'+size+'px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="'+Math.round(size*0.34)+'" height="'+Math.round(size*0.42)+'" viewBox="0 0 10 12" style="margin-left:2px"><path d="M0 0 L10 6 L0 12 Z" fill="#3b1a0a"/></svg></div>'}
+  document.querySelectorAll('.s1card').forEach(function(c){
+    var s=+c.dataset.size,rad=+c.dataset.radius,ls=+c.dataset.labelSize,cs=+c.dataset.circle,ns=+(c.dataset.numSize||28),inset=12;
+    c.style.width=s+'px';c.style.height=s+'px';c.style.borderRadius=rad+'px';c.style.backgroundImage='url('+c.dataset.img+')';
+    c.style.boxShadow=c.dataset.shadow||'0 8px 32px rgba(0,0,0,0.5)';
+    var html='<div style="position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.15) 75%, transparent 100%);pointer-events:none"></div>';
+    if(c.dataset.blur)html+='<div style="position:absolute;left:0;right:0;bottom:0;height:44%;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);-webkit-mask-image:linear-gradient(to top, black 55%, transparent 100%);mask-image:linear-gradient(to top, black 55%, transparent 100%);pointer-events:none"></div>';
+    html+='<div style="position:absolute;left:'+inset+'px;right:'+inset+'px;bottom:'+inset+'px">';
+    if(c.dataset.card==='reel')html+='<div style="display:flex;align-items:center;gap:8px">'+play(cs)+'<span style="color:#fff;font-size:'+ls+'px;font-family:\'Nunito\', sans-serif;white-space:nowrap">'+c.dataset.label+'</span></div>';
+    else html+='<div style="font-family:\'Bodoni Moda\', serif;font-size:'+ns+'px;color:#fff;line-height:1">'+c.dataset.num+'</div><div style="font-family:\'Nunito\', sans-serif;font-size:'+ls+'px;color:rgba(255,255,255,0.85);margin-top:3px">'+c.dataset.label+'</div>';
+    c.innerHTML=html+'</div>';
+  });
+
+  // ---- Arc card data (9 cards, real Barco photos)
+  var CARD_DATA=[
+    {title:'Crudo de sériole',desc:'Yuzu, huile d’olive de Kalamata, aneth',bg:'assets/ig-crudo.jpg'},
+    {title:'Tartare de gambas',desc:'Citron vert, ciboulette, réduction d’agrumes',bg:'assets/ig-tartare.jpg'},
+    {title:'Tataki de bœuf',desc:'Croûte de sésame, sauce umami',bg:'assets/ig-tataki.jpg'},
+    {title:'La plage',desc:'Cinquante nuances de bleu face aux transats',bg:'assets/ig-bleu.jpg'},
+    {title:'Le Sunbar',desc:'Palmiers, brise marine et vue sur le golfe',bg:'assets/ig-sunbar_palmiers.jpg'},
+    {title:'Mezcaloma',desc:'Mezcal, sauge maison, pamplemousse, thé vert',bg:'assets/ig-mezcaloma.jpg'},
+    {title:'Don’t Give a Figue',desc:'Tequila, figue de Provence, sel à l’hibiscus',bg:'assets/ig-figue.jpg'},
+    {title:'Primavera',desc:'Avocat, feta, agrumes, kumquat, grenade',bg:'assets/ig-primavera.jpg'},
+    {title:'Roches Rouges',desc:'La vue depuis la plage de la Nartelle',bg:'assets/ig-rochesrouges.jpg'}
+  ];
+  var arc=$('arc'),cards=[];
+  CARD_DATA.forEach(function(c,i){
+    var w=document.createElement('div');w.className='arc-card';
+    w.innerHTML='<div class="arc-inner" style="background-image:url('+c.bg+')"><div class="arc-ov"></div><div class="arc-num">'+String(i+1).padStart(2,'0')+'</div><div class="arc-title">'+c.title+'</div><div class="arc-desc">'+c.desc+'</div></div>';
+    arc.appendChild(w);cards.push(w);
+  });
+  function arcConsts(){return isMobile?{sp:12,R:700,W:160,H:175,sh:260,rad:18,base:140,ts:22,ds:12}:{sp:9,R:1100,W:220,H:230,sh:360,rad:26,base:200,ts:30,ds:15}}
+  function styleArcStatic(){
+    var k=arcConsts();arc.style.height=k.sh+'px';$('arcWrap').style.bottom=(isMobile?60:80)+'px';
+    cards.forEach(function(w){
+      w.style.width=k.W+'px';w.style.height=k.H+'px';w.style.transformOrigin=(k.W/2)+'px '+k.R+'px';
+      var inn=w.firstChild;inn.style.borderRadius=k.rad+'px';inn.style.padding=isMobile?'16px 16px 18px':'20px 22px 24px';
+      var n=inn.querySelector('.arc-num');n.style.top=n.style.right=(isMobile?14:18)+'px';
+      inn.querySelector('.arc-title').style.fontSize=k.ts+'px';inn.querySelector('.arc-desc').style.fontSize=k.ds+'px';
+    });
+    var h2=$('s2h'),p=$('s2p');
+    h2.style.fontSize=isMobile?'clamp(28px, 8vw, 44px)':'clamp(38px, 6.5vw, 78px)';
+    p.style.fontSize=(isMobile?14:20)+'px';p.style.maxWidth=(isMobile?300:480)+'px';
+    $('scene2').style.paddingTop=isMobile?'8vh':'12vh';
+    // mobile heading sizes (HeadingDark)
+    var tab=window.innerWidth>=768;
+    document.querySelectorAll('.hd-a').forEach(function(e){e.style.fontSize=tab?'clamp(28px, 5vw, 44px)':'clamp(26px, 7vw, 42px)'});
+    document.querySelectorAll('.hd-b').forEach(function(e){e.style.fontSize=tab?'clamp(60px, 12vw, 86px)':'clamp(52px, 16vw, 80px)'});
+    var sp=document.querySelector('.s1p');sp.style.fontSize=(tab?16:15)+'px';sp.style.maxWidth=(tab?400:290)+'px';
+    $('s1mobile').style.padding=tab?'80px 32px 96px':'80px 24px 72px';$('s1mobile').style.gap=(tab?28:22)+'px';
+  }
+  function placeArc(rotationOffset){
+    var k=arcConsts(),center=Math.floor(cards.length/2);
+    cards.forEach(function(w,i){
+      var baseDeg=(i-center)*k.sp,deg=baseDeg-rotationOffset+(center*k.sp),rad=deg*Math.PI/180;
+      var x=Math.sin(rad)*k.R,y=k.R-Math.cos(rad)*k.R;
+      w.style.bottom=(-y+k.base)+'px';w.style.left='calc(50% + '+x+'px - '+(k.W/2)+'px)';w.style.transform='rotate('+deg+'deg)';
+      w.style.visibility=Math.abs(deg)>70?'hidden':'visible';
+    });
+  }
+
+  // ---- scroll progress + derived UI (Layer 8)
+  var container=$('container'),sp=0,topbar=$('topbar'),fab=$('callfab');
+  function onScroll(){
+    var max=container.scrollHeight-window.innerHeight;
+    sp=clamp(window.scrollY/(max||1),0,1);
+    var s1=clamp(1-sp/0.22,0,1),s2=clamp((sp-0.68)/0.16,0,1);
+    $('scene1').style.opacity=s1;$('scene1').style.visibility=s1<=0?'hidden':'visible';
+    $('scene2').style.opacity=s2;$('arcWrap').style.opacity=s2;
+    var arcSweepDeg=(CARD_DATA.length-1)*10;
+    placeArc(lerp(0,arcSweepDeg,clamp((sp-0.7)/0.3,0,1)));
+    var past=window.scrollY>max-10;
+    topbar.classList.toggle('on',past);topbar.setAttribute('aria-hidden',past?'false':'true');
+    topbar.querySelectorAll('a').forEach(function(a){a.tabIndex=past?0:-1});
+    fab.classList.toggle('on',past);
+  }
+  styleArcStatic();onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){isMobile=mq.matches;styleArcStatic();onScroll()});
+
+  // ---- mouse + rAF parallax loop
+  var target={x:0,y:0},smooth={x:0,y:0},MAG={world:6,clouds:9,portal:7,curtainL:14,curtainR:14};
+  window.addEventListener('mousemove',function(e){if(isMobile)return;target.x=(e.clientX/window.innerWidth-0.5)*2;target.y=(e.clientY/window.innerHeight-0.5)*2});
+  var world=$('world'),clouds=$('clouds'),portal=$('portal'),cL=$('curtainL'),cR=$('curtainR'),sbImg=$('sunbarImg'),sbSec=$('sunbar');
+  function tick(){
+    smooth.x=lerp(smooth.x,target.x,0.07);smooth.y=lerp(smooth.y,target.y,0.07);
+    var ep=easeInOut(sp),mx=isMobile?0:smooth.x,my=isMobile?0:smooth.y;
+    world.style.transform='translate('+(-mx*MAG.world)+'px, '+(-my*MAG.world)+'px) scale('+lerp(1,1.18,ep)+')';
+    clouds.style.transform='translate('+(-mx*MAG.clouds)+'px, '+(-my*MAG.clouds*0.4)+'px) scale('+lerp(1,1.4,ep)+')';
+    clouds.style.opacity=String(lerp(0.7,1,clamp(sp/0.05,0,1)));
+    portal.style.transform='translate('+(-mx*MAG.portal)+'px, '+(-my*MAG.portal)+'px) scale('+lerp(1,7.5,ep)+')';
+    portal.style.opacity=String(clamp(1-(sp-0.65)/0.20,0,1));
+    var folScale=lerp(1,1.7,ep),folOpacity=clamp(1-(sp-0.5)/0.28,0,1);
+    cL.style.transform='translate('+(-mx*MAG.curtainL)+'px, '+(-my*MAG.curtainL*0.3)+'px) scale('+folScale+')';cL.style.opacity=String(folOpacity);
+    cR.style.transform='translate('+(-mx*MAG.curtainR)+'px, '+(-my*MAG.curtainR*0.3)+'px) scale('+folScale+')';cR.style.opacity=String(folOpacity);
+    // gentle parallax on the Sunbar section photo
+    var rct=sbSec.getBoundingClientRect();if(rct.bottom>0&&rct.top<window.innerHeight){sbImg.style.transform='translateY('+(-(1-(rct.bottom/(window.innerHeight+rct.height)))*14)+'%)'}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // ---- entrance fade (600 ms)
+  var fades=document.querySelectorAll('.fade');
+  fades.forEach(function(e){e.style.opacity=0;e.style.transform='translateY(20px)';e.style.transition='opacity 0.9s ease, transform 0.9s ease';e.style.transitionDelay=e.dataset.d});
+  setTimeout(function(){fades.forEach(function(e){e.style.opacity=1;e.style.transform='translateY(0)'})},600);
+
+  // ---- section reveals
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+  } else document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
