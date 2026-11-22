@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Clos des Vignes · Suites dans les vignes, Ramatuelle</title>
+<meta name="description" content="Le Clos des Vignes, chambres et junior suites au cœur d'un vignoble à Ramatuelle, près des plages de Pampelonne. Piscine chauffée, oliviers, brunch le dimanche.">
+<link rel="icon" href="data:,">
+<link rel="preload" href="assets/hero-piscine.jpg" as="image">
+<link rel="preload" href="assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pinyon.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Poppins;font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-300.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-400.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-500.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-600.woff2) format("woff2")}
+@font-face{font-family:"Pinyon Script";font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/pinyon.woff2) format("woff2")}
+@font-face{font-family:Outfit;font-weight:100 900;font-style:normal;font-display:swap;src:url(assets/fonts/outfit.woff2) format("woff2")}
+
+:root{--sky:#78a6e6;--room:#161e1a;--s:1;--cs:var(--s);--travel:300vh;--ink:#efe9dd;--amber:#e9b27c;--muted:#a9b2a5}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--room);color:#fff}
+body{font-family:Poppins,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;left:0;top:0;width:100%;height:0;z-index:20;opacity:0}
+.nav>*{position:absolute;white-space:nowrap}
+.nav::before{content:"";position:absolute;left:0;top:0;width:100%;height:var(--navh,0px);background:rgba(22,30,26,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:0;transition:opacity .35s;pointer-events:none;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.solid::before{opacity:1}
+.logo{font-weight:600;font-size:max(14px,calc(22px*var(--s)));letter-spacing:.12em;display:flex;align-items:center;min-height:44px}
+.pill{display:flex;gap:calc(4px*var(--s));padding:calc(5px*var(--s));border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.pill a{font-size:max(11px,calc(15px*var(--s)));padding:calc(10px*var(--s)) calc(20px*var(--s));line-height:1.1;border-radius:999px;transition:background .25s,color .25s;display:flex;align-items:center;min-height:44px}
+.pill a:hover{background:rgba(255,255,255,.16)}
+.pill a.on{background:#fff;color:#22302a}
+.eng{display:flex;align-items:center;gap:calc(8px*var(--s));font-size:max(11px,calc(15px*var(--s)));min-height:44px}
+.eng svg{width:max(16px,calc(24px*var(--s)));height:max(16px,calc(24px*var(--s)))}
+.signup{background:#fff;color:#22302a;font-size:max(11px,calc(15px*var(--s)));padding:calc(12px*var(--s)) calc(21px*var(--s));border-radius:999px;display:flex;align-items:center;min-height:44px}
+.phone .pill a{font-size:max(11.5px,calc(12px*var(--s)));padding:calc(8px*var(--s)) max(9px,calc(11px*var(--s)));min-height:44px}
+.phone .logo{font-size:max(14px,calc(15px*var(--s)));letter-spacing:.1em}
+.phone .pill{transition:opacity .3s}
+.phone .nav.solid .pill{opacity:0;pointer-events:none}
+.phone .nav.solid::before{height:var(--navh2)}
+.phone .eng{width:44px;height:44px;justify-content:center;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.phone .eng span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.phone .eng svg{width:20px;height:20px}
+
+/* ---------- STORY ---------- */
+#story{position:relative;height:calc(100vh + var(--travel))}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--sky)}
+@supports (height:100svh){.stage{height:100svh}#story{height:calc(100svh + var(--travel))}}
+.L{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+#view,#tower{width:100%;height:100%}
+.sky{position:absolute;background:linear-gradient(to bottom,rgb(64,112,206) 0%,rgb(86,134,222) 22%,rgb(120,163,238) 40%,rgb(150,186,244) 55%,rgb(184,208,248) 68%,rgb(206,223,250) 80%,rgb(214,228,250) 100%)}
+#heroImg,#towerImg,#water{position:absolute;max-width:none}
+#heroImg{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%)}
+#water{opacity:0;transition:opacity .4s}
+#water.on{opacity:1}
+.dim{position:absolute;pointer-events:none;background:linear-gradient(to bottom,rgba(12,18,14,.55) 0%,rgba(12,18,14,.3) 18%,rgba(12,18,14,.1) 30%,rgba(12,18,14,.3) 47%,rgba(12,18,14,.36) 62%,rgba(12,18,14,0) 82%)}
+#towerImg{-webkit-mask-image:var(--tmask);mask-image:var(--tmask);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+#head{width:100%}
+#word{position:absolute;left:0;top:0;font-family:Outfit,sans-serif;font-weight:330;color:#fff;line-height:1;letter-spacing:0;white-space:nowrap;transform-origin:0 0;text-shadow:0 2px 30px rgba(10,20,14,.25)}
+#script{position:absolute;left:0;top:0;font-family:"Pinyon Script",cursive;font-weight:400;color:#fff;line-height:1;white-space:nowrap;transform-origin:0 0;text-shadow:0 2px 18px rgba(10,20,14,.35)}
+.shade{position:absolute;left:0;bottom:0;width:100%;height:34%;background:linear-gradient(to top,rgba(14,22,17,.62),transparent);opacity:0;pointer-events:none;display:none}
+.phone .shade{display:block}
+
+#room{visibility:hidden;background:linear-gradient(to bottom,transparent 75%,#3e281e 75%)}
+#room::before{content:"";position:absolute;left:-4000px;right:-4000px;bottom:100%;height:6000px;background:#120f0c}
+#room::after{content:"";position:absolute;left:-4000px;right:-4000px;top:100%;height:6000px;background:linear-gradient(#3e281e,#2c1d15 900px,#1f140e)}
+#room .ext{position:absolute;top:0;height:100%;width:4000px;background:linear-gradient(#120f0c,#1b1612 54%,#40332a 56%,#1d1611 63%,#4a3024 63.5%,#3e281e)}
+#room .ext.l{right:100%}#room .ext.r{left:100%}
+#roomCv{position:absolute;left:0;top:0;width:100%;height:100%;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
+
+#build{position:absolute;left:0;top:0;display:flex;align-items:center;gap:calc(28px*var(--s));opacity:0}
+.thumb{position:relative;flex:none;width:calc(121px*var(--s));height:calc(95px*var(--s));border-radius:calc(14px*var(--s));background:url(assets/piscine-collines.jpg) center/cover;box-shadow:0 calc(6px*var(--s)) calc(18px*var(--s)) rgba(10,20,14,.35);display:block;min-width:44px;min-height:44px}
+.thumb::after{content:"";position:absolute;left:50%;top:50%;width:calc(30px*var(--s));height:calc(30px*var(--s));min-width:18px;min-height:18px;transform:translate(-50%,-50%);border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322302a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14M5 12l7 7 7-7'/%3E%3C/svg%3E") center/55% no-repeat}
+#build h2{font-weight:300;font-size:calc(36px*var(--s));line-height:1.06;letter-spacing:-.005em}
+.phone .thumb{width:calc(76px*var(--s));height:calc(60px*var(--s))}
+.phone #build h2{font-size:max(20px,calc(26px*var(--s)))}
+
+#para{position:absolute;top:0;right:0;font-weight:300;font-size:calc(13.4px*var(--s));line-height:1.45;opacity:0;text-shadow:0 1px 3px rgba(0,0,0,.45),0 1px 14px rgba(10,20,14,.55)}
+#para span{display:block;white-space:nowrap}
+#para.wrap span{display:inline;white-space:normal}
+.phone #para{font-size:max(12px,calc(12.5px*var(--s)))}
+
+.card{position:absolute;left:0;top:0;width:calc(266px*var(--cs));background:#fff;border-radius:calc(24px*var(--cs));padding:calc(12px*var(--cs)) calc(12px*var(--cs)) calc(18px*var(--cs));box-shadow:0 calc(14px*var(--cs)) calc(40px*var(--cs)) rgba(6,12,8,.38);transform-origin:0 0;will-change:transform;visibility:hidden;--ph:1;color:#24233a}
+.card .ph{height:calc(150px*var(--cs)*var(--ph));border-radius:calc(18px*var(--cs));background-size:cover;background-position:center}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:calc(8px*var(--cs));padding:calc(9px*var(--cs)) calc(6px*var(--cs)) 0}
+.card .row>div{min-width:0}
+.card h3{overflow:hidden;text-overflow:ellipsis;font-weight:500;font-size:max(12px,calc(14px*var(--cs)));color:#24302a;white-space:nowrap}
+.card .sub{font-size:max(11px,calc(12.5px*var(--cs)));color:#9da69f;white-space:nowrap}
+.card .price{font-size:max(12px,calc(13px*var(--cs)));color:#8e7d6a;padding-left:calc(10px*var(--cs));border-left:1px solid #ebe6de;line-height:2;white-space:nowrap}
+.card .spec{display:flex;gap:calc(22px*var(--cs));padding:calc(10px*var(--cs)) calc(6px*var(--cs)) 0;font-size:max(11px,calc(12px*var(--cs)));color:#55605a;list-style:none}
+.card .spec li{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.card .spec svg{width:max(13px,calc(16px*var(--cs)));height:max(13px,calc(16px*var(--cs)));fill:none;stroke:#a49883;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card.compact .row{flex-direction:column;align-items:flex-start;gap:0;line-height:1.35}
+.card.compact .price{border-left:0;padding-left:0;line-height:1.35;color:#a0764e}
+.card.compact .spec{gap:max(7px,calc(16px*var(--cs)))}
+
+/* ---------- SECTIONS ---------- */
+.sec{position:relative;padding:clamp(72px,11vw,140px) max(20px,6vw);color:var(--ink);background:var(--room)}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{font-family:"Pinyon Script",cursive;font-size:clamp(30px,4vw,46px);color:var(--amber);line-height:1;display:block;margin-bottom:6px}
+.sec h2{font-weight:300;font-size:clamp(28px,4.4vw,58px);line-height:1.08;letter-spacing:-.01em;max-width:16ch}
+.lead{font-weight:300;font-size:clamp(15px,1.35vw,18px);line-height:1.7;color:#d8d6cc;max-width:58ch;margin-top:22px}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,80px);align-items:end}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;margin-top:48px}
+.facts div{background:#18211c;padding:22px 20px}
+.facts b{display:block;font-family:Outfit,sans-serif;font-weight:300;font-size:clamp(26px,3vw,40px);color:#fff;line-height:1.1}
+.facts span{font-size:13px;color:var(--muted);line-height:1.5;display:block;margin-top:6px}
+
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(20px,6vw) 18px;margin:44px calc(-1*max(20px,6vw)) 0;scrollbar-width:none;touch-action:pan-x pan-y;overscroll-behavior-x:contain}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:none;scroll-snap-align:center;--gh:clamp(300px,42vw,500px);width:min(80vw,calc(var(--gh)*.8))}
+.gal .im{height:var(--gh);border-radius:22px;background-size:cover;background-position:center;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.gal figure.w{width:min(88vw,calc(var(--gh)*1.42))}
+@media (max-width:520px){.gal figure,.gal figure.w{--gh:min(100vw,470px)}}
+.gal figcaption{font-size:13px;color:var(--muted);margin-top:12px;padding-left:4px}
+.galnav{display:flex;gap:10px;margin-top:14px}
+.galnav button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:background .2s}
+.galnav button:hover{background:rgba(255,255,255,.1)}
+.galnav svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8}
+
+.suites{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+.suite{background:#fff;color:#24302a;border-radius:26px;padding:12px;display:grid;grid-template-columns:44% 1fr;gap:18px;align-items:center;box-shadow:0 18px 44px rgba(0,0,0,.3)}
+.suite .im{border-radius:18px;aspect-ratio:1/1;background-size:cover;background-position:center}
+.suite h3{font-weight:500;font-size:19px}
+.suite .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a0764e;margin-bottom:6px}
+.suite p{font-size:14px;line-height:1.6;color:#5d6862;margin-top:8px;padding-right:8px}
+
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px;list-style:none}
+.svc li{border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px 18px;background:rgba(255,255,255,.03);font-size:14px;line-height:1.5;color:#d8d6cc}
+.svc li b{display:block;color:#fff;font-weight:500;font-size:15px;margin:12px 0 4px}
+.svc svg{width:26px;height:26px;stroke:var(--amber);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+.around{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);margin-top:44px;align-items:stretch}
+.around .im{border-radius:26px;background:url(assets/petit-dejeuner.jpg) center 70%/cover;min-height:420px}
+.around ol{list-style:none;display:flex;flex-direction:column}
+.around li{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.around li:first-child{padding-top:0}
+.around li i{font-style:normal;font-family:Outfit,sans-serif;font-weight:300;font-size:30px;color:var(--amber);min-width:44px;line-height:1}
+.around li b{display:block;font-weight:500;color:#fff;font-size:16px;margin-bottom:4px}
+.around li span{font-size:14px;color:#c9c8bd;line-height:1.6}
+
+#contact{background:linear-gradient(#161e1a,#1d1712)}
+.book{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,60px);margin-top:44px}
+.panel{background:#fff;color:#24302a;border-radius:28px;padding:clamp(22px,3vw,38px)}
+.panel h3{font-weight:500;font-size:20px;margin-bottom:6px}
+.panel p{font-size:14px;color:#5d6862;line-height:1.6}
+.tels{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.tel{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:0 18px;border-radius:16px;background:#f4efe6;font-size:16px;color:#24302a;transition:background .2s}
+.tel:hover{background:#ece3d3}
+.tel small{font-size:12px;color:#8e7d6a}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;background:#22302a;color:#fff;font-size:14px}
+.btn.ghost{background:transparent;border:1px solid #cfc6b6;color:#24302a}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7}
+.info{display:flex;flex-direction:column;gap:14px}
+.info .row{border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:20px 22px}
+.info .row span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.info .row p{font-size:15px;line-height:1.6;color:#e5e1d6}
+.info .row a{text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+footer{padding:34px max(20px,6vw) 40px;color:#8f978f;font-size:13px;background:#1d1712;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08)}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.25,.75,.2,1),transform .9s cubic-bezier(.25,.75,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .split,.around,.book{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:last-child{grid-column:1/-1}
+  .suites{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr 1fr}
+  .around .im{min-height:300px}
+}
+@media (max-width:520px){
+  .suite{grid-template-columns:1fr;padding:10px}
+  .suite .im{aspect-ratio:16/11}
+  .suite div:last-child{padding:4px 8px 10px}
+  .svc li{padding:16px 14px}
+  .tel{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" id="logo">LE CLOS DES VIGNES</a>
+  <nav class="pill" id="pill" aria-label="Navigation">
+    <a class="on" href="#top">Accueil</a>
+    <a href="#domaine">Le domaine</a>
+    <a href="#suites">Les suites</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="eng" id="eng" href="tel:+33494495640" aria-label="Appeler le Clos des Vignes">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.3a11 11 0 0 0 5.3 5.3l1.3-2.1 4.2 1.6V17a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5z"/></svg>
+    <span>04 94 49 56 40</span>
+  </a>
+  <a class="signup" id="signup" href="#contact">Réserver</a>
+</header>
+
+<main id="top">
+<section id="story" aria-label="Le Clos des Vignes, Ramatuelle">
+  <div class="stage" id="stage">
+    <div class="L" id="view">
+      <div class="sky" id="sky"></div>
+      <img id="heroImg" src="assets/hero-piscine.jpg" alt="La piscine du Clos des Vignes, la maison provençale, les palmiers et le cyprès" crossorigin="anonymous">
+      <canvas id="water" aria-hidden="true"></canvas>
+      <div class="dim" id="dim"></div>
+    </div>
+    <div class="L" id="head"><span id="word" aria-hidden="true">VIGNES</span></div>
+    <div class="L" id="tower" aria-hidden="true"><img id="towerImg" src="assets/hero-piscine.jpg" alt=""></div>
+    <h1 id="script">Le Clos des</h1>
+    <div class="shade" id="shade"></div>
+    <div class="L" id="room" aria-hidden="true"><span class="ext l"></span><span class="ext r"></span><canvas id="roomCv"></canvas></div>
+    <div id="build">
+      <a class="thumb" href="#domaine" aria-label="Découvrir le domaine"></a>
+      <h2>Suites dans<br>les vignes.</h2>
+    </div>
+    <p id="para"><span>Chambres et junior suites blotties au cœur d'un vignoble, </span><span>entre les plages de Pampelonne et le village de Ramatuelle. </span><span>Piscine chauffée à 29 °C, palmiers, oliviers et vélos prêtés : </span><span>une adresse pour se ressourcer sur le golfe de Saint-Tropez.</span></p>
+
+    <article class="card" data-i="0">
+      <div class="ph" style="background-image:url(assets/card-tropezina.jpg)"></div>
+      <div class="row"><div><h3>La Tropezina</h3><div class="sub">Avec balcon</div></div><span class="price">Sur demande</span></div>
+      <ul class="spec"><li><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10V20M19 10V20M8 10V5M16 10V5M3 20h18"/></svg>Balcon</li><li><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><circle cx="12" cy="9" r="3"/><path d="M12 6V3l2-1"/></svg>Vignes</li></ul>
+    </article>
+    <article class="card" data-i="1">
+      <div class="ph" style="background-image:url(assets/card-etage.jpg)"></div>
+      <div class="row"><div><h3>Suite de l'étage</h3><div class="sub">Vue panoramique</div></div><span class="price">Sur demande</span></div>
+      <ul class="spec"><li><svg viewBox="0 0 24 24"><path d="M4 20h4v-4h4v-4h4V8h4"/></svg>Étage</li><li><svg viewBox="0 0 24 24"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Panorama</li></ul>
+    </article>
+    <article class="card" data-i="2">
+      <div class="ph" style="background-image:url(assets/card-chaines.jpg)"></div>
+      <div class="row"><div><h3>Chambre Chaînes</h3><div class="sub">Peau neuve</div></div><span class="price">Sur demande</span></div>
+      <ul class="spec"><li><svg viewBox="0 0 24 24"><path d="M3 18V8M21 18v-5H3M3 13h18M7 13V10h5v3"/></svg>Lit double</li><li><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Rénovée</li></ul>
+    </article>
+    <article class="card" data-i="3">
+      <div class="ph" style="background-image:url(assets/card-piscine.jpg)"></div>
+      <div class="row"><div><h3>Chambre haute</h3><div class="sub">Côté piscine</div></div><span class="price">Sur demande</span></div>
+      <ul class="spec"><li><svg viewBox="0 0 24 24"><path d="M3 18V8M21 18v-5H3M3 13h18M7 13V10h5v3"/></svg>Lit double</li><li><svg viewBox="0 0 24 24"><path d="M2 16c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 20c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 13V5a2 2 0 0 1 4 0M16 13V5a2 2 0 0 0-4 0M8 8h8"/></svg>Piscine</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="domaine">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="eyebrow">Le domaine</span>
+        <h2>Une oasis entre vignes et palmiers.</h2>
+      </div>
+      <div class="rv">
+        <p class="lead">Au bout du chemin des Boutinelles, le Clos des Vignes se niche dans un vignoble et une palmeraie, entre la plage de Pampelonne et le sentier du littoral. Une maison provençale entre le Saint-Tropez festif et le village médiéval de Ramatuelle, pensée pour le calme, la nature et la discrétion.</p>
+      </div>
+    </div>
+    <div class="facts rv">
+      <div><b>4</b><span>chambres et junior suites, certaines communicantes pour 4 personnes</span></div>
+      <div><b>29 °C</b><span>une piscine chauffée de 6 × 12 m, entourée de transats</span></div>
+      <div><b>3 km</b><span>du village perché de Ramatuelle, commerces à 800 m</span></div>
+    </div>
+    <div class="gal" id="gal" aria-label="Photos du domaine">
+      <figure class="w"><div class="im" style="background-image:url(assets/hero-piscine.jpg)"></div><figcaption>La piscine et la maison</figcaption></figure>
+      <figure><div class="im" style="background-image:url(assets/petit-dejeuner.jpg);background-position:center 75%"></div><figcaption>Petit-déjeuner sous la pergola</figcaption></figure>
+      <figure class="w"><div class="im" style="background-image:url(assets/salon-terrasse.jpg)"></div><figcaption>Le salon ouvert sur la terrasse</figcaption></figure>
+      <figure><div class="im" style="background-image:url(assets/piscine-collines.jpg)"></div><figcaption>Le bassin face aux collines</figcaption></figure>
+      <figure class="w"><div class="im" style="background-image:url(assets/patio-olivier.jpg)"></div><figcaption>Le patio provençal et son olivier</figcaption></figure>
+      <figure><div class="im" style="background-image:url(assets/sdb-rose.jpg)"></div><figcaption>La salle de bain rose de la Tropezina</figcaption></figure>
+      <figure class="w"><div class="im" style="background-image:url(assets/chambre-vue.jpg)"></div><figcaption>Une chambre ouverte sur le jardin</figcaption></figure>
+    </div>
+    <div class="galnav"><button type="button" id="gPrev" aria-label="Photo précédente"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="gNext" aria-label="Photo suivante"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+  </div>
+</section>
+
+<section class="sec" id="suites">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Les suites</span><h2>Quatre adresses, une seule vue : les vignes.</h2>
+    <p class="lead">Chambres et junior suites avec kitchenette, linge de lit et de toilette fournis, Wi-Fi privé et télévision. Le petit-déjeuner est inclus.</p></div>
+    <div class="suites">
+      <article class="suite rv"><div class="im" style="background-image:url(assets/card-tropezina.jpg)"></div><div><div class="k">Suite</div><h3>La Tropezina</h3><p>Un balcon sur le jardin et le vignoble de Ramatuelle, et sa salle de bain rose aux mallons provençaux.</p></div></article>
+      <article class="suite rv"><div class="im" style="background-image:url(assets/card-etage.jpg)"></div><div><div class="k">Suite</div><h3>La suite de l'étage</h3><p>À l'étage, une vue panoramique sur les vignes et les paysages alentour. Un vrai havre de paix.</p></div></article>
+      <article class="suite rv"><div class="im" style="background-image:url(assets/card-chaines.jpg)"></div><div><div class="k">Chambre</div><h3>La chambre Chaînes</h3><p>Rénovée : élégance, simplicité et confort, tête de lit cannée et tomettes.</p></div></article>
+      <article class="suite rv"><div class="im" style="background-image:url(assets/card-piscine.jpg)"></div><div><div class="k">Chambre</div><h3>La chambre haute</h3><p>Un accès direct face à la piscine chauffée, pour le repos et le soleil au milieu des vignes.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Sur place</span><h2>Le temps de ne rien faire.</h2></div>
+    <ul class="svc">
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M2 17c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 14V6a2 2 0 0 1 4 0M16 14V6a2 2 0 0 0-4 0M8 9h8"/></svg><b>Piscine chauffée</b>29 °C, 6 × 12 m, au milieu du jardin.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M4 11h13v3a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6zM17 12h1.5a2.5 2.5 0 0 1 0 5H16M8 3c0 2 2 2 2 4M12 3c0 2 2 2 2 4"/></svg><b>Brunch le dimanche</b>Et petit-déjeuner inclus chaque matin.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h6l2 7M10 9l-1.5-3H6M14 6h2.5"/></svg><b>Vélos prêtés</b>Pour filer vers les plages et le village.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M12 21v-7M12 14c-3 0-6-2-6-6 3 0 6 2 6 6zM12 14c3 0 6-2 6-6-3 0-6 2-6 6zM12 9c0-3 1.5-5 3-6"/></svg><b>Jardin et terrasses</b>Terrasses ombragées, parc clos, mobilier de jardin.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><circle cx="16.5" cy="9.5" r="3"/><path d="M3 21h18"/></svg><b>Pétanque et ping-pong</b>Boulodrome, jeux de société, bibliothèque.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M4 10h16M6 10l1 10h10l1-10M9 6c0-1.5 1-2 1-3M13 6c0-1.5 1-2 1-3"/></svg><b>Barbecue</b>Et restaurants partenaires qui livrent sur place.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 18v2M17 18v2M7 7V5h10v2"/></svg><b>Parking privé</b>Gratuit, avec abri pour les vélos.</li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M2 9.5a14.5 14.5 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1"/></svg><b>Wi-Fi privé</b>Animaux acceptés sur demande.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="autour">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Autour</span><h2>Le golfe de Saint-Tropez, à vélo.</h2></div>
+    <div class="around">
+      <div class="im rv" role="img" aria-label="Petit-déjeuner sous la pergola, face à la piscine et aux palmiers"></div>
+      <ol>
+        <li class="rv"><i>01</i><div><b>Plage de Pampelonne</b><span>Côté La Sauvageonne et Cabane Bambou, à rejoindre à vélo ou en voiture.</span></div></li>
+        <li class="rv"><i>02</i><div><b>Sentier du littoral et plages de l'Escalet</b><span>Le sentier côtier et les plages de l'Escalet, tout proches du domaine.</span></div></li>
+        <li class="rv"><i>03</i><div><b>Village de Ramatuelle</b><span>À trois kilomètres : ruelles fleuries, bistrots et petites boutiques du village perché.</span></div></li>
+        <li class="rv"><i>04</i><div><b>Saint-Tropez</b><span>Le village et ses façades colorées, pour commencer la journée en terrasse.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Réserver</span><h2>Votre séjour au Clos des Vignes.</h2></div>
+    <div class="book">
+      <div class="panel rv">
+        <h3>Demande de réservation</h3>
+        <p>Appelez-nous pour connaître les disponibilités et le tarif de la chambre de votre choix.</p>
+        <div class="tels">
+          <a class="tel" href="tel:+33494495640">04 94 49 56 40 <small>Fixe</small></a>
+          <a class="tel" href="tel:+33618716970">06 18 71 69 70 <small>Mobile</small></a>
+          <a class="tel" href="tel:+33623751770">06 23 75 17 70 <small>Mobile</small></a>
+        </div>
+        <div class="btns">
+          <a class="btn" href="https://www.instagram.com/sttropezhotel/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>Écrire sur Instagram</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=43.204621,6.640645" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Itinéraire</a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="row rv"><span>Saison</span><p>Ouvert tous les jours, du 1er avril au 31 décembre 2026.</p></div>
+        <div class="row rv"><span>Tarifs</span><p>De 149 € à 389 € la nuit, petit-déjeuner inclus. Espèces, carte bancaire et chèques-vacances acceptés.</p></div>
+        <div class="row rv"><span>Adresse</span><p>1889 chemin des Boutinelles, Le Fond du Plan<br>83350 Ramatuelle</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <span>© Le Clos des Vignes · Ramatuelle, golfe de Saint-Tropez</span>
+  <a href="https://www.instagram.com/sttropezhotel/" target="_blank" rel="noopener">Instagram @sttropezhotel</a>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const root=document.documentElement, nav=$('nav'), stage=$('stage'), story=$('story');
+const view=$('view'), sky=$('sky'), heroImg=$('heroImg'), water=$('water'), dim=$('dim');
+const head=$('head'), word=$('word'), tower=$('tower'), towerImg=$('towerImg'), script=$('script'), shade=$('shade');
+const room=$('room'), roomCv=$('roomCv'), build=$('build'), para=$('para');
+const cards=[...document.querySelectorAll('.card')];
+const logo=$('logo'), pill=$('pill'), eng=$('eng'), signup=$('signup');
+
+const PW=2048, PH=1360;            // plate space (hero photo has the same 1.506 ratio)
+const FOCUS_X=1197;                 // cypress in plate space
+const GX=1025, GY=561.5, GWW=1004, GHH=773, STEP=860; // room glass
+
+/* tower (cypress) mask, drawn in the photo's own 1920x1275 space */
+const poly='1122,272 1136,300 1146,360 1152,450 1159,560 1164,650 1167,760 1163,842 1078,842 1076,760 1083,650 1093,560 1099,450 1103,360 1109,300';
+const svg=`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1275' preserveAspectRatio='none'><filter id='b'><feGaussianBlur stdDeviation='2.5'/></filter><polygon filter='url(%23b)' fill='white' points='${poly}'/></svg>`;
+towerImg.style.setProperty('--tmask',`url("data:image/svg+xml,${svg.replace(/</g,'%3C').replace(/>/g,'%3E').replace(/"/g,"'")}")`);
+
+/* ---------- easing ---------- */
+function bez(x1,y1,x2,y2){
+  const cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by=3*(y2-y1)-cy,ay=1-cy-by;
+  const sx=t=>((ax*t+bx)*t+cx)*t, sy=t=>((ay*t+by)*t+cy)*t, dx=t=>(3*ax*t+2*bx)*t+cx;
+  return x=>{ if(x<=0)return 0; if(x>=1)return 1; let t=x;
+    for(let i=0;i<8;i++){const e=sx(t)-x; const d=dx(t); if(Math.abs(e)<1e-6)break; if(Math.abs(d)<1e-6)break; t-=e/d;}
+    if(t<0||t>1){let lo=0,hi=1;t=x;for(let i=0;i<30;i++){const v=sx(t);if(v<x)lo=t;else hi=t;t=(lo+hi)/2;}}
+    return sy(t);};
+}
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), lerp=(a,b,t)=>a+(b-a)*t;
+const win=(t,a,b,e)=>e(clamp((t-a)/(b-a)));
+const ePan=bez(.45,.6,.65,1), eRise1=bez(.08,.9,.45,.95), eRise2=bez(.45,0,.55,1), eNav=bez(.33,0,.2,1),
+      eText=bez(.3,.15,.2,1), eFade=bez(.25,.75,.2,1), eExit=bez(.5,0,.75,.4), ePush=bez(.45,0,.55,1);
+
+/* monotone cubic (Fritsch-Carlson) for ln S */
+const KT=[9.0,9.2,9.5,9.8,10.1,10.4,10.63,10.8,10.97,11.1,11.3], KV=[1.93,1.749,1.526,1.253,.956,.642,.358,.166,.058,0,0];
+const KM=(()=>{const n=KT.length,d=[],m=new Array(n);for(let i=0;i<n-1;i++)d.push((KV[i+1]-KV[i])/(KT[i+1]-KT[i]));
+  m[0]=d[0];m[n-1]=d[n-2];for(let i=1;i<n-1;i++)m[i]=d[i-1]*d[i]<=0?0:(d[i-1]+d[i])/2;
+  for(let i=0;i<n-1;i++){if(d[i]===0){m[i]=m[i+1]=0;continue;}const a=m[i]/d[i],b=m[i+1]/d[i],h=a*a+b*b;if(h>9){const t=3/Math.sqrt(h);m[i]=t*a*d[i];m[i+1]=t*b*d[i];}}return m;})();
+function lnS(T){ if(T<=KT[0])return KV[0]; if(T>=KT[KT.length-1])return 0;
+  let i=0;while(T>KT[i+1])i++; const h=KT[i+1]-KT[i],t=(T-KT[i])/h,t2=t*t,t3=t2*t;
+  return (2*t3-3*t2+1)*KV[i]+(t3-2*t2+t)*h*KM[i]+(-2*t3+3*t2)*KV[i+1]+(t3-t2)*h*KM[i+1]; }
+
+/* ---------- state ---------- */
+let W,H,phone,s,sc,pw,ph,oxH,oxR,oy,g,sEnd,gyEnd,navBottom;
+let capTop,wordScale=1,scriptInk={top:0,h:0};
+let cardPos=[],cardSize=[],cardMode='desk',gridTop=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+
+function measureText(font,txt){const c=measureText.c||(measureText.c=document.createElement('canvas').getContext('2d'));c.font=font;return c.measureText(txt);}
+
+function placeNav(){
+  const items=[logo,pill,eng,signup];
+  items.forEach(e=>{e.style.left=e.style.right=e.style.top='';});
+  const r=e=>e.getBoundingClientRect();
+  if(!phone){
+    const cy=H*67/1012;
+    logo.style.left=W*93/1418+'px'; logo.style.top=cy-r(logo).height/2+'px';
+    pill.style.left=(W-r(pill).width)/2+'px'; pill.style.top=cy-r(pill).height/2+'px';
+    const sr=W*92/1418; signup.style.right=sr+'px'; signup.style.top=cy-r(signup).height/2+'px';
+    eng.style.right=Math.max(W*216/1418, sr+r(signup).width+16*s)+'px'; eng.style.top=cy-r(eng).height/2+'px';
+    // keep pill clear of logo / eng on narrower desktops
+    const pl=r(pill), lg=r(logo), en=r(eng);
+    if(pl.left<lg.right+12||pl.right>en.left-12){ pill.style.left=(lg.right+ (en.left-lg.right-pl.width)/2)+'px'; }
+  }else{
+    const top=18*s; signup.style.right=20*s+'px'; signup.style.top=top+'px';
+    const sb=r(signup), cy=sb.top+sb.height/2;
+    logo.style.left=20*s+'px'; logo.style.top=cy-r(logo).height/2+'px';
+    eng.style.right=20*s+sb.width+10*s+'px'; eng.style.top=cy-r(eng).height/2+'px';
+    pill.style.left=(W-r(pill).width)/2+'px'; pill.style.top=sb.bottom+12*s+'px';
+  }
+  navBottom=Math.max(...items.map(e=>r(e).bottom));
+  root.style.setProperty('--navh',(navBottom+10)+'px');
+  root.style.setProperty('--navh2',(signup.getBoundingClientRect().bottom+12*s)+'px');
+}
+
+function layout(){
+  W=innerWidth; H=stage.clientHeight; phone=H>1.15*W;
+  root.classList.toggle('phone',phone);
+  s=phone?Math.min(W/390,H/700,1.9):clamp(Math.min(W/1440,H/900),.62,1.35);
+  root.style.setProperty('--s',s); root.style.setProperty('--travel',3.4*H+'px');
+  logo.textContent=phone||W<1100?'CLOS DES VIGNES':'LE CLOS DES VIGNES';
+  sc=Math.max(W/PW,H/PH); pw=PW*sc; ph=PH*sc;
+  oxR=(W-pw)/2; oy=(H-ph)/2; oxH=clamp(W/2-FOCUS_X*sc,W-pw,0);
+  for(const e of [heroImg,towerImg]){e.style.left=oxH+'px';e.style.top=oy+'px';e.style.width=pw+'px';e.style.height=ph+'px';}
+  Object.assign(sky.style,{left:oxH+'px',top:(oy-.6*ph)+'px',width:pw+'px',height:1.6*ph+'px'});
+  Object.assign(dim.style,{left:oxH+'px',top:oy+'px',width:pw+'px',height:ph+'px'});
+  const wy0=860/1275*PH, wy1=1150/1275*PH;
+  Object.assign(water.style,{left:oxH+'px',top:(oy+wy0*sc)+'px',width:pw+'px',height:(wy1-wy0)*sc+'px'});
+  room.style.width=pw+'px'; room.style.height=ph+'px';
+  g={x:oxR+GX*sc,y:oy+GY*sc,w:GWW*sc,h:GHH*sc};
+  sEnd=phone?Math.min(1,.92*W/g.w):1;
+
+  placeNav();
+
+  /* build block */
+  if(!phone){ build.style.left=W*93/1418+'px'; build.style.top=H*169/1012+'px'; }
+  else{ build.style.left=20*s+'px'; build.style.top=navBottom+20*s+'px'; }
+
+  /* paragraph */
+  para.classList.toggle('wrap',phone||H<620);
+  para.style.width=''; para.style.left='';para.style.bottom='';para.style.top='';para.style.right='';
+  if(!phone){ para.style.right=W*68/1418+'px'; para.style.top=H*182/1012+'px'; if(H<620)para.style.width=.4*W+'px'; }
+  else{ para.style.left=20*s+'px'; para.style.right=20*s+'px'; para.style.top='auto'; para.style.bottom=.045*H+'px'; }
+
+  /* headline + script, sized from their ink */
+  const n=word.textContent.length;
+  const mw=measureText('330 100px Outfit',word.textContent), mH=measureText('330 100px Outfit','H');
+  const capA=mH.actualBoundingBoxAscent, fA=mw.fontBoundingBoxAscent||92, fD=mw.fontBoundingBoxDescent||24;
+  const ink100=mw.actualBoundingBoxLeft+mw.actualBoundingBoxRight;
+  const ms=measureText('400 100px "Pinyon Script"',script.textContent);
+  const sInkH100=ms.actualBoundingBoxAscent+ms.actualBoundingBoxDescent, sInkW100=ms.actualBoundingBoxLeft+ms.actualBoundingBoxRight;
+  const sfA=ms.fontBoundingBoxAscent||100, sfD=ms.fontBoundingBoxDescent||40;
+  let wordW,cap,inkLeft,sW,sLeft,sTop;
+  if(!phone){
+    wordW=W*1303/1440; cap=Math.min(150*H/900*1.22,wordW*150/1303); wordW=Math.min(wordW,cap*1303/150*1.25);
+    capTop=H*446/900; inkLeft=W*70/1440;
+    sW=Math.min(W*406/1440,wordW*406/1303); sLeft=W*73/1440;
+  }else{
+    wordW=W-40*s; cap=wordW*150/1303; inkLeft=20*s;
+    sW=Math.min(W*.5,260*s); sLeft=20*s;
+    const bb=build.getBoundingClientRect();
+    sTop=bb.bottom+20*s;
+  }
+  const sSize=100*sW/sInkW100, sInkH=sInkH100*sSize/100;
+  if(!phone) sTop=capTop-sInkH*.836; else capTop=sTop+sInkH*1.04;
+  script.style.fontSize=sSize+'px';
+  const sHalf=(sSize-(sfA+sfD)*sSize/100)/2;
+  script.style.left=sLeft+ms.actualBoundingBoxLeft*sSize/100+'px';
+  script.style.top=sTop-(sHalf+(sfA-ms.actualBoundingBoxAscent)*sSize/100)+'px';
+  scriptInk={top:sTop,h:sInkH};
+
+  const fs=100*cap/capA, k=fs/100, inkW=ink100*k;
+  let ls=0; if(wordW/inkW>1.08){ ls=(wordW/1.06-inkW)/(n-1); }
+  wordScale=wordW/(inkW+ls*(n-1));
+  word.style.fontSize=fs+'px'; word.style.letterSpacing=ls+'px';
+  const half=(fs-(fA+fD)*k)/2;
+  word.style.left=inkLeft+mw.actualBoundingBoxLeft*k*wordScale+'px';
+  word.style.top=capTop-(half+(fA-capA)*k)+'px';
+  word.dataset.sx=wordScale;
+
+  layoutCards();
+  drawRoom();
+}
+
+/* ---------- cards ---------- */
+function setCS(cs,phr){ for(const c of cards){c.style.setProperty('--cs',cs);c.style.setProperty('--ph',phr);c.classList.toggle('compact',cs<1.05);c.style.width='';} }
+function layoutCards(){
+  cardPos=[];cardSize=[];
+  const gap=12*s;
+  if(phone){
+    const gg=10*s; let cw=Math.min(266*s*.9,(W-32*s-gg)/2), cs=cw/266;
+    setCS(cs,1);
+    let ch=Math.max(...cards.map(c=>c.offsetHeight));
+    while(2*ch+gg>.47*H&&cs>.55){cs-=.03;cw=266*cs;setCS(cs,1);ch=Math.max(...cards.map(c=>c.offsetHeight));}
+    const x0=(W-(2*cw+gg))/2, bottom=H-16*s;
+    gridTop=bottom-2*ch-gg;
+    cards.forEach((c,i)=>{const col=i%2,row=i>>1;cardPos[i]={x:x0+col*(cw+gg),y:gridTop+row*(ch+gg),from:col?1:-1,row};cardSize[i]={w:cw,h:ch};});
+    cardMode='phone';
+    const avail=gridTop-6*s-(navBottom+10*s);
+    sEnd=Math.min(sEnd,avail/((STEP-(GY-GHH/2))*sc));
+    let gy=Math.min(g.y,gridTop-6*s-(STEP-GY)*sc*sEnd);
+    gy=Math.max(gy,navBottom+10*s+g.h*sEnd/2);
+    gyEnd=gy; return;
+  }
+  gyEnd=g.y;
+  const top=navBottom+14*s, bottom=H-12*s;
+  let cs=s,phr=1; setCS(cs,phr);
+  const fits=()=>2*cards[0].offsetHeight+gap<=bottom-top;
+  while(!fits()&&cs>.5){cs=Math.max(.5,cs-.04);setCS(cs,phr);}
+  while(!fits()&&phr>.45){phr=Math.max(.45,phr-.05);setCS(cs,phr);}
+  if(fits()){
+    const ch=cards[0].offsetHeight, cw=cards[0].offsetWidth;
+    const yT=Math.min(Math.max(top,H*195/998),bottom-2*ch-gap), yB=Math.max(Math.min(bottom-ch,H*581/998),top+ch+gap);
+    const xs=[W*79/1418, W*(1351-12)/1418-cw, W*212/1418, W*(1221-12)/1418-cw];
+    cards.forEach((c,i)=>{cardPos[i]={x:xs[i],y:i<2?yT:yB,from:i%2?1:-1,row:i>>1};cardSize[i]={w:cw,h:ch};});
+    cardMode='desk';
+  }else{
+    const cw=Math.min(266*s,(W-24*s-3*8*s)/4); setCS(cw/266,.5);
+    const ch=cards[0].offsetHeight, order=[0,2,1,3], x0=(W-(4*cw+3*8*s))/2;
+    order.forEach((ci,k)=>{cardPos[ci]={x:x0+k*(cw+8*s),y:H-12*s-ch,from:k<2?-1:1,row:(k===1||k===2)?1:0};cardSize[ci]={w:cw,h:ch};});
+    cardMode='row';
+  }
+}
+
+/* ---------- room plate (drawn: Provençal suite at dusk, tall three-pane window) ---------- */
+let roomReady=false;
+function drawRoom(){
+  const f=phone?.5:1; roomCv.width=PW*f; roomCv.height=PH*f;
+  const c=roomCv.getContext('2d'); c.setTransform(f,0,0,f,0,0);
+  const rnd=(()=>{let x=7;return()=>(x=(x*16807)%2147483647)/2147483647;})();
+  // warm plaster wall
+  let gr=c.createLinearGradient(0,0,0,740); gr.addColorStop(0,'#120f0c'); gr.addColorStop(.6,'#1a1511'); gr.addColorStop(1,'#1f1914');
+  c.fillStyle=gr; c.fillRect(0,0,PW,740);
+  let rg=c.createRadialGradient(1025,600,150,1025,600,1150); rg.addColorStop(0,'rgba(240,196,150,.20)'); rg.addColorStop(.5,'rgba(240,196,150,.06)'); rg.addColorStop(1,'rgba(240,196,150,0)');
+  c.fillStyle=rg; c.fillRect(0,0,PW,740);
+  for(let i=0;i<6000;i++){c.fillStyle=`rgba(255,236,210,${rnd()*.03})`;c.fillRect(rnd()*PW,rnd()*740,1+rnd()*3,1+rnd()*3);}
+  // ceiling beams
+  for(let i=0;i<3;i++){const y=i*40-6; let bg=c.createLinearGradient(0,y,0,y+26); bg.addColorStop(0,'#2b2018'); bg.addColorStop(1,'#110c09'); c.fillStyle=bg; c.fillRect(0,y,PW,26);}
+  // window reveal (thick wall, lit by daylight)
+  c.fillStyle='#3a3127'; c.beginPath(); c.moveTo(468,130);c.lineTo(1582,130);c.lineTo(1527,175);c.lineTo(523,175);c.closePath();c.fill();
+  let eg=c.createLinearGradient(468,0,523,0); eg.addColorStop(0,'#2a231c'); eg.addColorStop(1,'#6a5a46');
+  c.fillStyle=eg; c.beginPath(); c.moveTo(468,130);c.lineTo(523,175);c.lineTo(523,740);c.lineTo(468,740);c.closePath();c.fill();
+  eg=c.createLinearGradient(1582,0,1527,0); eg.addColorStop(0,'#2a231c'); eg.addColorStop(1,'#6a5a46');
+  c.fillStyle=eg; c.beginPath(); c.moveTo(1582,130);c.lineTo(1527,175);c.lineTo(1527,740);c.lineTo(1582,740);c.closePath();c.fill();
+  // glass: cut out (the view shows through)
+  c.save(); c.globalCompositeOperation='destination-out'; c.fillRect(523,175,1004,773); c.restore();
+  // painted frame, mullions, glazing bars
+  const wood='#d8d0bf', woodD='#9a917f';
+  c.fillStyle=wood; c.fillRect(523,175,1004,12); c.fillRect(523,175,12,570); c.fillRect(1515,175,12,570);
+  for(const x of [834,1200]){ let mg=c.createLinearGradient(x,0,x+20,0); mg.addColorStop(0,woodD); mg.addColorStop(.45,wood); mg.addColorStop(1,woodD); c.fillStyle=mg; c.fillRect(x,175,20,570); }
+  c.fillStyle='rgba(216,208,191,.9)';
+  for(const y of [372,568]){ c.fillRect(535,y,299,6); c.fillRect(854,y,346,6); c.fillRect(1220,y,295,6); }
+  // linen curtains, back-lit
+  function curtain(x0,x1,side){
+    for(let x=x0;x<x1;x+=2){
+      const t=(x-x0)/(x1-x0), fold=Math.sin(t*Math.PI*7+side)*.5+.5, edge=side>0?Math.pow(t,4):Math.pow(1-t,4);
+      c.fillStyle=`hsl(34,24%,${12+fold*16+edge*34}%)`; c.fillRect(x,104,2.6,640+Math.sin(t*11)*5);
+    }
+  }
+  curtain(360,520,1); curtain(1530,1690,-1);
+  c.fillStyle='#3d2e21'; c.fillRect(320,94,1410,9);
+  // two stone steps with soft warm light lines
+  let sg=c.createLinearGradient(0,735,0,772); sg.addColorStop(0,'#55463a'); sg.addColorStop(1,'#3e3329'); c.fillStyle=sg; c.fillRect(0,735,PW,37);
+  sg=c.createLinearGradient(0,772,0,805); sg.addColorStop(0,'#2a2119'); sg.addColorStop(1,'#1d1611'); c.fillStyle=sg; c.fillRect(0,772,PW,33);
+  sg=c.createLinearGradient(0,805,0,830); sg.addColorStop(0,'#504135'); sg.addColorStop(1,'#3b3027'); c.fillStyle=sg; c.fillRect(0,805,PW,25);
+  sg=c.createLinearGradient(0,830,0,860); sg.addColorStop(0,'#271f18'); sg.addColorStop(1,'#1d1611'); c.fillStyle=sg; c.fillRect(0,830,PW,30);
+  for(const y of [772,830]){ let lg=c.createLinearGradient(0,y,0,y+24); lg.addColorStop(0,'rgba(255,196,140,.55)'); lg.addColorStop(.15,'rgba(255,190,130,.22)'); lg.addColorStop(1,'rgba(255,190,130,0)'); c.fillStyle=lg; c.fillRect(0,y,PW,24); }
+  // daylight falling on the top step
+  let dl=c.createLinearGradient(0,735,0,772); dl.addColorStop(0,'rgba(255,240,220,.16)'); dl.addColorStop(1,'rgba(255,240,220,0)'); c.fillStyle=dl; c.fillRect(523,735,1004,37);
+  // polished terracotta floor
+  let fg=c.createLinearGradient(0,860,0,PH); fg.addColorStop(0,'#4a2e22'); fg.addColorStop(1,'#3e281e');
+  c.fillStyle=fg; c.fillRect(0,860,PW,PH-860);
+  c.save(); c.beginPath(); c.rect(0,860,PW,PH-860); c.clip();
+  c.strokeStyle='rgba(18,9,5,.32)'; c.lineWidth=1.6;
+  for(let k=0,y=866;y<PH;k++){ c.beginPath(); c.moveTo(0,y); c.lineTo(PW,y); c.stroke(); y+=8+k*5.5; }
+  for(let i=-44;i<=44;i++){ c.beginPath(); c.moveTo(1025+i*22,860); c.lineTo(1025+i*96,PH); c.stroke(); }
+  // window reflection on the tiles
+  if('filter' in c) c.filter='blur(18px)';
+  let rf=c.createLinearGradient(0,860,0,1300); rf.addColorStop(0,'rgba(255,236,208,.26)'); rf.addColorStop(1,'rgba(255,236,208,0)');
+  c.fillStyle=rf; c.beginPath(); c.moveTo(560,862); c.lineTo(1490,862); c.lineTo(1700,1320); c.lineTo(350,1320); c.closePath(); c.fill();
+  if('filter' in c) c.filter='none';
+  let vg=c.createLinearGradient(0,0,PW,0); vg.addColorStop(0,'rgba(10,6,4,.5)'); vg.addColorStop(.25,'rgba(10,6,4,0)'); vg.addColorStop(.75,'rgba(10,6,4,0)'); vg.addColorStop(1,'rgba(10,6,4,.5)');
+  c.fillStyle=vg; c.fillRect(0,860,PW,PH-860);
+  c.restore();
+  // olive tree in a terracotta pot, on the top step (left pane)
+  const px=690;
+  c.save(); c.filter&&(c.filter='blur(14px)'); c.fillStyle='rgba(0,0,0,.45)'; c.beginPath(); c.ellipse(px,740,90,10,0,0,Math.PI*2); c.fill(); c.restore();
+  let pg=c.createLinearGradient(px-75,0,px+75,0); pg.addColorStop(0,'#4a2617'); pg.addColorStop(.42,'#8c4c2e'); pg.addColorStop(.6,'#7a4027'); pg.addColorStop(1,'#3a1d10');
+  c.fillStyle=pg; c.beginPath(); c.moveTo(px-74,624); c.lineTo(px+74,624); c.lineTo(px+56,738); c.lineTo(px-56,738); c.closePath(); c.fill();
+  c.fillStyle='#6d3a23'; c.fillRect(px-82,612,164,15);
+  c.strokeStyle='#221812'; c.lineCap='round';
+  const branches=[[px,615,px-12,525,px+20,445,9],[px+8,525,px+70,470,px+112,400,5],[px-3,545,px-62,482,px-92,422,5],[px+18,452,px-22,392,px+4,330,4],[px+18,452,px+60,382,px+42,322,3.5]];
+  for(const [x0,y0,cx,cy,x1,y1,w] of branches){ c.lineWidth=w*2; c.beginPath(); c.moveTo(x0,y0); c.quadraticCurveTo(cx,cy,x1,y1); c.stroke(); }
+  const clusters=[[px+110,398,64],[px-90,418,64],[px+4,328,74],[px+46,320,56],[px-42,362,56],[px+72,362,52],[px-8,400,48]];
+  for(const [cx,cy,r] of clusters){ for(let i=0;i<210;i++){ const a=rnd()*Math.PI*2, d=Math.sqrt(rnd())*r; const x=cx+Math.cos(a)*d*1.25, y=cy+Math.sin(a)*d*.8;
+    c.save(); c.translate(x,y); c.rotate(-.6+rnd()*1.2+(x<cx?.4:-.4)); const u=rnd(); c.fillStyle=u<.16?'#7d8a63':(u<.45?'#3a4630':'#232c1d'); c.beginPath(); c.ellipse(0,0,10,2.8,0,0,Math.PI*2); c.fill(); c.restore(); } }
+  // lantern on the right step
+  const lx=1390; c.fillStyle='#16110d'; c.fillRect(lx-24,646,48,90); c.fillRect(lx-30,636,60,11); c.fillRect(lx-7,618,14,20);
+  c.save(); c.shadowColor='rgba(255,190,120,1)'; c.shadowBlur=36; c.fillStyle='#ffd39c'; c.fillRect(lx-15,660,30,62); c.restore();
+  c.fillStyle='#16110d'; c.fillRect(lx-1.5,660,3,62);
+  let lg2=c.createRadialGradient(lx,700,10,lx,700,240); lg2.addColorStop(0,'rgba(255,180,110,.24)'); lg2.addColorStop(1,'rgba(255,180,110,0)'); c.fillStyle=lg2; c.fillRect(lx-240,460,480,400);
+  roomReady=true;
+}
+
+/* ---------- water ripple over the pool (replaces the hero video) ---------- */
+const wc=water.getContext('2d'); let wOn=false;
+const POOL=[[0,875],[1190,917],[940,1140],[830,1130],[0,1000]]; // photo space 1920x1275
+function drawWater(t){
+  const NW=heroImg.naturalWidth, NH=heroImg.naturalHeight; if(!NW)return;
+  const f=NW/1920, y0=860, y1=1150, cw=960, chh=145;
+  if(water.width!==cw){water.width=cw;water.height=chh;}
+  wc.clearRect(0,0,cw,chh); wc.save(); wc.beginPath();
+  POOL.forEach(([x,y],i)=>{const X=x*cw/1920+ (i===1||i===2?-3:3)*(x>0?1:0), Y=(y-y0)*chh/(y1-y0); i?wc.lineTo(X,Y):wc.moveTo(X,Y);}); wc.closePath(); wc.clip();
+  for(let r=0;r<chh;r++){
+    const sy=y0+r*(y1-y0)/chh, depth=.6+.4*r/chh;
+    const dx=(Math.sin(sy*.11+t*2.3)*1.1+Math.sin(sy*.043-t*1.4)*.8)*depth;
+    wc.drawImage(heroImg,0,sy*f,NW,(y1-y0)/chh*f+.5,dx,r,cw,1.2);
+  }
+  wc.restore();
+}
+
+/* ---------- render loop ---------- */
+let t0=null, pCur=0, last=performance.now(), started=false;
+function start(){ if(started)return; started=true; t0=performance.now(); }
+function storyProgress(){ const r=story.getBoundingClientRect(); return clamp(-r.top/(story.offsetHeight-H)); }
+
+function frame(now){
+  const dt=Math.min(.1,(now-last)/1000); last=now;
+  const rm=reduce.matches;
+  const I=rm?99:(started?(now-t0)/1000:0);
+  const pT=storyProgress();
+  if(rm){ pCur=pT; } else { pCur+=(pT-pCur)*(1-Math.exp(-dt/.187)); if(Math.abs(pT-pCur)<1e-4)pCur=pT; }
+  let T=6.8+pCur*6.6; if(rm)T=pT<.5?6.8:13.4;
+
+  /* intro */
+  const pe=win(I,0,2.6,ePan), panY=(1-pe)*.355*H, panScale=lerp(1.13,1,pe);
+  let off; if(I<1.15)off=.45; else if(I<2.2)off=lerp(.45,-.063,eRise1((I-1.15)/1.05)); else off=lerp(-.063,0,eRise2(clamp((I-2.2)/1.3)));
+  nav.style.opacity=win(I,1.45,2.0,eNav);
+  const hRise=(1-win(I,2.6,4.5,eText))*.62*H, sRise=(1-win(I,2.75,4.65,eText))*.62*H;
+  const bIn=win(I,5.2,6.0,eFade);
+
+  /* scroll exits */
+  const sx=win(T,6.82,7.25,eExit), hx=win(T,7.0,7.42,eExit), bx=win(T,6.85,7.35,eExit);
+  script.style.opacity=1-sx; script.style.transform=`translateY(${sRise+panY+sx*25*s}px)`;
+  word.style.opacity=1-hx; word.style.transform=`translateY(${hRise+panY+hx*25*s}px) scaleX(${wordScale})`;
+  const bo=bIn*(1-bx), by=(1-bIn)*18*s+bx*25*s;
+  build.style.opacity=bo; build.style.transform=`translateY(${by}px)`;
+  para.style.opacity=bo; para.style.transform=`translateY(${by}px)`; shade.style.opacity=bo;
+  build.style.pointerEvents=bo>.5?'auto':'none';
+
+  /* pull-back */
+  const L=lnS(T), q=clamp(1-L/1.93), S=Math.exp(L)*Math.pow(sEnd,q), gy=lerp(g.y,gyEnd,q);
+  const roomOn=T>=8.98&&roomReady;
+  room.style.visibility=roomOn?'visible':'hidden';
+  let R={l:0,t:0,r:W,b:H};
+  if(roomOn){
+    room.style.transform=`translate(${g.x}px,${gy}px) scale(${S}) translate(${-g.x+oxR}px,${-g.y+oy}px)`;
+    const gw=g.w*S, gh=g.h*S;
+    R={l:Math.max(0,g.x-gw/2),t:Math.max(0,gy-gh/2),r:Math.min(W,g.x+gw/2),b:Math.min(H,gy+gh/2)};
+  }
+  const Rw=R.r-R.l, Rh=R.b-R.t, kc=Math.max(Rw/W,Rh/H), rcx=(R.l+R.r)/2, rcy=(R.t+R.b)/2;
+  const push=1+.3*win(T,7.5,8.35,ePush)*(1-q);
+  const vt=`translate(${rcx}px,${R.b}px) scale(${push}) translate(${-rcx}px,${-R.b}px) translate(${rcx}px,${rcy+panY}px) scale(${kc*panScale}) translate(${-W/2}px,${-H/2}px)`;
+  view.style.transform=vt; tower.style.transform=vt;
+  head.style.transform=`translate(${rcx}px,${R.b}px) scale(${push}) translate(${-rcx}px,${-R.b}px)`;
+  const rise=`translateY(${(off*H-panY)/(kc*panScale)}px)`;
+  heroImg.style.transform=rise; water.style.transform=rise; dim.style.transform=rise;
+
+  /* water */
+  if(!rm&&!roomOn&&started){ drawWater(now/1000); if(!wOn){water.classList.add('on');wOn=true;} }
+  else if(rm&&wOn){water.classList.remove('on');wOn=false;}
+
+  /* cards */
+  cards.forEach((c,i)=>{
+    const p=cardPos[i]; if(!p)return;
+    const a=p.row?11.55:11.25, b=p.row?13.3:13.1, e=win(T,a,b,eFade);
+    const fromX=p.from<0?-(p.x+cardSize[i].w+40):W+40;
+    const x=lerp(fromX,p.x,rm?(T>=13.4?1:0):e);
+    c.style.visibility=e>0||rm&&T>=13.4?'visible':'hidden';
+    c.style.transform=`translate(${x}px,${p.y}px)`;
+  });
+
+  /* header backdrop once past the story */
+  const sr=story.getBoundingClientRect();
+  nav.classList.toggle('solid',sr.bottom<navBottom+20);
+  requestAnimationFrame(frame);
+}
+
+/* ---------- boot ---------- */
+function ready(){ layout(); start(); }
+const fontsReady=document.fonts?document.fonts.ready:Promise.resolve();
+const imgReady=heroImg.decode?heroImg.decode().catch(()=>{}):new Promise(r=>heroImg.complete?r():heroImg.onload=r);
+Promise.all([fontsReady,imgReady]).then(ready);
+setTimeout(()=>{ if(!started){layout();start();} },3500);
+layout();
+requestAnimationFrame(frame);
+let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(layout,80);});
+if(document.fonts)document.fonts.addEventListener&&document.fonts.addEventListener('loadingdone',()=>layout());
+reduce.addEventListener&&reduce.addEventListener('change',()=>layout());
+
+/* gallery buttons */
+const gal=$('gal');
+$('gPrev').onclick=()=>gal.scrollBy({left:-gal.clientWidth*.7,behavior:'smooth'});
+$('gNext').onclick=()=>gal.scrollBy({left:gal.clientWidth*.7,behavior:'smooth'});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>
