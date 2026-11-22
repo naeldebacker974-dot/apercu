@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cap-Sea · Location de bateaux à Agay, Saint-Raphaël</title>
+<meta name="description" content="Cap-Sea, location de bateaux à moteur avec permis et balades privées avec skipper sans permis, au port d'Agay (Saint-Raphaël). Neuf bateaux de 6,10 à 8,80 m, face à l'Estérel.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Cap-Sea · Location de bateaux à Agay">
+<meta property="og:description" content="Location avec permis ou balade privée avec skipper, au port d'Agay, face à l'Estérel.">
+<meta property="og:image" content="assets/baie.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Crect x='14' y='26' width='36' height='12' rx='6' fill='%23fff' transform='skewX(-18) translate(10 0)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/film/f001.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Cap-Sea",
+  "description": "Location de bateaux à moteur avec permis et balades en mer privées avec skipper, au port d'Agay.",
+  "image": "assets/baie.jpg",
+  "telephone": "+33629834245",
+  "email": "contact@cap-sea.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "Le Port", "postalCode": "83530", "addressLocality": "Agay, Saint-Raphaël", "addressCountry": "FR" },
+  "sameAs": ["https://www.instagram.com/capsea.agay/", "https://www.facebook.com/CapSea.agay"]
+}
+</script>
+<style>
+:root{
+  --black:#000; --white:#fff; --ink:#0a0a0a; --tile:#f2f2f2; --tile2:#e6e6e6; --muted:#8e8e8e;
+  --pad:clamp(16px,2.2vw,40px);
+  --navh:84px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{background:var(--white);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;font-optical-sizing:auto;font-weight:500;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons & pills */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 16px;border-radius:8px;font-size:13px;font-weight:500;letter-spacing:-.01em;transition:transform .15s ease,background .2s;white-space:nowrap;user-select:none}
+.btn:active{transform:scale(.97)}
+.btn-black{background:var(--black);color:var(--white)}
+.btn-grey{background:var(--tile);color:var(--ink)}
+.btn-grey2{background:var(--tile2);color:var(--ink)}
+.btn-white{background:var(--white);color:var(--black)}
+.pill{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap}
+.pill svg{width:12px;height:12px}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--navh);z-index:50;display:flex;align-items:center;padding:0 var(--pad);color:#fff;mix-blend-mode:difference;pointer-events:none}
+.nav > *{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:9px;font-size:18px;font-weight:500;letter-spacing:-.04em;height:44px}
+.brand i{display:block;width:22px;height:11px;border-radius:6px;background:#fff;transform:skewX(-20deg)}
+.links{position:absolute;left:40.6vw;display:flex;gap:28px;font-size:13px}
+.links a{transition:opacity .3s;display:inline-flex;align-items:center;height:44px}
+.links a.first{margin-right:5vw}
+.links a.dim{opacity:.45}
+.nav-r{margin-left:auto;display:flex;gap:8px}
+.nav .btn-white{background:#fff;color:#000}
+.nav .tel{display:none}
+.navbg{position:fixed;inset:0 0 auto 0;height:var(--navh);z-index:49;background:rgba(255,255,255,.86);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);opacity:0;transition:opacity .35s;pointer-events:none}
+.navbg.on{opacity:1}
+.il{display:inline-flex;align-items:center;min-height:44px}
+
+/* Track & stage */
+#track{position:relative;height:720vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--white)}
+.filmbox{position:absolute;left:0;top:0;width:100%;height:100%;background:#000;isolation:isolate;overflow:hidden;will-change:transform,width,height}
+.filmbox canvas{position:absolute;left:0;top:0;transform-origin:0 0}
+.filmbox .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,8,20,.55) 0%,rgba(0,8,20,.12) 34%,rgba(0,8,20,.08) 55%,rgba(0,8,20,.62) 100%);pointer-events:none}
+
+.hero{position:absolute;inset:0;color:#fff;pointer-events:none;z-index:6}
+.hero .lede{position:absolute;left:var(--pad);top:42%;max-width:34ch}
+.hero .lede p{font-size:clamp(15px,1.25vw,19px);line-height:1.35;letter-spacing:-.02em;margin-top:14px}
+.hero .lede p span{color:rgba(255,255,255,.72)}
+.hero .pill{background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff}
+.hero .scroll{position:absolute;left:var(--pad);bottom:calc(var(--pad) + 4px);font-size:13px;color:rgba(255,255,255,.8)}
+.hero h1{position:absolute;inset:auto var(--pad) var(--pad) 0;font-size:min(7.6vw,12.5vh);line-height:.9;letter-spacing:-.055em;font-weight:500}
+.hero h1 .l1{display:block;text-align:right}
+.hero h1 .l2{display:flex;justify-content:space-between;padding-left:40.8vw}
+.hero h1 .g{color:#9aa3ad}
+.hero h1 .w{display:inline-block}
+
+.statement{position:absolute;z-index:3;display:flex;flex-direction:column;justify-content:space-between}
+.statement p{font-size:3.3vw;line-height:1.08;letter-spacing:-.045em}
+.statement p span{display:block}
+.statement .btn{align-self:flex-start}
+.marquee{position:absolute;left:0;right:0;bottom:4vh;z-index:3;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee .mq{display:flex;gap:3.2vw;width:max-content;font-size:clamp(18px,1.9vw,30px);color:#b2b2b2;letter-spacing:-.03em;white-space:nowrap;animation:mq 38s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.fleetline{position:absolute;z-index:3;left:50%;top:36%;transform:translate(-50%,-50%);width:11.4em;font-size:min(3.9vw,5.5vh);line-height:1.12;letter-spacing:-.045em;text-align:center}
+.fleetline .wd{display:inline-block;white-space:pre}
+
+.boat{position:absolute;left:0;top:0;margin:0;border-radius:14px;overflow:hidden;background:var(--tile);will-change:transform,filter,opacity;opacity:0}
+.boat img{width:100%;height:100%;object-fit:cover}
+
+.bar{position:absolute;left:var(--pad);right:var(--pad);bottom:var(--pad);z-index:5;display:grid;grid-template-columns:auto 1.6fr 1fr 1fr auto;gap:8px}
+.tile{background:var(--tile);border-radius:12px;padding:18px 20px;min-height:116px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.tile.arrow{width:clamp(56px,6vw,96px);align-items:center;justify-content:center;padding:0}
+.tile.arrow button{width:100%;height:100%;min-height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px}
+.tile.arrow svg{width:22px;height:22px}
+.tile .name{font-size:3.3vw;line-height:.95;letter-spacing:-.055em}
+.tile .row1{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.tile .desc{font-size:13px;color:var(--muted)}
+.tile .pills{display:flex;gap:6px;flex-wrap:wrap}
+.tile .pills .pill{background:var(--white)}
+.tile .lab{font-size:12px;color:var(--muted)}
+.tile .price{font-size:clamp(26px,2.4vw,40px);letter-spacing:-.05em;line-height:1}
+.tile .sub{font-size:12px;color:var(--muted)}
+.tile .pr{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.swap{transition:filter .35s,opacity .35s}
+.swap.out{filter:blur(8px);opacity:0}
+
+/* Sections after the film */
+.sec{padding:clamp(72px,10vw,150px) var(--pad);position:relative}
+.kicker{font-size:13px;color:var(--muted);margin-bottom:18px;display:flex;gap:10px;align-items:center}
+.kicker::before{content:"";width:18px;height:1px;background:currentColor}
+.h2{font-size:clamp(34px,5.2vw,84px);line-height:.98;letter-spacing:-.055em;font-weight:500;max-width:16ch}
+.h2 .g{color:var(--muted)}
+.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.45;letter-spacing:-.015em;color:#3a3a3a;max-width:52ch;margin-top:22px}
+.rv{opacity:0;transform:translateY(26px);filter:blur(10px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
+.rv.in{opacity:1;transform:none;filter:none}
+
+#balades{background:var(--black);color:#fff}
+#balades .lead{color:rgba(255,255,255,.7)}
+#balades .kicker{color:rgba(255,255,255,.55)}
+.bal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:clamp(40px,5vw,72px)}
+.bal{background:#111;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.bal .ph{aspect-ratio:1.5/1;overflow:hidden}
+.bal .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.bal:hover .ph img{transform:scale(1.04)}
+.bal .bd{padding:24px;display:flex;flex-direction:column;gap:18px;flex:1}
+.bal h3{font-size:clamp(26px,2.4vw,38px);letter-spacing:-.05em;font-weight:500;line-height:1}
+.bal h3 small{display:block;font-size:13px;letter-spacing:-.01em;color:rgba(255,255,255,.55);margin-top:8px}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prices div{background:#1c1c1c;border-radius:12px;padding:16px}
+.prices b{display:block;font-size:clamp(26px,2.2vw,34px);font-weight:500;letter-spacing:-.05em}
+.prices span{font-size:12px;color:rgba(255,255,255,.55)}
+.incl{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(28px,3vw,44px)}
+.incl .pill{background:#1c1c1c;color:#fff;height:36px;font-size:13px;padding:0 14px}
+
+.tarifs{margin-top:clamp(36px,4vw,64px);border-top:1px solid var(--tile2)}
+.tr{display:grid;grid-template-columns:64px 1.3fr 1.4fr .7fr .6fr .6fr .8fr .8fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--tile2);font-size:14px}
+.tr.hd{font-size:12px;color:var(--muted);padding:12px 0}
+.tr .th{width:64px;height:44px;border-radius:8px;overflow:hidden;background:var(--tile)}
+.tr .th img{width:100%;height:100%;object-fit:cover}
+.tr .nm{font-size:clamp(17px,1.4vw,22px);letter-spacing:-.04em}
+.tr .md{color:var(--muted)}
+.tr .p{font-size:16px;letter-spacing:-.03em}
+.tr .na{color:#bdbdbd}
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:28px}
+.note{background:var(--tile);border-radius:12px;padding:18px;font-size:14px;line-height:1.4}
+.note b{display:block;font-weight:500;margin-bottom:6px;letter-spacing:-.02em}
+.note span{color:#555}
+
+#esterel{background:var(--tile)}
+.est{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,64px);align-items:end}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(120px,14vw,230px);gap:8px;margin-top:clamp(40px,5vw,72px)}
+.gal figure{border-radius:14px;overflow:hidden;position:relative;background:#ddd}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:12px;bottom:12px;font-size:12px;color:#fff;background:rgba(0,0,0,.38);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}.g3{grid-column:span 2}.g4{grid-column:span 2}.g5{grid-column:span 2}
+.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.spot{background:var(--white);border-radius:12px;padding:20px;font-size:14px;line-height:1.45;color:#444}
+.spot b{display:block;color:var(--ink);font-size:18px;letter-spacing:-.035em;font-weight:500;margin-bottom:6px}
+
+.score{display:flex;gap:clamp(24px,4vw,64px);align-items:flex-end;flex-wrap:wrap;margin-top:clamp(32px,4vw,56px)}
+.score .big{font-size:clamp(84px,13vw,220px);letter-spacing:-.07em;line-height:.8}
+.score .big small{font-size:.32em;color:var(--muted);letter-spacing:-.04em}
+.score p{max-width:40ch;color:#444;font-size:15px;line-height:1.45}
+.stars{display:flex;gap:4px;margin-bottom:12px}
+.stars svg{width:22px;height:22px}
+
+#reserver{background:var(--black);color:#fff}
+#reserver .lead{color:rgba(255,255,255,.7)}
+#reserver .kicker{color:rgba(255,255,255,.55)}
+.formwrap{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,80px);align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:rgba(255,255,255,.55)}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:16px;color:#fff;background:#151515;border:1px solid #262626;border-radius:10px;padding:0 14px;height:50px;width:100%;letter-spacing:-.01em;-webkit-appearance:none;appearance:none}
+textarea{height:110px;padding:14px;resize:vertical}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#fff}
+form .btn{height:52px;font-size:14px;width:100%}
+.formnote{font-size:12px;color:rgba(255,255,255,.5);grid-column:1/-1;line-height:1.5}
+.ok{display:none;grid-column:1/-1;background:#151515;border-radius:12px;padding:16px;font-size:14px}
+.ok.on{display:block}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:stretch}
+.contact .ph{border-radius:16px;overflow:hidden;min-height:340px}
+.contact .ph img{width:100%;height:100%;object-fit:cover}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
+.cbox{background:var(--tile);border-radius:12px;padding:18px;font-size:14px;line-height:1.45}
+.cbox .lab{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}
+.cbox a{text-decoration:underline;text-underline-offset:3px}
+.cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.cta .btn{height:48px;padding:0 20px;font-size:14px}
+
+footer{padding:40px var(--pad) calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--tile2);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+footer nav{display:flex;gap:6px;flex-wrap:wrap}
+footer nav a{display:inline-flex;align-items:center;height:44px;padding:0 10px;border-radius:8px;background:var(--tile);color:var(--ink)}
+footer .big{font-size:clamp(48px,9vw,140px);letter-spacing:-.07em;color:var(--ink);line-height:.85;width:100%;margin-bottom:24px}
+
+/* Small screens: prompt layout below 760px or portrait */
+@media (max-width:759px), (orientation:portrait){
+  :root{--navh:64px}
+  .links{display:none}
+  .nav .tel{display:inline-flex}
+  .nav .btn{height:44px;padding:0 14px}
+  .hero .lede{top:calc(var(--navh) + 18px);right:var(--pad)}
+  .hero .lede p{font-size:16px}
+  .hero h1{font-size:15.5vw;line-height:.88;left:var(--pad);right:var(--pad)}
+  .hero h1 .l1{text-align:left}
+  .hero h1 .l2{display:block;padding-left:0}
+  .hero h1 .l2 > span{display:block}
+  .hero .scroll{left:auto;right:var(--pad);bottom:auto;top:calc(var(--navh) + 22px)}
+  .statement p{font-size:6.2vw}
+  .fleetline{font-size:6.2vw;top:34%}
+  .bar{grid-template-columns:auto 1fr 1fr auto;grid-template-rows:auto auto}
+  .bar .t-name{grid-column:1/-1;grid-row:1}
+  .bar .t-prev{grid-column:1;grid-row:2}
+  .bar .t-pills{grid-column:2;grid-row:2}
+  .bar .t-price{grid-column:3;grid-row:2}
+  .bar .t-next{grid-column:4;grid-row:2}
+  .tile{min-height:0;padding:14px}
+  .tile.arrow{width:48px}
+  .tile.arrow button{min-height:48px}
+  .tile .name{font-size:9vw}
+  .tile .price{font-size:22px}
+  .t-price .btn{display:none}
+  .hm{display:none}
+  .t-pills .pills{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:899px){
+  .bal-grid,.est,.formwrap,.contact{grid-template-columns:1fr}
+  .tr.hd{display:none}
+  .tr{grid-template-columns:64px 1fr auto;grid-template-areas:"th nm p4" "th md p8";row-gap:2px;column-gap:12px}
+  .tr .th{grid-area:th}.tr .nm{grid-area:nm}.tr .md{grid-area:md;font-size:12px}
+  .tr .c-l,.tr .c-cv,.tr .c-px{display:none}
+  .tr .p4{grid-area:p4;text-align:right;font-size:14px}.tr .p8{grid-area:p8;text-align:right;font-size:14px}
+  .tr .p4::before{content:"4 h  ";color:var(--muted);font-size:12px;white-space:pre}
+  .tr .p8::before{content:"8 h  ";color:var(--muted);font-size:12px;white-space:pre}
+  .notes{grid-template-columns:1fr 1fr}
+  .spots{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:42vw}
+  .g1{grid-column:span 2;grid-row:span 1}.g2{grid-column:span 1;grid-row:span 2}.g3,.g4{grid-column:span 1}.g5{grid-column:span 2}
+  .cgrid{grid-template-columns:1fr 1fr}
+  .cbox{padding:14px;font-size:13px}
+  .contact .ph{min-height:240px;aspect-ratio:1.5/1}
+  form{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .note{padding:14px;font-size:13px}
+  .prices b{font-size:24px}
+  .bal .bd{padding:18px}
+}
+
+/* No GSAP: plain stacked page */
+.nogsap #track{height:auto}
+.nogsap .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;gap:24px;padding:calc(var(--navh) + 12px) var(--pad) 40px}
+.nogsap .filmbox{position:relative;height:70vh;border-radius:16px}
+.nogsap .hero,.nogsap .statement,.nogsap .marquee,.nogsap .fleetline,.nogsap .bar{position:relative;inset:auto;left:auto;top:auto;transform:none;width:auto;opacity:1!important;filter:none!important}
+.nogsap .hero{position:absolute;top:calc(var(--navh) + 12px);left:var(--pad);right:var(--pad);height:70vh}
+.nogsap .boat{position:relative;opacity:1;width:100%;height:auto;aspect-ratio:1.5/1;transform:none!important}
+.nogsap .statement .btn{margin-top:16px}
+
+@media (prefers-reduced-motion:reduce){
+  .marquee .mq{animation:none}
+  .rv{transition:none;opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body>
+
+<div class="navbg" id="navbg" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" data-go="0" aria-label="Cap-Sea, retour en haut"><i></i>cap-sea</a>
+  <nav class="links" aria-label="Navigation principale">
+    <a href="#top" class="first" data-go="0" data-sec="0">Accueil</a>
+    <a href="#flotte" data-go="7.3" data-sec="1">Flotte</a>
+    <a href="#balades" data-sec="2">Balades</a>
+    <a href="#contact" data-sec="3">Contact</a>
+  </nav>
+  <div class="nav-r">
+    <a class="btn btn-white tel" href="tel:+33629834245" aria-label="Appeler Cap-Sea au 06 29 83 42 45">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+    <a class="btn btn-white" href="#reserver" data-go="10">Réserver</a>
+  </div>
+</header>
+
+<main id="top">
+<section id="track" aria-label="Cap-Sea, la flotte">
+  <div class="stage" id="stage">
+    <div class="filmbox" id="filmbox">
+      <canvas id="film" width="576" height="1024" aria-hidden="true"></canvas>
+      <div class="shade" id="shade"></div>
+    </div>
+
+    <div class="statement" id="statement">
+      <p>
+        <span>Ce n'est pas qu'une sortie.</span>
+        <span>C'est l'Estérel vu du large.</span>
+        <span>Votre bateau vous attend</span>
+        <span>au port d'Agay : briefing,</span>
+        <span>masques et tubas à bord.</span>
+      </p>
+      <a class="btn btn-grey" href="#reserver" data-go="10">Réserver</a>
+    </div>
+
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="mq" id="mq"></div>
+    </div>
+
+    <p class="fleetline" id="fleetline">Neuf bateaux, chacun baptisé d'après un sushi&nbsp;: de California Rolls à Wazabi, de 6,10 à 8,80&nbsp;m et de 150 à 300&nbsp;CV, tous au départ du port d'Agay.</p>
+
+    <div id="boats"></div>
+
+    <div class="bar" id="bar">
+      <div class="tile arrow t-prev"><button type="button" id="prev" aria-label="Bateau précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button></div>
+      <div class="tile t-name">
+        <div class="row1">
+          <div class="name swap" id="bName">Wazabi</div>
+          <a class="btn btn-grey2" href="#tarifs">Tous les tarifs</a>
+        </div>
+        <div class="desc swap" id="bDesc">XO DSCVR 9 T-Top · 8,80 m · 300 CV · 8 pers.</div>
+      </div>
+      <div class="tile t-pills">
+        <span class="lab">Départ</span>
+        <div class="pills">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Port d'Agay</span>
+          <span class="pill swap" id="bPers">8 pers.</span>
+        </div>
+      </div>
+      <div class="tile t-price">
+        <span class="lab">Journée<span class="hm"> (8 h)</span></span>
+        <div class="pr">
+          <div><div class="price swap" id="bPrice">800 €</div><div class="sub swap" id="bSub">Journée seule</div></div>
+          <a class="btn btn-black" href="#reserver" id="bRes">Réserver</a>
+        </div>
+      </div>
+      <div class="tile arrow t-next"><button type="button" id="next" aria-label="Bateau suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+
+    <div class="hero" id="hero">
+      <div class="lede">
+        <span class="pill" id="hPill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Agay · Saint-Raphaël</span>
+        <p id="hLede">Le bateau qu'il vous faut, au port d'Agay.<br><span>Avec permis en location, ou sans permis avec un skipper.</span></p>
+      </div>
+      <span class="scroll" id="hScroll">Défiler ↓</span>
+      <h1 id="hTitle"><span class="sr">Cap-Sea : </span><span class="l1"><span class="w">Location</span></span><span class="l2"><span class="w g">Bateaux</span><span class="w">à&nbsp;Agay</span></span></h1>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="balades">
+  <div class="kicker rv">Sans permis bateau</div>
+  <h2 class="h2 rv">Balade privée avec skipper. <span class="g">Rien qu'à vous.</span></h2>
+  <p class="lead rv">Un bateau privatisé pour votre groupe, un skipper à la barre, et vous profitez : criques de l'Estérel, baignade, fonds marins. L'itinéraire se fait sur mesure.</p>
+  <div class="bal-grid">
+    <article class="bal rv">
+      <div class="ph"><img src="assets/flotte/california-rolls.jpg" alt="L'Invictus 200 FX de Cap-Sea au mouillage à Agay" loading="lazy" width="767" height="511"></div>
+      <div class="bd">
+        <h3>Invictus<small>Jusqu'à 5 personnes, plus le skipper</small></h3>
+        <div class="prices"><div><b>200 €</b><span>1 h 30</span></div><div><b>280 €</b><span>2 h 30</span></div></div>
+      </div>
+    </article>
+    <article class="bal rv">
+      <div class="ph"><img src="assets/flotte/wakame.jpg" alt="Le Quicksilver 805 Open de Cap-Sea dans la baie d'Agay" loading="lazy" width="767" height="511"></div>
+      <div class="bd">
+        <h3>Quicksilver 805 Open<small>Jusqu'à 7 personnes, plus le skipper</small></h3>
+        <div class="prices"><div><b>280 €</b><span>1 h 30</span></div><div><b>360 €</b><span>2 h 30</span></div></div>
+      </div>
+    </article>
+  </div>
+  <div class="incl rv">
+    <span class="pill">Carburant inclus</span>
+    <span class="pill">Skipper inclus</span>
+    <span class="pill">0 caution</span>
+    <span class="pill">0 permis bateau</span>
+    <span class="pill">Photos et vidéos offertes</span>
+    <span class="pill">Itinéraire sur mesure</span>
+  </div>
+</section>
+
+<section class="sec" id="tarifs">
+  <div class="kicker rv">Location avec permis · Tarifs 2026</div>
+  <h2 class="h2 rv">Neuf bateaux, <span class="g">de 150 à 300 CV.</span></h2>
+  <p class="lead rv">Vous avez le permis bateau et envie de naviguer&nbsp;? Choisissez votre bateau, à la demi-journée (4 h) ou à la journée (8 h).</p>
+  <div class="tarifs rv" id="tarifTable">
+    <div class="tr hd"><span></span><span>Bateau</span><span>Modèle</span><span>Longueur</span><span>Puissance</span><span>Pers.</span><span>4 h</span><span>8 h</span></div>
+  </div>
+  <div class="notes rv">
+    <div class="note"><b>Permis &amp; caution</b><span>Permis bateau obligatoire, caution demandée au départ.</span></div>
+    <div class="note"><b>Carburant</b><span>Non inclus dans le prix de la location.</span></div>
+    <div class="note"><b>À bord</b><span>Masques et tubas prêtés. Bouée, wakeboard, kneeboard et skis sur demande.</span></div>
+    <div class="note"><b>Remise en main</b><span>Pas navigué depuis longtemps&nbsp;? On fait le point avec vous avant le départ.</span></div>
+    <div class="note"><b>Basse saison</b><span>Tarifs sur demande.</span></div>
+    <div class="note"><b>Fidélité</b><span>Déjà venu louer cette année&nbsp;? 1 h d'activité en soirée pour 100&nbsp;€.</span></div>
+    <div class="note"><b>Douchettes</b><span>Non utilisables, en raison des restrictions d'eau douce.</span></div>
+    <div class="note"><b>Météo</b><span><a class="il" href="https://marine.meteoconsult.fr/meteo-marine/bulletin-detaille/port-2246/previsions-meteo-agay-aujourdhui" target="_blank" rel="noopener" style="text-decoration:underline">Prévisions marines pour Agay</a></span></div>
+  </div>
+</section>
+
+<section class="sec" id="esterel">
+  <div class="est">
+    <div>
+      <div class="kicker rv">Au départ d'Agay</div>
+      <h2 class="h2 rv">L'Estérel, <span class="g">côté mer.</span></h2>
+    </div>
+    <p class="lead rv">Roches rouges, eau claire et petites criques&nbsp;: venez découvrir le massif de l'Estérel et ses fonds marins, en famille ou entre amis, en toute sécurité.</p>
+  </div>
+  <div class="gal">
+    <figure class="g1 rv"><img src="assets/roches.jpg" alt="Roches rouges de l'Estérel au bord de l'eau" loading="lazy" width="1600" height="778"><figcaption>Les roches rouges</figcaption></figure>
+    <figure class="g2 rv"><img src="assets/crique.jpg" alt="Bateau au mouillage devant une grotte de l'Estérel" loading="lazy" width="800" height="1000"><figcaption>Grottes et criques</figcaption></figure>
+    <figure class="g3 rv"><img src="assets/fonds.jpg" alt="Fonds marins de l'Estérel" loading="lazy" width="1334" height="1000"><figcaption>Les fonds marins</figcaption></figure>
+    <figure class="g4 rv"><img src="assets/sillage.jpg" alt="Sillage d'un bateau Cap-Sea face au massif de l'Estérel" loading="lazy" width="1600" height="778"><figcaption>Cap sur l'Estérel</figcaption></figure>
+    <figure class="g5 rv"><img src="assets/baie.jpg" alt="Bateau qui file dans la baie, l'Estérel en fond" loading="lazy" width="1594" height="672"><figcaption>La baie</figcaption></figure>
+  </div>
+  <div class="spots">
+    <div class="spot rv"><b>Grottes et criques</b>Le littoral de l'Estérel se découvre au ras de l'eau, entre roches rouges et petites anses.</div>
+    <div class="spot rv"><b>Un aquarium géant</b>Masque et tuba prêtés&nbsp;: pas besoin d'aller loin pour voir la Méditerranée de près.</div>
+    <div class="spot rv"><b>Coucher de soleil</b>Les balades en fin de journée, face à l'île d'Or, comptent parmi les plus belles sorties.</div>
+  </div>
+</section>
+
+<section class="sec" id="avis">
+  <div class="kicker rv">Ce qu'en disent les clients</div>
+  <h2 class="h2 rv">Noté 5 sur 5 <span class="g">sur Google.</span></h2>
+  <div class="score rv">
+    <div>
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z" fill="#0a0a0a"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z" fill="#0a0a0a"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z" fill="#0a0a0a"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z" fill="#0a0a0a"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z" fill="#0a0a0a"/></svg>
+      </div>
+      <div class="big">5,0<small> / 5</small></div>
+    </div>
+    <p>Note moyenne Google sur plus de 300&nbsp;avis. Retrouvez aussi Cap-Sea sur <a href="https://www.tripadvisor.fr/Attraction_Review-g1080032-d6748593-Reviews-Cap_Sea-Agay_Saint_Raphael_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html" target="_blank" rel="noopener" class="il" style="text-decoration:underline">TripAdvisor</a>.</p>
+  </div>
+</section>
+
+<section class="sec" id="reserver">
+  <div class="formwrap">
+    <div>
+      <div class="kicker rv">Disponibilités</div>
+      <h2 class="h2 rv">Réservez <span class="g">votre sortie.</span></h2>
+      <p class="lead rv">Indiquez le bateau, la date et la formule&nbsp;: l'équipe vous répond pour confirmer la disponibilité. Vous pouvez aussi appeler directement le <a class="il" href="tel:+33629834245" style="color:#fff;text-decoration:underline">06 29 83 42 45</a>.</p>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <label>Formule
+        <select id="fFormule" name="formule">
+          <option>Location avec permis · 4 h</option>
+          <option>Location avec permis · 8 h</option>
+          <option>Balade avec skipper · 1 h 30</option>
+          <option>Balade avec skipper · 2 h 30</option>
+        </select>
+      </label>
+      <label>Bateau
+        <select id="fBoat" name="bateau"></select>
+      </label>
+      <label>Date souhaitée<input type="date" name="date" id="fDate"></label>
+      <label>Personnes<input type="number" name="personnes" min="1" max="10" value="4" inputmode="numeric"></label>
+      <label>Nom<input type="text" name="nom" autocomplete="name" required></label>
+      <label>Téléphone<input type="tel" name="tel" autocomplete="tel" required></label>
+      <label class="full">Message<textarea name="message" placeholder="Horaire souhaité, questions…"></textarea></label>
+      <button class="btn btn-white full" type="submit">Envoyer la demande</button>
+      <p class="formnote">La demande s'ouvre dans votre messagerie, adressée à contact@cap-sea.com. Réservation confirmée par l'équipe, selon la météo et les disponibilités.</p>
+      <p class="ok" id="ok">Merci&nbsp;! Votre messagerie s'est ouverte avec la demande. Envoyez-la, l'équipe Cap-Sea vous répond rapidement.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="contact">
+    <div>
+      <div class="kicker rv">Nous trouver</div>
+      <h2 class="h2 rv">La cabane <span class="g">du port d'Agay.</span></h2>
+      <p class="lead rv">Christelle et Thibault vous accueillent à la cabane Cap-Sea, sur le port, pour votre location ou votre sortie privatisée avec skipper.</p>
+      <div class="cgrid rv">
+        <div class="cbox"><span class="lab">Adresse</span>Le Port, 83530 Agay<br>Saint-Raphaël</div>
+        <div class="cbox"><span class="lab">En saison</span>Tous les jours, 8 h – 21 h<br>Hors saison : sur demande</div>
+        <div class="cbox"><span class="lab">Téléphone</span><a class="il" href="tel:+33629834245">06 29 83 42 45</a></div>
+        <div class="cbox"><span class="lab">E-mail</span><a class="il" href="mailto:contact@cap-sea.com">contact@cap-sea.com</a></div>
+        <div class="cbox"><span class="lab">Langues</span>Français, anglais, espagnol</div>
+        <div class="cbox"><span class="lab">Paiement</span>Carte bancaire, chèque, espèces</div>
+      </div>
+      <div class="cta rv">
+        <a class="btn btn-black" href="tel:+33629834245">Appeler</a>
+        <a class="btn btn-grey" href="https://www.google.com/maps/search/?api=1&query=Port+d%27Agay+83530+Agay" target="_blank" rel="noopener">Itinéraire</a>
+        <a class="btn btn-grey" href="https://www.instagram.com/capsea.agay/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="ph rv"><img src="assets/cabane.jpg" alt="La cabane Cap-Sea sur le port d'Agay" loading="lazy" width="887" height="568"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="big">cap-sea</div>
+  <span>Cap-Sea · Location de bateaux · Port d'Agay, Saint-Raphaël</span>
+  <nav aria-label="Liens">
+    <a href="https://www.instagram.com/capsea.agay/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/CapSea.agay" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.tripadvisor.fr/Attraction_Review-g1080032-d6748593-Reviews-Cap_Sea-Agay_Saint_Raphael_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html" target="_blank" rel="noopener">TripAdvisor</a>
+    <a href="#top" data-go="0">Haut de page</a>
+  </nav>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+"use strict";
+var BOATS=[
+ {n:"California Rolls",m:"Invictus 200 FX",l:"6,10 m",cv:150,p:6,h4:240,h8:440,img:"california-rolls"},
+ {n:"Yakitori",m:"Brig 650 Eagle",l:"6,50 m",cv:150,p:8,h4:250,h8:450,img:"yakitori"},
+ {n:"Temaki",m:"Quicksilver 675 Open",l:"6,75 m",cv:150,p:8,h4:260,h8:460,img:"temaki"},
+ {n:"Perle Coco",m:"Flyer 6.6",l:"6,60 m",cv:175,p:8,h4:270,h8:470,img:"perle-coco"},
+ {n:"Unagi",m:"Quicksilver 675 Open",l:"6,75 m",cv:200,p:8,h4:270,h8:470,img:"unagi"},
+ {n:"Yuzu",m:"Quicksilver 675 Open",l:"6,75 m",cv:200,p:8,h4:280,h8:480,img:"yuzu"},
+ {n:"Wakamé",m:"Quicksilver 805 Open",l:"8,05 m",cv:225,p:10,h4:null,h8:650,img:"wakame"},
+ {n:"Saké",m:"Master 775",l:"7,75 m",cv:250,p:10,h4:null,h8:680,img:"sake"},
+ {n:"Wazabi",m:"XO DSCVR 9 T-Top",l:"8,80 m",cv:300,p:8,h4:null,h8:800,img:"wazabi"}
+];
+var N=BOATS.length, START=8, FRAMES=54;
+var $=function(s){return document.querySelector(s)};
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- static content ---------- */
+var tt=$("#tarifTable"), fb=$("#fBoat");
+BOATS.forEach(function(b,i){
+  var r=document.createElement("div"); r.className="tr";
+  r.innerHTML='<span class="th"><img src="assets/flotte/'+b.img+'.jpg" alt="" loading="lazy" width="767" height="511"></span><span class="nm">'+b.n+'</span><span class="md">'+b.m+'</span><span class="c-l">'+b.l+'</span><span class="c-cv">'+b.cv+' CV</span><span class="c-px">'+b.p+' pers.</span><span class="p p4'+(b.h4?'':' na')+'">'+(b.h4?b.h4+' €':'—')+'</span><span class="p p8">'+b.h8+' €</span>';
+  tt.appendChild(r);
+  var o=document.createElement("option"); o.textContent=b.n+" · "+b.m; o.value=b.n; fb.appendChild(o);
+});
+var mq=$("#mq"), names=BOATS.map(function(b){return b.n}).concat(["Invictus","Brig","Quicksilver","Flyer","Master","XO"]);
+var mqh=names.map(function(n){return "<span>"+n+"</span>"}).join("");
+mq.innerHTML=mqh+mqh;
+var bx=$("#boats");
+BOATS.forEach(function(b,i){
+  var f=document.createElement("figure"); f.className="boat";
+  f.innerHTML='<img src="assets/flotte/'+b.img+'.jpg" alt="'+b.n+', '+b.m+'" width="767" height="511"'+(i===START?'':' loading="lazy"')+'>';
+  bx.appendChild(f);
+});
+var figs=[].slice.call(document.querySelectorAll(".boat"));
+
+/* form → mailto */
+try{var d=new Date();d.setDate(d.getDate()+1);$("#fDate").min=new Date().toISOString().slice(0,10);}catch(e){}
+$("#form").addEventListener("submit",function(e){
+  e.preventDefault(); var f=e.target, g=function(n){return (f.elements[n]&&f.elements[n].value)||""};
+  if(!g("nom")||!g("tel")){ (g("nom")?f.elements.tel:f.elements.nom).focus(); return; }
+  var body="Formule : "+g("formule")+"\nBateau : "+g("bateau")+"\nDate : "+g("date")+"\nPersonnes : "+g("personnes")+"\nNom : "+g("nom")+"\nTéléphone : "+g("tel")+"\n\n"+g("message");
+  window.location.href="mailto:contact@cap-sea.com?subject="+encodeURIComponent("Demande de disponibilité · "+g("bateau"))+"&body="+encodeURIComponent(body);
+  $("#ok").classList.add("on");
+});
+
+/* reveal on scroll */
+var rvs=[].slice.call(document.querySelectorAll(".rv"));
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+  rvs.forEach(function(el){io.observe(el)});
+} else rvs.forEach(function(el){el.classList.add("in")});
+
+/* ---------- film frames ---------- */
+var canvas=$("#film"), ctx=canvas.getContext("2d"), imgs=new Array(FRAMES), loaded=new Array(FRAMES);
+var small=Math.min(innerWidth,innerHeight)<760;
+var step=small?2:1; // fewer frames on phones
+function src(i){var n=String(i+1);while(n.length<3)n="0"+n;return "assets/film/f"+n+".jpg"}
+var order=[0],seen={0:1};
+[16,8,4,2,1].forEach(function(s){for(var i=0;i<FRAMES;i+=s){var j=Math.min(FRAMES-1,i);if(step===2&&j%2&&j!==FRAMES-1)continue;if(!seen[j]){seen[j]=1;order.push(j)}}});
+if(!seen[FRAMES-1])order.push(FRAMES-1);
+var qi=0,active=0,lastDrawn=-1;
+function pump(){while(active<6&&qi<order.length){(function(i){active++;var im=new Image();im.decoding="async";im.onload=function(){loaded[i]=1;active--;if(Math.abs(i-state.f)<3)lastDrawn=-1,paintFrame();pump()};im.onerror=function(){active--;pump()};im.src=src(i);imgs[i]=im})(order[qi++])}}
+function nearest(f){var i=Math.round(f);if(loaded[i])return i;for(var d=1;d<FRAMES;d++){if(loaded[i-d])return i-d;if(loaded[i+d])return i+d}return -1}
+function paintFrame(){var i=nearest(state.f);if(i<0||i===lastDrawn)return;ctx.drawImage(imgs[i],0,0,576,1024);lastDrawn=i}
+
+/* ---------- state & layout ---------- */
+var state={f:0}, box={x:0,y:0,w:0,h:0,r:0,plate:0,foot:1,op:1,zoom:1.04,shade:1}, row={y:.82,op:0,blur:16,focus:0,cur:START,gapK:1};
+var Lo={};
+function layout(){
+  var vw=innerWidth, vh=innerHeight, mob=vw<760||vh>vw, pad=Math.max(16,Math.min(40,vw*.022)), navh=mob?64:84;
+  Lo={vw:vw,vh:vh,mob:mob,pad:pad,navh:navh};
+  var c={};
+  if(mob){c.x=pad;c.w=vw-2*pad;c.h=Math.min(c.w/1.3,vh*.42);c.y=navh+6}
+  else{c.w=vw*.46;c.h=c.w/1.3;if(c.h>vh*.64){c.h=vh*.64;c.w=c.h*1.3}c.x=pad;c.y=Math.max(navh+8,(vh-c.h)/2-vh*.03)}
+  c.r=Math.max(16,Math.min(24,vw*.016));
+  Lo.card=c;
+  var st=$("#statement");
+  if(mob){st.style.left=pad+"px";st.style.right=pad+"px";st.style.top=(c.y+c.h+22)+"px";st.style.height="";st.style.bottom=(vh*.04+56)+"px";}
+  else{var sx=c.x+c.w+vw*.04;st.style.left=sx+"px";st.style.right=pad+"px";st.style.top=c.y+"px";st.style.height=c.h+"px";st.style.bottom="";}
+  Lo.carW=mob?vw*.6:vw*.23; Lo.ratio=1.5;
+  var bar=$("#bar"); var bh=bar.offsetHeight||(mob?180:116);
+  var barTop=vh-pad-bh, top=navh+8, bot=barTop-12, av=bot-top;
+  Lo.focusRatio=mob?1.0:1.5;
+  var fw=Math.min(mob?vw*.95:vw*.70,(av*.94)*Lo.focusRatio);
+  Lo.focusW=fw; Lo.focusY=(top+bot)/2/vh;
+  Lo.rowSmall=mob?.80:.82;
+  Lo.small={w:Lo.carW,h:Lo.carW/1.5,x:vw/2-Lo.carW/2,y:Lo.rowSmall*vh-Lo.carW/3,r:14};
+}
+function lerp(a,b,t){return a+(b-a)*t}
+
+/* ---------- render ---------- */
+var fbEl=$("#filmbox"), shade=$("#shade");
+function render(){
+  var vw=Lo.vw,vh=Lo.vh;
+  // film box
+  fbEl.style.transform="translate3d("+box.x+"px,"+box.y+"px,0)";
+  fbEl.style.width=box.w+"px"; fbEl.style.height=box.h+"px";
+  fbEl.style.borderRadius=box.r+"px";
+  var g=Math.round(lerp(0,242,box.plate)); fbEl.style.backgroundColor="rgb("+g+","+g+","+g+")";
+  fbEl.style.opacity=box.op; fbEl.style.visibility=box.op<.01?"hidden":"visible";
+  shade.style.opacity=box.shade*box.foot;
+  // canvas cover
+  var s=Math.max(box.w/576,box.h/1024)*box.zoom, cw=576*s, ch=1024*s;
+  var ox=(box.w-cw)*.42, oy=box.h/2-ch*.52; oy=Math.min(0,Math.max(box.h-ch,oy));
+  canvas.style.transform="translate3d("+ox+"px,"+oy+"px,0) scale("+s+")";
+  canvas.style.opacity=box.foot;
+  paintFrame();
+  // boats
+  var f=row.focus, w=lerp(Lo.carW,Lo.focusW,f), ratio=lerp(Lo.ratio,Lo.focusRatio,f), h=w/ratio;
+  var gap=lerp(Lo.carW*1.1,Lo.focusW*1.12,f), cy=lerp(row.y,Lo.focusY,f)*vh;
+  for(var i=0;i<N;i++){
+    var k=((i-row.cur)%N+N)%N; if(k>N/2)k-=N;
+    var ak=Math.abs(k), x=vw/2+k*gap-w/2, el=figs[i];
+    var op=row.op*(ak<.5?1:Math.max(0,1-f*1.15))*(ak>3.2?Math.max(0,4.2-ak):1);
+    var bl=row.blur+(ak>.5?16*f:0)*Math.min(1,ak);
+    el.style.width=w+"px"; el.style.height=h+"px";
+    el.style.transform="translate3d("+x+"px,"+(cy-h/2)+"px,0)";
+    el.style.opacity=op; el.style.filter=bl>.2?"blur("+bl.toFixed(1)+"px)":"none";
+    el.style.visibility=op<.01?"hidden":"visible";
+    el.style.zIndex=ak<.5?2:1;
+  }
+}
+
+/* ---------- carousel ---------- */
+var curIdx=START, swapEls=["#bName","#bDesc","#bPers","#bPrice","#bSub"].map($);
+function fillBar(b){
+  $("#bName").textContent=b.n; $("#bDesc").textContent=b.m+" · "+b.l+" · "+b.cv+" CV · "+b.p+" pers.";
+  $("#bPers").textContent=b.p+" pers."; $("#bPrice").textContent=b.h8+" €";
+  $("#bSub").textContent=b.h4?("4 h : "+b.h4+" €"):"Journée seule";
+}
+function go(dir){
+  curIdx=((curIdx+dir)%N+N)%N; var b=BOATS[curIdx];
+  if(reduce||!window.gsap){row.cur=curIdx;fillBar(b);render();return}
+  swapEls.forEach(function(e){e.classList.add("out")});
+  setTimeout(function(){fillBar(b);swapEls.forEach(function(e){e.classList.remove("out")})},360);
+  var target=row.cur+dir;
+  gsap.to(row,{cur:target,duration:.9,ease:"power3.inOut",overwrite:true,onUpdate:render,onComplete:function(){row.cur=((row.cur%N)+N)%N;render()}});
+}
+$("#prev").addEventListener("click",function(){go(-1)});
+$("#next").addEventListener("click",function(){go(1)});
+$("#bRes").addEventListener("click",function(){try{$("#fBoat").value=BOATS[curIdx].n;$("#fFormule").value=BOATS[curIdx].h4?"Location avec permis · 4 h":"Location avec permis · 8 h"}catch(e){}});
+document.addEventListener("keydown",function(e){if(row.focus<.9)return;if(e.key==="ArrowLeft")go(-1);if(e.key==="ArrowRight")go(1)});
+(function(){var sx=null,sy=0,st=$("#stage");st.style.touchAction="pan-y";
+  st.addEventListener("pointerdown",function(e){if(row.focus<.9)return;sx=e.clientX;sy=e.clientY},{passive:true});
+  st.addEventListener("pointerup",function(e){if(sx===null)return;var dx=e.clientX-sx,dy=e.clientY-sy;sx=null;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.2)go(dx<0?1:-1)},{passive:true});
+})();
+
+/* ---------- no GSAP fallback ---------- */
+if(!window.gsap||!window.ScrollTrigger){
+  document.documentElement.classList.add("nogsap");
+  pump(); var t=setInterval(function(){if(loaded[FRAMES-1]){state.f=FRAMES-1;lastDrawn=-1;
+    var r=fbEl.getBoundingClientRect();box.w=r.width;box.h=r.height;box.zoom=1;paintFrame();
+    canvas.style.transform="scale("+Math.max(r.width/576,r.height/1024)+")";clearInterval(t)}},300);
+  figs.forEach(function(f){f.style.opacity=1});
+  return;
+}
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- timeline ---------- */
+var tl, words;
+(function splitWords(){var p=$("#fleetline"), t=p.textContent.split(/(\s+)/), h="";
+  t.forEach(function(w){ if(/^\s+$/.test(w)) h+=w; else h+='<span class="wd">'+w.replace(/</g,"&lt;")+'</span>'; });
+  p.innerHTML=h; words=[].slice.call(p.querySelectorAll(".wd"));})();
+var stLines=[].slice.call(document.querySelectorAll("#statement p span")), stBtn=$("#statement .btn");
+var tiles=[].slice.call(document.querySelectorAll("#bar .tile"));
+var heroEls=[$("#hPill"),$("#hLede"),$("#hScroll"),$("#hTitle")];
+
+function build(){
+  var prog=tl?tl.progress():0;
+  if(tl){tl.scrollTrigger&&tl.scrollTrigger.kill();tl.kill()}
+  layout();
+  var c=Lo.card, sm=Lo.small;
+  Object.assign(box,{x:0,y:0,w:Lo.vw,h:Lo.vh,r:0,plate:0,foot:1,op:1,zoom:1.04,shade:1});
+  Object.assign(row,{y:Lo.rowSmall,op:0,blur:16,focus:0});
+  state.f=0;
+  gsap.set(stLines,{opacity:0,y:26,filter:"blur(12px)"});
+  gsap.set([stBtn,"#marquee"],{opacity:0,y:20});
+  gsap.set(words,{opacity:0,filter:"blur(10px)"});
+  gsap.set(tiles,{opacity:0,y:40});
+  gsap.set("#fleetline",{opacity:1});
+  gsap.set("#hero",{opacity:1,y:0,filter:"blur(0px)"});
+
+  tl=gsap.timeline({defaults:{ease:"none"},paused:true,onUpdate:render});
+  tl.to(state,{f:10,duration:1.2},0)
+    .to("#hero",{opacity:0,y:-40,filter:"blur(14px)",duration:.8},.3)
+    .to(box,{x:c.x,y:c.y,w:c.w,h:c.h,r:c.r,zoom:1,shade:.25,duration:1.5,ease:"power2.inOut"},.9)
+    .to(state,{f:FRAMES-1,duration:2.5},1.2)
+    .to(stLines,{opacity:1,y:0,filter:"blur(0px)",duration:.6,stagger:.16,ease:"power2.out"},2.15)
+    .to("#marquee",{opacity:1,y:0,duration:.5},2.9)
+    .to(stBtn,{opacity:1,y:0,duration:.5},2.9)
+    .to([stLines,stBtn,"#marquee"],{opacity:0,filter:"blur(12px)",duration:.8},4.3)
+    .to(box,{x:sm.x,y:sm.y,w:sm.w,h:sm.h,r:sm.r,shade:0,duration:1.2,ease:"power2.inOut"},4.3)
+    .to(box,{plate:1,duration:.6},5.3)
+    .to(box,{foot:0,duration:.6},5.4)
+    .to(row,{op:1,blur:0,duration:.9},5.3)
+    .to(box,{op:0,duration:.4},6.2)
+    .to(words,{opacity:1,filter:"blur(0px)",duration:.4,stagger:.045},5.8)
+    .to(row,{y:.73,duration:1.5,ease:"power2.inOut"},5.8)
+    .to(words,{opacity:0,filter:"blur(10px)",duration:.6,stagger:.01},7.4)
+    .to(row,{y:Lo.focusY,duration:.9,ease:"power2.inOut"},7.4)
+    .to(row,{focus:1,duration:1,ease:"power2.inOut"},8.0)
+    .to(tiles,{opacity:1,y:0,duration:.5,stagger:.08,ease:"power2.out"},8.8)
+    .to({},{duration:.4},9.6);
+  tl.progress(prog);
+  ScrollTrigger.create({trigger:"#track",start:"top top",end:"bottom bottom",scrub:reduce?true:.7,animation:tl});
+  render();
+}
+
+function goTo(t){var tr=$("#track"),top=tr.offsetTop,len=tr.offsetHeight-innerHeight;var y=top+len*(t/10);
+  window.scrollTo({top:y,behavior:reduce?"auto":"smooth"})}
+document.querySelectorAll("[data-go]").forEach(function(a){a.addEventListener("click",function(e){
+  var t=parseFloat(a.getAttribute("data-go")); if(a.getAttribute("href")==="#reserver"&&a.closest("#bar"))return;
+  if(a.getAttribute("href")==="#reserver"&&t===10&&window.scrollY>$("#track").offsetTop+$("#track").offsetHeight-innerHeight-10)return;
+  e.preventDefault();goTo(t)})});
+
+/* nav current section */
+var navLinks=[].slice.call(document.querySelectorAll(".links a"));
+function navState(){var y=scrollY+innerHeight*.4,tr=$("#track"),endT=tr.offsetTop+tr.offsetHeight-innerHeight;
+  var p=(scrollY-tr.offsetTop)/Math.max(1,endT-tr.offsetTop), cur=0;
+  if(p>.66)cur=1;
+  if(y>$("#balades").offsetTop)cur=2;
+  if(y>$("#reserver").offsetTop)cur=3;
+  navLinks.forEach(function(a,i){a.classList.toggle("dim",i===cur)});
+  $("#navbg").classList.toggle("on",scrollY>endT+20)}
+addEventListener("scroll",navState,{passive:true});
+
+var rt; addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){var wasSmall=small;build();ScrollTrigger.refresh()},180)});
+
+build(); pump(); navState();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){build();ScrollTrigger.refresh()});
+
+/* intro, only at top */
+if(!reduce&&scrollY<10){
+  gsap.from("#nav",{opacity:0,duration:.9,delay:.1});
+  gsap.from("#filmbox",{opacity:0,duration:1.2});
+  gsap.from([$("#hPill"),$("#hLede")],{opacity:0,y:18,filter:"blur(10px)",duration:1,stagger:.12,delay:.35,ease:"power2.out"});
+  gsap.from("#hTitle .w",{opacity:0,filter:"blur(26px)",duration:1.3,stagger:.14,delay:.5,ease:"power2.out"});
+  gsap.from("#hScroll",{opacity:0,duration:.8,delay:1.1});
+}
+})();
+</script>
+</body>
+</html>
