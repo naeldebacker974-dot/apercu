@@ -808,7 +808,7 @@ let fh = 2 * Math.tan(THREE.MathUtils.degToRad(15)) * 10, fw = fh * camera.aspec
 const rig = new THREE.Group(), body = new THREE.Group(); rig.add(body); scene.add(rig);
 const uni = { uTime: { value: 0 }, uAmp: { value: 0.075 }, uFreq: { value: 5.2 }, uSpeed: { value: 6.5 } };
 
-new GLTFLoader().load('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261104_151843_47d87652-1c40-465c-b0d6-cd94c22a9d3e.glb', (g) => {
+new GLTFLoader().load('assets/tpl/fish.glb', (g) => {
   g.scene.updateMatrixWorld(true);
   let mesh = null;
   g.scene.traverse(o => { if (o.isMesh && !mesh) mesh = o; });
