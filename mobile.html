@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Aperçu mobile</title>
+<style>
+html,body{height:100%;margin:0}
+body{background:#14181a;color:#cfd6d3;font:14px/1.4 system-ui,-apple-system,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;box-sizing:border-box}
+.phone{width:390px;max-width:100%;height:min(844px,calc(100vh - 80px));border-radius:36px;border:10px solid #000;box-shadow:0 0 0 2px #3a4245,0 24px 60px rgba(0,0,0,.5);overflow:hidden;background:#fff;box-sizing:content-box}
+iframe{width:100%;height:100%;border:0;display:block}
+p{margin:0}
+</style></head><body>
+<p id="t">Aperçu en taille téléphone (390 px)</p>
+<div class="phone"><iframe id="f" title="Aperçu mobile"></iframe></div>
+<script>
+var s=(location.hash||"").replace(/[^a-z0-9-]/gi,"");
+if(s){document.getElementById("f").src="./"+s+"/";}else{document.getElementById("t").textContent="Ajoutez le nom du site après # dans l'adresse.";}
+</script>
+</body></html>
