@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Alegría Saint-Tropez – Bar à cocktails &amp; tapas</title>
+<meta name="description" content="Alegría, bar à cocktails et tapas au 4 rue Sibille à Saint-Tropez. Cocktails signature, tequilas, tapas à partager et soirées jusqu'à 3 h. Mas Tequila, Mas Alegría.">
+<meta property="og:title" content="Alegría Saint-Tropez – Bar à cocktails & tapas">
+<meta property="og:description" content="Cocktails, tequila et tapas à partager au cœur de Saint-Tropez. Mas Tequila, Mas Alegría.">
+<meta property="og:image" content="assets/enseigne.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='33' y='47' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-style='italic' font-size='42' fill='%23FF6FC8'%3EA%3C/text%3E%3C/svg%3E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fff'/%3E%3Ctext x='33' y='47' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-style='italic' font-size='42' fill='%23000'%3EA%3C/text%3E%3C/svg%3E" media="(prefers-color-scheme: light)">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/LibreFranklin-BlackItalic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/Geist-Light.woff2">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Alegría Saint-Tropez","description":"Bar à cocktails et tapas, décor inspiré de la Riviera mexicaine.","address":{"@type":"PostalAddress","streetAddress":"4 rue Sibille","postalCode":"83990","addressLocality":"Saint-Tropez","addressCountry":"FR"},"telephone":"+33498133285","email":"contact@alegriasainttropez.fr","servesCuisine":["Tapas","Mexicaine"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"19:00","closes":"03:00"}],"sameAs":["https://www.instagram.com/alegria.sainttropez/"]}
+</script>
+<style>
+@font-face{font-family:"Franklin Gothic Atf";src:url("https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/LibreFranklin-BlackItalic.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Geist;src:url("https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/Geist-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:Geist;src:url("https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/Geist-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Geistmono;src:url("https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/assets/fonts/GeistMono-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+
+@property --taste-primary{syntax:'<color>';inherits:true;initial-value:#959492}
+@property --taste-secondary{syntax:'<color>';inherits:true;initial-value:#eeeeee}
+@property --loader-reveal{syntax:'<length>';inherits:true;initial-value:100vh}
+
+:root{
+  --black:#000;--white:#fff;--n-lightest:#eee;
+  --white-5:rgba(255,255,255,.05);--white-20:rgba(255,255,255,.2);--white-30:rgba(255,255,255,.3);
+  --white-50:rgba(255,255,255,.5);--white-60:rgba(255,255,255,.6);--white-80:rgba(255,255,255,.8);
+  --pad-global:4%;
+  --xxs:.5rem;--xs:clamp(.75rem,.65vw,1rem);--s:clamp(1.25rem,1.1vw,1.5rem);--m:clamp(1.5rem,1.4vw,2rem);
+  --l:clamp(2rem,2vw,3rem);--xl:clamp(2.5rem,2.8vw,4rem);--xxl:clamp(3rem,3.5vw,5rem);
+  --h:clamp(3.5rem,4vw,6rem);--xh:clamp(4rem,4.8vw,7rem);--xxh:clamp(5rem,6.5vw,10rem);
+  --nav-h:8rem;--radius-xs:.25rem;--radius-s:.5rem;--radius-m:1rem;--blur:2rem;
+  --taste-primary:#8A2E00;--taste-secondary:#FF9F43;
+  transition:--taste-primary .6s ease-in-out,--taste-secondary .6s ease-in-out;
+  color-scheme:dark;
+}
+html{font-size:clamp(.875rem,.833vw,1rem)}
+html.is-locked,html.is-locked body{overflow:hidden}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#000;color:#fff;font-family:Geist,Arial,sans-serif;font-weight:300;line-height:1.5;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;overflow-x:hidden}
+body::before{content:"";position:fixed;left:0;right:0;top:0;height:100vh;z-index:-1;pointer-events:none;
+  background:linear-gradient(9.02deg,#eee -30%,#959492 15%,#000 65%);transform:translateY(var(--loader-reveal))}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(88.85% 121.19% at 43.49% 112.49%,var(--taste-secondary) 4.96%,var(--taste-primary) 54.38%,#000 93.49%)}
+body.is-profile-active::after{opacity:1}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.heading-style-h2,.h-font{font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:-.01em}
+.heading-style-h2{font-size:clamp(2.25rem,3vw,3rem);line-height:1;margin:0}
+.heading-style-h2 .l2{display:block;margin-top:-.35em}
+.heading-style-h2 .l1,.heading-style-h2 .l2{line-height:1.2}
+.line{padding-bottom:.02em}
+
+/* ---------- Loader ---------- */
+.loader{position:fixed;inset:0;z-index:10000;background:#000;display:flex;align-items:center;justify-content:center}
+.loader_logo{position:absolute;top:49.2%;left:49.9%;width:24.1svh;transform:scaleX(.95) translate(-50%,-50%);transform-origin:0 0}
+.loader_logo svg{width:100%;height:auto;overflow:visible}
+.loader_logo text{font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;font-size:110px;fill:transparent;stroke:#fff;stroke-width:1.2;stroke-dasharray:420;stroke-dashoffset:420}
+.loader_logo .chrome{fill:url(#chrome)}
+.loader_percent{position:absolute;bottom:var(--xh);left:50%;transform:translateX(-50%);font-family:Geistmono,monospace;font-size:.875rem;letter-spacing:1rem;padding-left:1rem;color:var(--white-80)}
+
+/* ---------- Navbar ---------- */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:10;padding:var(--m) var(--pad-global) 0;display:flex;flex-direction:column;gap:var(--s);pointer-events:none}
+.navbar_overlay{position:absolute;left:0;top:0;width:100%;height:8rem;background:linear-gradient(#0009,#0000);z-index:-1;transition:background .4s}
+body.is-faq-view .navbar_overlay{background:linear-gradient(#000 45%,#0000)}
+.navbar_progress{display:flex;align-items:center;height:1px}
+.navbar_progress .sq{width:1px;height:1px;background:#fff;flex:none}
+.navbar_track{position:relative;flex:1;height:1px;background:var(--white-20)}
+.scroll_indicator{--p:0;position:absolute;left:0;top:0;height:1px;width:calc(var(--p)*100%)}
+.scroll_indicator>i{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%)}
+.si_core{height:1px;background:linear-gradient(to right,rgba(255,255,255,.05),rgba(255,255,255,.35) 55%,#fff)}
+.si_mid{height:3px;filter:blur(2px);background:linear-gradient(to right,transparent,rgba(255,255,255,.25) 60%,rgba(255,255,255,.95))}
+.si_halo{height:12px;filter:blur(7px);background:linear-gradient(to right,transparent,rgba(255,255,255,.1) 65%,rgba(255,255,255,.5))}
+.scroll_indicator>i.si_hot{left:auto;right:0;width:28px;height:6px;transform:translate(40%,-50%);filter:blur(2px);background:radial-gradient(ellipse,#fff,rgba(255,255,255,.5) 35%,transparent 70%)}
+.navbar_row{display:grid;grid-template-columns:1fr max-content 1fr;align-items:center;pointer-events:auto}
+.navbar_sound{justify-self:start;display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;min-height:44px;min-width:44px;font-family:Geist;font-weight:400}
+.navbar_sound svg{width:.9rem;height:.55rem;overflow:visible}
+.navbar_logo{display:block;text-decoration:none;font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;font-size:1.95rem;line-height:1;letter-spacing:.01em;width:9rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+.navbar_logo small{display:block;font-family:Geistmono,monospace;font-size:.6rem;letter-spacing:.28em;margin-top:.25rem;color:var(--white-60)}
+.navbar_right{justify-self:end;display:flex;align-items:center;gap:var(--s);position:relative}
+.navbar_menu-btn{display:inline-flex;align-items:center;gap:.6rem;font-size:.875rem;min-height:44px;min-width:44px;font-weight:400;text-transform:uppercase}
+.navbar_menu-btn svg{width:8px;height:8px;overflow:visible}
+.navbar_menu-btn circle{transform-box:fill-box;transform-origin:center}
+.navbar_call{display:inline-flex;align-items:center;gap:.45rem;background:#fff;color:#000;text-decoration:none;text-transform:uppercase;font-weight:400;font-size:.8rem;padding:.6rem .9rem;border-radius:.5rem;min-height:44px;box-shadow:0 0 20px rgba(255,255,255,.45)}
+.navbar_call svg{width:.85rem;height:.85rem}
+.menu_panel{position:absolute;left:50%;top:var(--xxl);transform:translateX(-50%);height:0;opacity:0;overflow:hidden;padding:0 var(--s);border:1px solid var(--white-20);border-radius:1rem;background:var(--white-5);backdrop-filter:blur(1rem);-webkit-backdrop-filter:blur(1rem);min-width:19rem;visibility:hidden}
+.menu_panel-inner{padding:var(--m) 0}
+.menu_link{display:block;text-decoration:none;font-family:Geist;font-weight:400;text-transform:uppercase;font-size:clamp(2rem,2vw,2.25rem);line-height:1.1;padding:var(--xs) var(--s);border-bottom:1px solid var(--white-20);overflow:hidden}
+.menu_link:last-child{border-bottom:0}
+.menu_extras{display:none}
+.menu_emblem{display:none}
+
+/* ---------- HUD ---------- */
+.hud{position:fixed;inset:0;z-index:1;pointer-events:none;padding:var(--nav-h) var(--pad-global) var(--l);display:flex;justify-content:space-between;font-family:Geistmono,monospace;font-size:.75rem;color:var(--white-50)}
+.hud_col{display:flex;flex-direction:column;justify-content:space-between;align-items:center;width:1.25rem;position:relative}
+.hud_col>div{display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.corner{width:9px;height:9px;display:block}
+.scroll_hint{position:absolute;left:50%;bottom:10rem;width:1.25rem;transform:translateX(-50%)}
+.scroll_hint svg{width:100%;height:auto;display:block}
+.gradient_overlay{position:fixed;left:-10%;top:-10%;width:120%;height:120%;background:linear-gradient(180deg,transparent,#0000 70%,#000 95%);filter:blur(1rem);opacity:1;z-index:-1}
+
+/* ---------- 3D canvas ---------- */
+main{position:relative}
+.webgl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;outline:none;touch-action:pan-y}
+
+/* ---------- Sections (spacers) ---------- */
+.section{position:relative;min-height:125svh;pointer-events:none}
+.fixed{position:fixed;inset:0;pointer-events:none;visibility:hidden;opacity:0}
+.fixed a,.fixed button{pointer-events:auto}
+
+/* ---------- Hero / gamme ---------- */
+.gamme_container{z-index:2;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;height:100svh;padding-bottom:var(--l)}
+.gamme_gradient-wrapper{position:absolute;inset:0;filter:blur(6rem);overflow:hidden;pointer-events:none}
+.gamme_gradient{position:absolute;left:50%;bottom:0;width:120%;max-width:70%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,95%);
+  background:conic-gradient(from 17deg,#FF9F43 0deg,#C8A27A 60deg,#FF4D5E 120deg,#F2DC5D 180deg,#8EE08A 240deg,#FF6FC8 300deg,#FF9F43 360deg)}
+.gamme_strip{position:absolute;left:0;bottom:0;width:100vw;height:3rem;backdrop-filter:blur(15rem);-webkit-backdrop-filter:blur(15rem)}
+.gamme_kicker{position:relative;font-family:Geistmono,monospace;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white-80);margin-bottom:var(--s)}
+.gamme_titles{position:relative;height:calc(clamp(2.25rem,3vw,3rem)*2);width:100%;margin-bottom:var(--m)}
+.gamme_title{position:absolute;left:0;right:0;bottom:0;visibility:hidden;opacity:0}
+.carousel_nav{position:absolute;top:50%;left:50%;width:100%;max-width:35vh;aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.carousel_arrow{position:absolute;bottom:0;width:44px;height:52px;display:flex;align-items:center;justify-content:center;pointer-events:auto;color:#fff}
+.carousel_arrow svg{width:1rem;height:2rem;overflow:visible}
+.carousel_arrow path,.carousel_arrow rect{transform-box:fill-box;transform-origin:center}
+.carousel_arrow.is-prev{left:0}.carousel_arrow.is-next{right:0}
+.carousel_pagination{position:relative;width:min(38rem,86vw);height:44px;display:flex;align-items:center;cursor:grab;touch-action:none;pointer-events:auto;margin-bottom:var(--s)}
+.carousel_pagination svg{width:100%;height:8px;overflow:visible}
+.gamme_scroll{position:relative;font-size:.875rem;text-transform:uppercase;color:var(--white-60);letter-spacing:.04em}
+
+/* ---------- Profile ---------- */
+.profile_container{z-index:2;display:flex;align-items:center}
+.profile_left{padding-left:var(--xxh);max-width:calc(28rem + var(--xxh));position:relative;width:100%}
+.profile_items{position:relative;min-height:22rem}
+.profile_item{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);visibility:hidden}
+.profile_item.is-active{visibility:visible}
+.profile_text{position:relative;font-size:1.25rem;margin-top:var(--m);padding:.25rem 0}
+.profile_text .c-tl{position:absolute;left:-1rem;top:-1rem}
+.profile_text .c-br{position:absolute;right:-1rem;bottom:-1rem}
+.profile_meta{margin-top:var(--m);font-family:Geistmono,monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white-60)}
+.carousel_title-bis-wrapper{z-index:1;display:flex;align-items:center;padding:0 var(--pad-global)}
+.bis{position:absolute;left:var(--pad-global);right:var(--pad-global);top:50%;transform:translateY(-50%);font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;text-transform:uppercase;color:var(--white-30);font-size:clamp(6rem,11vw,14rem);line-height:.9;visibility:hidden}
+.bis>div,.bis .line-mask{width:100%}
+.bis .line{width:100%}
+.bis .line>div{display:flex;justify-content:space-between;width:100%}
+
+/* ---------- Benefits ---------- */
+.benefits_container{z-index:2;display:flex;align-items:center;padding-left:var(--xxh)}
+.benefits_block{max-width:28rem;font-size:1.25rem;text-align:left}
+.benefits_sub{display:flex;align-items:center;gap:.6rem;margin-bottom:var(--s)}
+.benefits_chip{width:1.75rem;height:1.75rem;border-radius:.25rem;background:var(--taste-secondary);color:var(--taste-primary);display:flex;align-items:center;justify-content:center;font-family:Geist;font-weight:400;font-size:1.1rem;line-height:1}
+.benefits_label{--benefits-line:0;position:relative;background:#fff;color:#000;font-size:1rem;text-transform:uppercase;padding:.15rem .5rem;font-weight:400;line-height:1.4}
+.benefits_label::before{content:"";position:absolute;left:.35rem;right:.35rem;top:50%;height:1px;background:#000;transform:scaleX(var(--benefits-line));transform-origin:left}
+.benefits_h2{font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;text-transform:uppercase;font-size:clamp(2.25rem,3vw,3rem);line-height:1;margin:0 0 var(--s)}
+.benefits_p{margin:0}
+.benefits_photo{margin-top:var(--m);width:100%;max-width:22rem;aspect-ratio:16/10;object-fit:cover;border-radius:.5rem;border:1px solid var(--white-20)}
+.benefits_nav{position:fixed;right:var(--pad-global);top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:var(--s);visibility:hidden;opacity:0}
+.benefits_nav-btn{width:calc(2rem + var(--xs)*2 + 3px);height:calc(2.25rem + var(--xs)*2 + 3px);min-width:44px;min-height:48px;padding:var(--xs);border:1.5px solid var(--white-20);border-radius:999px;background:var(--white-5);backdrop-filter:blur(.5rem);-webkit-backdrop-filter:blur(.5rem);color:var(--white-50);display:flex;align-items:center;justify-content:center;transition:border-color .3s,box-shadow .3s,color .3s}
+.benefits_nav-btn svg{width:1.25rem;height:1.5rem}
+.benefits_nav-btn.is-active{border-color:var(--taste-secondary);box-shadow:inset 0 2px 4px rgba(255,255,255,.3),inset -3px 3px 15px var(--taste-secondary);color:#fff}
+.benefits_dot{width:1px;height:1px;background:var(--white-50)}
+
+/* ---------- Argument ---------- */
+.argument_container{z-index:2;display:flex;align-items:center;justify-content:center}
+.argument_video{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;visibility:hidden;opacity:0}
+.argument_shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.15),rgba(0,0,0,.55))}
+.argument_blur{position:absolute;left:50%;top:50%;width:84%;max-width:104rem;aspect-ratio:3.2;transform:translate(-50%,-50%);backdrop-filter:blur(2rem);-webkit-backdrop-filter:blur(2rem);
+  -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 40%,transparent 72%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 40%,transparent 72%);opacity:0}
+.argument_word{position:relative;width:80%;max-width:100rem;text-align:center;font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;text-transform:uppercase;line-height:.86;
+  color:var(--taste-secondary);mix-blend-mode:screen;filter:drop-shadow(0 0 80px var(--taste-secondary)) drop-shadow(0 0 90px var(--taste-primary))}
+.argument_word .w{display:block;white-space:nowrap}
+.argument_word .w1{font-size:min(12.2vw,15rem)}
+.argument_word .w2{font-size:min(6.1vw,7.5rem);margin-top:.1em}
+.argument_word .ch{display:inline-block;will-change:transform}
+
+/* ---------- FAQ / galerie / réservation / footer (flux normal) ---------- */
+.section.is-faq{pointer-events:auto;z-index:4;padding:calc(var(--nav-h) + var(--l)) var(--pad-global) var(--l)}
+.faq_bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,.78) 14rem,rgba(0,0,0,.86) calc(100% - 20rem),rgba(0,0,0,0) 100%);z-index:-1}
+.faq_inner{max-width:80rem;margin:0 auto;position:relative}
+.faq_title{font-family:"Franklin Gothic Atf",Arial,sans-serif;font-weight:500;text-transform:uppercase;font-size:clamp(2.25rem,7.5vw,10rem);line-height:.8;margin:0 0 var(--xl);position:relative;z-index:-1}
+.faq_list{border-top:1px solid var(--white-20)}
+.faq_item{border-bottom:1px solid var(--white-20)}
+.faq_q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;text-align:left;font-family:Geist;font-weight:300;font-size:clamp(1.25rem,1.25vw,1.5rem);padding:1.25rem 0;min-height:44px}
+.faq_q svg{width:2rem;height:2rem;flex:none;transition:transform .4s}
+.faq_item.is-open .faq_q svg{transform:rotate(180deg)}
+.faq_a{height:0;overflow:hidden}
+.faq_a p{margin:0;padding:0 0 1.25rem;font-size:1.125rem;color:var(--white-80);max-width:52rem}
+.faq_a a,.nl_legal a{text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.75rem 0;margin:-.75rem 0}
+
+.gallery{margin:var(--xxh) 0 0}
+.gallery_head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:var(--m);flex-wrap:wrap}
+.gallery_head p{margin:0;font-family:Geistmono,monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white-60)}
+.gallery_track{display:flex;gap:var(--s);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--s);touch-action:pan-x pan-y;scrollbar-width:thin;scrollbar-color:var(--white-30) transparent;-webkit-overflow-scrolling:touch}
+.gallery_track figure{margin:0;flex:0 0 clamp(14rem,22vw,22rem);scroll-snap-align:start;position:relative}
+.gallery_track img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:.5rem;border:1px solid var(--white-20);pointer-events:none}
+.gallery_track figcaption{font-family:Geistmono,monospace;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white-60);margin-top:.6rem}
+
+.infos{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--m);margin:var(--xxh) 0 0;padding:var(--l) 0;border-top:1px solid var(--white-20);border-bottom:1px solid var(--white-20)}
+.infos h3{margin:0 0 .5rem;font-family:Geistmono,monospace;font-weight:400;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--white-60)}
+.infos p{margin:0;font-size:1.05rem}
+.infos a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+
+.newsletter{max-width:40rem;margin:var(--xxh) auto 0;text-align:center;scroll-margin-top:6rem}
+.newsletter .heading-style-h2{line-height:.8;margin-bottom:var(--m)}
+.newsletter p{margin:0 0 var(--m);color:var(--white-80);font-size:1.1rem}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;text-transform:uppercase;font-family:Geist;font-weight:400;padding:1.25rem 1.5rem;border-radius:.5rem;box-shadow:0 0 20px rgba(255,255,255,.6);text-decoration:none;font-size:.95rem;min-height:44px;line-height:1}
+.btn_mask{display:inline-flex;overflow:hidden;position:relative}
+.btn_mask .b2{position:absolute;left:0;top:0;display:inline-flex}
+.btn_mask .ch{display:inline-block;white-space:pre}
+.newsletter_call{margin-bottom:var(--l)}
+.nl_form{display:flex;gap:.75rem;align-items:stretch;margin-top:var(--s)}
+.nl_field{position:relative;flex:1}
+.nl_field input{width:100%;height:100%;min-height:56px;background:transparent;border:0;border-radius:.5rem;box-shadow:inset 0 0 0 1px var(--white-20);color:#fff;font:inherit;font-size:1rem;padding:1.4rem 1rem .5rem;outline:none;transition:box-shadow .3s;user-select:text;-webkit-user-select:text}
+.nl_field input:focus{box-shadow:inset 0 0 0 2px #fff}
+.nl_field label{position:absolute;left:1rem;top:50%;transform:translateY(-50%);font-size:.875rem;opacity:.6;transition:all .3s;pointer-events:none;text-transform:uppercase}
+.nl_field input:focus+label,.nl_field input:valid+label{font-size:.75rem;transform:translateY(-115%)}
+.nl_legal{font-size:.875rem;color:var(--white-60);margin-top:var(--s)!important}
+.nl_legal a{text-decoration:underline}
+
+.footer{margin:var(--xxh) auto 0;text-align:center}
+.footer_copy{font-size:.75rem;letter-spacing:.08em;margin-bottom:var(--s);color:var(--white-80)}
+.footer_bar{max-width:50rem;margin:0 auto;padding:var(--xs) var(--s);border-radius:.5rem;background:var(--white-5);backdrop-filter:blur(2rem);-webkit-backdrop-filter:blur(2rem);display:flex;align-items:center;justify-content:space-between;gap:var(--s)}
+.footer_btn{width:7.5rem;min-height:44px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid #fff;border-radius:.25rem;font-size:.875rem;text-decoration:none;text-transform:uppercase;font-weight:400}
+.footer_links{display:flex;gap:var(--s);flex-wrap:wrap;justify-content:center}
+.footer_links a{font-size:.75rem;text-transform:uppercase;text-decoration:none;color:var(--white-80);min-height:44px;display:inline-flex;align-items:center}
+.footer_credit{margin-top:var(--s);font-size:.75rem;color:var(--white-50)}
+
+/* ---------- Responsive ≤ 991 ---------- */
+@media (max-width:991px){
+  .menu_panel{position:fixed;left:0;top:0;transform:none;width:100vw;height:0;border:0;border-radius:0;background:#000;backdrop-filter:none;padding:0 var(--pad-global);z-index:-1;min-width:0}
+  .menu_panel-inner{padding:8rem 0 2rem;min-height:100svh;display:flex;flex-direction:column}
+  .menu_link{font-size:2.5rem}
+  .menu_emblem{display:block;margin:var(--l) auto;width:4rem;height:4rem;color:var(--white-60)}
+  .menu_extras{display:flex;flex-direction:column;align-items:center;gap:var(--s);margin-top:auto}
+  .menu_extras .row{display:flex;gap:.75rem}
+  .menu_extras small{font-size:.75rem;color:var(--white-60)}
+  .carousel_title-bis-wrapper,.gamme_strip,.corner{display:none}
+  .profile_container,.benefits_container{align-items:flex-end;justify-content:center;padding:0 var(--pad-global) var(--l);text-align:center}
+  .profile_container::before,.benefits_container::before{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72) 38%,rgba(0,0,0,.86));z-index:-1}
+  .profile_left{padding-left:0;max-width:34rem;margin:0 auto}
+  .profile_items{min-height:0;height:21rem}
+  .profile_item{top:auto;bottom:0;transform:none}
+  .profile_text .c-tl,.profile_text .c-br{display:none}
+  .benefits_block{max-width:22.5rem;margin:0 auto;text-align:center}
+  .benefits_sub{justify-content:center}
+  .benefits_photo{margin:var(--s) auto 0;max-height:24svh}
+  .benefits_nav{right:auto;left:50%;top:calc(var(--nav-h) - .5rem);transform:translateX(-50%);flex-direction:row;gap:.5rem}
+  .benefits_nav-btn{width:46px;height:46px;min-height:46px;padding:0}
+  .benefits_nav-btn svg{width:1.1rem;height:1.25rem}
+  .argument_video{object-fit:cover}
+  .argument_word{width:70%;max-width:17.5rem;position:absolute;bottom:var(--xxl);filter:none}
+  .argument_word .w1{font-size:min(8.4vw,2.35rem)}
+  .argument_word .w2{font-size:min(8.4vw,2.35rem)}
+  .argument_blur{display:none}
+  .infos{grid-template-columns:1fr 1fr}
+}
+@media (max-width:767px){
+  .navbar_row{min-height:4rem}
+  .footer_bar{display:grid;grid-template-columns:1fr 1fr}
+  .footer_links{grid-column:1/-1;order:-1;flex-direction:column;gap:0}
+  .footer_btn{width:100%}
+  .nl_form{flex-direction:column}
+  .nl_form .btn{width:100%}
+  .infos{grid-template-columns:1fr}
+  .faq_title{text-align:center}
+}
+@media (max-width:899px){
+  .webgl.is-dimmed{opacity:.32}
+}
+@media (max-width:560px){
+  :root{--pad-global:16px}
+  .navbar_logo{width:6.6rem;font-size:1.45rem}
+  .navbar_logo small{font-size:.5rem;letter-spacing:.22em}
+  .navbar_menu-btn .lbl{display:none}
+  .navbar_right{gap:.25rem}
+  .navbar_call{padding:.55rem .7rem;font-size:.75rem}
+  .navbar_sound .lbl{font-size:.75rem}
+  .hud{padding-left:6px;padding-right:6px}
+  .scroll_hint{bottom:7rem}
+  .gamme_kicker{font-size:.7rem;letter-spacing:.14em}
+  .profile_text{font-size:1.05rem}
+  .benefits_block{font-size:1.02rem}
+  .faq_a p{font-size:1rem}
+  .gallery_track figure{flex-basis:72vw}
+}
+@media (prefers-reduced-motion:reduce){:root{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" aria-hidden="true">
+  <div class="loader_logo">
+    <svg viewBox="0 0 150 560" role="img" aria-label="Alegría">
+      <defs>
+        <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9a9a9a"/><stop offset=".55" stop-color="#ffffff"/><stop offset=".8" stop-color="#7d7d7d"/><stop offset="1" stop-color="#e6e6e6"/>
+        </linearGradient>
+      </defs>
+      <g transform="translate(36 0) rotate(90)">
+        <text x="4" y="0" class="ld-a">ALEGRÍA</text>
+      </g>
+    </svg>
+  </div>
+  <div class="loader_percent"><span class="lp">0</span>%</div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="navbar_overlay"></div>
+  <div class="navbar_progress"><span class="sq"></span><div class="navbar_track"><div class="scroll_indicator"><i class="si_halo"></i><i class="si_mid"></i><i class="si_core"></i><i class="si_hot"></i></div></div><span class="sq"></span></div>
+  <div class="navbar_row">
+    <button class="navbar_sound" type="button" aria-label="Activer ou couper le son">
+      <span class="lbl">ON</span>
+      <svg viewBox="0 0 14 8" fill="none"><rect width="2" height="8" rx="1" fill="currentColor"/><rect x="4" width="2" height="8" rx="1" fill="currentColor"/><rect x="8" width="2" height="8" rx="1" fill="currentColor"/><rect x="12" width="2" height="8" rx="1" fill="currentColor"/></svg>
+    </button>
+    <a class="navbar_logo" href="#gamme" data-goto="0" aria-label="Alegría Saint-Tropez, retour en haut"><span>ALEGRÍA<small>SAINT-TROPEZ</small></span></a>
+    <div class="navbar_right">
+      <button class="navbar_menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 8 8"><circle fill="currentColor" cx="1" cy="1" r="1"/><circle fill="currentColor" cx="7" cy="1" r="1"/><circle fill="currentColor" cx="7" cy="7" r="1"/><circle fill="currentColor" cx="1" cy="7" r="1"/><circle fill="currentColor" cx="4" cy="4" r="1"/></svg>
+        <span class="lbl">Menu</span>
+      </button>
+      <a class="navbar_call" href="tel:+33498133285" aria-label="Appeler Alegría au 04 98 13 32 85"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+      <nav class="menu_panel" id="menu" aria-label="Menu principal">
+        <div class="menu_panel-inner">
+          <a class="menu_link" href="#gamme" data-goto="0"><span>Cocktails</span></a>
+          <a class="menu_link" href="#benefits-1" data-goto="2"><span>L'esprit</span></a>
+          <a class="menu_link" href="#FAQ" data-goto="8"><span>Infos &amp; FAQ</span></a>
+          <a class="menu_link" href="#newsletter" data-goto="newsletter"><span>Réserver</span></a>
+          <svg class="menu_emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M32 58V14c0-6 8-6 8 0v18c0 4 6 4 6 0v-8c0-5 7-5 7 0v10c0 6-5 9-13 9"/><path d="M32 40c-8 0-13-3-13-9V22c0-5-7-5-7 0v8c0 4 6 4 6 0"/><path d="M22 58h20"/></svg>
+          <div class="menu_extras">
+            <a class="btn" href="tel:+33498133285"><span class="btn_label">Appeler · 04 98 13 32 85</span></a>
+            <div class="row"><a class="footer_btn" href="https://www.instagram.com/alegria.sainttropez/" target="_blank" rel="noopener">Instagram</a><a class="footer_btn" href="mailto:contact@alegriasainttropez.fr">E-mail</a></div>
+            <small>© 2026 ALEGRÍA SAINT-TROPEZ</small>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HUD -->
+<div class="hud" aria-hidden="true">
+  <div class="gradient_overlay"></div>
+  <div class="hud_col hud_left">
+    <div><svg class="corner" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span>A</span></div>
+    <div class="scroll_hint"><svg viewBox="0 0 35 146"><g><path fill="currentColor" fill-opacity="0.6" d="M7.6,9.1c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" d="M15.1,15.7c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.6" d="M22.6,9.1c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M30.2,2.4C30.2,1.1,31.3,0,32.6,0s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M2.4,0h0C3.7,0,4.8,1.1,4.8,2.4h0c0,1.3-1.1,2.4-2.4,2.4h0C1.1,4.8,0,3.7,0,2.4H0C0,1.1,1.1,0,2.4,0Z"/></g><g><path fill="currentColor" fill-opacity="0.6" d="M7.6,73c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" d="M15.1,79.7c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.6" d="M22.6,73c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M30.2,66.4c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M2.4,64h0c1.3,0,2.4,1.1,2.4,2.4h0c0,1.3-1.1,2.4-2.4,2.4h0C1.1,68.7,0,67.7,0,66.4H0C0,65,1.1,64,2.4,64Z"/></g><g><path fill="currentColor" fill-opacity="0.6" d="M7.6,137c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" d="M15.1,143.7c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.6" d="M22.6,137c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M30.2,130.3c0-1.3,1.1-2.4,2.4-2.4s2.4,1.1,2.4,2.4-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4Z"/><path fill="currentColor" fill-opacity="0.3" d="M2.4,128h0c1.3,0,2.4,1.1,2.4,2.4h0c0,1.3-1.1,2.4-2.4,2.4h0C1.1,132.7,0,131.6,0,130.3H0C0,129,1.1,128,2.4,128Z"/></g></svg></div>
+    <div><span>ST</span><span>_</span><svg class="corner" viewBox="0 0 9 9" fill="none"><path d="M8.5 8.5L2.5 8.5C1.39543 8.5 0.5 7.60457 0.5 6.5L0.499999 0.5" stroke="currentColor" stroke-linecap="round"/></svg></div>
+  </div>
+  <div class="hud_col hud_right">
+    <div><svg class="corner" viewBox="0 0 9 9" fill="none"><path d="M0.5 0.5L6.5 0.499999C7.60457 0.499999 8.5 1.39543 8.5 2.5L8.5 8.5" stroke="currentColor" stroke-linecap="round"/></svg><span>_</span></div>
+    <div class="scroll_hint"></div>
+    <div><span>_</span><svg class="corner" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></div>
+  </div>
+</div>
+
+<main>
+  <!-- Fixed layers -->
+  <div class="fixed gamme_container">
+    <h1 class="sr-only">Alegría Saint-Tropez – Bar à cocktails, tequila &amp; tapas, 4 rue Sibille</h1>
+    <div class="gamme_gradient-wrapper"><div class="gamme_gradient"></div></div>
+    <div class="gamme_strip"></div>
+    <div class="carousel_nav">
+      <button class="carousel_arrow is-prev" type="button" aria-label="Cocktail précédent"><svg viewBox="0 0 17 32" fill="none"><path d="M2.11495 13.4458C3.28298 13.4458 4.22986 14.3927 4.22986 15.5607C4.22986 16.7287 3.28298 17.6756 2.11495 17.6756C0.946913 17.6756 3.33786e-05 16.7287 3.33786e-05 15.5607C3.33786e-05 14.3927 0.946913 13.4458 2.11495 13.4458Z" fill="currentColor"/><path d="M8.04854 6.77686C9.21657 6.77686 10.1635 7.72373 10.1635 8.89177C10.1635 10.0598 9.21657 11.0067 8.04854 11.0067C6.88051 11.0067 5.93363 10.0598 5.93363 8.89177C5.93363 7.72373 6.88051 6.77686 8.04854 6.77686Z" fill="currentColor" fill-opacity="0.6"/><path d="M8.04854 20.1143C9.21657 20.1143 10.1635 21.0611 10.1635 22.2292C10.1635 23.3972 9.21657 24.3441 8.04854 24.3441C6.88051 24.3441 5.93363 23.3972 5.93363 22.2292C5.93363 21.0611 6.88051 20.1143 8.04854 20.1143Z" fill="currentColor" fill-opacity="0.6"/><path d="M13.9823 26.8911C15.1503 26.8911 16.0972 27.838 16.0972 29.006C16.0972 30.1741 15.1503 31.1209 13.9823 31.1209C12.8142 31.1209 11.8673 30.1741 11.8673 29.006C11.8673 27.838 12.8142 26.8911 13.9823 26.8911Z" fill="currentColor" fill-opacity="0.3"/><rect x="16.0972" y="7.03622e-07" width="4.22982" height="4.22983" rx="2.11491" transform="rotate(90 16.0972 7.03622e-07)" fill="currentColor" fill-opacity="0.3"/></svg></button>
+      <button class="carousel_arrow is-next" type="button" aria-label="Cocktail suivant"><svg viewBox="0 0 17 32" fill="none"><path d="M13.9822 13.4458C12.8142 13.4458 11.8673 14.3927 11.8673 15.5607C11.8673 16.7287 12.8142 17.6756 13.9822 17.6756C15.1503 17.6756 16.0971 16.7287 16.0971 15.5607C16.0971 14.3927 15.1503 13.4458 13.9822 13.4458Z" fill="currentColor"/><path d="M8.04863 6.77686C6.8806 6.77686 5.93372 7.72373 5.93372 8.89177C5.93372 10.0598 6.8806 11.0067 8.04863 11.0067C9.21666 11.0067 10.1635 10.0598 10.1635 8.89177C10.1635 7.72373 9.21666 6.77686 8.04863 6.77686Z" fill="currentColor" fill-opacity="0.6"/><path d="M8.04863 20.1143C6.8806 20.1143 5.93372 21.0611 5.93372 22.2292C5.93372 23.3972 6.8806 24.3441 8.04863 24.3441C9.21666 24.3441 10.1635 23.3972 10.1635 22.2292C10.1635 21.0611 9.21666 20.1143 8.04863 20.1143Z" fill="currentColor" fill-opacity="0.6"/><path d="M2.11491 26.8911C0.946879 26.8911 0 27.838 0 29.006C0 30.1741 0.946879 31.1209 2.11491 31.1209C3.28295 31.1209 4.22983 30.1741 4.22983 29.006C4.22983 27.838 3.28295 26.8911 2.11491 26.8911Z" fill="currentColor" fill-opacity="0.3"/><rect width="4.22982" height="4.22983" rx="2.11491" transform="matrix(0 1 1 -4.37114e-08 0 7.03622e-07)" fill="currentColor" fill-opacity="0.3"/></svg></button>
+    </div>
+    <p class="gamme_kicker">Saint-Tropez · la fête commence ici</p>
+    <div class="gamme_titles">
+      <h2 class="gamme_title heading-style-h2"><span class="l1">El</span><span class="l2">Chapo</span></h2>
+      <h2 class="gamme_title heading-style-h2"><span class="l1">Espresso</span><span class="l2">Martini</span></h2>
+      <h2 class="gamme_title heading-style-h2"><span class="l1">Le</span><span class="l2">Negroni</span></h2>
+      <h2 class="gamme_title heading-style-h2"><span class="l1">Tom</span><span class="l2">Collins</span></h2>
+      <h2 class="gamme_title heading-style-h2"><span class="l1">Le</span><span class="l2">Daiquiri</span></h2>
+      <h2 class="gamme_title heading-style-h2"><span class="l1">Mas</span><span class="l2">Tequila</span></h2>
+    </div>
+    <div class="carousel_pagination" role="slider" aria-label="Choisir un cocktail" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" tabindex="0">
+      <svg viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="liquid"><feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"/></filter>
+          <linearGradient id="bar-gradient" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FF9F43"/><stop offset="20%" stop-color="#C8A27A"/><stop offset="40%" stop-color="#FF4D5E"/><stop offset="60%" stop-color="#F2DC5D"/><stop offset="80%" stop-color="#8EE08A"/><stop offset="100%" stop-color="#FF6FC8"/>
+          </linearGradient>
+        </defs>
+        <g filter="url(#liquid)" style="filter:url(#liquid) drop-shadow(0 0 12px rgba(0,0,0,.25))">
+          <rect class="pg_bar" x="0" y="16" width="1000" height="8" rx="4" fill="url(#bar-gradient)"/>
+          <circle class="pg_dot" cx="20" cy="20" r="18" fill="url(#bar-gradient)"/>
+        </g>
+      </svg>
+    </div>
+    <p class="gamme_scroll">Scroller pour découvrir</p>
+  </div>
+
+  <div class="fixed carousel_title-bis-wrapper" aria-hidden="true">
+    <div class="bis"><div>El</div><div>Chapo</div></div>
+    <div class="bis"><div>Espresso</div><div>Martini</div></div>
+    <div class="bis"><div>Le</div><div>Negroni</div></div>
+    <div class="bis"><div>Tom</div><div>Collins</div></div>
+    <div class="bis"><div>Le</div><div>Daiquiri</div></div>
+    <div class="bis"><div>Mas</div><div>Tequila</div></div>
+  </div>
+
+  <div class="fixed profile_container">
+    <div class="profile_left">
+      <div class="profile_items">
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">El</span><span class="l2">Chapo</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Le cocktail signature de la maison, celui qu'on vous conseille pour ouvrir la soirée. Sa recette ? Arnaud, notre mixologue, vous la raconte au comptoir.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">Signature Alegría · carte &amp; prix sur place</p></div>
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">Espresso</span><span class="l2">Martini</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Le classique corsé : café serré, mousse veloutée et trois grains sur le dessus. Celui qu'on commande quand la nuit ne fait que commencer.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">Classique · carte &amp; prix sur place</p></div>
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">Le</span><span class="l2">Negroni</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Le grand classique, amer et rond, servi sur glace avec un zeste d'orange. Parfait pour l'apéro, avant les tapas.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">Classique · carte &amp; prix sur place</p></div>
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">Tom</span><span class="l2">Collins</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Un long drink frais et pétillant, citron et bulles. L'allié des chaudes soirées d'été dans les ruelles de Saint-Tropez.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">Classique · carte &amp; prix sur place</p></div>
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">Le</span><span class="l2">Daiquiri</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Rhum, citron vert et une pointe de sucre, servi bien frappé en coupe. La fraîcheur des Caraïbes, version Riviera.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">Classique · carte &amp; prix sur place</p></div>
+        <div class="profile_item"><h3 class="heading-style-h2 p-title"><span class="l1">Mas</span><span class="l2">Tequila</span></h3><p class="profile_text"><svg class="corner c-tl" viewBox="0 0 9 9" fill="none"><path d="M0.5 8.5L0.499999 2.5C0.499998 1.39543 1.39543 0.500001 2.5 0.500001L8.5 0.499999" stroke="currentColor" stroke-linecap="round"/></svg><span class="p-copy">Ici, la tequila est reine. Don Julio, 818, Clase Azul : demandez la sélection du moment, en shot avec son quartier d'orange ou en cocktail.</span><svg class="corner c-br" viewBox="0 0 9 9" fill="none"><path d="M8.5 0.5L8.5 6.5C8.5 7.60457 7.60457 8.5 6.5 8.5L0.500001 8.5" stroke="currentColor" stroke-linecap="round"/></svg></p><p class="profile_meta">La sélection · carte &amp; prix sur place</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed benefits_container" data-b="0">
+    <div class="benefits_block">
+      <div class="benefits_sub"><span class="benefits_chip">×</span><span class="benefits_label">Apéro sans surprise</span></div>
+      <h3 class="benefits_h2">Cocktails signature</h3>
+      <p class="benefits_p">Arnaud, notre mixologue, secoue les classiques et les créations de la maison. Venez le rencontrer au bar et commandez vos favoris.</p>
+      <img class="benefits_photo" src="assets/cocktails-trio.jpg" alt="Trois cocktails d'Alegría sur le comptoir en bois" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="fixed benefits_container" data-b="1">
+    <div class="benefits_block">
+      <div class="benefits_sub"><span class="benefits_chip">×</span><span class="benefits_label">Petite faim</span></div>
+      <h3 class="benefits_h2">Tapas à partager</h3>
+      <p class="benefits_p">Tacos, mini-burgers, tostada ceviche de thon, picanha de bœuf argentin… De bonnes assiettes à partager, servies jusqu'à minuit.</p>
+      <img class="benefits_photo" src="assets/tapas-table.jpg" alt="Table de tapas et cocktails chez Alegría" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="fixed benefits_container" data-b="2">
+    <div class="benefits_block">
+      <div class="benefits_sub"><span class="benefits_chip">×</span><span class="benefits_label">Fin de soirée à 23 h</span></div>
+      <h3 class="benefits_h2">Jusqu'à 3 h du matin</h3>
+      <p class="benefits_p">On ouvre à 19 h et on ne ferme qu'à 3 h. Musique, DJ certains soirs, des verres qui s'enchaînent : là où les soirées commencent.</p>
+      <img class="benefits_photo" src="assets/neon-mas-alegria.jpg" alt="Néon « mas alegría » sur un mur végétal" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="fixed benefits_container" data-b="3">
+    <div class="benefits_block">
+      <div class="benefits_sub"><span class="benefits_chip">×</span><span class="benefits_label">Déco sans âme</span></div>
+      <h3 class="benefits_h2">Riviera mexicaine</h3>
+      <p class="benefits_p">Dans l'ancien Nano, adresse mythique de la nuit tropézienne, un décor chaleureux inspiré de la Riviera mexicaine : cactus, calaveras et lumière dorée.</p>
+      <img class="benefits_photo" src="assets/deco-calavera.jpg" alt="Décor d'Alegría : calavera, cactus en céramique et bouteilles de tequila" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+  <div class="benefits_nav" aria-label="Les 4 piliers d'Alegría">
+    <button class="benefits_nav-btn" type="button" data-b="0" aria-label="Cocktails signature"><svg viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M2 3h16l-8 9z"/><path d="M10 12v9M6 21h8"/><path d="M14 3l3-2"/></svg></button>
+    <span class="benefits_dot"></span>
+    <button class="benefits_nav-btn" type="button" data-b="1" aria-label="Tapas à partager"><svg viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M2 17a8 8 0 0 1 16 0z"/><path d="M5 14c1-1 2 0 3-1s2 0 3-1 2 0 3-1"/><path d="M3 20h14"/></svg></button>
+    <span class="benefits_dot"></span>
+    <button class="benefits_nav-btn" type="button" data-b="2" aria-label="Jusqu'à 3 h du matin"><svg viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><circle cx="10" cy="13" r="7"/><path d="M3 13h14M10 6v14M5 8.5c3 2 7 2 10 0M5 17.5c3-2 7-2 10 0"/><path d="M10 2v4"/></svg></button>
+    <span class="benefits_dot"></span>
+    <button class="benefits_nav-btn" type="button" data-b="3" aria-label="Riviera mexicaine"><svg viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M10 22V5a2 2 0 0 1 4 0v8a2 2 0 0 0 2-2V9a1.5 1.5 0 0 1 3 0v3a4 4 0 0 1-4 4h-1"/><path d="M10 15H8a4 4 0 0 1-4-4V8a1.5 1.5 0 0 1 3 0v2a2 2 0 0 0 2 2h1"/><path d="M6 22h10"/></svg></button>
+  </div>
+
+  <div class="fixed argument_container">
+    <video class="argument_video" data-src="assets/ambiance-cocktails.mp4" poster="assets/ambiance-cocktails.jpg" muted loop playsinline preload="none"></video>
+    <video class="argument_video" data-src="assets/ambiance-salle.mp4" poster="assets/ambiance-salle.jpg" muted loop playsinline preload="none"></video>
+    <video class="argument_video" data-src="assets/ambiance-bar.mp4" poster="assets/ambiance-bar.jpg" muted loop playsinline preload="none"></video>
+    <video class="argument_video" data-src="assets/ambiance-cocktails.mp4" poster="assets/ambiance-cocktails.jpg" muted loop playsinline preload="none"></video>
+    <video class="argument_video" data-src="assets/ambiance-salle.mp4" poster="assets/ambiance-salle.jpg" muted loop playsinline preload="none"></video>
+    <video class="argument_video" data-src="assets/ambiance-bar.mp4" poster="assets/ambiance-bar.jpg" muted loop playsinline preload="none"></video>
+    <div class="argument_shade"></div>
+    <div class="argument_blur"></div>
+    <p class="argument_word" aria-label="Mas Tequila, Mas Alegría"><span class="w w1">Mas Tequila</span><span class="w w2">Mas Alegría</span></p>
+  </div>
+
+  <!-- Scroll spacers -->
+  <section class="section is-gamme" id="gamme" aria-label="Nos cocktails"></section>
+  <section class="section is-profile" id="profile" aria-label="Le cocktail"></section>
+  <section class="section is-benefits" id="benefits-1" aria-label="Cocktails signature"></section>
+  <section class="section is-benefits" id="benefits-2" aria-label="Tapas à partager"></section>
+  <section class="section is-benefits" id="benefits-3" aria-label="Jusqu'à 3 h du matin"></section>
+  <section class="section is-benefits" id="benefits-4" aria-label="Riviera mexicaine"></section>
+  <section class="section is-argument" id="argument" aria-label="Mas Tequila"></section>
+  <section class="section is-full-gamme" id="full-gamme" aria-label="Toute la carte"></section>
+
+  <section class="section is-faq" id="FAQ">
+    <div class="faq_bg"></div>
+    <div class="faq_inner">
+      <h2 class="faq_title">Foire aux<br>questions</h2>
+      <div class="faq_list">
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Où se trouve Alegría ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Au 4 rue Sibille, en plein cœur de Saint-Tropez (83990). La terrasse donne sur la rue du Cépoun. <a href="https://www.google.com/maps/search/?api=1&amp;query=Alegria+4+rue+Sibille+83990+Saint-Tropez" target="_blank" rel="noopener">Voir le plan</a></p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Quels sont vos horaires ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Du mardi au samedi, de 19 h à 3 h du matin. Fermé le dimanche et le lundi. Les tapas sont servies jusqu'à minuit.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Comment réserver une table ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Par téléphone au <a href="tel:+33498133285">04 98 13 32 85</a>, ou par message privé sur <a href="https://www.instagram.com/alegria.sainttropez/" target="_blank" rel="noopener">Instagram (@alegria.sainttropez)</a>.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Qu'est-ce qu'on mange chez Alegría ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Des tapas et des assiettes à partager : tacos, mini-burgers, tostada ceviche de thon, picanha de bœuf argentin… La carte évolue au fil de la saison.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Quels cocktails trouve-t-on à la carte ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Les grands classiques (Negroni, Tom Collins, Daiquiri, Espresso Martini), le cocktail maison El Chapo et une sélection de tequilas. Arnaud, notre mixologue, vous conseille.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Y a-t-il de la musique ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Oui : les soirées se vivent en musique, avec DJ certains soirs, de l'apéro jusqu'à la fermeture.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Quelle est l'histoire du lieu ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Alegría a pris la suite du Nano, adresse mythique de la nuit tropézienne. Une affaire de famille, avec un décor chaleureux inspiré de la Riviera mexicaine.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Êtes-vous ouverts toute l'année ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Le bar fait une pause de quelques semaines en hiver. La date de réouverture est annoncée sur notre Instagram : suivez-nous pour ne pas la manquer.</p></div></div>
+        <div class="faq_item"><button class="faq_q" type="button" aria-expanded="false"><span>Un anniversaire, un groupe ?</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M11 15C11 14.4477 11.4477 14 12 14C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15Z" fill="currentColor"/><path d="M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z" fill="currentColor" fill-opacity="0.6"/><path d="M17 9C17 8.44772 17.4477 8 18 8C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10C17.4477 10 17 9.55228 17 9Z" fill="currentColor" fill-opacity="0.3"/><rect x="5" y="8" width="2" height="2" rx="1" fill="currentColor" fill-opacity="0.3"/></svg></button><div class="faq_a"><p>Contactez l'équipe par téléphone au <a href="tel:+33498133285">04 98 13 32 85</a> ou par e-mail à <a href="mailto:contact@alegriasainttropez.fr">contact@alegriasainttropez.fr</a> : on en parle ensemble.</p></div></div>
+      </div>
+
+      <div class="gallery" id="galerie">
+        <div class="gallery_head"><h2 class="heading-style-h2"><span class="l1">La vie</span><span class="l2">à Alegría</span></h2><p>Photos · @alegria.sainttropez</p></div>
+        <div class="gallery_track" data-lenis-prevent-touch>
+          <figure><img src="assets/tacos.jpg" alt="Tacos servis sur leur support" loading="lazy" decoding="async"><figcaption>Tacos</figcaption></figure>
+          <figure><img src="assets/cocktail-el-chapo.jpg" alt="Cocktail El Chapo" loading="lazy" decoding="async"><figcaption>El Chapo</figcaption></figure>
+          <figure><img src="assets/mini-burgers.jpg" alt="Mini-burgers et frites à partager" loading="lazy" decoding="async"><figcaption>Mini-burgers</figcaption></figure>
+          <figure><img src="assets/espresso-martini.jpg" alt="Espresso martini" loading="lazy" decoding="async"><figcaption>Espresso martini</figcaption></figure>
+          <figure><img src="assets/shots-tequila.jpg" alt="Shots de tequila et quartiers d'orange" loading="lazy" decoding="async"><figcaption>Tequila</figcaption></figure>
+          <figure><img src="assets/cocktail-rouge.jpg" alt="Cocktail rouge sur un sous-verre Alegría" loading="lazy" decoding="async"><figcaption>Cocktail maison</figcaption></figure>
+          <figure><img src="assets/bar.jpg" alt="Le bar d'Alegría et ses bouteilles" loading="lazy" decoding="async"><figcaption>Le bar</figcaption></figure>
+          <figure><img src="assets/tapas-partage.jpg" alt="Tapas à partager à la lumière des bougies" loading="lazy" decoding="async"><figcaption>À partager</figcaption></figure>
+          <figure><img src="assets/cocktail-palmes.jpg" alt="Cocktail en coupe devant des palmes" loading="lazy" decoding="async"><figcaption>Coupe</figcaption></figure>
+          <figure><img src="assets/enseigne.jpg" alt="Enseigne lumineuse Alegría" loading="lazy" decoding="async"><figcaption>4 rue Sibille</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="infos">
+        <div><h3>Adresse</h3><p>4 rue Sibille<br>83990 Saint-Tropez</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Alegria+4+rue+Sibille+83990+Saint-Tropez" target="_blank" rel="noopener">Itinéraire</a></div>
+        <div><h3>Horaires</h3><p>Mardi → samedi<br>19 h – 3 h · tapas jusqu'à minuit</p></div>
+        <div><h3>Réservation</h3><p><a href="tel:+33498133285">04 98 13 32 85</a></p></div>
+        <div><h3>Contact</h3><p><a href="mailto:contact@alegriasainttropez.fr">contact@alegriasainttropez.fr</a></p></div>
+      </div>
+
+      <div class="newsletter" id="newsletter">
+        <h2 class="heading-style-h2"><span class="l1">Réservez</span><span class="l2">votre table</span></h2>
+        <p>Une table pour ce soir ? Appelez-nous. Et pour être prévenu de la réouverture et des prochaines soirées, laissez-nous votre e-mail.</p>
+        <a class="btn newsletter_call" href="tel:+33498133285"><span class="btn_label">Appeler le 04 98 13 32 85</span></a>
+        <form class="nl_form" action="#" onsubmit="return false">
+          <div class="nl_field"><input type="email" id="nl-mail" required autocomplete="email"><label for="nl-mail">Votre adresse mail</label></div>
+          <button class="btn" type="submit"><span class="btn_label">S'inscrire</span></button>
+        </form>
+        <p class="nl_legal">En vous inscrivant vous acceptez notre <a href="#">politique de confidentialité</a></p>
+      </div>
+
+      <footer class="footer">
+        <p class="footer_copy">© 2026 ALEGRÍA SAINT-TROPEZ</p>
+        <div class="footer_bar">
+          <a class="footer_btn" href="https://www.instagram.com/alegria.sainttropez/" target="_blank" rel="noopener">Instagram</a>
+          <div class="footer_links"><a href="#">Mentions légales</a><a href="#">Politique de confidentialité</a></div>
+          <a class="footer_btn" href="tel:+33498133285">Appeler</a>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <section class="section is-last-copy" id="last-copy" aria-hidden="true"></section>
+  <section class="section is-last" id="last" aria-hidden="true"></section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
+const BASE = 'https://cdn.jsdelivr.net/gh/azoklearn/ciao-energy-site@main/';
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const DEG = Math.PI / 180;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const wrap = (v, min, max) => { const r = max - min; return ((((v - min) % r) + r) % r) + min; };
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+let lowPower = isIOS || innerWidth < 1024;
+const mobile3d = () => innerWidth < 900;
+const DESK = () => innerWidth > 991;
+
+/* ---------------- Cocktails (les « saveurs ») ---------------- */
+const FLAVOURS = [
+  { name: 'El Chapo',         primary: '#8A2E00', secondary: '#FF9F43', glass: 'rocks',     liquid: 0xd9560a, garnish: 'orange' },
+  { name: 'Espresso Martini', primary: '#3A2416', secondary: '#C8A27A', glass: 'martini',   liquid: 0x2a140a, garnish: 'beans'  },
+  { name: 'Negroni',          primary: '#7A0019', secondary: '#FF4D5E', glass: 'rocks',     liquid: 0x9e0a1c, garnish: 'peel'   },
+  { name: 'Tom Collins',      primary: '#5E5200', secondary: '#F2DC5D', glass: 'highball',  liquid: 0xd8b62a, garnish: 'lemon'  },
+  { name: 'Daiquiri',         primary: '#0B4D2C', secondary: '#8EE08A', glass: 'coupe',     liquid: 0x8cc444, garnish: 'lime'   },
+  { name: 'Tequila',          primary: '#8A0A6B', secondary: '#FF6FC8', glass: 'caballito', liquid: 0xc27014, garnish: 'orangeWedge' }
+];
+
+/* ---------------- Sons ---------------- */
+const Sound = (() => {
+  let ctx, on = true, unlocked = false; const buffers = {};
+  const files = { change: 'CIAO-ENERGY-defilementui.mp3', enter: 'CIAO-ENERGY-doubleclic-canette.mp3', benefits: 'CIAO-ENERGY-transition2.mp3', click: 'CIAO-ENERGY-Clickui.mp3' };
+  try { ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
+  if (ctx) Object.entries(files).forEach(([k, f]) => {
+    fetch(BASE + 'assets/sounds/' + f).then(r => r.arrayBuffer()).then(b => ctx.decodeAudioData(b)).then(buf => buffers[k] = buf).catch(() => {});
+  });
+  const unlock = () => { if (ctx && !unlocked) { ctx.resume().catch(() => {}); unlocked = true; } };
+  ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(ev => addEventListener(ev, unlock, { once: true, passive: true }));
+  let lockUntil = 0;
+  return {
+    play(k, fromScroll) {
+      if (!on || !ctx || !buffers[k] || ctx.state !== 'running') return;
+      if (fromScroll && performance.now() < lockUntil) return;
+      const s = ctx.createBufferSource(); s.buffer = buffers[k]; const g = ctx.createGain(); g.gain.value = .5; s.connect(g).connect(ctx.destination); s.start();
+    },
+    lock() { lockUntil = performance.now() + 1800; },
+    set on(v) { on = v; }, get on() { return on; }
+  };
+})();
+
+/* ---------------- Texte : masques ---------------- */
+const splits = new Map();
+function getSplit(el, chars) {
+  const key = el; if (splits.has(key)) return splits.get(key);
+  const s = SplitText.create(el, { type: chars ? 'lines,chars' : 'lines', mask: 'lines', linesClass: 'line' });
+  splits.set(key, s); return s;
+}
+const Reveal = {
+  linesIn(el, delay = 0) { const s = getSplit(el, false); return gsap.fromTo(s.lines, { yPercent: 110 }, { yPercent: 0, duration: .7, ease: 'power3.out', stagger: .08, delay, overwrite: true }); },
+  linesOut(el) { const s = getSplit(el, false); return gsap.to(s.lines, { yPercent: -110, duration: .5, ease: 'power3.in', stagger: .04, overwrite: true }); },
+  charsIn(el, delay = 0) { const s = getSplit(el, true); return gsap.fromTo(s.chars, { yPercent: 110 }, { yPercent: 0, duration: .6, ease: 'power3.out', stagger: .01, delay, overwrite: true }); },
+  charsOut(el) { const s = getSplit(el, true); return gsap.to(s.chars, { yPercent: -110, duration: .5, ease: 'power3.in', stagger: .01, overwrite: true }); },
+  setOut(el, chars) { const s = getSplit(el, chars); gsap.set(chars ? s.chars : s.lines, { yPercent: 110 }); }
+};
+
+/* ---------------- Lenis + défilement ---------------- */
+const sections = $$('main > .section');
+const secData = [];
+function measure() {
+  secData.length = 0;
+  sections.forEach(s => secData.push({ el: s, top: s.offsetTop, height: s.offsetHeight }));
+}
+measure();
+
+const lenis = new Lenis({
+  autoRaf: false, infinite: true, syncTouch: true,
+  virtualScroll: (d) => handleVirtual(d)
+});
+window.lenis = lenis;
+lenis.on('scroll', ScrollTrigger.update);
+
+const html = document.documentElement;
+let scrollLocked = true;
+html.classList.add('is-locked');
+lenis.stop();
+const blockEv = e => { if (scrollLocked) e.preventDefault(); };
+addEventListener('wheel', blockEv, { passive: false, capture: true });
+addEventListener('touchmove', blockEv, { passive: false, capture: true });
+
+const limit = () => Math.max(1, document.documentElement.scrollHeight - innerHeight);
+const scrollY = () => clamp(window.scrollY, 0, limit());
+const anchorIndex = (y = scrollY()) => { let idx = 0; secData.forEach((s, i) => { if (s.top <= y + 20) idx = i; }); return idx; };
+let pageLock = false;
+function scrollTo(pos, dur = 1.5) {
+  if (pos !== 0) pos -= 10;
+  lenis.animatedScroll = lenis.targetScroll = scrollY();
+  pageLock = true;
+  lenis.scrollTo(pos, { duration: dur, easing: t => 1 - Math.pow(1 - t, 3), lock: true, programmatic: false, force: true,
+    onComplete: () => { pageLock = false; } });
+  setTimeout(() => { pageLock = false; }, dur * 1000 + 80);
+}
+const goSection = (i, dur) => { i = clamp(i, 0, secData.length - 1); scrollTo(secData[i].top, dur ?? ([0, 1, 5, 6].includes(anchorIndex()) ? 1.5 : 1)); };
+
+function handleVirtual({ deltaY, event }) {
+  if (scrollLocked) return false;
+  const isWheel = event.type.includes('wheel');
+  const isTouch = event.type.includes('touch');
+  const a = anchorIndex();
+  if (isWheel && innerWidth >= 1024 && a <= 6) {
+    if (event.cancelable) event.preventDefault();
+    if (pageLock || Math.abs(deltaY) < 4) return false;
+    if (deltaY > 0) goSection(a + 1); else if (a > 0 || scrollY() > 2) goSection(a - (scrollY() - secData[a].top > 30 ? 0 : 1));
+    return false;
+  }
+  if (isTouch && innerWidth < 1024 && a <= 7 && !inFlowZone()) return false; // géré par le pager tactile
+  if (deltaY < 0 && lenis.targetScroll + deltaY < 0 && lenis.animatedScroll < limit() * .5) { if (lenis.targetScroll > 0) lenis.scrollTo(0, { programmatic: false, lerp: .1 }); return false; }
+  return true;
+}
+function inFlowZone() { const y = scrollY(); const faq = secData[8]; return y >= faq.top - 20; }
+
+/* Pager tactile (< 1024 px) */
+(() => {
+  let sy = 0, sx = 0, axis = null, active = false;
+  addEventListener('touchstart', e => {
+    if (scrollLocked || innerWidth >= 1024) return;
+    if (e.target.closest('.gallery_track,.carousel_pagination,.menu_panel,.faq_inner a,.faq_inner button,.faq_inner input')) { active = false; return; }
+    active = anchorIndex() <= 7 && !inFlowZone(); sy = e.touches[0].clientY; sx = e.touches[0].clientX; axis = null;
+  }, { passive: true });
+  addEventListener('touchmove', e => {
+    if (!active) return;
+    const dy = e.touches[0].clientY - sy, dx = e.touches[0].clientX - sx;
+    if (!axis && (Math.abs(dy) > 2 || Math.abs(dx) > 2)) axis = Math.abs(dy) > Math.abs(dx) ? 'y' : 'x';
+    if (axis === 'y' && e.cancelable) e.preventDefault();
+  }, { passive: false });
+  addEventListener('touchend', e => {
+    if (!active) return; active = false;
+    const dy = (e.changedTouches[0]?.clientY ?? sy) - sy;
+    if (axis !== 'y' || Math.abs(dy) <= 24 || pageLock) return;
+    const a = anchorIndex();
+    if (dy < 0) goSection(a + 1, 1.5); else if (a > 0) goSection(a - 1, 1.5);
+  }, { passive: true });
+})();
+
+/* Barre de progression */
+const indicator = $('.scroll_indicator');
+const setP = gsap.quickTo(indicator, '--p', { duration: .3, ease: 'power3.out' });
+
+/* ---------------- Scène 3D ---------------- */
+const canvas = document.createElement('canvas');
+canvas.className = 'webgl';
+$('main').prepend(canvas);
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+renderer.setClearColor(0x000000, 0);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+THREE.ColorManagement.enabled = true;
+const pixelRatio = () => mobile3d() ? Math.min(devicePixelRatio, 1.25) : lowPower ? Math.min(devicePixelRatio, 2) : Math.min(devicePixelRatio, 1.5);
+renderer.setPixelRatio(pixelRatio());
+renderer.setSize(innerWidth, innerHeight, false);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(20, innerWidth / innerHeight, .1, 1000);
+camera.position.set(0, 0, 29);
+
+let composer, bloom, smaa;
+function buildComposer() {
+  const pr = pixelRatio();
+  const rt = new THREE.WebGLRenderTarget(innerWidth * pr, innerHeight * pr, { type: lowPower ? THREE.UnsignedByteType : THREE.HalfFloatType });
+  composer = new EffectComposer(renderer, rt);
+  composer.addPass(new RenderPass(scene, camera));
+  if (!lowPower) { bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth * .5, innerHeight * .5), .1, .1, 1); composer.addPass(bloom); }
+  composer.addPass(new OutputPass());
+  if (!lowPower) { smaa = new SMAAPass(innerWidth * pr, innerHeight * pr); composer.addPass(smaa); }
+}
+buildComposer();
+
+const tint = { color: { value: new THREE.Color(0xffffff) }, strength: { value: 1 } };
+function tintMat(m) {
+  m.onBeforeCompile = (shader) => {
+    shader.uniforms.tintColor = tint.color; shader.uniforms.tintStrength = tint.strength;
+    shader.fragmentShader = 'uniform vec3 tintColor;\nuniform float tintStrength;\n' + shader.fragmentShader;
+    shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>
+     reflectedLight.indirectDiffuse  *= tintColor * tintStrength;
+     reflectedLight.indirectSpecular *= tintColor * tintStrength;`);
+  };
+  return m;
+}
+function mat(params, physicalOnly = {}) {
+  if (lowPower) return tintMat(new THREE.MeshStandardMaterial(params));
+  return tintMat(new THREE.MeshPhysicalMaterial({ ...params, ...physicalOnly }));
+}
+
+const manager = new THREE.LoadingManager();
+let loadRatio = 0; manager.onProgress = (u, l, t) => { loadRatio = l / t; };
+const texLoader = new THREE.TextureLoader(manager);
+const spotMask = texLoader.load(BASE + 'assets/img/spot-mask.avif');
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+new RGBELoader(manager).load(BASE + 'assets/3d/hdri2.hdr', (hdr) => {
+  scene.environment = pmrem.fromEquirectangular(hdr).texture; hdr.dispose(); pmrem.dispose();
+});
+
+/* Matériaux */
+const baseMat = mat({ color: 0xababab, metalness: .9, roughness: .3, envMapIntensity: .1 }, { sheen: .3, sheenRoughness: .2, sheenColor: new THREE.Color(0xffffff), reflectivity: 1, ior: 2 });
+const glassMat = mat({ color: 0xffffff, metalness: 0, roughness: .05, transparent: true, opacity: .16, envMapIntensity: 1.4, depthWrite: false, side: THREE.DoubleSide }, { clearcoat: 1, clearcoatRoughness: .08, reflectivity: .6, ior: 1.5 });
+const liquidMats = FLAVOURS.map(f => mat({ color: f.liquid, metalness: 0, roughness: .28, transparent: true, opacity: .95, envMapIntensity: .45, emissive: new THREE.Color(f.liquid).multiplyScalar(.3) }, { sheen: .05, sheenRoughness: .125, clearcoat: .5, clearcoatRoughness: .3, reflectivity: .5, ior: 1.4 }));
+const iceMat = mat({ color: 0xffffff, metalness: .1, roughness: .12, transparent: true, opacity: .38, envMapIntensity: 2.5, depthWrite: false }, { clearcoat: 1 });
+const strawMat = mat({ color: 0x111111, metalness: .3, roughness: .35, envMapIntensity: 1 });
+const beanMat = mat({ color: 0x2b170c, metalness: .1, roughness: .35, envMapIntensity: 1 });
+const cremaMat = mat({ color: 0xc8a27a, metalness: 0, roughness: .6, envMapIntensity: 1, emissive: new THREE.Color(0x3a2416) });
+const saltMat = mat({ color: 0xf4f0e8, metalness: 0, roughness: .9, envMapIntensity: 1 });
+
+function citrusTexture(rind, flesh) {
+  const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d');
+  g.fillStyle = rind; g.beginPath(); g.arc(128, 128, 126, 0, Math.PI * 2); g.fill();
+  g.fillStyle = '#fff8e8'; g.beginPath(); g.arc(128, 128, 112, 0, Math.PI * 2); g.fill();
+  for (let i = 0; i < 10; i++) {
+    const a0 = i / 10 * Math.PI * 2 + .04, a1 = (i + 1) / 10 * Math.PI * 2 - .04;
+    g.fillStyle = flesh; g.beginPath(); g.moveTo(128 + Math.cos((a0 + a1) / 2) * 10, 128 + Math.sin((a0 + a1) / 2) * 10);
+    g.arc(128, 128, 104, a0, a1); g.closePath(); g.fill();
+  }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+const citrus = {
+  orange: { rind: '#f07a12', flesh: '#ffa53a' }, lemon: { rind: '#f3d51e', flesh: '#fbe877' }, lime: { rind: '#3f9a1e', flesh: '#a8dc5a' }
+};
+const citrusMats = {};
+Object.entries(citrus).forEach(([k, v]) => {
+  const t = citrusTexture(v.rind, v.flesh);
+  citrusMats[k] = [mat({ color: v.rind, roughness: .5, metalness: 0, envMapIntensity: 1 }), mat({ map: t, roughness: .45, metalness: 0, envMapIntensity: 1, emissive: new THREE.Color(v.flesh).multiplyScalar(.12) }), mat({ map: t, roughness: .45, metalness: 0, envMapIntensity: 1 })];
+});
+
+/* Profils des verres (rayon, hauteur) */
+const GLASSES = {
+  rocks:     { h: 3.2, outer: [[0,0],[1.1,0],[1.2,.1],[1.25,2.6]], inner: [[1.17,2.6],[1.12,.45],[0,.45]], liquid: [[0,.46],[1.11,.46],[1.15,1.9],[0,1.9]], rim: [1.21, 2.6] },
+  martini:   { h: 3.7, outer: [[0,0],[.95,0],[.95,.06],[.2,.14],[.09,.3],[.08,1.45],[.14,1.55],[1.55,2.75]], inner: [[1.5,2.75],[0,1.6]], liquid: [[0,1.61],[1.4,2.62],[0,2.62]], rim: [1.52, 2.75] },
+  highball:  { h: 4.3, outer: [[0,0],[.8,0],[.85,.08],[.88,3.6]], inner: [[.82,3.6],[.78,.4],[0,.4]], liquid: [[0,.41],[.79,.41],[.81,3.0],[0,3.0]], rim: [.85, 3.6] },
+  coupe:     { h: 3.6, outer: [[0,0],[.95,0],[.95,.06],[.2,.14],[.09,.3],[.08,1.5],[.15,1.65],[.7,1.8],[1.15,2.05],[1.4,2.55]], inner: [[1.36,2.55],[1.1,2.1],[.65,1.86],[0,1.75]], liquid: [[0,1.76],[.65,1.87],[1.1,2.11],[1.3,2.4],[0,2.4]], rim: [1.38, 2.55] },
+  caballito: { h: 3.0, outer: [[0,0],[.5,0],[.52,.1],[.7,2.1]], inner: [[.65,2.1],[.45,.35],[0,.35]], liquid: [[0,.36],[.46,.36],[.6,1.7],[0,1.7]], rim: [.68, 2.1] }
+};
+const SEG = () => mobile3d() ? 28 : lowPower ? 36 : 56;
+const geoCache = {};
+function latheGeo(pts, key) {
+  if (geoCache[key]) return geoCache[key];
+  const g = new THREE.LatheGeometry(pts.map(p => new THREE.Vector2(p[0], p[1])), SEG());
+  g.computeVertexNormals(); geoCache[key] = g; return g;
+}
+
+function buildGlass(fi) {
+  const f = FLAVOURS[fi], G = GLASSES[f.glass];
+  const rawH = Math.max(...G.outer.map(p => p[1]));
+  const diam = 2 * Math.max(...G.outer.map(p => p[0]));
+  const stemmed = f.glass === 'martini' || f.glass === 'coupe';
+  const k = Math.min(G.h / rawH, (stemmed ? 2.3 : 1.9) / diam);
+  const hh = rawH * k;
+  const content = new THREE.Group();
+  const glass = new THREE.Mesh(latheGeo([...G.outer, ...G.inner], 'g-' + f.glass), glassMat); glass.renderOrder = 2;
+  const liquid = new THREE.Mesh(latheGeo(G.liquid, 'l-' + f.glass), liquidMats[fi]); liquid.renderOrder = 1;
+  content.add(liquid, glass);
+  const [rimR, rimY] = G.rim;
+  const topY = Math.max(...G.liquid.map(p => p[1]));
+  // Garnitures (asymétriques : elles rendent la rotation lisible)
+  if (f.garnish === 'orange' || f.garnish === 'lemon' || f.garnish === 'lime') {
+    const key = f.garnish === 'orange' ? 'orange' : f.garnish;
+    const r = f.glass === 'highball' ? .62 : .7;
+    const wheel = new THREE.Mesh(new THREE.CylinderGeometry(r, r, .09, 32), citrusMats[key]);
+    wheel.rotation.set(Math.PI / 2, 0, 0); wheel.rotation.order = 'YXZ'; wheel.rotation.y = .5;
+    wheel.position.set(rimR * .78, rimY + r * .45, 0);
+    content.add(wheel);
+  }
+  if (f.garnish === 'orange' || f.garnish === 'lemon') {
+    const sh = rimY * .95;
+    const straw = new THREE.Mesh(new THREE.CylinderGeometry(.06, .06, sh, 10), strawMat);
+    straw.position.set(-rimR * .35, rimY * .55, .2); straw.rotation.z = .22; content.add(straw);
+  }
+  if (f.garnish === 'peel') {
+    const ice = new THREE.Mesh(new THREE.BoxGeometry(1.15, 1.15, 1.15), iceMat); ice.position.set(.05, topY - .35, 0); ice.rotation.set(.3, .5, .1); ice.renderOrder = 1.5; content.add(ice);
+    const peel = new THREE.Mesh(new THREE.TorusGeometry(.42, .07, 8, 24, Math.PI * 1.3), citrusMats.orange[0]);
+    peel.position.set(rimR * .62, rimY + .05, .15); peel.rotation.set(.2, .9, 0); content.add(peel);
+  }
+  if (f.garnish === 'beans') {
+    const crema = new THREE.Mesh(latheGeo([[0, topY], [1.4, topY], [1.43, topY + .05], [0, topY + .06]], 'crema'), cremaMat); content.add(crema);
+    const bg = new THREE.SphereGeometry(.13, 12, 8);
+    [[0, 0], [.32, .12], [-.2, .3]].forEach(([x, z], i) => { const b = new THREE.Mesh(bg, beanMat); b.scale.set(1, .55, .7); b.position.set(x, topY + .1, z); b.rotation.y = i; content.add(b); });
+  }
+  if (f.garnish === 'orangeWedge') {
+    const salt = new THREE.Mesh(new THREE.TorusGeometry(rimR, .045, 8, 48, Math.PI * 1.1), saltMat); salt.rotation.x = Math.PI / 2; salt.position.y = rimY; content.add(salt);
+    const wedge = new THREE.Mesh(new THREE.CylinderGeometry(.55, .55, .4, 24, 1, false, 0, Math.PI * .55), citrusMats.orange);
+    wedge.rotation.set(Math.PI / 2, 0, .4); wedge.position.set(rimR * .7, rimY + .2, 0); content.add(wedge);
+  }
+  content.scale.setScalar(k);
+  // centrer verticalement
+  content.position.y = -hh / 2;
+  const centerer = new THREE.Group(); centerer.add(content);
+  // axe du verre aligné sur l'axe local Z, comme les meshes de la canette d'origine
+  centerer.rotation.x = -Math.PI / 2;
+  const spinner = new THREE.Group(); spinner.add(centerer);
+  spinner.rotation.x = Math.PI / 2; spinner.userData.spin = true;
+  const glassGroup = new THREE.Group(); glassGroup.add(spinner);
+  glassGroup.rotation.z = Math.PI / 360 * 45;
+  glassGroup.userData.flavour = fi;
+  return glassGroup;
+}
+
+/* Lumières */
+const spot1 = new THREE.SpotLight(0xffffff, 50, 8, Math.PI / 4, 1, .1); spot1.position.set(0, 3.5, 0); spot1.target.position.set(0, 0, 1);
+const spot2 = new THREE.SpotLight(0xffffff, 50, 8, Math.PI / 4, 1, .1); spot2.position.set(0, -3, 2); spot2.target.position.set(0, 0, 1.8);
+const spot3 = new THREE.SpotLight(0xffffff, 0, 15, Math.PI / 8, 1, .1); spot3.position.set(0, 3, 2); spot3.target.position.set(0, .5, 0); spot3.map = spotMask;
+scene.add(spot1, spot1.target, spot2, spot2.target, spot3, spot3.target);
+const fill = new THREE.HemisphereLight(0xfff1e0, 0x200810, .35); scene.add(fill);
+
+/* Bases chromées */
+let base = null;
+new GLTFLoader(manager).load(BASE + 'assets/3d/base.glb', (g) => {
+  base = g.scene; base.traverse(o => { if (o.isMesh) o.material = baseMat; }); scene.add(base);
+});
+
+/* Carrousel */
+const cans = [];
+const carousel = { spacing: 3.5, offset: 0, target: -1.5, position: -1.5, index: 0, dragging: false,
+  getIndex() { return wrap(Math.round((this.position + this.offset) / this.spacing), 0, 6); },
+  goTo(i) { this.target = i * this.spacing - this.offset; },
+  next() { this.goTo(Math.round((this.target + this.offset) / this.spacing) + 1); },
+  previous() { this.goTo(Math.round((this.target + this.offset) / this.spacing) - 1); }
+};
+window.carousel = carousel;
+function buildCans() {
+  cans.forEach(c => scene.remove(c)); cans.length = 0;
+  const n = mobile3d() ? 6 : lowPower ? 12 : 24;
+  for (let i = 0; i < n; i++) { const c = buildGlass(i % 6); cans.push(c); scene.add(c); }
+}
+buildCans();
+let carouselReady = false;
+manager.onLoad = () => { if (!carouselReady) { carouselReady = true; dispatchEvent(new Event('carousel:ready')); } };
+setTimeout(() => { if (!carouselReady) { carouselReady = true; dispatchEvent(new Event('carousel:ready')); } }, 9000);
+
+/* Données pilotées par le défilement */
+const startData = {
+  camPosX: 0, camPosY: 0, camPosZ: 29, camRotX: 0, camRotY: 0, camRotZ: 0, fov: 20,
+  canScale: 1, canPosX: 0, canPosY: 0, canPosZ: 0, canRotX: 0, canRotY: 0, canRotZ: 0, canSpin: 0,
+  spacing: 1, wave: 1, swirl: 0, baseOffset: 0,
+  lightIntensity: 50, lightWidth: 1, tintStrength: 1, spotIntensity: 0, spotY: 3, pointerInfluence: .2, swipeSpeed: 1
+};
+const data = { ...startData };
+const swipe = { active: true };
+const K = (camPos, camRot, fov, canPos, canRot, canSpin, spacing, wave, swirl, baseOffset, lightIntensity, lightWidth, tintStrength, spotIntensity, spotY, pointerInfluence, swipeSpeed) => ({
+  camPosX: camPos[0], camPosY: camPos[1], camPosZ: camPos[2], camRotX: camRot[0] * DEG, camRotY: camRot[1] * DEG, camRotZ: camRot[2] * DEG, fov,
+  canPosX: canPos[0], canPosY: canPos[1], canPosZ: canPos[2], canRotX: canRot[0] * DEG, canRotY: canRot[1] * DEG, canRotZ: canRot[2] * DEG, canSpin: canSpin * DEG,
+  spacing, wave, swirl, baseOffset, lightIntensity, lightWidth, tintStrength, spotIntensity, spotY, pointerInfluence, swipeSpeed
+});
+const STEPS = [
+  K([0,0,6],[0,0,0],40,[.5,-.5,0],[-37.5,15,22.5],0,3.5,0,0,3,30,1,1,0,3,.2,1),
+  K([0,-2,12],[10,0,-10],20,[0,-.8,0],[0,0,0],120,2.2,0,0,3,0,1,.2,35,2.2,0,1),
+  K([0,-2,12],[10,0,5],20,[0,-.48,0],[0,0,0],130,2.2,0,0,3,0,1,.2,35,2.2,0,1),
+  K([0,-2,12],[10,0,-10],20,[0,.02,0],[0,0,0],120,2.2,0,0,3,0,1,.2,35,2.2,0,1),
+  K([0,-2,12],[10,0,5],20,[0,.5,0],[0,0,0],130,2.2,0,0,3,0,1,.2,35,2.2,0,1),
+  K([0,0,8],[0,0,0],45,[0,0,-.5],[-20,0,-5],0,5,0,0,3,45,1.5,2,0,3,.2,1),
+  K([-3,-3.5,20],[10,-9,-10],30,[0,0,-.4],[0,0,0],0,.47,0,1,20,10,3,2,0,3,0,2),
+  K([0,-5.5,10],[0,0,0],30,[0,0,-.4],[0,0,0],0,.6,0,1,20,0,3,2,0,3,0,1),
+  K([0,0,29],[0,0,0],20,[0,0,.5],[0,0,0],20,5,0,0,10,50,1,1,0,3,.2,1)
+];
+let tl;
+function buildTimeline() {
+  const t0 = tl ? tl.time() : 0;
+  if (tl) tl.kill();
+  Object.assign(data, startData); swipe.active = true;
+  measure();
+  const H = document.documentElement.scrollHeight;
+  tl = gsap.timeline({ paused: true, defaults: { ease: 'power1.inOut' } });
+  const at = i => secData[i].top / H, dur = i => secData[i].height / H;
+  for (let s = 0; s < 8; s++) {
+    tl.to(data, { ...STEPS[s], duration: dur(s) }, at(s));
+    if (s === 0) tl.set(swipe, { active: false }, at(1));
+    if (s === 5) tl.set(swipe, { active: true }, at(6));
+  }
+  tl.set(swipe, { active: false }, at(8));
+  tl.set(data, { camPosX: 0, camPosY: 8, camPosZ: 10, camRotX: 0, camRotY: 0, camRotZ: 0, fov: 20, spacing: 5, swirl: 0 }, at(8));
+  tl.to(data, { ...STEPS[8], duration: dur(8) }, at(8));
+  tl.to(data, { ...startData, duration: dur(9) }, at(9));
+  tl.set(swipe, { active: true }, at(10));
+  tl.seek(0); tl.seek(t0);
+}
+
+/* Pointeur */
+const pointer = { mouseX: 0, mouseY: 0, smoothX: 0, smoothY: 0 };
+addEventListener('pointermove', e => { pointer.mouseX = e.clientX - innerWidth / 2; pointer.mouseY = e.clientY - innerHeight / 2; }, { passive: true });
+
+/* Glisser / clic sur le canvas */
+const drag = { down: false, axis: null, sx: 0, sy: 0, lx: 0, deltaX: 0, moved: false };
+const raycaster = new THREE.Raycaster(); const ndc = new THREE.Vector2();
+canvas.addEventListener('pointerdown', e => {
+  if (!swipe.active || scrollLocked) return;
+  drag.down = true; drag.axis = null; drag.sx = drag.lx = e.clientX; drag.sy = e.clientY; drag.moved = false;
+});
+addEventListener('pointermove', e => {
+  if (!drag.down) return;
+  const dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
+  if (!drag.axis && (Math.abs(dx) > 2 || Math.abs(dy) > 2)) { drag.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y'; if (drag.axis === 'x') { lenis.stop(); carousel.dragging = true; canvas.style.cursor = 'grabbing'; } }
+  if (drag.axis === 'x') { drag.deltaX += e.clientX - drag.lx; drag.moved = true; }
+  drag.lx = e.clientX;
+});
+addEventListener('pointerup', e => {
+  if (!drag.down) return; drag.down = false;
+  if (drag.axis === 'x') { drag.deltaX *= 8; carousel.dragging = false; if (!scrollLocked) lenis.start(); canvas.style.cursor = ''; return; }
+  if (!drag.moved && anchorIndex() === 0 && scrollY() < 40) {
+    const hit = pick(e);
+    if (hit) {
+      const x = hit.userData.x;
+      if (Math.abs(x) < carousel.spacing * .5) goSection(1, 1.5);
+      else if (x > 0) carousel.next(); else carousel.previous();
+    }
+  }
+});
+function pick(e) {
+  ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  raycaster.setFromCamera(ndc, camera);
+  const hits = raycaster.intersectObjects(cans, true);
+  if (!hits.length) return null;
+  let o = hits[0].object; while (o && !cans.includes(o)) o = o.parent; return o;
+}
+canvas.addEventListener('pointermove', e => {
+  if (drag.down || anchorIndex() !== 0 || !DESK()) return;
+  const hit = pick(e); canvas.style.cursor = hit && Math.abs(hit.userData.x) < carousel.spacing * .5 ? 'pointer' : 'grab';
+});
+
+/* WebGL perdu : on met seulement le rendu en pause */
+let glLost = false;
+canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); glLost = true; });
+canvas.addEventListener('webglcontextrestored', () => { glLost = false; });
+
+/* ---------------- Boucle unique ---------------- */
+let last = performance.now(), lastIndex = -1, prevWrapped = 0;
+function frame(now) {
+  requestAnimationFrame(frame);
+  const dt = Math.min(.05, (now - last) / 1000); last = now;
+  lenis.raf(now);
+
+  const L = limit();
+  const y = scrollY();
+  // garde de boucle
+  if (prevWrapped - y > L * .6 && !scrollLocked) { scrollTo(0, 1.2); }
+  prevWrapped = y;
+  setP(y / L);
+  if (tl) tl.seek(y / document.documentElement.scrollHeight);
+
+  // carrousel
+  if (!carousel.dragging) carousel.target = Math.round(carousel.target / carousel.spacing) * carousel.spacing;
+  if (Math.abs(drag.deltaX) > .01) { carousel.target -= drag.deltaX * .02 * data.swipeSpeed; drag.deltaX = carousel.dragging ? 0 : drag.deltaX * .0; }
+  carousel.position = lerp(carousel.position, carousel.target, Math.min(1, dt * 10));
+  const idx = carousel.getIndex();
+  if (idx !== lastIndex) { const prev = lastIndex; lastIndex = idx; onChanged({ index: idx, previous: prev }); }
+
+  pointer.smoothX = lerp(pointer.smoothX, pointer.mouseX, Math.min(1, dt * 10));
+  pointer.smoothY = lerp(pointer.smoothY, pointer.mouseY, Math.min(1, dt * 10));
+
+  const minX = cans.length * -0.5 * carousel.spacing, maxX = -minX;
+  const dist0 = Math.min(y, Math.max(0, L - y));
+  const p0 = clamp(dist0 / (secData[0].height || 1), 0, 1);
+  const windowRatio = clamp(1440 / innerWidth, 1, 2.4);
+  const wave = windowRatio * 0.25 * (1 - p0) * data.wave;
+  cans.forEach((can, i) => {
+    const x = wrap(i * carousel.spacing - carousel.position, minX, maxX);
+    can.userData.x = x;
+    const p = clamp(1 - Math.abs(x) / carousel.spacing, 0, 1);
+    const p1 = Math.min(p, p0);
+    let s = 1.2, px = x * data.spacing, py = Math.sin(px * wave);
+    let pz = (-Math.abs(x) - 0.2) * data.wave;
+    let rx = -Math.PI / 180 * 20 * data.wave;
+    let ry = (px * 0.5 - Math.PI / 180 * 20) * data.wave;
+    let rz = Math.PI / 360 * 22.5 * data.wave;
+    rx = lerp(rx, x * 0.06 * windowRatio + 0.2, data.swirl);
+    s = lerp(s, data.canScale, p0); py = lerp(py, data.canPosY, p0); pz = lerp(pz, data.canPosZ, p0);
+    rx += data.canRotX; ry = lerp(ry, data.canRotY, p1); rz = lerp(rz, data.canRotZ, p1);
+    can.position.set(px, py, pz); can.rotation.set(rx, ry, rz); can.scale.setScalar(s);
+    can.rotation.y += pointer.smoothX / 1280 * data.pointerInfluence * p;
+    can.rotation.x += pointer.smoothY / 1280 * data.pointerInfluence * p;
+    can.children.forEach(c => { if (c.userData.spin) c.rotation.z = can.rotation.y * 0.6 + data.canSpin * p; });
+  });
+  if (base) { base.children[0].position.y = -data.baseOffset; if (base.children[1]) base.children[1].position.y = data.baseOffset; }
+  camera.position.set(data.camPosX, data.camPosY, data.camPosZ);
+  camera.rotation.set(data.camRotX, data.camRotY, data.camRotZ); camera.fov = data.fov; camera.updateProjectionMatrix();
+  spot1.intensity = spot2.intensity = data.lightIntensity; spot1.angle = spot2.angle = Math.min(Math.PI / 2, Math.PI / 4 * data.lightWidth);
+  spot3.intensity = data.spotIntensity; spot3.position.set(0, data.spotY, 2); spot3.target.position.set(0, data.spotY - 2.5, 0);
+  tint.strength.value = data.tintStrength;
+
+  if (!glLost) composer.render();
+}
+
+/* ---------------- Interface : changement de cocktail ---------------- */
+const root = document.documentElement;
+const titles = $$('.gamme_title');
+const bisEls = $$('.bis');
+const profItems = $$('.profile_item');
+const videos = $$('.argument_video');
+const dot = $('.pg_dot');
+const gradEl = $('.gamme_gradient');
+let gradRot = 0, colorTimer, currentIndex = 0, profileActive = false, argumentActive = false, uiReady = false;
+
+function onChanged({ index, previous }) {
+  currentIndex = index;
+  clearTimeout(colorTimer);
+  colorTimer = setTimeout(() => { root.style.setProperty('--taste-primary', FLAVOURS[index].primary); root.style.setProperty('--taste-secondary', FLAVOURS[index].secondary); }, 150);
+  $('.carousel_pagination').setAttribute('aria-valuenow', index + 1);
+  if (previous < 0 || !uiReady) return;
+  Sound.play('change');
+  let delta = index - previous; if (delta > 3) delta -= 6; if (delta < -3) delta += 6;
+  gradRot += -delta * 60; gsap.to(gradEl, { rotate: gradRot, duration: .8, ease: 'power2.inOut' });
+  showTitle(index, false, previous);
+  positionDot(index, false, previous);
+  if (profileActive) swapProfile(index, previous);
+  if (argumentActive) showVideo(index);
+}
+function showTitle(i, instant, prev) {
+  titles.forEach((t, k) => {
+    if (k === i) { gsap.to(t, { autoAlpha: 1, duration: instant ? 0 : .5 }); if (!instant) Reveal.charsIn(t, .3); else gsap.set(getSplit(t, true).chars, { yPercent: 0 }); }
+    else if (k === prev) { Reveal.charsOut(t); gsap.to(t, { autoAlpha: 0, duration: .5, delay: .2 }); }
+    else gsap.set(t, { autoAlpha: 0 });
+  });
+}
+function positionDot(i, instant, prev) {
+  const cx = 20 + 960 / 5 * i;
+  if (instant) { gsap.set(dot, { attr: { cx } }); return; }
+  const wrapJump = (prev === 5 && i === 0) || (prev === 0 && i === 5);
+  if (wrapJump) {
+    const dir = prev === 5 ? 1 : -1;
+    gsap.timeline().to(dot, { x: 150 * dir, scale: 0, transformOrigin: 'center', duration: .3, ease: 'power2.in' })
+      .set(dot, { attr: { cx }, x: -150 * dir })
+      .to(dot, { x: 0, scale: 1, duration: .45, ease: 'power3.out' });
+  } else gsap.to(dot, { attr: { cx }, duration: .6, ease: 'power3.out' });
+}
+function swapProfile(i, prev) {
+  profItems.forEach((p, k) => {
+    if (k === i) { p.classList.add('is-active'); Reveal.charsIn($('.p-title', p), .3); Reveal.linesIn($('.p-copy', p), .35); gsap.fromTo($('.profile_meta', p), { autoAlpha: 0 }, { autoAlpha: 1, delay: .5 }); }
+    else if (k === prev) { Reveal.charsOut($('.p-title', p)); Reveal.linesOut($('.p-copy', p)); gsap.to($('.profile_meta', p), { autoAlpha: 0, duration: .3, onComplete: () => { if (currentIndex !== k) p.classList.remove('is-active'); } }); }
+    else p.classList.remove('is-active');
+  });
+  bisEls.forEach((b, k) => {
+    if (k === i) { gsap.set(b, { visibility: 'visible' }); Reveal.charsIn(b, .2); }
+    else if (k === prev) { Reveal.charsOut(b); }
+    else gsap.set(b, { visibility: 'hidden' });
+  });
+}
+
+/* Vidéos de l'ambiance */
+function showVideo(i) {
+  videos.forEach((v, k) => {
+    if (k === i) { if (!v.src) { v.src = v.dataset.src; v.load(); } v.currentTime = (k > 2 ? 1 : 0); v.play().catch(() => {}); gsap.to(v, { autoAlpha: 1, duration: .6 }); }
+    else { gsap.to(v, { autoAlpha: 0, duration: .6, onComplete: () => v.pause() }); }
+  });
+}
+function pauseVideos() { videos.forEach(v => { v.pause(); }); }
+
+/* Flèches, pagination */
+$('.carousel_arrow.is-prev').addEventListener('click', () => carousel.previous());
+$('.carousel_arrow.is-next').addEventListener('click', () => carousel.next());
+$$('.carousel_arrow').forEach(b => {
+  const shapes = b.querySelectorAll('path,rect'); let hov;
+  b.addEventListener('mouseenter', () => { hov = gsap.to(shapes, { scale: .5, duration: .4, ease: 'power2.inOut', stagger: .08, yoyo: true, repeat: -1 }); });
+  b.addEventListener('mouseleave', () => { hov && hov.kill(); gsap.to(shapes, { scale: 1, duration: .3 }); });
+});
+(() => {
+  const pg = $('.carousel_pagination'); let down = false;
+  const go = e => { const r = pg.getBoundingClientRect(); const t = clamp((e.clientX - r.left) / r.width, 0, 1); const i = Math.round(t * 5); const cur = Math.round((carousel.target + carousel.offset) / carousel.spacing); const curW = wrap(cur, 0, 6); carousel.goTo(cur + (i - curW)); };
+  pg.addEventListener('pointerdown', e => { down = true; pg.setPointerCapture(e.pointerId); pg.style.cursor = 'grabbing'; go(e); });
+  pg.addEventListener('pointermove', e => { if (down) go(e); });
+  pg.addEventListener('pointerup', () => { down = false; pg.style.cursor = ''; });
+  pg.addEventListener('keydown', e => { if (e.key === 'ArrowRight') carousel.next(); if (e.key === 'ArrowLeft') carousel.previous(); });
+})();
+
+/* Son */
+(() => {
+  const btn = $('.navbar_sound'), bars = $$('rect', btn), lbl = $('.lbl', btn); let loops = [];
+  const start = () => { loops = bars.map(r => { const t = () => { const h = gsap.utils.random(2, 8, .1); return gsap.to(r, { attr: { height: h, y: (8 - h) / 2 }, duration: gsap.utils.random(.2, .5), ease: 'power1.inOut', onComplete: () => { if (Sound.on) loops.push(t()); } }); }; return t(); }); };
+  start();
+  btn.addEventListener('click', () => {
+    Sound.on = !Sound.on; lbl.textContent = Sound.on ? 'ON' : 'OFF';
+    if (!Sound.on) { gsap.killTweensOf(bars); gsap.to(bars, { attr: { height: 2, y: 3 }, duration: .3 }); } else start();
+    Sound.play('click');
+  });
+})();
+
+/* Menu */
+(() => {
+  const btn = $('.navbar_menu-btn'), panel = $('.menu_panel'), links = $$('.menu_link span', panel), dots = $$('circle', btn), extras = $$('.menu_extras > *, .menu_emblem', panel);
+  let open = false, hov;
+  btn.addEventListener('mouseenter', () => { if (!DESK()) return; hov = gsap.to(dots, { scale: .5, transformOrigin: 'center', duration: .4, ease: 'power2.inOut', stagger: .1, yoyo: true, repeat: -1 }); });
+  btn.addEventListener('mouseleave', () => { hov && hov.kill(); gsap.to(dots, { scale: 1, duration: .3 }); });
+  const show = () => {
+    open = true; btn.setAttribute('aria-expanded', 'true'); Sound.play('click');
+    const mob = !DESK();
+    gsap.set(panel, { visibility: 'visible' });
+    gsap.fromTo(panel, { height: 0, opacity: 0 }, { height: mob ? '100svh' : 'auto', opacity: 1, duration: mob ? .8 : .6, ease: 'power3.inOut' });
+    links.forEach((l, i) => Reveal.linesIn(l, mob ? .45 + i * .1 : .3 + i * .06));
+    if (mob) gsap.fromTo(extras, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, stagger: .08, delay: .45 + links.length * .1, duration: .5 });
+  };
+  const hide = () => {
+    open = false; btn.setAttribute('aria-expanded', 'false');
+    links.forEach(l => Reveal.linesOut(l));
+    gsap.to(panel, { height: 0, opacity: 0, duration: DESK() ? .5 : .7, delay: .3, ease: 'power3.inOut', onComplete: () => gsap.set(panel, { visibility: 'hidden' }) });
+  };
+  btn.addEventListener('click', e => { e.stopPropagation(); open ? hide() : show(); });
+  document.addEventListener('click', e => { if (open && !panel.contains(e.target)) hide(); });
+  window.__closeMenu = () => { if (open) hide(); };
+})();
+
+/* Liens internes */
+$$('[data-goto]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault(); Sound.play('click'); Sound.lock(); window.__closeMenu && window.__closeMenu();
+  const g = a.dataset.goto;
+  if (g === 'newsletter') { const n = $('#newsletter'); scrollTo(n.getBoundingClientRect().top + scrollY() - 80 + 10, 1.5); }
+  else goSection(+g, 1.5);
+}));
+$$('.benefits_nav-btn').forEach(b => b.addEventListener('click', () => { Sound.lock(); Sound.play('benefits'); goSection(2 + +b.dataset.b, 1); }));
+
+/* FAQ */
+$$('.faq_item').forEach(it => {
+  const q = $('.faq_q', it), a = $('.faq_a', it);
+  q.addEventListener('click', () => {
+    Sound.play('click');
+    const open = !it.classList.contains('is-open');
+    it.classList.toggle('is-open', open); q.setAttribute('aria-expanded', open);
+    gsap.to(a, { height: open ? 'auto' : 0, duration: .4, ease: 'power2.inOut', onComplete: () => { measure(); ScrollTrigger.refresh(); buildTimeline(); } });
+  });
+});
+
+/* Boutons : effet de lettres (bureau) */
+function buttonHover() {
+  if (innerWidth <= 991 || !matchMedia('(hover:hover)').matches) return;
+  $$('.btn').forEach(b => {
+    const lbl = $('.btn_label', b); if (!lbl || lbl.dataset.done) return; lbl.dataset.done = 1;
+    const txt = lbl.textContent;
+    const mk = cls => `<span class="${cls}">${[...txt].map(c => `<span class="ch">${c}</span>`).join('')}</span>`;
+    lbl.innerHTML = `<span class="btn_mask">${mk('b1')}${mk('b2')}</span>`;
+    const c1 = $$('.b1 .ch', lbl), c2 = $$('.b2 .ch', lbl);
+    gsap.set(c2, { yPercent: 110 });
+    const st = Math.min(.025, .25 / c1.length);
+    b.addEventListener('mouseenter', () => { gsap.to(c1, { yPercent: -110, duration: .4, ease: 'power3.inOut', stagger: st, overwrite: true }); gsap.to(c2, { yPercent: 0, duration: .4, ease: 'power3.inOut', stagger: st, overwrite: true }); });
+    b.addEventListener('mouseleave', () => { gsap.to(c1, { yPercent: 0, duration: .4, ease: 'power3.inOut', stagger: st, overwrite: true }); gsap.to(c2, { yPercent: 110, duration: .4, ease: 'power3.inOut', stagger: st, overwrite: true }); });
+  });
+}
+
+/* Indice de défilement (HUD) */
+function scrollHints() {
+  const src = $('.hud_left .scroll_hint svg'); const r = $('.hud_right .scroll_hint'); if (!r.firstChild) r.appendChild(src.cloneNode(true));
+  $$('.scroll_hint svg').forEach(svg => {
+    const g = svg.querySelectorAll('g');
+    gsap.set(g, { transformOrigin: 'center' });
+    gsap.timeline({ repeat: -1, repeatDelay: .3 })
+      .fromTo(g[0], { opacity: 0, scale: 0, y: 100 }, { opacity: 1, scale: 1, y: 0, duration: .6, ease: 'power2.out' })
+      .fromTo(g[1], { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: .6, ease: 'power2.out' }, '-=.4')
+      .fromTo(g[2], { opacity: 0, scale: 0, y: -100 }, { opacity: 1, scale: 1, y: 0, duration: .6, ease: 'power2.out' }, '-=.4')
+      .to({}, { duration: .3 })
+      .to(g, { opacity: 0, duration: .4, stagger: .25 });
+  });
+}
+
+/* Mot « Mas Tequila » : lettres */
+(() => {
+  $$('.argument_word .w').forEach(w => { w.innerHTML = [...w.textContent].map(c => c === ' ' ? '<span class="ch">&nbsp;</span>' : `<span class="ch">${c}</span>`).join(''); });
+})();
+
+/* ---------------- ScrollTriggers ---------------- */
+const gamme = $('.gamme_container'), profileC = $('.profile_container'), bisW = $('.carousel_title-bis-wrapper'), benefitsC = $$('.benefits_container'), bnav = $('.benefits_nav'), argC = $('.argument_container');
+let activeSection = 0;
+function setSection(i) {
+  if (i === activeSection) return;
+  const prev = activeSection; activeSection = i;
+  // héro
+  const heroOn = i === 0 || i === 10 || i === 9;
+  gsap.to(gamme, { autoAlpha: heroOn ? 1 : 0, duration: heroOn ? .6 : .4 });
+  // profil
+  const profOn = i === 1;
+  if (profOn !== profileActive) {
+    profileActive = profOn;
+    if (profOn) {
+      gsap.to([profileC, bisW], { autoAlpha: 1, duration: .5 });
+      profItems.forEach((p, k) => p.classList.toggle('is-active', k === currentIndex));
+      const p = profItems[currentIndex];
+      Reveal.charsIn($('.p-title', p), .2); Reveal.linesIn($('.p-copy', p), .3); gsap.fromTo($('.profile_meta', p), { autoAlpha: 0 }, { autoAlpha: 1, delay: .5 });
+      bisEls.forEach((b, k) => { gsap.set(b, { visibility: k === currentIndex ? 'visible' : 'hidden' }); if (k === currentIndex) Reveal.charsIn(b, .2); });
+    } else {
+      gsap.to([profileC, bisW], { autoAlpha: 0, duration: .4 });
+    }
+  }
+  document.body.classList.toggle('is-profile-active', i >= 1 && i <= 6);
+  // bénéfices
+  benefitsC.forEach((c, k) => {
+    const on = i === 2 + k;
+    const h2 = $('.benefits_h2', c), p = $('.benefits_p', c), lab = $('.benefits_label', c);
+    if (on) {
+      gsap.to(c, { autoAlpha: 1, duration: .5, delay: .35 });
+      Reveal.charsIn(h2, .35); Reveal.linesIn(p, .45);
+      gsap.fromTo(lab, { '--benefits-line': 0 }, { '--benefits-line': 1, duration: .8, delay: 1, ease: 'power2.inOut' });
+      gsap.fromTo($('.benefits_photo', c), { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: .8, delay: .55, ease: 'power3.out' });
+    } else if (c._on) { Reveal.charsOut(h2); Reveal.linesOut(p); gsap.to(c, { autoAlpha: 0, duration: .4, delay: .1 }); }
+    c._on = on;
+    $$('.benefits_nav-btn')[k].classList.toggle('is-active', on);
+  });
+  gsap.to(bnav, { autoAlpha: i >= 1 && i <= 5 ? 1 : 0, duration: .4 });
+  if (i >= 2 && i <= 5 && prev >= 1 && prev <= 5 && Math.abs(prev - i) === 1) Sound.play('benefits', true);
+  // argument
+  const argOn = i === 6;
+  if (argOn !== argumentActive) {
+    argumentActive = argOn;
+    const chars = $$('.argument_word .ch');
+    if (argOn) {
+      gsap.set(argC, { visibility: 'visible' }); gsap.to(argC, { opacity: 1, duration: .5 });
+      showVideo(currentIndex);
+      gsap.fromTo(chars, { scale: .6, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .5, ease: 'back.out(2)', stagger: .04, delay: .4, overwrite: true });
+      gsap.to('.argument_blur', { opacity: 1, duration: .6, delay: 1 });
+      gsap.to('.gradient_overlay', { opacity: 0, duration: .5 });
+    } else {
+      gsap.to(chars, { scale: .6, autoAlpha: 0, duration: .3, stagger: .01, overwrite: true });
+      gsap.to('.argument_blur', { opacity: 0, duration: .3 });
+      gsap.to('.gradient_overlay', { opacity: 1, duration: .5 });
+      gsap.to(argC, { autoAlpha: 0, duration: .5, onComplete: pauseVideos });
+    }
+  }
+  document.body.classList.toggle('is-faq-view', i === 8);
+  // HUD masqué sur la FAQ (≤ 991)
+  gsap.to('.hud', { autoAlpha: (i === 8 && innerWidth <= 991) ? 0 : 1, duration: .4 });
+  // mobile : la 3D devient un fond discret après le héros
+  canvas.classList.toggle('is-dimmed', !(i === 0 || i === 9 || i === 10));
+  // son d'entrée géré à part
+}
+function setupTriggers() {
+  ScrollTrigger.getAll().forEach(t => t.kill());
+  sections.forEach((s, i) => {
+    ScrollTrigger.create({ trigger: s, start: 'top 55%', end: 'bottom 55%', onToggle: self => { if (self.isActive) setSection(i); } });
+  });
+  // sortie du héros
+  const heroOut = gsap.timeline({ paused: true });
+  const fadeEls = ['.carousel_pagination', '.scroll_hint', '.carousel_arrow.is-prev', '.gamme_scroll', '.gamme_gradient-wrapper', '.gamme_kicker'];
+  heroOut.to(fadeEls, { autoAlpha: 0, duration: .5 }, 0);
+  if (DESK()) heroOut.to('.gamme_titles', { autoAlpha: 0, duration: .5 }, 0).to('.carousel_nav', { maxWidth: '55%', duration: .5 }, 0);
+  else heroOut.to('.carousel_arrow.is-next', { autoAlpha: 0, duration: .5 }, 0).to('.gamme_titles', { y: '-2.5rem', duration: .5 }, 0);
+  ScrollTrigger.create({ trigger: sections[0], start: 'bottom bottom', onEnter: () => heroOut.play(), onLeaveBack: () => heroOut.reverse() });
+  ScrollTrigger.create({ trigger: sections[10], start: 'top bottom', onEnter: () => heroOut.reverse(), onLeaveBack: () => heroOut.play() });
+}
+
+/* Son « enter » */
+let enterPlayed = false, lastY = 0;
+lenis.on('scroll', () => {
+  const y = scrollY(); const th = Math.max(secData[0].height * .03, 24);
+  if (!enterPlayed && lastY < th && y >= th) { Sound.play('enter', true); enterPlayed = true; }
+  if (y < th) enterPlayed = false;
+  lastY = y;
+});
+
+/* ---------------- Loader ---------------- */
+const loader = $('.loader'), lp = $('.lp'), ldText = $('.loader .ld-a');
+gsap.set(['.gamme_container', '.navbar', '.hud', canvas], { autoAlpha: 0 });
+const pct = { v: 0 };
+let animDone = false, ready = false, entered = false;
+// le « logo qui se forme » : contour → chromé
+const logoTl = gsap.timeline({ onComplete: () => { animDone = true; tryEnter(); } })
+  .to(ldText, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' })
+  .add(() => ldText.classList.add('chrome'))
+  .fromTo(ldText, { fillOpacity: 0 }, { fillOpacity: 1, duration: .6, ease: 'power1.out' });
+let fakeT = null;
+const pctTick = () => { const target = Math.max(loadRatio * 99, Math.min(99, logoTl.progress() * 99 * .9)); if (!fakeT) pct.v = Math.max(pct.v, target); lp.textContent = Math.round(pct.v); };
+gsap.ticker.add(pctTick);
+setTimeout(() => { if (!ready) fakeT = gsap.to(pct, { v: 90, duration: 8, ease: 'power1.out' }); }, 3000);
+addEventListener('carousel:ready', () => { ready = true; tryEnter(); }, { once: true });
+
+async function tryEnter() {
+  if (!animDone || !ready || entered) return;
+  entered = true;
+  try { await document.fonts.ready; } catch (e) {}
+  if (fakeT) fakeT.kill();
+  gsap.ticker.remove(pctTick);
+  gsap.to(pct, { v: 100, duration: .4, onUpdate: () => lp.textContent = Math.round(pct.v) });
+  gsap.to('.loader_percent', { autoAlpha: 0, duration: .4, delay: .3 });
+  // préparation de l'interface
+  measure(); buildTimeline(); setupTriggers(); scrollHints(); buttonHover();
+  titles.forEach(t => getSplit(t, true)); profItems.forEach(p => { Reveal.setOut($('.p-title', p), true); Reveal.setOut($('.p-copy', p), false); });
+  bisEls.forEach(b => Reveal.setOut(b, true)); benefitsC.forEach(c => { Reveal.setOut($('.benefits_h2', c), true); Reveal.setOut($('.benefits_p', c), false); });
+  $$('.menu_link span').forEach(l => Reveal.setOut(l, false));
+  uiReady = true; showTitle(currentIndex, true); positionDot(currentIndex, true);
+  carousel.target = carousel.offset;
+
+  const t = gsap.timeline({ delay: .5, defaults: { ease: 'power3.out' } });
+  t.to(loader, { autoAlpha: 0, duration: .6, ease: 'power2.in', onComplete: () => loader.style.display = 'none' }, 0)
+   .to(canvas, { autoAlpha: 1, duration: .6 }, 0)
+   .fromTo(root, { '--loader-reveal': '100vh' }, { '--loader-reveal': '0vh', duration: 1, ease: 'power2.out' }, .2)
+   .fromTo('.navbar', { yPercent: -120, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: .9 }, .3)
+   .set('.hud', { autoAlpha: 1 }, .4)
+   .from('.hud_left', { x: '-10rem', duration: .9 }, .4)
+   .from('.hud_right', { x: '10rem', duration: .9 }, .4)
+   .to(gamme, { autoAlpha: 1, duration: 1 }, .5);
+  // intro 3D
+  Object.assign(data, { camPosZ: 25, spacing: 10, baseOffset: 3, lightIntensity: 0, lightWidth: 2, canSpin: 20 * DEG, pointerInfluence: 0 });
+  const intro = gsap.timeline({ delay: .5, defaults: { duration: 2.5, ease: 'power4.out' } });
+  intro.to(data, { lightIntensity: 30 }, 0)
+       .to(data, { camPosZ: 29 }, 1)
+       .to(data, { camPosZ: startData.camPosZ, spacing: startData.spacing, baseOffset: startData.baseOffset, lightIntensity: startData.lightIntensity, lightWidth: startData.lightWidth, canSpin: startData.canSpin, pointerInfluence: startData.pointerInfluence }, 2);
+  // déverrouillage du défilement
+  gsap.delayedCall(.5 + 2, () => {
+    scrollLocked = false; html.classList.remove('is-locked'); lenis.start(); measure(); ScrollTrigger.refresh(); buildTimeline();
+  });
+}
+
+/* ---------------- Redimensionnement ---------------- */
+let lastW = innerWidth, rT;
+addEventListener('resize', () => {
+  clearTimeout(rT);
+  rT = setTimeout(() => {
+    renderer.setPixelRatio(pixelRatio()); renderer.setSize(innerWidth, innerHeight, false);
+    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+    composer.setPixelRatio ? composer.setPixelRatio(pixelRatio()) : null; composer.setSize(innerWidth, innerHeight);
+    measure(); ScrollTrigger.refresh();
+    if (innerWidth !== lastW) { lastW = innerWidth; buildTimeline(); }
+  }, 150);
+});
+
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
