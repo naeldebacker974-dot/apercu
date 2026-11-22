@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Escale d'Or · Balades en mer aux îles d'Or, Hyères</title>
+<meta name="description" content="Escale d'Or : balades en mer privatisées avec skipper au départ d'Hyères (La Capte) vers Porquerolles, Port-Cros et l'île du Levant. Jusqu'à 12 personnes. Delphine & Stéphane.">
+<meta name="theme-color" content="#F1ECEA">
+<link rel="icon" href="data:,">
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Escale d'Or","description":"Balades en mer privatisées avec skipper vers Porquerolles, Port-Cros et l'île du Levant.","telephone":"+33765204848","address":{"@type":"PostalAddress","streetAddress":"Port de Hyères, allée de la Mer, La Capte","postalCode":"83400","addressLocality":"Hyères","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":43.082679,"longitude":6.159665},"sameAs":["https://www.instagram.com/escaledor83/","https://www.facebook.com/escaledor83/"]}
+</script>
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --bg:#F1ECEA;--ink:#1F2430;--muted:#938B90;--dark:#12141B;--sky1:#C0C9D9;--sky2:#EFCEBE;--peach:#DDAD95;--lav:#B0AEC6;--harbour:#7DA3BB;--sand:#EBC9AE;--rose:#BF9FA5;--slate:#4C6165;--ice:#BAD9E6;--subgrey:#5B5A62;--skygrey:#8D8893;--mangrey:#6E7180;--ctah:#2E3546;
+  --u:1px;--n:1;--hfs:100px;--ic:62px;--pfs:48px;--sfs:56px;--mfs:72px;--camw:260px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* ---------- NAV ---------- */
+#nav{position:fixed;inset:0 0 auto 0;z-index:50;height:calc(86px*var(--n));padding:0 calc(40px*var(--n));display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+#nav>*{pointer-events:auto}
+#nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(241,236,234,.82);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 rgba(31,36,48,.06);opacity:0;transition:opacity .35s,background .35s}
+body.solid-nav #nav::before{opacity:1}
+body.solid-nav.dark-nav #nav::before{background:rgba(31,36,48,.86);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.logo{display:flex;align-items:center;gap:calc(10px*var(--n));text-decoration:none;color:var(--ink);opacity:0;min-height:44px;transition:color .4s}
+.logo svg{width:calc(46px*var(--n));height:calc(46px*var(--n));min-width:34px;min-height:34px}
+.logo b{font-weight:620;font-size:calc(18px*var(--n));letter-spacing:-.02em;white-space:nowrap}
+.links{display:flex;gap:calc(28px*var(--n));list-style:none}
+.links a{text-decoration:none;font-size:calc(15px*var(--n));font-weight:400;letter-spacing:-.005em;color:var(--muted);opacity:0;display:inline-flex;align-items:center;min-height:44px;transition:color .3s}
+.links a:hover,.links a.cur{color:var(--ink)}
+.navr{display:flex;gap:8px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:calc(8px*var(--n));height:calc(42px*var(--n));min-height:44px;padding:0 calc(16px*var(--n)) 0 calc(20px*var(--n));border-radius:calc(12px*var(--n));background:var(--ink);color:var(--bg);font-size:max(13px,calc(15px*var(--n)));font-weight:500;text-decoration:none;border:0;white-space:nowrap;transition:background .3s,color .3s}
+.pill:hover{background:var(--ctah)}
+.pill svg{width:calc(16px*var(--n));height:calc(16px*var(--n));min-width:14px;min-height:14px}
+.pill.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);padding:0 calc(16px*var(--n))}
+.pill.ghost:hover{background:rgba(31,36,48,.07)}
+#cta{clip-path:inset(0 0 0 100% round calc(12px*var(--n)))}
+#callTop{opacity:0}
+body.dark-nav .logo{color:#fff}
+body.dark-nav .links a{color:#8C8F9A}
+body.dark-nav .links a.cur,body.dark-nav .links a:hover{color:#fff}
+body.dark-nav #cta{background:#fff;color:var(--ink)}
+body.dark-nav #callTop{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
+
+/* ---------- STORY ---------- */
+#story{position:relative;height:1600vh}
+#hero{position:absolute;top:0;left:0;width:100%;height:100vh;height:100svh;z-index:9;pointer-events:none;will-change:transform}
+#hl{position:absolute;top:41%;left:0;width:100%;height:0;font-size:var(--hfs);font-weight:560;letter-spacing:-.035em;line-height:1;color:var(--ink)}
+#grp{position:absolute;top:0;left:0;height:1em;transform:translateY(-50%);transition:transform .5s cubic-bezier(.25,.75,.2,1)}
+.ch{position:absolute;top:0;white-space:pre;clip-path:inset(0 100% 0 0)}
+.ic{position:absolute;top:50%;width:var(--ic);height:var(--ic);margin-top:calc(var(--ic)*-.5);transition:left .5s cubic-bezier(.25,.75,.2,1)}
+.ic svg{width:100%;height:100%;display:block;opacity:0;transform:scale(0)}
+#measure{position:absolute;visibility:hidden;white-space:pre;font-size:var(--hfs);font-weight:560;letter-spacing:-.035em}
+#heroSub{position:absolute;left:16px;right:16px;top:calc(var(--hfs)*.78);text-align:center;opacity:0;transform:translateY(10px)}
+#heroSub p{font-size:max(15px,calc(var(--hfs)*.2));font-weight:450;letter-spacing:-.015em;color:var(--ink)}
+#heroSub small{display:block;margin-top:.7em;font-size:max(12px,calc(var(--hfs)*.13));font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#gull{position:absolute;left:0;top:0;width:calc(var(--ic)*1.25);height:calc(var(--ic)*1.25);margin:calc(var(--ic)*-.625) 0 0 calc(var(--ic)*-.625);opacity:0;will-change:transform}
+#gull svg{width:100%;height:100%}
+
+#stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
+#proc{position:absolute;z-index:4;top:20%;left:0;right:0;padding:0 16px;text-align:center;opacity:0;pointer-events:none}
+#proc.on{pointer-events:auto}
+#proc h2{font-size:var(--pfs);font-weight:500;line-height:1.12;letter-spacing:-.03em}
+#proc h2 .ln{display:block}
+.nw{white-space:nowrap}
+.w{display:inline-block;opacity:0;transform:translateY(.35em);filter:blur(6px)}
+.g{color:var(--muted)}
+.chip{display:inline-block;width:1.05em;height:.92em;border-radius:.16em;vertical-align:-.12em;margin:0 .14em;box-shadow:0 .06em .18em rgba(31,36,48,.18);background:url(assets/turquoise-crique.jpg) center 60%/cover}
+#proc p{font-size:max(14px,calc(var(--pfs)*.27));font-weight:400;color:var(--subgrey);margin-top:calc(var(--pfs)*.42);opacity:0}
+#proc .pill{height:max(44px,calc(var(--pfs)*.64));font-size:max(14px,calc(var(--pfs)*.25));padding:0 calc(var(--pfs)*.28) 0 calc(var(--pfs)*.32);border-radius:calc(var(--pfs)*.2);margin-top:calc(var(--pfs)*.38);opacity:0}
+#cards{position:absolute;inset:0;z-index:2;pointer-events:none}
+.card{position:absolute;left:0;top:0;width:calc(var(--cw)*1px);height:calc(var(--cw)*1.32px);margin:calc(var(--cw)*-.66px) 0 0 calc(var(--cw)*-.5px);border-radius:calc(var(--cw)*.075px);background-size:cover;background-position:center;box-shadow:0 calc(var(--cw)*.03px) calc(var(--cw)*.09px) rgba(31,36,48,.16),inset 0 0 0 1px rgba(255,255,255,.35);will-change:transform,opacity;opacity:0}
+#sky{position:absolute;inset:0;z-index:6;visibility:hidden;overflow:hidden}
+#skyPlate,#skyVid{position:absolute;left:-4%;top:-4%;width:108%;height:108%;object-fit:cover}
+#skyPlate{background:linear-gradient(180deg,var(--sky1),var(--sky2)) center/cover}
+#skyVid{opacity:0;transition:opacity 1.2s}
+#skyVid.on{opacity:.78}
+#cam{position:absolute;left:50%;top:51%;width:var(--camw);aspect-ratio:1.094;transform:translate(-50%,-50%);filter:drop-shadow(0 calc(var(--camw)*.12) calc(var(--camw)*.08) rgba(60,52,70,.22));perspective:900px}
+#camI{width:100%;height:100%;background-repeat:no-repeat;transform-origin:54% 31%}
+.skyw{position:absolute;font-size:var(--sfs);letter-spacing:-.03em;line-height:1.08;color:var(--ink);font-weight:500}
+.skyw .g{color:var(--skygrey)}
+#skyTL{left:calc(40px*var(--n));top:calc(104px*var(--n))}
+#skyBR{right:calc(40px*var(--n));bottom:calc(46px*var(--n));text-align:right}
+#black{position:absolute;inset:0;z-index:8;background:var(--dark);opacity:0;pointer-events:none}
+
+/* ---------- MANIFESTO ---------- */
+#manifesto{position:relative;height:950vh;background:var(--dark)}
+#mstage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#track{position:absolute;left:0;top:50%;display:flex;flex-direction:row;align-items:center;gap:calc(var(--mfs)*.32);white-space:nowrap;font-size:var(--mfs);letter-spacing:-.03em;color:#fff;font-weight:500;will-change:transform}
+.mw{display:inline-block}
+.mw .c{display:inline-block;opacity:0;transform:translateY(.55em) rotate(14deg);transform-origin:0 100%}
+.mw.g{color:var(--mangrey)}
+.intro{position:relative;font-size:.72em;display:flex;flex-direction:column;gap:.26em;line-height:1}
+.intro .row{display:flex;gap:.3em}
+.lab{position:absolute;font-size:max(12px,.333em);padding:.3em .6em;border-radius:.16em;color:var(--ink);box-shadow:0 .12em .3em rgba(0,0,0,.35);white-space:nowrap;letter-spacing:-.01em}
+.big{position:relative;display:inline-block;font-size:.42em;padding:.28em .62em .3em;border-radius:.16em;color:var(--ink);box-shadow:0 .12em .3em rgba(0,0,0,.35);letter-spacing:-.02em}
+.small{display:inline-block;font-size:max(12px,.24em);padding:.3em .6em;border-radius:.16em;color:var(--ink);box-shadow:0 .12em .3em rgba(0,0,0,.35)}
+.pop{transform:scale(0)}
+.obj{background-repeat:no-repeat}
+.stack{display:flex;flex-direction:column;align-items:center;gap:.1em}
+.dot{position:absolute;right:-.18em;top:-.18em;width:.36em;height:.36em;border-radius:50%;background:var(--ink)}
+.spark{width:.34em;height:.34em}
+.spacer{flex:0 0 30vw;height:1px}
+
+/* ---------- CONTENT ---------- */
+.sec{padding:clamp(72px,10vw,128px) 16px;position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.h2{font-size:clamp(36px,6.2vw,84px);font-weight:560;letter-spacing:-.04em;line-height:1.02}
+.lead{font-size:clamp(16px,1.6vw,19px);line-height:1.55;color:var(--subgrey);font-weight:420;max-width:640px;margin-top:20px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.offers{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:48px}
+.off{grid-column:span 2;background:#FBF8F7;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px -28px rgba(31,36,48,.35)}
+.off.wide{grid-column:span 3}
+.off .ph{aspect-ratio:4/3;background-size:cover;background-position:center}
+.off .bd{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.off h3{font-size:24px;font-weight:600;letter-spacing:-.025em}
+.off p{font-size:15.5px;line-height:1.55;color:var(--subgrey);font-weight:420}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.tag{font-size:13px;padding:7px 11px;border-radius:9px;background:var(--bg);color:var(--ink);font-weight:520}
+.tag.price{background:var(--ink);color:var(--bg)}
+.tag.peach{background:var(--sky2)}
+.caps{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 16px 24px;margin:40px -16px 0;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.caps::-webkit-scrollbar{display:none}
+.cap{flex:0 0 min(82vw,380px);scroll-snap-align:start;border-radius:24px;overflow:hidden;position:relative;aspect-ratio:3/4;color:#fff;background-size:cover;background-position:center;box-shadow:0 20px 40px -26px rgba(31,36,48,.5)}
+.cap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,20,27,0) 35%,rgba(18,20,27,.78))}
+.cap .in2{position:absolute;left:0;right:0;bottom:0;padding:22px;z-index:1}
+.cap small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.85;font-weight:600}
+.cap h3{font-size:27px;letter-spacing:-.03em;font-weight:600;margin:6px 0 10px}
+.cap p{font-size:14.5px;line-height:1.5;opacity:.92;font-weight:420}
+.capnav{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
+.rbtn{width:48px;height:48px;border-radius:50%;border:0;background:#FBF8F7;box-shadow:0 6px 18px -10px rgba(31,36,48,.5);display:grid;place-items:center}
+.rbtn svg{width:18px;height:18px}
+.duo{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.duo .ph{border-radius:26px;aspect-ratio:4/5;background-size:cover;background-position:center;box-shadow:0 30px 60px -36px rgba(31,36,48,.55)}
+.facts{list-style:none;margin-top:28px;display:grid;gap:12px}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5;color:var(--ink);font-weight:450}
+.facts svg{flex:0 0 22px;height:22px;margin-top:1px;color:var(--harbour)}
+.quote{margin-top:48px;background:var(--sky2);border-radius:28px;padding:clamp(28px,5vw,64px);position:relative;overflow:hidden}
+.quote blockquote{font-size:clamp(22px,3vw,38px);line-height:1.25;letter-spacing:-.025em;font-weight:500;max-width:900px}
+.stars{display:flex;gap:4px;color:var(--ink);margin-bottom:18px}
+.stars svg{width:20px;height:20px}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-size:14px;color:var(--subgrey);font-weight:450}
+.faq{margin-top:40px;display:grid;gap:10px;max-width:860px}
+.faq details{background:#FBF8F7;border-radius:16px;padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:560;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:24px;font-weight:300;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;font-size:15.5px;line-height:1.6;color:var(--subgrey);font-weight:420}
+#contact{background:var(--ink);color:#fff;border-radius:32px 32px 0 0}
+#contact .h2 .g{color:#8C8F9A}
+#contact .lead{color:#B8BAC4}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);margin-top:44px;align-items:start}
+.cbtns{display:flex;flex-wrap:wrap;gap:10px}
+.pill.light{background:#fff;color:var(--ink)}
+.pill.light:hover{background:var(--sky2)}
+.pill.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.pill.line:hover{background:rgba(255,255,255,.08)}
+.pill.big2{height:56px;padding:0 24px;border-radius:16px;font-size:16px}
+.info{margin-top:30px;display:grid;gap:18px}
+.info div{font-size:15.5px;line-height:1.55;color:#D9DAE0;font-weight:420}
+.info b{display:block;color:#fff;font-weight:600;font-size:13px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:4px}
+form.book{background:rgba(255,255,255,.06);border-radius:24px;padding:clamp(20px,3vw,32px);display:grid;gap:14px}
+form.book h3{font-size:22px;letter-spacing:-.02em;font-weight:600}
+form.book label{display:grid;gap:6px;font-size:13px;color:#B8BAC4;font-weight:500}
+form.book input,form.book select{height:50px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font:inherit;font-size:16px;padding:0 14px;width:100%;color-scheme:dark}
+form.book .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form.book .pill{justify-content:center;height:54px}
+form.book small{font-size:12.5px;color:#9A9CA8;line-height:1.5;font-weight:420}
+footer{background:var(--ink);color:#9A9CA8;padding:28px 16px 40px;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;font-size:13.5px}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+footer a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;color:#D9DAE0}
+
+@media (max-width:980px){.off,.off.wide{grid-column:span 3}}
+@media (max-width:819px){
+  .links{display:none}
+  #nav{padding:0 16px;height:68px}
+  .duo,.cgrid{grid-template-columns:1fr}
+  .duo .ph{aspect-ratio:4/3.4}
+  .off .ph{aspect-ratio:16/10}
+  .offers{grid-template-columns:1fr;gap:14px}
+  .off,.off.wide{grid-column:auto}
+  .capnav{display:none}
+  #skyTL{left:16px;top:84px}
+  #skyBR{right:16px;bottom:28px}
+}
+@media (max-width:899px){
+  .pill{font-size:14px;gap:6px;padding:0 14px;border-radius:12px}
+  .pill svg{width:15px;height:15px}
+}
+@media (max-width:430px){.logo b{display:none}}
+@media (max-width:359px){#callTop span{display:none}}
+
+/* reduced motion */
+html.rm #story,html.rm #manifesto{height:auto}
+html.rm #hero{position:relative;height:100vh}
+html.rm #stage{position:relative}
+html.rm #mstage{position:relative;height:auto;padding:120px 16px}
+html.rm #track{position:relative;top:auto;flex-wrap:wrap;white-space:normal;transform:none!important}
+html.rm .mw .c,html.rm .pop{opacity:1!important;transform:none!important}
+</style>
+</head>
+<body>
+
+<header id="nav">
+  <a class="logo" href="#top" aria-label="Escale d'Or, accueil">
+    <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><circle cx="24" cy="12.5" r="8.5"/><path d="M6 27c6-5 13-5 18 0s12 5 18 0v6c-6 5-13 5-18 0S12 28 6 33z"/><path d="M10 39c5-3.6 10-3.6 14 0s9 3.6 14 0" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/></svg>
+    <b>Escale d'Or</b>
+  </a>
+  <ul class="links">
+    <li><a href="#top" class="cur" data-go="top">Accueil</a></li>
+    <li><a href="#iles" data-go="iles">Les îles</a></li>
+    <li><a href="#balades">Balades</a></li>
+    <li><a href="#equipe">L'équipage</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="navr">
+    <a class="pill ghost" id="callTop" href="tel:+33765204848" aria-label="Appeler Escale d'Or au 07 65 20 48 48"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11.3v2a1.3 1.3 0 0 1-1.5 1.3A13 13 0 0 1 1.4 3.5 1.3 1.3 0 0 1 2.7 2h2a1.3 1.3 0 0 1 1.3 1.1c.1.7.3 1.3.5 1.9a1.3 1.3 0 0 1-.3 1.4l-.8.8a10.7 10.7 0 0 0 4 4l.8-.8a1.3 1.3 0 0 1 1.4-.3c.6.2 1.2.4 1.9.5a1.3 1.3 0 0 1 1.1 1.3z"/></svg><span>Appeler</span></a>
+    <a class="pill" id="cta" href="#contact">Réserver<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+<section id="story">
+  <div id="hero">
+    <div id="hl" role="heading" aria-level="1" aria-label="Escale d'Or">
+      <div id="grp" aria-hidden="true"></div>
+      <div id="heroSub"><p>Balades en mer privatisées avec skipper</p><small>Hyères · Porquerolles · Port-Cros · Le Levant</small></div>
+    </div>
+    <span id="measure" aria-hidden="true"></span>
+    <div id="gull" aria-hidden="true"></div>
+  </div>
+  <div id="stage">
+    <div id="proc">
+      <h2><span class="ln"><span class="nw"><span class="w g">De</span> <span class="w">la</span> <span class="w">Capte</span><span class="w"><span class="chip" role="img" aria-label="Crique turquoise"></span></span></span><span class="nw"><span class="w g">aux</span> <span class="w">îles</span> <span class="w">d'Or</span></span></span><span class="ln"><span class="w g">en</span> <span class="w">bateau</span> <span class="w g">privatisé</span></span></h2>
+      <p>Skipper et carburant compris, jusqu'à 12 personnes à bord.</p>
+      <a class="pill" href="#balades">Voir les balades<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div id="cards" aria-hidden="true"></div>
+    <div id="sky" aria-hidden="true">
+      <div id="skyPlate"></div>
+      <video id="skyVid" muted loop playsinline preload="none"></video>
+      <div id="cam"><div id="camI"></div></div>
+      <div class="skyw" id="skyTL"><span class="w g">Pas</span> <span class="w g">juste</span> <span class="w">une</span> <span class="w">balade</span></div>
+      <div class="skyw" id="skyBR"><span class="w g">Une</span> <span class="w">journée</span> <span class="w g">qui</span> <span class="w">vous</span> <span class="w">ressemble</span></div>
+    </div>
+    <div id="black"></div>
+  </div>
+</section>
+
+<section id="manifesto" aria-label="Escale d'Or en quelques mots">
+  <div id="mstage"><div id="track"></div></div>
+</section>
+
+<section class="sec" id="balades">
+  <div class="wrap">
+    <span class="eyebrow rv">Les balades</span>
+    <h2 class="h2 rv">Une journée, une demi-journée <span class="g">ou un coucher de soleil.</span></h2>
+    <p class="lead rv">Toutes les sorties se font en bateau privatisé, avec un skipper diplômé et le carburant compris. Départ de la plage de la Capte ou du port d'Hyères, jusqu'à 12 personnes.</p>
+    <div class="offers">
+      <article class="off wide rv"><div class="ph" style="background-image:url(assets/turquoise-crique.jpg);background-position:center 70%"></div><div class="bd"><h3>La journée complète</h3><p>Départ vers 10 h. Plusieurs mouillages pour se baigner, bronzer et faire du snorkeling, déjeuner au port (le skipper vous conseille une table) ou pique-nique à bord, puis l'après-midi au rythme des criques. Retour vers 17 h 30.</p><div class="meta"><span class="tag">10 h → 17 h 30</span><span class="tag peach">Port-Cros & Levant possibles</span><span class="tag price">Prix sur demande</span></div></div></article>
+      <article class="off wide rv"><div class="ph" style="background-image:url(assets/mouillage-voilier.jpg)"></div><div class="bd"><h3>La demi-journée</h3><p>Le matin ou l'après-midi : plages, criques isolées, arrêts baignade et snorkeling. Masques et tubas fournis.</p><div class="meta"><span class="tag">9 h → 13 h</span><span class="tag">14 h → 18 h</span><span class="tag price">À partir de 450 € · 6 pers.</span></div></div></article>
+      <article class="off rv"><div class="ph" style="background-image:url(assets/large-ile.jpg)"></div><div class="bd"><h3>La mini-balade</h3><p>Une sortie courte de 2 heures, avec skipper, au départ d'Hyères.</p><div class="meta"><span class="tag">2 h</span><span class="tag price">Prix sur demande</span></div></div></article>
+      <article class="off rv"><div class="ph" style="background-image:url(assets/coucher-soleil.jpg)"></div><div class="bd"><h3>L'apéro coucher de soleil</h3><p>Une sortie en fin de journée avec Stéphane : apéritif et planche à partager, au moment où le soleil se couche.</p><div class="meta"><span class="tag">En soirée</span><span class="tag price">Prix sur demande</span></div></div></article>
+      <article class="off rv"><div class="ph" style="background-image:url(assets/apero-plage.jpg)"></div><div class="bd"><h3>Les événements privés</h3><p>EVJF, EVG, anniversaires, séminaires : une journée ou une demi-journée en mer construite sur mesure.</p><div class="meta"><span class="tag">Sur mesure</span><span class="tag price">Sur devis</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="iles" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow rv">Les itinéraires</span>
+    <h2 class="h2 rv">Quatre caps <span class="g">au départ d'Hyères.</span></h2>
+    <div class="caps" id="caps">
+      <article class="cap" style="background-image:url(assets/porquerolles-plage.jpg)"><div class="in2"><small>Cap 01</small><h3>Porquerolles</h3><p>Plage sauvage de la Galère, cap des Mèdes, plages Notre-Dame et de la Courtade, le port et son village, plage d'Argent, le Langoustier, la calanque de Brégançonnet.</p></div></article>
+      <article class="cap" style="background-image:url(assets/crique-soir.jpg)"><div class="in2"><small>Cap 02</small><h3>Brégançon</h3><p>Plage des Salins, plage de Pellegrin (accès au domaine de Léoube), l'Estagnol et son restaurant, le fort de Brégançon et ses plages accessibles seulement par la mer.</p></div></article>
+      <article class="cap" style="background-image:url(assets/mouillage-voilier.jpg)"><div class="in2"><small>Cap 03</small><h3>Presqu'île de Giens</h3><p>Plages de la Badine et de la Baume, l'île du Grand Ribaud, le port du Niel et son petit restaurant de pêcheurs, plages du Pontillon et du Pradeau.</p></div></article>
+      <article class="cap" style="background-image:url(assets/port-village.jpg)"><div class="in2"><small>Cap 04 · journée</small><h3>Port-Cros & le Levant</h3><p>Le tour de Port-Cros par la baie de Port-Man et l'îlot de la Gabinière, spot de snorkeling, avec une escale au village du port et ses restaurants.</p></div></article>
+    </div>
+    <div class="capnav"><button class="rbtn" data-d="-1" aria-label="Itinéraire précédent"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button><button class="rbtn" data-d="1" aria-label="Itinéraire suivant"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button></div>
+  </div>
+</section>
+
+<section class="sec" id="equipe" style="padding-top:0">
+  <div class="wrap duo">
+    <div class="ph rv" style="background-image:url(assets/le-sun.jpg)" role="img" aria-label="Le Sun, semi-rigide d'Escale d'Or, au mouillage"></div>
+    <div>
+      <span class="eyebrow rv">L'équipage</span>
+      <h2 class="h2 rv">Delphine <span class="g">&amp;</span> Stéphane</h2>
+      <p class="lead rv">Escale d'Or, c'est un couple qui vit sur l'eau. Delphine est à la barre et aux explications, Stéphane anime les apéros au coucher du soleil. À bord, vous êtes entre vous : le bateau est privatisé pour votre groupe.</p>
+      <ul class="facts rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Skipper diplômé et carburant compris</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Masques et tubas fournis, bains de soleil à bord</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Le Sun, semi-rigide de 200 CV</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Locations de bateaux, sur demande</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Paiement par carte, chèque ou espèces</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="avis" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow rv">Ils sont venus à bord</span>
+    <div class="quote rv">
+      <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg></div>
+      <blockquote>« Très belle balade jusqu'à l'île de Porquerolles en famille. Entre cousins accompagnés de notre mamie de 92 ans. Malgré une mer agitée, le professionnalisme et les excellentes explications de Delphine nous ont fait passer un très bon moment ! »</blockquote>
+      <cite>Dao, Noémie et leur mamie · avis 5 étoiles partagé par Escale d'Or en juin 2024</cite>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow rv">Bon à savoir</span>
+    <h2 class="h2 rv">Avant d'embarquer</h2>
+    <div class="faq rv">
+      <details><summary>D'où part-on ?</summary><p>De la plage de la Capte ou du port d'Hyères (allée de la Mer, La Capte, 83400 Hyères), selon la sortie. Le point de rendez-vous vous est confirmé à la réservation.</p></details>
+      <details><summary>Combien de personnes à bord ?</summary><p>Jusqu'à 12 personnes. Le bateau est privatisé : vous êtes entre vous, en famille ou entre amis.</p></details>
+      <details><summary>Qu'est-ce qui est compris ?</summary><p>Le skipper diplômé et le carburant. Les masques et tubas sont fournis pour le snorkeling.</p></details>
+      <details><summary>Et pour le déjeuner ?</summary><p>Lors de la journée complète, le skipper vous recommande un restaurant et vous dépose au port. Vous pouvez aussi pique-niquer à bord ou sur une plage.</p></details>
+      <details><summary>Comment payer ?</summary><p>Par carte bancaire, chèque ou espèces.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Réservation</span>
+    <h2 class="h2">Choisissez votre date, <span class="g">on s'occupe du cap.</span></h2>
+    <p class="lead">Appelez Delphine et Stéphane ou envoyez votre demande par SMS : formule, date et nombre de personnes.</p>
+    <div class="cgrid">
+      <div>
+        <div class="cbtns">
+          <a class="pill light big2" href="tel:+33765204848">Appeler le 07 65 20 48 48</a>
+          <a class="pill line big2" href="https://www.instagram.com/escaledor83/" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill line big2" href="https://www.facebook.com/escaledor83/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="info">
+          <div><b>Départ</b>Plage de la Capte ou port d'Hyères<br>Allée de la Mer, La Capte, 83400 Hyères</div>
+          <div><b>Destinations</b>Porquerolles, Port-Cros, l'île du Levant, Brégançon, presqu'île de Giens</div>
+          <div><b>Saison</b>Du printemps à l'automne, selon la météo</div>
+        </div>
+        <div class="cbtns" style="margin-top:22px"><a class="pill line" href="https://www.google.com/maps/search/?api=1&amp;query=43.082679,6.159665" target="_blank" rel="noopener">Voir le départ sur la carte<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+      </div>
+      <form class="book" id="book">
+        <h3>Demande de date</h3>
+        <label>Formule<select name="f"><option>Journée complète</option><option>Demi-journée (matin)</option><option>Demi-journée (après-midi)</option><option>Mini-balade 2 h</option><option>Apéro coucher de soleil</option><option>Événement privé</option></select></label>
+        <div class="two"><label>Date<input type="date" name="d" required></label><label>Personnes<input type="number" name="p" min="1" max="12" value="6" required></label></div>
+        <label>Votre prénom<input type="text" name="n" autocomplete="given-name"></label>
+        <button class="pill light" type="submit">Préparer mon SMS</button>
+        <small>Votre application de messages s'ouvre avec la demande déjà écrite pour le 07 65 20 48 48. Rien n'est envoyé sans vous.</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© Escale d'Or · Balades en mer, Hyères</span>
+    <nav><a href="tel:+33765204848">07 65 20 48 48</a><a href="https://www.instagram.com/escaledor83/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/escaledor83/" target="_blank" rel="noopener">Facebook</a></nav>
+  </div>
+</footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const root=document.documentElement;
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(RM) root.classList.add('rm');
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const eOut=t=>1-Math.pow(1-clamp(t),3);
+const eInOut=t=>{t=clamp(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const backOut=(t,s=1.15)=>{t=clamp(t);const c=s+1;return 1+c*Math.pow(t-1,3)+s*Math.pow(t-1,2)};
+function bez(x1,y1,x2,y2){const A=(a,b)=>1-3*b+3*a,B=(a,b)=>3*b-6*a,C=a=>3*a;const f=(t,a,b)=>((A(a,b)*t+B(a,b))*t+C(a))*t;const d=(t,a,b)=>3*A(a,b)*t*t+2*B(a,b)*t+C(a);return x=>{x=clamp(x);let t=x;for(let i=0;i<8;i++){const e=f(t,x1,x2)-x;const s=d(t,x1,x2);if(Math.abs(e)<1e-5||!s)break;t-=e/s}return f(clamp(t),y1,y2)}}
+const eGlide=bez(.25,.75,.2,1);
+
+/* ---- assets ---- */
+const CF='assets/tpl/';
+const px=(f,w)=>CF+(f===SKY?f.replace('.png','.jpg'):f);
+const SKY='hf_20261118_061434_a222c9d2-715b-44b7-873f-0548d1624211.png',VID=CF+'hf_20261118_065029_a6ae2ebb-cd79-41fd-ae60-6b66fdda04ee.mp4',CAM='hf_20261118_061547_10365665-40d3-4390-944f-7bcb10dc6d4a.png',STK='hf_20261118_061547_979f8673-f904-4102-90a0-6458bce33bc8.png';
+function sprite(el,url,b){const dx=b[2]-b[0],dy=b[3]-b[1];el.style.backgroundImage='url("'+url+'")';el.style.backgroundSize=(100/dx)+'% '+(100/dy)+'%';el.style.backgroundPosition=(dx>=1?0:b[0]/(1-dx)*100)+'% '+(dy>=1?0:b[1]/(1-dy)*100)+'%';}
+const CROP={conch:[.109,.121,.430,.422],pearl:[.625,.152,.863,.395],capsule:[.094,.656,.418,.793],camera:[.148,.141,.879,.809]};
+$('#skyPlate').style.backgroundImage='url("'+px(SKY,2400)+'")';
+sprite($('#camI'),px(CAM,1400),CROP.camera);
+
+/* ---- cards (photos Escale d'Or) ---- */
+const PH=['turquoise-crique.jpg|50% 70%','crique-soir.jpg|60% 50%','coucher-soleil.jpg|50% 50%','mouillage-voilier.jpg|30% 50%','le-sun.jpg|52% 50%','porquerolles-plage.jpg|45% 50%','port-village.jpg|30% 50%','large-ile.jpg|55% 50%','regate.jpg|50% 55%','port-aube.jpg|40% 50%','apero-plage.jpg|35% 50%','a-bord.jpg|40% 50%'];
+const cardsEl=$('#cards');const cards=PH.map((s,i)=>{const [f,pos]=s.split('|');const d=document.createElement('div');d.className='card';d.style.backgroundImage='url(assets/'+f+')';d.style.backgroundPosition=pos;cardsEl.appendChild(d);return {el:d,cur:null,tgt:[0,0,0,1,0]}});
+
+/* ---- icons (pictos fins) ---- */
+const ICONS=[
+ // mouette
+ '<path d="M2.5 11.5c2.4-2.6 5-3.2 7.2-1.4L12 12l2.3-1.9c2.2-1.8 4.8-1.2 7.2 1.4" fill="none" stroke="#1F2430" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6 12.4 12 14l1.4-1.6" fill="#7DA3BB" stroke="#1F2430" stroke-width="1.4" stroke-linejoin="round"/>',
+ // coquillage
+ '<path d="M12 20.5 4 11.2C4.9 6.7 8 4 12 4s7.1 2.7 8 7.2z" fill="#F4E3D3" stroke="#1F2430" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 20.5V4.2M12 20.5 8 5.2M12 20.5l4-15.3M12 20.5 5.3 8.2M12 20.5l6.7-12.3" stroke="#DDAD95" stroke-width="1.2" fill="none"/>',
+ // voilier
+ '<path d="M12 3v13" stroke="#1F2430" stroke-width="1.6" stroke-linecap="round"/><path d="M12.8 4.5 19 15h-6.2z" fill="#7DA3BB" stroke="#1F2430" stroke-width="1.4" stroke-linejoin="round"/><path d="M11.2 7 6.5 15h4.7z" fill="#fff" stroke="#1F2430" stroke-width="1.4" stroke-linejoin="round"/><path d="M4 17.5h16l-2.2 3H6.2z" fill="#DDAD95" stroke="#1F2430" stroke-width="1.5" stroke-linejoin="round"/>',
+ // phare
+ '<path d="M10 7h4l1.4 13H8.6z" fill="#fff" stroke="#1F2430" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 11.5h5M9 15.5h6" stroke="#7DA3BB" stroke-width="1.8"/><path d="M9.5 7V4.6L12 3l2.5 1.6V7" fill="#DDAD95" stroke="#1F2430" stroke-width="1.4" stroke-linejoin="round"/><path d="M6.5 21h11" stroke="#1F2430" stroke-width="1.6" stroke-linecap="round"/><path d="M16.5 5.2 20 4M7.5 5.2 4 4" stroke="#DDAD95" stroke-width="1.3" stroke-linecap="round"/>',
+ // poisson
+ '<path d="M3.5 12c2.6-3.8 6-5.3 9.6-4.6 2.3.4 4 1.9 5.2 4.6-1.2 2.7-2.9 4.2-5.2 4.6-3.6.7-7-.8-9.6-4.6z" fill="#7DA3BB" stroke="#1F2430" stroke-width="1.5" stroke-linejoin="round"/><path d="m18.3 12 3-3.2v6.4z" fill="#BAD9E6" stroke="#1F2430" stroke-width="1.4" stroke-linejoin="round"/><circle cx="7.3" cy="11.2" r="1" fill="#1F2430"/>',
+ // vague
+ '<path d="M3 15.5c2.2 0 3-1.6 4.5-4.6C9 8 11.2 6 14.2 6.3c2.6.2 4 2.2 3.7 4-1.7-1.3-4.3-.6-4.3 2 0 1.8 1.5 3.2 3.4 3.2H21" fill="#BAD9E6" stroke="#1F2430" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19.2c1.5 0 2.2-1.1 3-1.1s1.5 1.1 3 1.1 2.2-1.1 3-1.1 1.5 1.1 3 1.1 2.2-1.1 3-1.1 1.5 1.1 3 1.1" fill="none" stroke="#1F2430" stroke-width="1.5" stroke-linecap="round"/>',
+ // soleil
+ '<circle cx="12" cy="12" r="4.4" fill="#DDAD95" stroke="#1F2430" stroke-width="1.5"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7" stroke="#1F2430" stroke-width="1.5" stroke-linecap="round"/>'
+];
+const svg=s=>'<svg viewBox="0 0 24 24" aria-hidden="true">'+s+'</svg>';
+$('#gull').innerHTML=svg(ICONS[0]);
+
+/* ---- headline ---- */
+const WORD="Escale d'Or";const chars=[...WORD];const NS=chars.filter(c=>c!==' ').length;
+const grp=$('#grp');const meas=$('#measure');
+const chEls=chars.map(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;grp.appendChild(s);return s});
+const icEls=ICONS.map(s=>{const d=document.createElement('div');d.className='ic';d.innerHTML=svg(s);grp.appendChild(d);return d});
+let cw=[],shown=0,live=icEls.slice();
+
+/* ---- sizes ---- */
+let W,H,MOB,N,HFS,IC,CW;
+function sizes(){
+  W=innerWidth;H=innerHeight;MOB=W<820&&W<H*1.1;
+  const u=Math.min(W/1440,H/800);
+  N=MOB?Math.min(1,W/560):clamp(W/1440,.62,1.25);
+  HFS=MOB?Math.min(W*.15,H*.09):Math.min(W*.074,H*.135);
+  IC=HFS*.62;
+  const pfs=MOB?Math.min(W*.085,40):Math.min(W*.0335,H*.062);
+  const sfs=MOB?Math.min(W*.09,44):Math.min(W*.042,H*.078);
+  const mfs=MOB?Math.min(W*.11,H*.075):Math.min(W*.05,H*.1);
+  const camw=MOB?Math.min(W*.62,H*.34):Math.min(W*.19,H*.36);
+  CW=MOB?Math.min(W*.30,H*.2):Math.min(W/1440,H/780)*218;
+  const r=root.style;r.setProperty('--u',u+'px');r.setProperty('--n',N);r.setProperty('--hfs',HFS+'px');r.setProperty('--ic',IC+'px');r.setProperty('--pfs',pfs+'px');r.setProperty('--sfs',sfs+'px');r.setProperty('--mfs',mfs+'px');r.setProperty('--camw',camw+'px');
+  cardsEl.style.setProperty('--cw',CW);
+  cw=chars.map(c=>{meas.textContent=c;return meas.getBoundingClientRect().width});
+  layoutWord(false);
+}
+const GI=()=>IC*.2, GLI=()=>IC*.2*1.6;
+function layoutWord(anim=true){
+  let lw=0;const xs=[];chars.forEach((c,i)=>{xs.push(lw);lw+=cw[i]});
+  const shownW=xs[shown]!==undefined?xs[shown]:lw;
+  const k=live.length;
+  const tot=shownW+(k?((shown?GLI():0)+k*IC+(k-1)*GI()):0);
+  if(!anim){grp.style.transition='none';live.forEach(e=>e.style.transition='none')}
+  grp.style.transform='translate('+(W/2-tot/2)+'px,-50%)';
+  chEls.forEach((e,i)=>e.style.left=xs[i]+'px');
+  const ix0=shownW+(shown?GLI():0);
+  live.forEach((e,j)=>e.style.left=(ix0+j*(IC+GI()))+'px');
+  if(!anim){grp.offsetWidth;grp.style.transition='';live.forEach(e=>e.style.transition='')}
+}
+function iconSlot0(){const k=7;const tot=k*IC+(k-1)*GI();return {x:W/2-tot/2+IC/2,y:H*.41}}
+
+/* ---- intro timeline ---- */
+const T0=performance.now();let introDone=RM;
+const logo=$('.logo'),links=$$('.links a'),cta=$('#cta'),call=$('#callTop'),gull=$('#gull');
+const PATH=[[.33,-3,73],[.45,4,71],[.60,13,65],[.70,22,55],[.80,31,44],[.87,32.5,47.5],[.93,26,48],[1.00,21.5,45],[1.07,22.5,51.5],[1.15,27,52]];
+function cr(p0,p1,p2,p3,t){const t2=t*t,t3=t2*t;return .5*((2*p1)+(-p0+p2)*t+(2*p0-5*p1+4*p2-p3)*t2+(-p0+3*p1-3*p2+p3)*t3)}
+function gullAt(t){
+  const s=iconSlot0();const pts=PATH.map(p=>[p[0],p[1]*W/100,p[2]*H/100]).concat([[1.27,s.x,s.y]]);
+  let i=0;while(i<pts.length-2&&t>pts[i+1][0])i++;
+  const a=pts[Math.max(0,i-1)],b=pts[i],c=pts[i+1],d=pts[Math.min(pts.length-1,i+2)];
+  const u=clamp((t-b[0])/(c[0]-b[0]));return [cr(a[1],b[1],c[1],d[1],u),cr(a[2],b[2],c[2],d[2],u)];
+}
+const popped=new Set();let stepIdx=-1;
+function popIcon(j){if(popped.has(j))return;popped.add(j);const s=icEls[j].firstChild;s.animate([{opacity:0,transform:'scale(0)'},{opacity:1,transform:'scale(1.12)',offset:.6},{opacity:1,transform:'scale(1)'}],{duration:320,easing:'cubic-bezier(.2,.8,.3,1)',fill:'forwards'})}
+function doStep(i){
+  shown=i+1;const el=chEls[i];
+  el.animate([{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)'}],{duration:128,delay:70,easing:'cubic-bezier(.3,.7,.3,1)',fill:'forwards'});
+  const left=chars.slice(shown).filter(c=>c!==' ').length;
+  const want=Math.ceil(7*left/NS);
+  while(live.length>want){const e=live.shift();const s=e.firstChild;
+    s.animate([{transform:'scale(1)',filter:'brightness(1)',opacity:1},{transform:'scale(1.25,.16) rotate(-28deg)',filter:'brightness(0)',opacity:1,offset:.45},{transform:'scale(1.25,.16) rotate(-90deg)',filter:'brightness(0)',opacity:0}],{duration:220,easing:'ease-in-out',fill:'forwards'});}
+  layoutWord(true);
+}
+function finishIntro(){
+  for(let j=0;j<7;j++){icEls[j].firstChild.style.opacity=0}
+  chEls.forEach(e=>e.style.clipPath='inset(0 0 0 0)');shown=chars.length;live=[];layoutWord(false);
+  logo.style.opacity=1;links.forEach(a=>{a.style.opacity=1});cta.style.clipPath='none';call.style.opacity=1;
+  $('#heroSub').style.cssText='opacity:1;transform:none';introDone=true;
+}
+function intro(t){
+  logo.style.opacity=eOut((t-.15)/.2);
+  links.forEach((a,i)=>{const k=eOut((t-.2-i*.03)/.22);a.style.opacity=k;a.style.transform='translateY('+(6*(1-k))+'px)'});
+  const c=eOut((t-.23)/.19);cta.style.clipPath='inset(0 0 0 '+(100*(1-c))+'% round '+(12*N)+'px)';call.style.opacity=c;
+  if(t>=.33&&t<1.33){const [x,y]=gullAt(Math.min(t,1.27));const [x2,y2]=gullAt(Math.min(t+.02,1.27));let ang=Math.atan2(y2-y,x2-x)*180/Math.PI;if(!isFinite(ang)||(x2===x&&y2===y))ang=0;
+    let sc=1,op=1;if(t>1.27){const k=(t-1.27)/.06;sc=1-.4*k;op=1-k}
+    gull.style.opacity=op;gull.style.transform='translate('+x+'px,'+y+'px) rotate('+(ang*.35)+'deg) scale('+sc+')';}
+  else gull.style.opacity=0;
+  if(t>=1.27)popIcon(0);
+  for(let j=1;j<7;j++)if(t>=1.27+.03+(j-1)*.07)popIcon(j);
+  const si=Math.floor((t-1.9)/.22);
+  while(stepIdx<si&&stepIdx<chars.length-1){stepIdx++;doStep(stepIdx)}
+  const sub=eOut((t-4.4)/.8);$('#heroSub').style.cssText='opacity:'+sub+';transform:translateY('+(10*(1-sub))+'px)';
+  if(t>5.4){introDone=true}
+}
+
+/* ---- poses ---- */
+const step=R=>2*Math.asin(Math.min(1,1.05*CW/(2*R)));
+function fan(i){
+  if(i>5)return [W*.5,H*1.4,0,1,0];
+  if(MOB){const R=W*1.35,th=(i-2.5)*step(R),cx=W*.5,cy=H*.86+R;return [cx+R*Math.sin(th),cy-R*Math.cos(th)+CW*.2,th*180/Math.PI,1,1]}
+  const R=1250*W/1440,th=(i-2.5)*step(R),cx=W*.55,cy=H*.86+R;return [cx+R*Math.sin(th)-W*.02,cy-R*Math.cos(th),th*180/Math.PI,1,1];
+}
+const SCD=[[.08,.46,-20],[.20,.86,-12],[.80,.84,14],[.38,1.04,-8],[.92,.42,16],[.62,1.04,9]];
+const SCM=[[.06,.60,-20],[.45,.66,12],[.94,.60,16],[.22,.93,-14],[.72,.96,9],[.5,1.3,0]];
+function scatter(i){if(i>5)return [W*.5,H*1.4,0,1,0];const s=(MOB?SCM:SCD)[i];let y=s[1];if(H<500&&y<.1)y+=.08;return [W*s[0],H*y,s[2],1,1]}
+function pile(i){return [W*.5+((i%3)-1)*CW*.08,H*.62+(((i*7)%5)-2)*CW*.04,(i%2?-1:1)*(4+i*1.3),1,1]}
+function wheel(i,rot){
+  const R=MOB?W*1.2:900*W/1440;const cx=W*.5,cy=MOB?H*.76+R:H*.82+R;
+  let slot=((i+rot)%12+12)%12-5.5;const a=slot*step(R);const deg=a*180/Math.PI;
+  return [cx+R*Math.sin(a),cy-R*Math.cos(a),deg,1,Math.abs(deg)<62?1:0];
+}
+const L=(a,b,t)=>a.map((v,k)=>lerp(v,b[k],t));
+function target(i,p){
+  if(p<.085){const t=eInOut((p-.004)/.081);return L(fan(i),scatter(i),t)}
+  if(p<.21)return scatter(i);
+  if(p<.31){const t=eInOut((p-.21)/.1);const s=scatter(i);const pl=pile(i);if(i>5){const st=[W*.5,H*1.25,0,1,0];return L(st,pl,t)}return L(s,pl,t)}
+  if(p<.41){const t=eGlide((p-.31)/.1);const w=wheel(i,0);const pl=pile(i);const r=L(pl,w,t);r[4]=lerp(1,w[4],t);return r}
+  const rot=-3*eInOut((p-.41)/.16);return wheel(i,rot);
+}
+const RISE=[[5,.53],[2,.60],[0,.63],[1,.70],[3,.80],[4,.86]];
+function introPose(i,t,base){
+  const r=RISE.find(x=>x[0]===i);if(!r)return base;
+  const k=clamp((t-r[1])/.7);if(k<=0)return [base[0],H+CW*1.2,base[2]+8,1,0];
+  const e=backOut(k);return [base[0],lerp(H+CW*1.2,base[1],e),lerp(base[2]+8,base[2],e),1,clamp(k*4)];
+}
+
+/* ---- scroll engine ---- */
+const story=$('#story'),man=$('#manifesto'),hero=$('#hero'),proc=$('#proc');
+const FINE=matchMedia('(pointer:fine)').matches&&!RM;
+let ty=scrollY,sy=scrollY,lastWheel=0;
+const maxS=()=>document.documentElement.scrollHeight-innerHeight;
+const smoothEnd=()=>man.offsetTop+man.offsetHeight-innerHeight;
+if(FINE)addEventListener('wheel',e=>{
+  if(e.ctrlKey)return;
+  const d=e.deltaY*(e.deltaMode===1?32:e.deltaMode===2?innerHeight:1)*.75;
+  const base=(performance.now()-lastWheel<250)?ty:scrollY;
+  if(base+d>smoothEnd()+2&&scrollY>=smoothEnd()-2){ty=scrollY;return}
+  e.preventDefault();ty=clamp(base+d,0,maxS());lastWheel=performance.now();scrollTo(0,ty);
+},{passive:false});
+
+let procOn=false,procT=0,skyP=0,skyWordsOn=false,skyWT=0,vidLoaded=false,last=performance.now();
+const pws=$$('#proc .w'),pP=$('#proc p'),pB=$('#proc .pill');
+const skyEl=$('#sky'),vid=$('#skyVid'),cam=$('#cam'),camI=$('#camI'),blk=$('#black');
+const swTL=$$('#skyTL .w'),swBR=$$('#skyBR .w');const swAll=swTL.concat(swBR);const swDelay=[0,.12,.24,.36,.45,.57,.69,.81,.93];
+function resetWords(arr){arr.forEach(w=>{w.style.opacity=0;w.style.transform='translateY(.35em)';w.style.filter='blur(6px)'})}
+function revealWord(w,k,rise){w.style.opacity=k;w.style.transform='translateY('+(rise*(1-k))+'em)';w.style.filter='blur('+(6*(1-k))+'px)'}
+
+function frame(now){
+  const dt=Math.min(64,now-last);last=now;const f=dt/16.67;
+  if(FINE){if(now-lastWheel>250)ty=scrollY;sy+=(ty-sy)*(1-Math.pow(1-.06,f));if(Math.abs(ty-sy)<.1)sy=ty}else{sy=scrollY;ty=sy}
+  const t=(now-T0)/1000;
+  if(!introDone)intro(t);
+  // hero smooth compensation + headline fade
+  hero.style.transform='translateY('+(scrollY-sy)+'px)';
+  const st=story.offsetTop,sh=story.offsetHeight;
+  const p=clamp((sy-st)/(sh-H));
+  const navH=MOB?68:86*N;const hlTop=H*.41-(sy-st);
+  const hop=clamp((hlTop-(navH+.55*HFS))/((1.9-.55)*HFS));
+  $('#hl').style.opacity=RM?1:hop;
+  // cards
+  const settledAll=[];
+  cards.forEach((c,i)=>{
+    let tg=target(i,p);
+    if(t<1.6&&p<.002)tg=introPose(i,t,tg);
+    if(!c.cur||(p<.001&&t<1.7)||RM)c.cur=tg.slice();
+    else{const w=.055+(i%4)*.008;const k=1-Math.pow(1-w,f);c.cur=c.cur.map((v,j)=>v+(tg[j]-v)*k)}
+    settledAll.push(Math.abs(c.cur[0]-tg[0])<3&&Math.abs(c.cur[1]-tg[1])<3&&Math.abs(c.cur[2]-tg[2])<1);
+    const [x,y,r,s,o]=c.cur;c.el.style.transform='translate3d('+x+'px,'+y+'px,0) rotate('+r+'deg) scale('+s+')';c.el.style.opacity=o.toFixed(3);
+  });
+  // process block
+  let pop_=clamp((p-.05)/.025);proc.style.opacity=pop_;
+  if(p<.05){if(procOn){procOn=false;resetWords(pws);pP.style.opacity=0;pB.style.opacity=0;proc.classList.remove('on')}}
+  else if(p>.078&&!procOn){procOn=true;procT=now;proc.classList.add('on')}
+  if(procOn){const e=(now-procT)/1000;pws.forEach((w,i)=>revealWord(w,eOut((e-i*.11)/.55),.35));
+    const a=eOut((e-.7)/.5),b=eOut((e-.85)/.5);pP.style.opacity=a;pP.style.transform='translateY('+8*(1-a)+'px)';pB.style.opacity=b;pB.style.transform='translateY('+8*(1-b)+'px)'}
+  const pfade=pop_*(1-clamp(skyP*10));proc.style.opacity=pfade;proc.style.visibility=pfade<=0?'hidden':'visible';
+  // sky gate
+  const wheelDone=p>=.57&&settledAll.every(Boolean);
+  const want=wheelDone?eInOut((p-.62)/.12):0;
+  skyP+=(want-skyP)*(RM?1:1-Math.pow(1-.09,f));if(Math.abs(want-skyP)<.0005)skyP=want;
+  const e=skyP;
+  if(e<=.001){skyEl.style.visibility='hidden';if(!vid.paused)vid.pause()}
+  else{skyEl.style.visibility='visible';
+    const win=MOB?[.42,.16,-.06]:[.17,.20,.12];
+    const top=(.5-win[2]-win[1]/2)*100,bot=100-(top+win[1]*100),side=(1-win[0])/2*100;
+    skyEl.style.clipPath='inset('+lerp(top,0,e)+'% '+lerp(side,0,e)+'% '+lerp(bot,0,e)+'% '+lerp(side,0,e)+'% round '+lerp(14,0,e)+'px)';
+    const ps=lerp(1.18,1,e);$('#skyPlate').style.transform='scale('+ps+')';vid.style.transform='scale('+ps+')';
+    if(!vidLoaded&&!RM){vidLoaded=true;vid.src=VID;vid.playbackRate=.6;vid.addEventListener('playing',()=>{vid.playbackRate=.6;vid.classList.add('on')})}
+    if(vidLoaded&&vid.paused){const pr=vid.play();if(pr&&pr.catch)pr.catch(()=>{})}
+  }
+  // sky words
+  if(e>.995&&!skyWordsOn){skyWordsOn=true;skyWT=now}
+  if(e<.9&&skyWordsOn){skyWordsOn=false;resetWords(swAll)}
+  if(skyWordsOn){const s=(now-skyWT)/1000;swAll.forEach((w,i)=>revealWord(w,eOut((s-swDelay[i])/.6),.3))}
+  // camera
+  const yaw=lerp(-10,10,eInOut((p-.74)/.14));const bob=Math.sin(t*1.6)*6*N;
+  const gate=clamp((e-.9)/.1);const q=Math.pow(clamp((p-.88)/.09),1.6)*gate;
+  cam.style.transform='translate(-50%,calc(-50% + '+bob+'px)) scale('+lerp(.5,1,e)+')';
+  camI.style.transform='rotateY('+yaw+'deg) scale('+(1+q*q*28)+')';
+  blk.style.opacity=clamp((q-.45)/.4);
+  // manifesto
+  const mt=man.offsetTop,mh=man.offsetHeight;const mp=clamp((sy-mt)/(mh-H));
+  const x0=W*(MOB?.08:.06),x1=-(trackW-W*.9);
+  if(!RM)track.style.transform='translate('+lerp(x0,x1,mp)+'px,-50%)';
+  if(sy>mt-H*.2&&!RM){const curX=lerp(x0,x1,mp);mItems.forEach(it=>{if(!it.on&&curX+it.x<W*(MOB?.92:.86)){it.on=true;it.run()}})}
+  // nav
+  const ct=$('#contact').getBoundingClientRect().top;const ce=mt+mh-H*.5;
+  const dark=(p>.985&&sy<ce)||(sy>=mt-2&&sy<ce)||ct<60;
+  document.body.classList.toggle('dark-nav',dark);
+  document.body.classList.toggle('solid-nav',sy>=ce);
+  const lk=sy<st+(sh-H)*.15?0:(sy<mt+mh-H*.5?1:-1);
+  links.forEach((a,i)=>a.classList.toggle('cur',i===lk));
+  requestAnimationFrame(frame);
+}
+
+/* ---- manifesto track ---- */
+const track=$('#track');let trackW=0;const mItems=[];
+const LAB={peach:'#DDAD95',lav:'#B0AEC6',sand:'#EBC9AE',ice:'#BAD9E6',sky2:'#EFCEBE'};
+function words(list){return list.map(([w,g])=>{const s=document.createElement('span');s.className='mw'+(g?' g':'');[...w].forEach(c=>{const k=document.createElement('span');k.className='c';k.textContent=c;s.appendChild(k)});const it={el:s,on:false,run(){[...s.children].forEach((k,i)=>k.animate([{opacity:0,transform:'translateY(.55em) rotate(14deg)'},{opacity:1,transform:'none'}],{duration:500,delay:i*35,easing:'cubic-bezier(.22,.61,.36,1)',fill:'forwards'}))}};mItems.push(it);return s})}
+function popper(el,rest){el.classList.add('pop');const it={el,on:false,run(){el.animate([{transform:'scale(0) rotate(-14deg)'},{transform:'scale(1.08) rotate('+(rest+1)+'deg)',offset:.7},{transform:'scale(1) rotate('+rest+'deg)'}],{duration:500,delay:120,easing:'cubic-bezier(.2,.8,.3,1.15)',fill:'forwards'})}};mItems.push(it);return el}
+function obj(name,wEm,rest){const d=document.createElement('div');d.className='obj';const b=CROP[name];const asp=((b[2]-b[0])/(b[3]-b[1]));d.style.width=wEm+'em';d.style.height=(wEm/asp)+'em';sprite(d,px(STK,700),b);return popper(d,rest)}
+function label(txt,col,rest,cls='big',dot=false){const d=document.createElement('span');d.className=cls;d.textContent=txt;d.style.background=LAB[col];if(dot){const k=document.createElement('i');k.className='dot';d.appendChild(k)}return popper(d,rest)}
+function spark(){const d=document.createElement('div');d.className='spark';d.innerHTML='<svg viewBox="0 0 20 20" width="100%" height="100%"><path fill="#F4E3D3" d="M10 0c.8 5.6 3.6 8.6 10 10-6.4 1.4-9.2 4.4-10 10-.8-5.6-3.6-8.6-10-10 6.4-1.4 9.2-4.4 10-10z"/></svg>';return popper(d,0)}
+function buildTrack(){
+  const add=(...els)=>els.flat().forEach(e=>track.appendChild(e));
+  const intro=document.createElement('div');intro.className='intro';
+  const r1=document.createElement('div');r1.className='row';words([['Balades',1],['en'],['mer']]).forEach(e=>r1.appendChild(e));
+  const r2=document.createElement('div');r2.className='row';words([['aux'],['îles'],["d'Or.",1]]).forEach(e=>r2.appendChild(e));
+  intro.append(r1,r2);
+  const l1=label("Escale d'Or",'sky2',-6,'lab');l1.style.top='-.95em';l1.style.left='0';
+  const l2=label('Delphine & Stéphane','sand',-4,'lab');l2.style.top='-1.1em';l2.style.left='5.2em';
+  const l3=label('Hyères · La Capte','ice',4,'lab');l3.style.bottom='-1em';l3.style.left='.6em';
+  intro.append(l1,l2,l3);add(intro);
+  add(obj('conch',1.25,-12));
+  add(words([['Criques',1]]));
+  const st=document.createElement('div');st.className='stack';st.append(label('turquoise','peach',-8,'big',true),label('et snorkeling','lav',6,'small'));add(st);
+  add(words([['baignade',1],['au'],['mouillage.']]));
+  add(spark(),obj('pearl',.8,0));
+  add(words([['Le'],['bateau'],['–',1],['rien',1],['que',1]]));
+  add(label('pour','sky2',-8),obj('conch',1.05,10),obj('pearl',.5,0),spark(),label('vous','lav',3));
+  add(words([['et',1],['vos',1]]),label('proches','ice',-10),obj('capsule',1.05,-8));
+  add(words([['jusqu’à'],['12'],['personnes,'],['de',1],['Porquerolles',1],['à',1],['Port-Cros'],['et',1],['au',1],['Levant,'],['skipper'],['et'],['carburant',1],['compris.',1]]));
+  const sp=document.createElement('div');sp.className='spacer';add(sp);
+}
+function measureTrack(){const tr=track.style.transform;track.style.transform='translate(0,-50%)';trackW=track.scrollWidth;const r0=track.getBoundingClientRect().left;mItems.forEach(it=>{it.x=it.el.getBoundingClientRect().left-r0});track.style.transform=tr}
+
+/* ---- content reveals, carousel, form ---- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+$$('.rv').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+$$('.rbtn').forEach(b=>b.addEventListener('click',()=>{const c=$('#caps');c.scrollBy({left:+b.dataset.d*(c.firstElementChild.offsetWidth+16),behavior:'smooth'})}));
+$('#book').addEventListener('submit',ev=>{ev.preventDefault();const f=new FormData(ev.target);const d=f.get('d')?new Date(f.get('d')+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'';const msg='Bonjour Escale d\'Or, je souhaite réserver : '+f.get('f')+(d?', le '+d:'')+', pour '+f.get('p')+' personne(s).'+(f.get('n')?' '+f.get('n')+'.':'');location.href='sms:+33765204848?&body='+encodeURIComponent(msg)});
+$$('a[data-go]').forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();const st=story.offsetTop,sh=story.offsetHeight;const y=a.dataset.go==='top'?0:st+(sh-innerHeight)*.2;scrollTo({top:y,behavior:FINE?'auto':'smooth'});ty=y}));
+
+/* ---- boot ---- */
+buildTrack();
+function onResize(){sizes();measureTrack()}
+onResize();
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>{onResize()});
+let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(onResize,80)});
+if(RM){finishIntro();cards.forEach((c,i)=>{c.cur=fan(i)});skyEl.style.visibility='visible';mItems.forEach(it=>it.on=true)}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
